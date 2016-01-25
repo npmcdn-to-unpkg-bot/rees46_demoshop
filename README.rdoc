@@ -1,25 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+0. Использовать Bootstrap и simple_form (simple_form установить перед devise, чтобы devise использовал формы simple_form)
+1. Сделать регистрацию пользователей и админов.
+3. Сделать раздел админки со своей навигацией bootstrap.
+4. Сделать управление деревом категорий в админке. Категории бывают родительские и дочерние неограниченного уровня вложенности. Категории имеют name и parent_id.
+5. Сделать управление товарами и привязку их к категории. Товар может быть только в одной категории. Товар содержит картинку, название, описание (redactor.js), цену, старую цену (не обязательно), категорию, производителя (строка).
 
 * ...
 
