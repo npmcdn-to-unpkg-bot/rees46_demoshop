@@ -14,8 +14,8 @@ default: &default
 development:
   <<: *default
   database: rees46_demo
-  username: recommender
-  password: 123
+  username: alif
+  password: 
 
 
 # Warning: The database defined as "test" will be erased and
@@ -25,7 +25,7 @@ test:
   <<: *default
   database: rees46_demo_test
   username: recommender
-  password: 123
+  password:
 
 production:
   <<: *default

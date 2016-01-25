@@ -7,14 +7,14 @@ gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
-
+gem 'turbolinks'
 
 gem "therubyracer"
 # gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 
 gem 'simple_form'
-
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -41,6 +41,12 @@ gem 'unicorn'
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 
+# Rees46
+gem 'rees46'
+gem 'devise'
+gem 'cancancan'
+gem 'rolify'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -53,4 +59,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
