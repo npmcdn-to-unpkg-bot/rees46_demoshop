@@ -14,6 +14,7 @@ gem "therubyracer"
 gem "twitter-bootstrap-rails"
 
 gem 'simple_form'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
