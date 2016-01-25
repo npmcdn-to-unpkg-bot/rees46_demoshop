@@ -41,6 +41,9 @@ gem 'unicorn'
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 
+# Rees46 
+gem 'rees46'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -53,4 +56,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
