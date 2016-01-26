@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  belongs_to :parents, class: "Category", foreign_key: :parents_id
+  belongs_to :parent, class_name: 'Category', foreign_key: :parent_id
 
-  validates :name, present: true
+  validates :name, presence: true
 end
