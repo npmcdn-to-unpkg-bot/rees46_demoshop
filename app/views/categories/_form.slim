@@ -1,5 +1,5 @@
 = simple_form_for @category do |f|
   = f.input :name
-  = f.input :parent, as: :select, collection: Category.all
+  = f.input :parent_id, as: :select, collection: Category.all
 
   = f.submit "Сохранить", :class => 'btn btn-primary'

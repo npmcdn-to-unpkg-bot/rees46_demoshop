@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :find_category, only: [:show, :edit, :update, :destroy]
+  before_action :find_category, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, :except => [:index, :show]
   def index
     @categories = Category.all
@@ -27,7 +27,7 @@ class CategoriesController < ApplicationController
   def update
     if @category.update_attributes(category_params)
       flash[:sucess] = 'Категория был обновлен'
-      redirect_to @category
+      redirect_to categories_path
     else
       flash.now[:danger] = "Категория не был обновлен"
       render :edit
