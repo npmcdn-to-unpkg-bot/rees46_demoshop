@@ -51,14 +51,15 @@ html lang="en"
             - else
               li= link_to 'Sign In', new_user_session_path
               li= link_to 'Sign Up', new_user_registration_path
-        /! /.navbar-collapse
-      /! /.container-fluid
+        .navbar-collapse
+      .container-fluid
     .container
       .row
         .span9
           = bootstrap_flash
           = yield
-      /! /row
+      .row
       footer
+      br
+      br
         p © Company 2016
-    /! /container
