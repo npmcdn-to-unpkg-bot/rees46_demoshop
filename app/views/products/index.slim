@@ -1,0 +1,7 @@
+h1 Welcome to Products Page
+
+= link_to "Создать новый продукт", new_product_path, class: 'btn btn-default'
+br
+br
+- @products.each do |p|
+    p.title
