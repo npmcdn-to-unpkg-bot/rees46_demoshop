@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     if @category.user != current_user.has_role?(:admin)
-      return render :text => 'Not Allowed', :status => :forbidden
+      return render :text => 'Не допускается', :status => :forbidden
     end
     @category.destroy
     redirect_to @category
