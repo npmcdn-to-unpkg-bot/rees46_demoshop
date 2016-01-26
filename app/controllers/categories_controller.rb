@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :find_category, only: [:show, :edit, :update, :destroy]
-  before_action :authentication_user!, :except => [:index, :show]
+  before_action :authenticate_user!, :except => [:index, :show]
   def index
     @categories = Category.all
   end
@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     if @category.save
       flash[:notice] = "сохранил категорию"
-      redirect_to @category
+      redirect_to categories_path
     else
       flash.now[:error] = "Не удалось сохранить категорию"
       render action: new
@@ -25,7 +25,13 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category.update_attributes(category_params)
+    if @category.update_attributes(category_params)
+      flash[:sucess] = 'Категория был обновлен'
+      redirect_to @category
+    else
+      flash.now[:danger] = "Категория не был обновлен"
+      render :edit
+    end
   end
 
   def destroy
@@ -38,10 +44,10 @@ class CategoriesController < ApplicationController
 
   private
   def find_category
-    @cotegory = Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def category_params
-    params.require(:category).permit(:name, :patent_id)
+    params.require(:category).permit(:name, :parent_id)
   end
 end
