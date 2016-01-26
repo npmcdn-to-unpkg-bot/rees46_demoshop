@@ -11,5 +11,5 @@ h1 Welcome to Category
           ul
            = c.name
            li
-          
+           = c.children.name
            /= link_to "Edit", edit_category_path(c), :class => 'btn btn-primary'
