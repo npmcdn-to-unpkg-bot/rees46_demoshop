@@ -50,6 +50,7 @@ gem 'slim', '~> 3.0', '>= 3.0.6'
 gem 'pry'
 gem 'carrierwave', '~> 0.10.0'
 gem 'acts_as_tree'
+gem 'redactor-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
