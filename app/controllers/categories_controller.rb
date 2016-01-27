@@ -1,12 +1,19 @@
 class CategoriesController < ApplicationController
-  before_action :find_category, only: [:edit, :update, :destroy]
+  before_action :find_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, :except => [:index, :show]
   def index
-    @categories = Category.all
+    @category = nil
+    @categories = Category.where(parent_id: nil)
   end
 
   def new
     @category = Category.new
+    @category = Category.find(params[:id]) unless params[:id].nil?
+  end
+
+  def show
+    # @categories = @category.children
+    # render action: :index
   end
 
   def create

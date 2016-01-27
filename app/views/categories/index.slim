@@ -6,10 +6,16 @@ h1 Welcome to Category
       = link_to "Create New Category", new_category_path, :class => 'btn btn-primary'
       br
       br
-      ul
-        - @categories.each do |c|
-          ul
-           = c.name
-           li
-           = c.children.name
-           /= link_to "Edit", edit_category_path(c), :class => 'btn btn-primary'
+      h1
+        = @category.nil? ? 'Main Categories' : @category.name
+      - @categories.each do |category|
+        ul
+          li
+            = category.name
+            br
+            /= link_to 'Edit', edit_category_path(category) unless category.parent.nil?
+            ul
+              - category.walk_tree do |c, level|
+                li
+                  = "#{'-> '*level}#{c.name}"
+                  br
