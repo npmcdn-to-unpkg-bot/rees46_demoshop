@@ -1,5 +1,0 @@
-ul
-  li
-    - @catagory.walk_tree do |page, level|
-      = link_to "#{'-'*level}#{page.name}", page_path(page)
-      br

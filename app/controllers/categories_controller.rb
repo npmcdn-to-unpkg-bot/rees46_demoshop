@@ -11,11 +11,6 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id]) unless params[:id].nil?
   end
 
-  def show
-    # @categories = @category.children
-    # render action: :index
-  end
-
   def create
     @category = Category.new(category_params)
     if @category.save
