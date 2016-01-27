@@ -8,5 +8,5 @@ br
       .col-md-3
         h1
          = link_to product.title, product_path(product)
-        = link_to image_tag(product.image.thumb), product_path(product)
+        = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product)
      
