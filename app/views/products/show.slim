@@ -1,5 +1,5 @@
 .col-xs-6
   h1= @product.title
-  = @product.image
+  = image_tag @product.image, class: 'img-responsive'
   p= @product.description
   p= @product.brand
