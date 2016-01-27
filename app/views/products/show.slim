@@ -3,3 +3,7 @@
   = image_tag @product.image, class: 'img-responsive'
   = @product.description
   p= @product.brand
+  
+  h1 Related Products
+  - @categories.each do |category|
+    = category.name

@@ -9,4 +9,5 @@ br
         h1
          = link_to product.title, product_path(product)
         = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product)
-     
+        h4 
+          = number_to_currency(product.price)

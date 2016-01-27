@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-
+    @categories = Category.where(parent_id: nil)
   end
 
   def edit
