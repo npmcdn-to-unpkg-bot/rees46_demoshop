@@ -1,7 +1,6 @@
 class LineItemsController < ApplicationController
   include CurrentCart
   before_action :set_cart, only: :create
-  before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   def create
     product = Product.find(params[:product_id])
@@ -12,5 +11,11 @@ class LineItemsController < ApplicationController
     else
       render action: 'new'
     end
+  end
+
+  private
+
+  def line_item_params
+    params.require(:line_item).permit(:product_id)
   end
 end
