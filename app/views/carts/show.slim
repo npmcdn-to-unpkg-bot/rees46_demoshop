@@ -1,0 +1,10 @@
+- if notice 
+    = notice
+
+h2 Your Cart
+
+table
+  - @cart.line_items.each do |item|
+    tr
+      td
+        = item.product.title
