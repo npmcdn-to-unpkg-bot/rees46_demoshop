@@ -7,4 +7,6 @@ table
   - @cart.line_items.each do |item|
     tr
       td
+        = item.quantity
+        | x 
         = item.product.title
