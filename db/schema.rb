@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160127145540) do
+ActiveRecord::Schema.define(version: 20160128121055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -22,6 +27,17 @@ ActiveRecord::Schema.define(version: 20160127145540) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "cart_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "quantity",   default: 1
+  end
+
+  add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id", using: :btree
+  add_index "line_items", ["product_id"], name: "index_line_items_on_product_id", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "title"
@@ -88,4 +104,6 @@ ActiveRecord::Schema.define(version: 20160127145540) do
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
 
+  add_foreign_key "line_items", "carts"
+  add_foreign_key "line_items", "products"
 end
