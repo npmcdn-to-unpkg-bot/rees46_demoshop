@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get 'dashboard'     =>  'welcomes#dashboard'
   resources :categories
   resources :products
+  resources :line_items
+  resources :carts
 end
