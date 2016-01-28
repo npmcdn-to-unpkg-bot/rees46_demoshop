@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
-  root 'welcomes#index'
+  root 'store#index'
   get 'dashboard'     =>  'welcomes#dashboard'
   resources :categories
   resources :products
