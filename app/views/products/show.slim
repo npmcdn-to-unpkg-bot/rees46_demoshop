@@ -1,9 +1,18 @@
-.col-xs-6
-  h1= @product.title
-  = image_tag @product.image, class: 'img-responsive'
-  = @product.description
-  p= @product.brand
-  
-  h1 Related Products
-  - @categories.each do |category|
-    = category.name
+.row
+  .col-xs-5
+    h1= @product.title
+    = image_tag @product.image, class: 'img-responsive'
+    h3 Brand Name:
+    = @product.brand 
+    
+    h1 Related Products
+    - @categories.each do |category|
+      = category.name
+  .col-xs-5
+  br
+  br
+  br
+    = @product.description
+    br
+    br
+    = button_to "Add to Cart", line_items_path(product_id: @product)
