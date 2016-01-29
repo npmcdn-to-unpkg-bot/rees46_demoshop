@@ -1,13 +1,25 @@
 h1 Welcome to Products Page
+- if current_user && current_user.has_role?(:admin)
+  = link_to "Создать новый продукт", new_product_path, class: 'btn btn-default'
+br
+br
 
-= link_to "Создать новый продукт", new_product_path, class: 'btn btn-default'
-br
-br
-.row
-  - @products.each do |product|
-      .col-md-3
-        h1
-         = link_to product.title, product_path(product)
-        = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product)
-        h4 
-          = number_to_currency(product.price)
+.container
+  br
+  br
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        th
+          | Title
+        th
+          | Description
+        th
+          | Price
+        - if current_user && current_user.has_role?(:admin)
+          th
+            | Edit
+          th
+            | Delete
+    tbody
+      = render "index"

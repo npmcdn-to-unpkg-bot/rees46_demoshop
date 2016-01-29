@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    if @product.update_attributes(category_params)
+    if @product.update_attributes(product_params)
       flash[:sucess] = 'Продукт был обновлен'
       redirect_to @product
     else
