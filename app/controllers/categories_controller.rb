@@ -1,14 +1,20 @@
 class CategoriesController < ApplicationController
   before_action :find_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :admin_permission, except: [:index, :show]
+  
   def index
     @category = nil
     @categories = Category.where(parent_id: nil)
   end
 
   def new
-    @category = Category.new
-    @category = Category.find(params[:id]) unless params[:id].nil?
+    if current_user && current_user.has_role?(:admin)
+      @category = Category.new
+      @category = Category.find(params[:id]) unless params[:id].nil?
+    else
+      redirect_to root_path
+    end
   end
 
   def create
@@ -44,6 +50,14 @@ class CategoriesController < ApplicationController
   end
 
   private
+
+  def admin_permission
+    if current_user && current_user.has_role?(:admin)
+      return true
+    else
+      redirect_to root_path
+    end
+  end
 
   def find_category
     @category = Category.find(params[:id])
