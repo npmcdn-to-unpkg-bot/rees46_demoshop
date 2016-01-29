@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
 
   def index
     if @cart.line_items.empty?
-      redirect_to root_path, notice: "Your cart is empty"
+      redirect_to root_path, notice: 'Your cart is empty'
       return
     end
 
@@ -19,19 +19,19 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.add_line_items_form_cart(@cart)
 
-      if @order.save
-        Cart.destroy(session[:cart_id])
-        session[:cart_id] = nil
+    if @order.save
+      Cart.destroy(session[:cart_id])
+      session[:cart_id] = nil
 
-        redirect_to root_path, notice: 'Thanks for your Order'
-      else
-        render :new
-      end
+      redirect_to root_path, notice: 'Thanks for your Order'
+    else
+      render :new
+    end
   end
 
   private
 
-    def order_params
-      params.require(:order).permit(:name, :address, :email)
-    end
+  def order_params
+    params.require(:order).permit(:name, :address, :email)
+  end
 end

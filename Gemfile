@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
@@ -9,9 +8,9 @@ gem 'pg'
 
 gem 'turbolinks'
 
-gem "therubyracer"
+gem 'therubyracer'
 # gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
 
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
@@ -52,7 +51,7 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'acts_as_tree'
 gem 'redactor-rails'
 gem 'mini_magick'
-gem 'rubocop'
+gem 'rubocop', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, :except => [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @products = Product.all
@@ -14,10 +14,10 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      flash[:notice] = "сохранил продукт"
+      flash[:notice] = 'сохранил продукт'
       redirect_to products_path
     else
-      flash[:error] = "Не удалось сохранить продукт"
+      flash[:error] = 'Не удалось сохранить продукт'
       redner action: new
     end
   end
@@ -27,7 +27,6 @@ class ProductsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
@@ -35,14 +34,14 @@ class ProductsController < ApplicationController
       flash[:sucess] = 'Продукт был обновлен'
       redirect_to @product
     else
-      flash.now[:danger] = "Продукт не был обновлен"
+      flash.now[:danger] = 'Продукт не был обновлен'
       render :edit
     end
   end
 
   def destroy
     if @product.user != current_user.has_role?(:admin)
-      return render :text => 'Не допускается', :status => :forbidden
+      return render text: 'Не допускается', status: :forbidden
     end
     @product.destroy
     redirect_to @product
@@ -53,6 +52,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:title, :image, :description, :price, :brand, :category_id )
+    params.require(:product).permit(:title, :image, :description, :price, :brand, :category_id)
   end
 end
