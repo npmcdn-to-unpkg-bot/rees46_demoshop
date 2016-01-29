@@ -1,0 +1,12 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'db/**/*'
+    - 'bin/**/*'
+Metrics/LineLength:
+  Include:
+    - 'app/**/*'
+  Max: 120
+
+Style/Documentation:
+  Enabled: False

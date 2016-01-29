@@ -52,6 +52,7 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'acts_as_tree'
 gem 'redactor-rails'
 gem 'mini_magick'
+gem 'rubocop'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
