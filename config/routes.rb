@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
   root 'store#index'
-  get 'dashboard'     =>  'welcomes#dashboard'
+  get 'dashboard'     =>  'store#dashboard'
   resources :categories
   resources :products
   resources :line_items
