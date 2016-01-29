@@ -13,12 +13,8 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    if current_user && current_user.has_role?(:admin)
-      @category = Category.new
-      @category = Category.find(params[:id]) unless params[:id].nil?
-    else
-      redirect_to root_path
-    end
+    @category = Category.new
+    @category = Category.find(params[:id]) unless params[:id].nil?
   end
 
   def create
