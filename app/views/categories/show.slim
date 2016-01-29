@@ -1,0 +1,4 @@
+h1  Category
+.row
+  - @products.each do |product|
+    = render 'categories/product_cart', product: product

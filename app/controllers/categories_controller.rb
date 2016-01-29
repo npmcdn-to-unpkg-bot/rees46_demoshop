@@ -2,10 +2,14 @@ class CategoriesController < ApplicationController
   before_action :find_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :admin_permission, except: [:index, :show]
-  
+
   def index
     @category = nil
     @categories = Category.where(parent_id: nil)
+  end
+
+  def show
+    @products = @category.products
   end
 
   def new
