@@ -17,19 +17,21 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-    @order.add_line_items_from_cart(@cart)
+    @order.add_line_items_form_cart(@cart)
 
-    if @order.save
-      Cart.destroy(session[:cart_id])
-      session[:cart_id] = nil
+      if @order.save
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
 
-      redirect_to root_path, notice: "Thanks for your order"
-    end
+        redirect_to root_path, notice: 'Thanks for your Order'
+      else
+        render :new
+      end
   end
 
   private
 
-  def order_params
-    params.require(:order).permit(:name, :address, :email)
-  end
+    def order_params
+      params.require(:order).permit(:name, :address, :email)
+    end
 end

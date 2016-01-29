@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'orders/index'
-  get 'orders/new'
-  get 'orders/create'
+  resources :orders
 
   get 'carts/show'
 
