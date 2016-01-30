@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
       redirect_to products_path
     else
       flash[:error] = 'Не удалось сохранить продукт'
-      redner action: new
+      render :new
     end
   end
 

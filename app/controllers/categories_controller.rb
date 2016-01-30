@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
       redirect_to categories_path
     else
       flash.now[:error] = 'Не удалось сохранить категорию'
-      render action: new
+      render :new
     end
   end
 
