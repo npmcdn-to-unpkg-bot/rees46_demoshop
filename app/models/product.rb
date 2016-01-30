@@ -5,11 +5,7 @@ class Product < ActiveRecord::Base
 
   before_destroy :ensure_not_referenced_by_any_line_item
 
-  validates :title, presence: true
-  validates :image, presence: true
-  validates :description, presence: true
-  validates :price, presence: true
-  validates :brand, presence: true
+  validates :title, :image, :description, :price, :brand, presence: true
   mount_uploader :image, ImageUploader
 
   private
