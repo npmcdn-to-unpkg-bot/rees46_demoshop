@@ -40,9 +40,11 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    return render text: 'Не допускается', status: :forbidden
-    @product.destroy
-    redirect_to @product
+    if @product.destroy
+      redirect_to @product
+    else
+      return render text: 'Не допускается', status: :forbidden
+    end
   end
 
   private
