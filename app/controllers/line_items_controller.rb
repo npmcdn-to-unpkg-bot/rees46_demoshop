@@ -9,7 +9,7 @@ class LineItemsController < ApplicationController
     if @line_item.save
       redirect_to @line_item.cart
     else
-      render action: 'new'
+      render :new
     end
   end
 
