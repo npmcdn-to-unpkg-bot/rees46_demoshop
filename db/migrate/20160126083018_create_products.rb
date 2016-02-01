@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string  :title
       t.string  :image
       t.text    :description
-      t.decimal :price, default: 0.00
+      t.decimal :price, default: 0.0
       t.string  :brand
       t.integer :category_id
 
