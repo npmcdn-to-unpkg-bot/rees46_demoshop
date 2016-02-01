@@ -5,9 +5,9 @@ class Product < ActiveRecord::Base
 
   before_destroy :ensure_not_referenced_by_any_line_item
 
-  validates :title, :image, :description, :price, :brand, :category_id, presence: true
+  validates :title, :image, :description, :brand, :category_id, presence: true
   validates :title, uniqueness: true
-  validates :price, numericality: { greather_then_or_equal: 0.01 }
+  validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
   mount_uploader :image, ImageUploader
 
   private
