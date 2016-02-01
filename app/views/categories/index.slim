@@ -12,6 +12,9 @@ h1 Welcome to Category
         ul
           li
             = category.name
+            - if current_user && current_user.has_role?(:admin)
+              = link_to "Edit", edit_category_path(category)
+              = link_to "Delete", category, method: :delete, data: { confirm: "Are you sure?" }
             br
             /= link_to 'Edit', edit_category_path(category) unless category.parent.nil?
             ul

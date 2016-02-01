@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :find_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :admin_permission, except: [:index, :show]
+  before_action :admin_permission, except: :show
 
   def index
     @category = nil
@@ -14,16 +14,13 @@ class CategoriesController < ApplicationController
 
   def new
     @category = Category.new
-    @category = Category.find(params[:id]) unless params[:id].nil?
   end
 
   def create
     @category = Category.new(category_params)
     if @category.save
-      flash[:notice] = 'сохранил категорию'
-      redirect_to categories_path
+      redirect_to categories_path, notice: "Category was saved successfully"
     else
-      flash.now[:error] = 'Не удалось сохранить категорию'
       render :new
     end
   end
@@ -33,17 +30,15 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update_attributes(category_params)
-      flash[:sucess] = 'Категория был обновлен'
-      redirect_to categories_path
+      redirect_to categories_path, notice: "Category was update successfully"
     else
-      flash.now[:danger] = 'Категория не был обновлен'
       render :edit
     end
   end
 
   def destroy
-    if @category.user != current_user.has_role?(:admin)
-      return render text: 'Не допускается', status: :forbidden
+    if current_user == @category.user && current_user.has_role?(:admin)
+      render categories_path
     end
     @category.destroy
     redirect_to @category
