@@ -4,3 +4,4 @@
   = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product)
   h4
     = number_to_currency(product.price)
+    = button_to "Add to Cart", line_items_path(product_id: product)
