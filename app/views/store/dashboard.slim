@@ -5,3 +5,18 @@
       = link_to "Создать новую категорию", categories_path, class: 'btn btn-default'
     .col-md-6
         = link_to "Создать новый продукт", products_path, class: 'btn btn-default'
+br
+br
+.container
+  h1.text-center Order lists
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        th
+          | Name
+        th
+          | Address
+        th
+          | Email
+    tbody
+      = render "order_index"
