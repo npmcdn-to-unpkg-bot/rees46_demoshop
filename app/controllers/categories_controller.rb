@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    if current_user == @category.user && current_user.has_role?(:admin)
+    if current_user == current_user.has_role?(:admin)
       render categories_path
     end
     @category.destroy
