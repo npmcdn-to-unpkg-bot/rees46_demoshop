@@ -4,7 +4,6 @@ class CategoriesController < ApplicationController
   before_action :admin_permission, except: :show
 
   def index
-    @category = nil
     @categories = Category.where(parent_id: nil)
   end
 
