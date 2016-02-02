@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   resources :orders
 
-  get 'carts/show'
-
   get 'store/index'
 
   mount RedactorRails::Engine => '/redactor_rails'
@@ -11,6 +9,6 @@ Rails.application.routes.draw do
   get 'dashboard'     =>  'store#dashboard'
   resources :categories
   resources :products
-  resources :line_items
-  resources :carts
+  resources :line_items, only: :create
+  resources :carts, only: [:idex, :show, :destroy]
 end
