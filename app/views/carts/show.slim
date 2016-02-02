@@ -10,13 +10,14 @@ table
         = item.quantity
         | x 
         = item.product.title
+        |  
         = number_to_currency(item.total_price)
   hr
   tr
 hr
-    td[colspam="2"]
-      | Total
-    td[align="right"]
+    td Total
+    td 
+      |   
       = number_to_currency(@cart.total_price)
 hr
 = button_to "Checkout", new_order_path, method: :get
