@@ -3,10 +3,8 @@ class OrdersController < ApplicationController
   before_action :set_cart, only: [:new, :create]
 
   def index
-    if @cart.line_items.empty?
-      redirect_to root_path, notice: 'Your cart is empty'
-      return
-    end
+    return (redirect_to root_path, notice: 'Your cart is empty') ? @cart.line_items.empty?
+  end
 
     @orders = Order.all
   end
