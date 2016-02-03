@@ -19,4 +19,4 @@ br
         th
           | Email
     tbody
-      = render "order_index"
+      = render partial: "order", collection: @orders, as: :order

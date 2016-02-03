@@ -47,7 +47,7 @@ class ProductsController < ApplicationController
 
   def admin_permission
     if current_user && current_user.has_role?(:admin)
-      return true
+      true
     else
       redirect_to root_path
     end
