@@ -7,6 +7,7 @@ class Product < ActiveRecord::Base
 
   validates :title, :image, :description, :brand, :category_id, presence: true
   validates :title, uniqueness: true
+  # Price should be not less then $100 :) lets do some business 
   validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
   mount_uploader :image, ImageUploader
 
