@@ -15,11 +15,9 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      flash[:notice] = 'сохранил продукт'
-      redirect_to products_path
+      redirect_to products_path, notice: "Products was saved successfully"
     else
-      flash[:error] = 'Не удалось сохранить продукт'
-      render :new
+      render :new, notice: "Product was not saved successfully"
     end
   end
 
@@ -31,19 +29,17 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update_attributes(product_params)
-      flash[:sucess] = 'Продукт был обновлен'
-      redirect_to @product
+      redirect_to @product, notice: "Product was update successfully"
     else
-      flash.now[:danger] = 'Продукт не был обновлен'
-      render :edit
+      render :edit, notice: "Product was not update successfully"
     end
   end
 
   def destroy
     if @product.destroy
-      redirect_to @product
+      redirect_to @product, notice: "Product was delete successfully"
     else
-      return render text: 'Не допускается', status: :forbidden
+      redirect_to products_path, notice: "Sorry you dont have ablity to delete this"
     end
   end
 
