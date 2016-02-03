@@ -36,11 +36,11 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    if current_user == current_user.has_role?(:admin)
-      render categories_path
+    if @category.destroy
+      redirect_to @category, notice: "Category was delete successfully"
+    else
+      redirect_to root_path, notice: "You dont have permission to delete this"
     end
-    @category.destroy
-    redirect_to @category
   end
 
   private

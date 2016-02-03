@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :show
-  before_action :admin_permission, except: [:index, :show]
+  before_action :admin_permission, except: :show
 
   def index
     @products = Product.all
@@ -37,9 +37,9 @@ class ProductsController < ApplicationController
 
   def destroy
     if @product.destroy
-      redirect_to @product, notice: "Product was delete successfully"
+      redirect_to products_path, notice: "Product was delete successfully"
     else
-      redirect_to products_path, notice: "Sorry you dont have ablity to delete this"
+      redirect_to products_path, notice: "Ordered Product cant be delete"
     end
   end
 
