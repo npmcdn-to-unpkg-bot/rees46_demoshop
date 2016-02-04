@@ -1,6 +1,5 @@
 class Product < ActiveRecord::Base
-  enum industry: [:fashion, :cosmatic, :kide ]
-  # enum fashion: [:gender, :type, :size]
+  enum industry: [:fashion, :cosmetic, :kids ]
   enum gender: [:unisex, :male, :female]
   enum type: [:shoe, :shirt, :tshirt, :underwear, :trouser, :jacket, :blazer, :sock, :belt, :hat, :glove]
   enum size: [:r36, :r38, :r40, :r42, :r44, :r46, :r48, :r50]
