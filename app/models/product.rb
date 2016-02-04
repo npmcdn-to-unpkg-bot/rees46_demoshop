@@ -17,10 +17,14 @@ class Product < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   INDUSTRY_TYPES = [["Fashion", "fashion"], ["Cosmatic","cosmatic"], ["Kide", "Kide"]]
+
   FASHION_TYPEES = [["Gender", "gender"], ["Type","type"], ["Size","size"]]
+  
   GENDER_TYPES = [["Unisex", "unisex"],["Male", "male"], ["Female", "female"]]
+
   TYPE_TYPES = [["Shoe", "shoe"], ["Shirt", "shirt"], ["Tshirt", "tshirt"], ["Underwear", "underwear"], ["Trouser", "trouser"], ["Jacket","jacket"], ["Blazer", "blazer"], ["Sock", "sock"], ["Belt", "belt"], ["Hat", "hat"], ["Glove", "glove"]]
-  SIZE_TYPES = [["R36", "r36"], ["R38","r38"], ["R40","r40"]]
+
+  SIZE_TYPES = [["R36", "r36"], ["R38","r38"], ["R40","r40"], ["R42","r42"], ["R44","r44"], ["R46","r46"], ["R48","r48"], ["R50","r50"]]
 
   private
 
