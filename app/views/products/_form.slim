@@ -9,11 +9,28 @@
           li= msg
   = f.input :title
   = f.input :image
-  = f.input :description, :as => :text, :input_html => { :class => "redactor" }
+  = f.input :description, as: :text, :input_html => { class: "redactor" }
   = f.input :price
   = f.input :brand
+  = f.input :industry, as: :select, collection: Product::INDUSTRY_TYPES
+  .size-param.hidden
+    = f.input :gender, as: :select, collection: Product::GENDER_TYPES, :input_html => { class: "hidden" }
+    = f.input :type, as: :select, collection: Product::TYPE_TYPES, :input_html => { class: "hidden" }
+    = f.input :size, as: :select, collection: Product::SIZE_TYPES
   
-  = f.input :gender, as: :radio_buttons, collection: Product::GENDER_TYPES
   = f.input :category_id, as: :select, collection: Category.all
-
   = f.submit "Сохранить", :class => 'btn btn-primary'
+
+
+javascript:
+  $( document ).ready(function() {
+    $('#new_product').on('change', function() {
+      var industry_input = $('#product_industry');
+      var industry = industry_input.val();
+      if (industry === "fashion") {
+        $(this).find('#product_gender').removeClass('hidden');
+        $(this).find('#product_type').removeClass('hidden');
+        $(this).find('.size-param').removeClass('hidden'); 
+      }
+    });
+  });
