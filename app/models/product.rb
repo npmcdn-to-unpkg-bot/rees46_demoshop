@@ -1,6 +1,5 @@
 class Product < ActiveRecord::Base
   INDUSTRY_TYPES = %w[fashion cosmetic kids]
-  FASHION_TYPEES = %w[gender type size]
   GENDER_TYPES = %w[unisex male female]
   TYPE_TYPES = %w[shoe shirt tshirt underwear trouser jacket blazer sock belt hat glove]
   SIZE_TYPES = %w[russian_size euro_size american_size british_size asian_size]
@@ -11,6 +10,7 @@ class Product < ActiveRecord::Base
   AISA_SIZES = %w[a35 a36 a37 a38 a39 a40 a41 a42 a43 a44 a45 a46 a47 a48 a49 a50 a51 a52 a53 a54 a55 a56]
 
   enum industry: INDUSTRY_TYPES
+  #enum industry: %w[fashion cosmetic kids]
   enum gender: GENDER_TYPES
   enum type: TYPE_TYPES
   enum size: SIZE_TYPES

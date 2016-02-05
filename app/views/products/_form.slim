@@ -13,6 +13,7 @@
   = f.input :price
   = f.input :brand
   = f.input :industry, as: :select, collection: Product::INDUSTRY_TYPES
+  /= f.input :industry, as: :select, collection: Product.industries
   #fashion-param.hidden
     = f.input :gender, as: :radio_buttons, collection: Product::GENDER_TYPES, :item_wrapper_class => 'radio-inline'
     hr
