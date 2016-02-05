@@ -38,7 +38,7 @@ class Product < ActiveRecord::Base
   GENDER_TYPES = gender_arr
   TYPE_TYPES = type_arr
   SIZE_TYPES = [["Russian Size", "ru"], ["Euro Size", "eu"], ["American Size", "us"], ["British Size", "uk"], ["Asian size", "az"]]
-  RU_SIZES = eu_arr
+  RU_SIZES = ru_arr
   EU_SIZES = eu_arr
   UK_SIZES = uk_arr
   US_SIZES = us_arr
