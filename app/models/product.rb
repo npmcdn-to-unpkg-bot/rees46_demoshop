@@ -2,6 +2,7 @@ class Product < ActiveRecord::Base
   indus_arr = %w[fashion cosmetic kids].map(&:capitalize)
   gender_arr = %w[unisex male female].map(&:capitalize)
   type_arr = %w[shoe shirt tshirt underwear trouser jacket blazer sock belt hat glove].map(&:capitalize)
+  size_arr = %w[ru eu us uk az]
   ru_arr = %w[35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56]
   eu_arr = %w[e36 e37 e38 e39 e40 e41 e42 e43 e44]
   us_arr = %w[XS S M L XL XXL]
@@ -11,7 +12,7 @@ class Product < ActiveRecord::Base
   enum industry: indus_arr
   enum gender: gender_arr
   enum type: type_arr
-  enum size: [:ru, :eu, :us, :uk, :az]
+  enum size: size_arr
   enum russian_size: ru_arr
   enum euro_size: eu_arr
   enum american_size: us
