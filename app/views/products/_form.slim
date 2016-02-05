@@ -21,19 +21,19 @@
     = f.input :size,   as: :radio_buttons, collection: Product::SIZE_TYPES, :item_wrapper_class => 'radio-inline'
     hr
   #size-ru-param.hidden.country-sizes
-    = f.input :russian_size,   as: :radio_buttons, collection: Product::RU_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :russian_size,   as: :check_boxes, collection: Product::RU_SIZES, :item_wrapper_class => 'radio-inline'
     hr
   #size-eu-param.hidden.country-sizes
-    = f.input :euro_size,   as: :radio_buttons, collection: Product::EU_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :euro_size,   as: :check_boxes, collection: Product::EU_SIZES, :item_wrapper_class => 'radio-inline'
     hr
   #size-uk-param.hidden.country-sizes
-    = f.input :british_size,   as: :radio_buttons, collection: Product::UK_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :british_size,   as: :check_boxes, collection: Product::UK_SIZES, :item_wrapper_class => 'radio-inline'
     hr
   #size-us-param.hidden.country-sizes
-    = f.input :american_size,   as: :radio_buttons, collection: Product::US_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :american_size,   as: :check_boxes, collection: Product::US_SIZES, :item_wrapper_class => 'radio-inline'
     hr
   #size-az-param.hidden.country-sizes
-    = f.input :asia_size,   as: :radio_buttons, collection: Product::AISA_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :asian_size,   as: :check_boxes, collection: Product::AISA_SIZES, :item_wrapper_class => 'radio-inline'
   
   = f.input :category_id, as: :select, collection: Category.all
   = f.submit "Сохранить", :class => 'btn btn-primary'
