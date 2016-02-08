@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$( document ).on("last-element-rendered", function() {
   $('#product_industry').on('change', function() {
     var industry = $(this).val();
     if (industry === "fashion") {
