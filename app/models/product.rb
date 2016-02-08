@@ -3,25 +3,103 @@ class Product < ActiveRecord::Base
   GENDER_TYPES = %w[unisex male female]
   TYPE_TYPES = %w[shoe shirt tshirt underwear trouser jacket blazer sock belt hat glove]
   SIZE_TYPES = %w[russian_size euro_size american_size british_size asian_size]
-  RU_SIZES = %w[35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56]
-  EU_SIZES = %w[e36 e37 e38 e39 e40 e41 e42 e43 e44]
-  US_SIZES = %w[XS S M L XL XXL]
-  UK_SIZES = %w[b3 b4 b5 d5.5  b6 b6.5 b7 b7.5 b8]
-  AISA_SIZES = %w[a35 a36 a37 a38 a39 a40 a41 a42 a43 a44 a45 a46 a47 a48 a49 a50 a51 a52 a53 a54 a55 a56]
 
   enum industry: INDUSTRY_TYPES
-  #enum industry: %w[fashion cosmetic kids]
   enum gender: GENDER_TYPES
   enum type: TYPE_TYPES
   enum size: SIZE_TYPES
-  enum russian_size: RU_SIZES
-  enum euro_size: EU_SIZES
-  enum american_size: US_SIZES
-  enum british_size: UK_SIZES
-  enum asian_size: AISA_SIZES
 
+  RUSSIAN_SIZE = {
+    r35: 0,
+    r36: 1,
+    r37: 2,
+    r38: 3,
+    r39: 4,
+    r40: 5,
+    r41: 6,
+    r42: 7,
+    r43: 8,
+    r44: 9,
+    r45: 10,
+    r46: 11,
+    r47: 12,
+    r49: 13,
+    r50: 14,
+    r51: 15,
+    r52: 16,
+    r53: 17,
+    r54: 18,
+    r55: 19
+  }
+
+  EURO_SIZE = {
+    e36: 0,
+    e37: 1,
+    e38: 2,
+    e39: 3,
+    e40: 4,
+    e41: 5,
+    e42: 6,
+    e43: 7,
+    e44: 8,
+    e46: 9,
+    e48: 10,
+    e50: 11,
+    e52: 12,
+    e54: 13,
+    e56: 14,
+    e58: 15
+  }
+
+  AMERICAN_SIZE = {
+    XS: 0,
+    S:  1,
+    M:  2,
+    L:  3,
+    XL: 4,
+    XXL: 5
+  }
+
+  BRITISH_SIZE = {
+    "b3"   => 0,
+    "b4"   => 1,
+    "b5"   => 2,
+    "d5.5" => 3,
+    "b6"   => 4,
+    "b6.5" => 5,
+    "b7"   => 6,
+    "b7.5" => 7,
+    "b8"   => 8,
+    "b9"   => 9,
+    "b9.5" => 10
+  }
+
+  ASIAN_SIZE = {
+    a35: 0,
+    a36: 1,
+    a37: 2,
+    a38: 3,
+    a39: 4,
+    a40: 5,
+    a41: 6,
+    a42: 7,
+    a43: 8,
+    a44: 9,
+    a45: 10,
+    a46: 11,
+    a47: 12,
+    a48: 13,
+    a49: 14,
+    a50: 15,
+    a51: 16,
+    a52: 17,
+    a53: 18,
+    a54: 19,
+    a55: 20
+  }
 
   mount_uploader :image, ImageUploader
+
   belongs_to :category
   has_many :line_items
 
@@ -31,7 +109,6 @@ class Product < ActiveRecord::Base
   validates :title, uniqueness: true
   # Price should be not less then $100 :) lets do some business
   validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
-  mount_uploader :image, ImageUploader
 
   private
 
