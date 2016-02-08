@@ -18,7 +18,7 @@
     = @product.size.upcase
     - if @product.send(@product.size).any?
       - @product.send(@product.size).each do |as|
-        li = link_to Product.const_get(@product.size).keys[as].to_s
+        li = link_to Product.const_get(@product.size.upcase).keys[as].to_s
       
     h4
       = number_to_currency(@product.price)

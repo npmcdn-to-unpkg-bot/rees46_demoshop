@@ -58,7 +58,7 @@ class Product < ActiveRecord::Base
     L:  3,
     XL: 4,
     XXL: 5,
-    XXX: 6
+    XXXL: 6
   }
 
   BRITISH_SIZE = {
