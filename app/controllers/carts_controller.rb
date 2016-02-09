@@ -1,12 +1,7 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :destroy]
 
-  # def index
-  #   @carts = Cart.all
-  # end
-
-  def show
-    
+  def show    
   end
 
   def destroy
