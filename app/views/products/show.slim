@@ -8,18 +8,16 @@
     
     h1 Related Products
     = link_to @product.category.name, category_path(@product.category)
-  .col-xs-5
-  br
-  br
-  br
-  br
-    = @product.description.html_safe
-    br
-    = @product.size.upcase
-    - if @product.send(@product.size).any?
-      - @product.send(@product.size).each do |as|
-        li = link_to Product.const_get(@product.size.upcase).keys[as].to_s
-      
-    h4
-      = number_to_currency(@product.price)
-    = button_to "Add to Cart", line_items_path(product_id: @product)
+  .col-xs-5[style="top: 68px;"]
+    = simple_form_for @line_item do |f|
+      = @product.description.html_safe
+      br
+      = @product.size.upcase
+      - if @product.send(@product.size).any?
+        = f.input :size_id, as: :radio_buttons, collection:    Product.const_get(@product.size.upcase), :item_wrapper_class => 'radio-inline'
+        = f.input :product_id, as: :hidden, :input_html => { :value => @product.id }
+      h4
+        = number_to_currency(@product.price)
+        br
+        br
+        = f.submit "Add to Cart"
