@@ -9,7 +9,8 @@ class LineItemsController < ApplicationController
     if @line_item.save
       redirect_to @line_item.cart
     else
-      render :new
+      flash[:danger] = "Please select product size !"
+      redirect_to product
     end
   end
 
