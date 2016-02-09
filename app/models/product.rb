@@ -1,13 +1,40 @@
 class Product < ActiveRecord::Base
   INDUSTRY_TYPES = %w[fashion cosmetic kids]
+
+  # Fashion constants class
   GENDER_TYPES = %w[unisex male female]
   TYPE_TYPES = %w[shoe shirt tshirt underwear trouser jacket blazer sock belt hat glove]
   SIZE_TYPES = %w[russian_size euro_size american_size british_size asian_size]
 
+  # Consmetic constants class
+  PART_TYES = %w[hair face body intim hand leg]
+  SKIN_TYPES = %w[dry normal oily comby]
+  CONDITIONS = %w[colored damaged waved seborea akne
+  loss grow dehydrated sensitive problem fading]
+  VOLUMES = %w[value price]
+
+
+  # BOOLEAN_TYPES
+  HYPOALLERGENIC = BOOLEAN
+  PERIODICS = BOOLEAN
+
+  # Main type
   enum industry: INDUSTRY_TYPES
+
+  # Common enum
   enum gender: GENDER_TYPES
+
+  # Fashion enum
   enum type: TYPE_TYPES
   enum size: SIZE_TYPES
+
+  # Cosmetic
+  HAIR_TYPES = {}
+  FACE_TYPES = {}
+  BODY_TYPES = {}
+  INTIM_TYPES = {}
+  HAND_TYPES = {}
+
 
   RUSSIAN_SIZE = {
     "35" => 0,
