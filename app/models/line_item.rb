@@ -3,9 +3,7 @@ class LineItem < ActiveRecord::Base
   belongs_to :product
   belongs_to :cart
 
-  #validates :size_id, presence: true
-  #
-  # attr_accessor :size_id
+  validates :size_id, presence: true
 
   def total_price
     product.price * quantity

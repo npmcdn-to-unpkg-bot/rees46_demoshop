@@ -10,8 +10,14 @@ table
         = item.quantity
         | x 
         = item.product.title
-        |  
+        |
+        li= item.product.size
+        |
+        li= item.size_id
+        |
         = number_to_currency(item.total_price)
+        br
+        br	
   hr
   tr
 hr

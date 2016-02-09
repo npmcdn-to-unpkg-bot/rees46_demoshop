@@ -4,7 +4,8 @@ class LineItemsController < ApplicationController
 
   def create
     product = Product.find(line_item_params[:product_id])
-    @line_item = @cart.add_product(product.id)
+    # @line_item = @cart.add_product(line_item_params)
+    @line_item = @cart.line_items.create(line_item_params)
 
     if @line_item.save
       redirect_to @line_item.cart
@@ -17,6 +18,6 @@ class LineItemsController < ApplicationController
   private
 
   def line_item_params
-    params.require(:line_item).permit(:product_id, :size_id, :product)
+    params.require(:line_item).permit(:product_id, :size_id)
   end
 end
