@@ -14,7 +14,7 @@
   = f.input :brand
   = f.input :industry, as: :select, collection: Product::INDUSTRY_TYPES
   /= f.input :industry, as: :select, collection: Product.industries
-  #fashion-param.hidden
+  #fashion-param.hidden.country-sizes
     = f.input :gender, as: :radio_buttons, collection: Product::GENDER_TYPES, :item_wrapper_class => 'radio-inline'
     hr
     = f.input :type, as: :radio_buttons, collection: Product::TYPE_TYPES, :item_wrapper_class => 'radio-inline'
@@ -35,6 +35,7 @@
     hr
   #size-az-param.hidden.country-sizes
     = f.input :asian_size, as: :check_boxes, include_hidden: false, collection: Product::ASIAN_SIZE, :item_wrapper_class => 'radio-inline'
-  
+  #cosmetic-param.hidden.country-sizes
+  #kids-param.hidden.country-sizes
   = f.input :category_id, as: :select, collection: Category.all
   = f.submit "Сохранить", :class => 'btn btn-primary'
