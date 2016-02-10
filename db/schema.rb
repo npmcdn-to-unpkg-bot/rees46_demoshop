@@ -73,9 +73,9 @@ ActiveRecord::Schema.define(version: 20160210114723) do
     t.integer  "british_sizes",  default: [], null: false, array: true
     t.integer  "american_sizes", default: [], null: false, array: true
     t.integer  "asian_sizes",    default: [], null: false, array: true
-    t.integer  "skin_types"
     t.integer  "conditions"
     t.integer  "part_types",     default: [], null: false, array: true
+    t.integer  "skin_types",     default: [], null: false, array: true
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
