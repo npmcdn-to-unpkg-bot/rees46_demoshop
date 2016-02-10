@@ -66,16 +66,16 @@ ActiveRecord::Schema.define(version: 20160210114723) do
     t.integer  "size"
     t.integer  "kids"
     t.integer  "cosmetic"
-    t.integer  "russian_size",   default: [], null: false, array: true
-    t.integer  "euro_size",      default: [], null: false, array: true
-    t.integer  "british_size",   default: [], null: false, array: true
-    t.integer  "american_size",  default: [], null: false, array: true
-    t.integer  "asian_size",     default: [], null: false, array: true
     t.integer  "hypoallergenic", default: 0
     t.integer  "part_type"
     t.integer  "skin_type"
     t.integer  "condition"
     t.integer  "periodic"
+    t.integer  "russian_sizes",  default: [], null: false, array: true
+    t.integer  "euro_sizes",     default: [], null: false, array: true
+    t.integer  "british_sizes",  default: [], null: false, array: true
+    t.integer  "american_sizes", default: [], null: false, array: true
+    t.integer  "asian_sizes",    default: [], null: false, array: true
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree

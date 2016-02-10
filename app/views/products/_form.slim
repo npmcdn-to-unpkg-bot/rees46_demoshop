@@ -19,23 +19,24 @@
     hr
     = f.input :size, as: :radio_buttons, collection: Product::SIZE_TYPES, :item_wrapper_class => 'radio-inline'
     hr
+  #pro-product_size_russian_sizes.hidden.group-sizes
+    = f.input :russian_sizes, as: :check_boxes, include_hidden: false, collection: Product::RUSSIAN_SIZES, :item_wrapper_class => 'radio-inline'
+    hr
+  #pro-product_size_euro_sizes.hidden.group-sizes
+    = f.input :euro_sizes, as: :check_boxes, include_hidden: false, collection: Product::EURO_SIZES, :item_wrapper_class => 'radio-inline'
+    hr
+  #pro-product_size_british_sizes.hidden.group-sizes
+    = f.input :british_sizes, as: :check_boxes, include_hidden: false, collection: Product::BRITISH_SIZES, :item_wrapper_class => 'radio-inline'
+    hr
+  #pro-product_size_american_sizes.hidden.group-sizes
+    = f.input :american_sizes, as: :check_boxes, include_hidden: false, collection: Product::AMERICAN_SIZES, :item_wrapper_class => 'radio-inline'
+    hr
+  #pro-product_size_asian_sizes.hidden.group-sizes
+    = f.input :asian_sizes, as: :check_boxes, include_hidden: false, collection: Product::ASIAN_SIZES, :item_wrapper_class => 'radio-inline'
   #gender.hidden.country-sizes
     = f.input :gender, as: :radio_buttons, collection: Product::GENDER_TYPES, :item_wrapper_class => 'radio-inline'
     hr
-  #pro-product_size_russian_size.hidden.group-sizes
-    = f.input :russian_size, as: :check_boxes, include_hidden: false, collection: Product::RUSSIAN_SIZE, :item_wrapper_class => 'radio-inline'
-    hr
-  #pro-product_size_euro_size.hidden.group-sizes
-    = f.input :euro_size, as: :check_boxes, include_hidden: false, collection: Product::EURO_SIZE, :item_wrapper_class => 'radio-inline'
-    hr
-  #pro-product_size_british_size.hidden.group-sizes
-    = f.input :british_size, as: :check_boxes, include_hidden: false, collection: Product::BRITISH_SIZE, :item_wrapper_class => 'radio-inline'
-    hr
-  #pro-product_size_american_size.hidden.group-sizes
-    = f.input :american_size, as: :check_boxes, include_hidden: false, collection: Product::AMERICAN_SIZE, :item_wrapper_class => 'radio-inline'
-    hr
-  #pro-product_size_asian_size.hidden.group-sizes
-    = f.input :asian_size, as: :check_boxes, include_hidden: false, collection: Product::ASIAN_SIZE, :item_wrapper_class => 'radio-inline'
+      
   #cosmetic-param.hidden.country-sizes
     = f.input :hypoallergenic, as: :radio_buttons, :checked => [0, true], collection: Product::HYPOALLERGENIC, :item_wrapper_class => 'radio-inline'
     hr

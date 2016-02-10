@@ -4,7 +4,7 @@ class Product < ActiveRecord::Base
   # Fashion constants class
   GENDER_TYPES = %w[unisex male female]
   TYPE_TYPES = %w[shoe shirt tshirt underwear trouser jacket blazer sock belt hat glove]
-  SIZE_TYPES = %w[russian_size euro_size american_size british_size asian_size]
+  SIZE_TYPES = %w[russian_sizes euro_sizes american_sizes british_sizes asian_sizes]
 
   # Consmetic constants class
   COSMETIC_GENDER_TYPES = %w[unisex male female]
@@ -66,7 +66,7 @@ class Product < ActiveRecord::Base
   HAND_TYPES = {}
 
 
-  RUSSIAN_SIZE = {
+  RUSSIAN_SIZES = {
     "35" => 0,
     "36" => 1,
     "37" => 2,
@@ -89,7 +89,7 @@ class Product < ActiveRecord::Base
     "55" => 19
   }
 
-  EURO_SIZE = {
+  EURO_SIZES = {
     "36" => 0,
     "37" => 1,
     "38" => 2,
@@ -108,7 +108,7 @@ class Product < ActiveRecord::Base
     "58" => 15
   }
 
-  AMERICAN_SIZE = {
+  AMERICAN_SIZES = {
     XS: 0,
     S:  1,
     M:  2,
@@ -118,7 +118,7 @@ class Product < ActiveRecord::Base
     XXXL: 6
   }
 
-  BRITISH_SIZE = {
+  BRITISH_SIZES = {
     "3"   => 0,
     "4"   => 1,
     "5"   => 2,
@@ -132,7 +132,7 @@ class Product < ActiveRecord::Base
     "9.5" => 10
   }
 
-  ASIAN_SIZE = {
+  ASIAN_SIZES = {
     "35" => 0,
     "36" => 1,
     "37" => 2,
