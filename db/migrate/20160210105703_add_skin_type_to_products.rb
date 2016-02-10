@@ -1,5 +1,5 @@
 class AddSkinTypeToProducts < ActiveRecord::Migration
   def change
-    add_column :products, :skin_type, :integer
+    add_column :products, :skin_types, :integer
   end
 end
