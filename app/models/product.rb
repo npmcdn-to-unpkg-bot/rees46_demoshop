@@ -24,24 +24,26 @@ class Product < ActiveRecord::Base
     "comby"   =>  3,
   }
   CONDITIONS = {
-    "colored"    =>  0,
-    "damaged"    =>  1,
-    "waved"      =>  2,
-    "seborea"    =>  3,
-    "akne"       =>  4,
-   "loss"        =>  5,
-   "grow"        =>  6,
-   "dehydrated"  =>  7,
-   "sensitive"   =>  8,
-   "problem"     =>  9,
-   "fading"      =>  10
+    "colored"     =>  0,
+    "damaged"     =>  1,
+    "waved"       =>  2,
+    "seborea"     =>  3,
+    "akne"        =>  4,
+    "loss"        =>  5,
+    "grow"        =>  6,
+    "dehydrated"  =>  7,
+    "sensitive"   =>  8,
+    "problem"     =>  9,
+    "fading"      =>  10
  }
-  VOLUMES = %w[value price]
+
+ # later have to do
+  VOLUMES = { "value" =>  0, "price" =>  1, }
 
 
   # BOOLEAN_TYPES
   HYPOALLERGENIC = { "YES" => 1, "NO" => 0}
-  # PERIODICS = BOOLEAN
+  PERIODIC = { "YES" => 1, "NO" => 0}
 
   # Main type
   enum industry: INDUSTRY_TYPES
