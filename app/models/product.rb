@@ -7,6 +7,7 @@ class Product < ActiveRecord::Base
   SIZE_TYPES = %w[russian_size euro_size american_size british_size asian_size]
 
   # Consmetic constants class
+  COSMETIC_GENDER_TYPES = %w[unisex male female]
   PART_TYES = %w[hair face body intim hand leg]
   SKIN_TYPES = %w[dry normal oily comby]
   CONDITIONS = %w[colored damaged waved seborea akne
@@ -15,18 +16,21 @@ class Product < ActiveRecord::Base
 
 
   # BOOLEAN_TYPES
-  HYPOALLERGENIC = BOOLEAN
-  PERIODICS = BOOLEAN
+  HYPOALLERGENIC = { "YES" => 1, "NO" => 0}
+  # PERIODICS = BOOLEAN
 
   # Main type
   enum industry: INDUSTRY_TYPES
 
-  # Common enum
+
   enum gender: GENDER_TYPES
 
   # Fashion enum
   enum type: TYPE_TYPES
   enum size: SIZE_TYPES
+
+  # Cosmetic enum
+  #enum consmetic_gender: COSMETIC_GENDER_TYPES
 
   # Cosmetic
   HAIR_TYPES = {}
@@ -133,10 +137,10 @@ class Product < ActiveRecord::Base
 
   before_destroy :ensure_not_referenced_by_any_line_item
 
-  validates :title, :image, :description, :brand, :category_id, presence: true
-  validates :title, uniqueness: true
-  # Price should be not less then $100 :) lets do some business
-  validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
+  # validates :title, :image, :description, :brand, :category_id, presence: true
+  # validates :title, uniqueness: true
+  # # Price should be not less then $100 :) lets do some business
+  # validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
 
   private
 

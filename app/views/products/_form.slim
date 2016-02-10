@@ -21,25 +21,22 @@
     hr
     = f.input :size, as: :radio_buttons, collection: Product::SIZE_TYPES, :item_wrapper_class => 'radio-inline'
     hr
-  #size-ru-param.hidden.country-sizes
+  #pro-product_size_russian_size.hidden.group-sizes
     = f.input :russian_size, as: :check_boxes, include_hidden: false, collection: Product::RUSSIAN_SIZE, :item_wrapper_class => 'radio-inline'
     hr
-  #size-eu-param.hidden.country-sizes
+  #pro-product_size_euro_size.hidden.group-sizes
     = f.input :euro_size, as: :check_boxes, include_hidden: false, collection: Product::EURO_SIZE, :item_wrapper_class => 'radio-inline'
     hr
-  #size-uk-param.hidden.country-sizes
+  #pro-product_size_british_size.hidden.group-sizes
     = f.input :british_size, as: :check_boxes, include_hidden: false, collection: Product::BRITISH_SIZE, :item_wrapper_class => 'radio-inline'
     hr
-  #size-us-param.hidden.country-sizes
+  #pro-product_size_american_size.hidden.group-sizes
     = f.input :american_size, as: :check_boxes, include_hidden: false, collection: Product::AMERICAN_SIZE, :item_wrapper_class => 'radio-inline'
     hr
-  #size-az-param.hidden.country-sizes
+  #pro-product_size_asian_size.hidden.group-sizes
     = f.input :asian_size, as: :check_boxes, include_hidden: false, collection: Product::ASIAN_SIZE, :item_wrapper_class => 'radio-inline'
   #cosmetic-param.hidden.country-sizes
-    = f.input :gender, as: :radio_buttons, collection: Product::GENDER_TYPES, :item_wrapper_class => 'radio-inline'
-    hr
-  #cosmetic-param.hidden.country-sizes
-    = f.input :gender, as: :radio_buttons, collection: Product::HYPOALLERGENIC, :item_wrapper_class => 'radio-inline'
+    = f.input :hypoallergenic, as: :radio_buttons, :checked => [0, true], collection: Product::HYPOALLERGENIC, :item_wrapper_class => 'radio-inline'
     hr
     
   #kids-param.hidden.country-sizes
