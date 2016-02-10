@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Form
 gem 'simple_form'
+gem 'nested_form'
 
 # Use SCSS for stylesheets
 gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'

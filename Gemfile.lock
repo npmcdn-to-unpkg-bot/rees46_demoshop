@@ -167,6 +167,7 @@ GEM
     minitest (5.8.4)
     multi_json (1.11.2)
     multi_xml (0.5.5)
+    nested_form (0.3.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.2)
@@ -342,6 +343,7 @@ DEPENDENCIES
   jquery-rails
   meta_request
   mini_magick (~> 4.3, >= 4.3.6)
+  nested_form
   pg
   poltergeist
   pry

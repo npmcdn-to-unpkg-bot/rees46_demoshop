@@ -18,3 +18,4 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require redactor-rails
+//= require jquery_nested_form
