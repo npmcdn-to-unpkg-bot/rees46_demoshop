@@ -44,7 +44,7 @@
     hr
     = f.input :skin_types, as: :check_boxes, include_hidden: false, collection: Product::SKIN_TYPES, :item_wrapper_class => 'radio-inline'
     hr
-    = f.input :conditions, as: :radio_buttons, collection: Product::CONDITIONS, :item_wrapper_class => 'radio-inline'
+    = f.input :conditions, as: :check_boxes, include_hidden: false, collection: Product::CONDITIONS, :item_wrapper_class => 'radio-inline'
     hr
     = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, :item_wrapper_class => 'radio-inline'
     hr
