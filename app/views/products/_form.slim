@@ -41,6 +41,10 @@
     hr
     = f.input :part_type, as: :radio_buttons, collection: Product::PART_TYES, :item_wrapper_class => 'radio-inline'
     hr
+    = f.input :skin_type, as: :radio_buttons, collection: Product::SKIN_TYPES, :item_wrapper_class => 'radio-inline'
+    hr
+    = f.input :condition, as: :radio_buttons, collection: Product::CONDITIONS, :item_wrapper_class => 'radio-inline'
+    hr
     
   #kids-param.hidden.country-sizes
   = f.input :category_id, as: :select, collection: Category.all

@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
 
   # Consmetic constants class
   COSMETIC_GENDER_TYPES = %w[unisex male female]
-  
+
   PART_TYES = {
     "hair" => 0,
     "face" => 1,
@@ -17,9 +17,25 @@ class Product < ActiveRecord::Base
     "hand" => 4,
     "leg"  => 5,
   }
-  SKIN_TYPES = %w[dry normal oily comby]
-  CONDITIONS = %w[colored damaged waved seborea akne
-  loss grow dehydrated sensitive problem fading]
+  SKIN_TYPES = {
+    "dry"     =>  0,
+    "normal"  =>  1,
+    "oily"    =>  2,
+    "comby"   =>  3,
+  }
+  CONDITIONS = {
+    "colored"    =>  0,
+    "damaged"    =>  1,
+    "waved"      =>  2,
+    "seborea"    =>  3,
+    "akne"       =>  4,
+   "loss"        =>  5,
+   "grow"        =>  6,
+   "dehydrated"  =>  7,
+   "sensitive"   =>  8,
+   "problem"     =>  9,
+   "fading"      =>  10
+ }
   VOLUMES = %w[value price]
 
 
