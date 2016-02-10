@@ -3,10 +3,10 @@ $( document ).on("last-element-rendered", function() {
     var industry = $(this).val();
     if (industry === "fashion") {
       $(".country-sizes, .group-sizes").addClass('hidden');
-      $('#fashion-param').removeClass('hidden');
+      $('#fashion-param, #gender').removeClass('hidden');
     } else if (industry === "cosmetic") {
       $(".country-sizes, .group-sizes").addClass('hidden');
-      $('#cosmetic-param').removeClass('hidden');
+      $('#cosmetic-param, #gender').removeClass('hidden');
     } else if (industry === "kids") {
       $(".country-sizes, .group-sizes").addClass('hidden');
       $('#kids-param').removeClass('hidden');

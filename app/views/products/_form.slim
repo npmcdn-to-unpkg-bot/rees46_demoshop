@@ -15,11 +15,12 @@
   = f.input :industry, as: :select, collection: Product::INDUSTRY_TYPES
   /= f.input :industry, as: :select, collection: Product.industries
   #fashion-param.hidden.country-sizes
-    = f.input :gender, as: :radio_buttons, collection: Product::GENDER_TYPES, :item_wrapper_class => 'radio-inline'
-    hr
     = f.input :type, as: :radio_buttons, collection: Product::TYPE_TYPES, :item_wrapper_class => 'radio-inline'
     hr
     = f.input :size, as: :radio_buttons, collection: Product::SIZE_TYPES, :item_wrapper_class => 'radio-inline'
+    hr
+  #gender.hidden.country-sizes
+    = f.input :gender, as: :radio_buttons, collection: Product::GENDER_TYPES, :item_wrapper_class => 'radio-inline'
     hr
   #pro-product_size_russian_size.hidden.group-sizes
     = f.input :russian_size, as: :check_boxes, include_hidden: false, collection: Product::RUSSIAN_SIZE, :item_wrapper_class => 'radio-inline'
