@@ -36,8 +36,8 @@ class Product < ActiveRecord::Base
   }
 
   # BOOLEAN_TYPES Consmetic
-  HYPOALLERGENIC = { "YES" => 1, "NO" => 0}
-  PERIODIC = { "YES" => 1, "NO" => 0}
+  HYPOALLERGENIC = {  "NO" => 0, "YES" => 1}
+  PERIODIC = {  "NO" => 0, "YES" => 1 }
 
   # Main type
   enum industry: INDUSTRY_TYPES
