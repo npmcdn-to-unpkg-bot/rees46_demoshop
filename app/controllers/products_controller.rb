@@ -9,11 +9,11 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @product.volumes.build
   end
 
   def create
     @product = Product.new(product_params)
-
     if @product.save
       redirect_to products_path, notice: "Products was saved successfully"
     else
@@ -59,6 +59,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:title, :image, :description, :price, :brand, :category_id, :industry, :gender, :size, :hypoallergenic, :periodic, russian_sizes: [], euro_sizes: [], british_sizes: [], american_sizes: [], asian_sizes: [], part_types: [], skin_types: [], conditions: [])
+    params.require(:product).permit(:title, :image, :description, :price, :brand, :category_id, :industry, :gender, :size, :hypoallergenic, :periodic, russian_sizes: [], euro_sizes: [], british_sizes: [], american_sizes: [], asian_sizes: [], part_types: [], skin_types: [], conditions: [], volumes_attributes: [:product_id, :value, :value_price, :_destroy])
   end
 end

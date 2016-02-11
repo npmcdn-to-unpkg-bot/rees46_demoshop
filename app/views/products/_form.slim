@@ -1,4 +1,4 @@
-= simple_form_for @product do |f|
+= simple_nested_form_for @product do |f|
   - if @product.errors.any?
     #error_explanation
       h2
@@ -49,6 +49,16 @@
     = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, :item_wrapper_class => 'radio-inline'
     hr
     
+    // Nested form
+    p 
+      strong
+        | Volums
+    = f.fields_for  :volumes do |v|
+      = render "volume_fields", :f => v  
+    = f.link_to_add "Add Volume", :volumes  
+    
+    
   #kids-param.hidden.country-sizes
+  br
   = f.input :category_id, as: :select, collection: Category.all
   = f.submit "Сохранить", :class => 'btn btn-primary'

@@ -160,7 +160,8 @@ class Product < ActiveRecord::Base
 
   belongs_to :category
   has_many :line_items
-  has_many :volumes
+  has_many :volumes, dependent: :destroy
+  accepts_nested_attributes_for :volumes, reject_if: lambda {|attributes| attributes['value'].blank?}, :allow_destroy => true
 
   before_destroy :ensure_not_referenced_by_any_line_item
 

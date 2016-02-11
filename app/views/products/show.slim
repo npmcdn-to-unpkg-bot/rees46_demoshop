@@ -8,6 +8,10 @@
     
     h1 Related Products
     = link_to @product.category.name, category_path(@product.category)
+    - @product.volumes.each do |v|
+      h3 Value #{v.value}
+      h4 Value Price #{ v.value_price }
+      
   .col-xs-5[style="top: 68px;"]
     = simple_form_for @line_item do |f|
       - if @line_item.errors.any?
@@ -20,9 +24,9 @@
               li= msg
       = @product.description.html_safe
       .col-md-3
-        = @product.size.upcase
-        - if @product.send(@product.size).any?
-          = f.input :size_id, as: :select, collection:    Product.const_get(@product.size.upcase), :item_wrapper_class => 'radio-inline'
+      / = @product.size.upcase
+      /   - if @product.send(@product.size).any?
+      /     = f.input :size_id, as: :select, collection:    Product.const_get(@product.size.upcase), :item_wrapper_class => 'radio-inline'
       = f.input :product_id, as: :hidden, :input_html => { :value => @product.id }
       h4.col-md-3
         = number_to_currency(@product.price)
