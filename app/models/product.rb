@@ -35,13 +35,27 @@ class Product < ActiveRecord::Base
     "fading"      =>  10
   }
 
+  # Kids constants class
+  CHILD = {
+    "cloth"     =>  0,
+    "shoe"      =>  1,
+    "sock"      =>  2,
+    "toy"       =>  3,
+    "education" =>  4,
+    "food"      =>  5,
+    "nappy"     =>  6,
+    "hygiene"   =>  7,
+    "furtiture" =>  8,
+    "school"    =>  9,
+    "transport" =>  10
+  }
+
   # BOOLEAN_TYPES Consmetic
   HYPOALLERGENIC = {  "NO" => 0, "YES" => 1}
   PERIODIC = {  "NO" => 0, "YES" => 1 }
 
   # Main type
   enum industry: INDUSTRY_TYPES
-
 
   enum gender: GENDER_TYPES
 
