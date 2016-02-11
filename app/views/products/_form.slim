@@ -47,6 +47,7 @@
     hr
     = f.input :conditions, as: :check_boxes, include_hidden: false, collection: Product::CONDITIONS, :item_wrapper_class => 'radio-inline'
     hr
+  #periodic.hidden.country-sizes
     = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, :item_wrapper_class => 'radio-inline'
     hr
     
