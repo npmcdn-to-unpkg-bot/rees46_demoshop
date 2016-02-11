@@ -8,9 +8,6 @@
     
     h1 Related Products
     = link_to @product.category.name, category_path(@product.category)
-    - @product.volumes.each do |v|
-      h3 Value :- #{v.value} ml
-      h4 Value Price :- #{ number_to_currency(v.value_price) }
       
   .col-xs-5[style="top: 68px;"]
     = @product.description.html_safe
@@ -24,10 +21,20 @@
             - @line_item.errors.full_messages.each do |msg|
               li= msg
       .col-md-3
-        = @product.size.upcase
+      - if @product.industry == "fashion"
         - if @product.send(@product.size).any?
-          = f.input :size_id, as: :select, collection:    Product.const_get(@product.size.upcase), :item_wrapper_class => 'radio-inline'
-          = f.input :product_id, as: :hidden, :input_html => { :value => @product.id }
+          .clr
+            = @product.size.upcase
+            = f.input :size_id, as: :select, collection:    Product.const_get(@product.size.upcase), :item_wrapper_class => 'radio-inline'
+            = f.input :product_id, as: :hidden, :input_html => { :value => @product.id }
+      - elsif @product.industry == "cosmetic"
+        - @product.volumes.each do |v|
+          .clr
+            p Value:- #{v.value} ml
+            p Value Price :- #{ number_to_currency(v.value_price) }
+      - elsif @product.industry == "kids"
+        puts "Hello"
+        
       h4.col-md-3
         = number_to_currency(@product.price)
         br
