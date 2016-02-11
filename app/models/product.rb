@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
 
   # Fashion constants class
   GENDER_TYPES = %w[unisex male female]
-  
+
   TYPE_TYPES = {
     "shoe"       =>   0,
     "shirt"      =>   1,
@@ -23,7 +23,7 @@ class Product < ActiveRecord::Base
     "euro_sizes"      =>   1,
     "american_sizes"  =>   2,
     "british_sizes"   =>   3,
-    "asian_sizes"]    =>   4
+    "asian_sizes"     =>   4
   }
 
   # Consmetic constants class
@@ -69,6 +69,9 @@ class Product < ActiveRecord::Base
     "school"    =>  9,
     "transport" =>  10
   }
+
+  # Temporary later will create migration
+  attr_accessor :child
 
   # BOOLEAN_TYPES Consmetic
   HYPOALLERGENIC = {  "NO" => 0, "YES" => 1}
