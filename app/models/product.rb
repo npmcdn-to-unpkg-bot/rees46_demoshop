@@ -77,8 +77,6 @@ class Product < ActiveRecord::Base
     "1"     => 4,
     "1.5"   => 5
   }
-  # Temporary later will create migration
-  attr_accessor :age
 
   # BOOLEAN_TYPES Consmetic
   HYPOALLERGENIC = {  "NO" => 0, "YES" => 1}
