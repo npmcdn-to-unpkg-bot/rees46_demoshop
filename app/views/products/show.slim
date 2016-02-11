@@ -10,7 +10,7 @@
     = link_to @product.category.name, category_path(@product.category)
     - @product.volumes.each do |v|
       h3 Value #{v.value}
-      h4 Value Price #{ v.value_price }
+      h4 Value Price #{ number_to_currency(v.value_price) }
       
   .col-xs-5[style="top: 68px;"]
     = simple_form_for @line_item do |f|
