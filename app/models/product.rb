@@ -7,8 +7,6 @@ class Product < ActiveRecord::Base
   SIZE_TYPES = %w[russian_sizes euro_sizes american_sizes british_sizes asian_sizes]
 
   # Consmetic constants class
-  COSMETIC_GENDER_TYPES = %w[unisex male female]
-
   PART_TYES = {
     "hair" => 0,
     "face" => 1,
@@ -35,13 +33,9 @@ class Product < ActiveRecord::Base
     "sensitive"   =>  8,
     "problem"     =>  9,
     "fading"      =>  10
- }
+  }
 
- # later have to do
-  VOLUMES = { "value" =>  0, "price" =>  1, }
-
-
-  # BOOLEAN_TYPES
+  # BOOLEAN_TYPES Consmetic
   HYPOALLERGENIC = { "YES" => 1, "NO" => 0}
   PERIODIC = { "YES" => 1, "NO" => 0}
 
@@ -54,17 +48,6 @@ class Product < ActiveRecord::Base
   # Fashion enum
   enum type: TYPE_TYPES
   enum size: SIZE_TYPES
-
-  # Cosmetic enum
-  #enum consmetic_gender: COSMETIC_GENDER_TYPES
-
-  # Cosmetic
-  HAIR_TYPES = {}
-  FACE_TYPES = {}
-  BODY_TYPES = {}
-  INTIM_TYPES = {}
-  HAND_TYPES = {}
-
 
   RUSSIAN_SIZES = {
     "35" => 0,
