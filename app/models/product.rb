@@ -69,9 +69,16 @@ class Product < ActiveRecord::Base
     "school"    =>  9,
     "transport" =>  10
   }
-
+  AGE = {
+    "0"     => 0,
+    "0.25"  => 1,
+    "0.5"   => 2,
+    "0.75"  => 3,
+    "1"     => 4,
+    "1.5"   => 5
+  }
   # Temporary later will create migration
-  attr_accessor :child
+  attr_accessor :age
 
   # BOOLEAN_TYPES Consmetic
   HYPOALLERGENIC = {  "NO" => 0, "YES" => 1}
