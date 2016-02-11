@@ -3,8 +3,28 @@ class Product < ActiveRecord::Base
 
   # Fashion constants class
   GENDER_TYPES = %w[unisex male female]
-  TYPE_TYPES = %w[shoe shirt tshirt underwear trouser jacket blazer sock belt hat glove]
-  SIZE_TYPES = %w[russian_sizes euro_sizes american_sizes british_sizes asian_sizes]
+  
+  TYPE_TYPES = {
+    "shoe"       =>   0,
+    "shirt"      =>   1,
+    "tshirt"     =>   2,
+    "underwear"  =>   3,
+    "trouser"    =>   4,
+    "jacket"     =>   5,
+    "blazer"     =>   6,
+    "sock"       =>   7,
+    "belt"       =>   8,
+    "hat"        =>   9,
+    "glove"      =>   10
+  }
+
+  SIZE_TYPES = {
+    "russian_sizes"   =>   0,
+    "euro_sizes"      =>   1,
+    "american_sizes"  =>   2,
+    "british_sizes"   =>   3,
+    "asian_sizes"]    =>   4
+  }
 
   # Consmetic constants class
   PART_TYES = {
@@ -58,10 +78,6 @@ class Product < ActiveRecord::Base
   enum industry: INDUSTRY_TYPES
 
   enum gender: GENDER_TYPES
-
-  # Fashion enum
-  enum type: TYPE_TYPES
-  enum size: SIZE_TYPES
 
   RUSSIAN_SIZES = {
     "35" => 0,
