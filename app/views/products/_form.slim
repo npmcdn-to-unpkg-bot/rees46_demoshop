@@ -37,6 +37,9 @@
   #gender.hidden.country-sizes
     = f.input :gender, as: :radio_buttons, collection: Product::GENDER_TYPES, :item_wrapper_class => 'radio-inline'
     hr
+  #periodic.hidden.country-sizes
+    = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, :item_wrapper_class => 'radio-inline'
+    hr
       
   #cosmetic-param.hidden.country-sizes
     = f.input :hypoallergenic, as: :radio_buttons, :checked => [0, true], collection: Product::HYPOALLERGENIC, :item_wrapper_class => 'radio-inline'
@@ -46,9 +49,6 @@
     = f.input :skin_types, as: :check_boxes, include_hidden: false, collection: Product::SKIN_TYPES, :item_wrapper_class => 'radio-inline'
     hr
     = f.input :conditions, as: :check_boxes, include_hidden: false, collection: Product::CONDITIONS, :item_wrapper_class => 'radio-inline'
-    hr
-  #periodic.hidden.country-sizes
-    = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, :item_wrapper_class => 'radio-inline'
     hr
     
     // Nested form
