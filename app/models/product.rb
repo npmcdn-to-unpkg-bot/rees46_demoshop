@@ -46,26 +46,26 @@ class Product < ActiveRecord::Base
   }
 
   # Child constants class
-  AGE_MORE_LESS_2 = {
-    "0"     => 0,
-    "0.25"  => 1,
-    "0.5"   => 2,
-    "0.75"  => 3,
-    "1"     => 4,
-    "1.5"   => 5
+  CHILD_AGE_SIZES = {
+    "0-3 мес   = 0"     => 0,
+    "3-6 мес   = 0.25"  => 1,
+    "6-9 мес   = 0.5"   => 2,
+    "9-12 мес  = 0.75"  => 3,
+    "12-18 мес = 1"     => 4,
+    "18-24 мес = 1.5"   => 5
   }
 
   CHILD_HIGHT_SIZES = {
-    "h80-94"    => 0,
-    "h95-105"   => 1,
-    "h105-115"  => 2,
-    "h115-125"  => 3,
-    "h125-135"  => 4
+    "h 80-94    |  S"    => 0,
+    "h 95-105   |  M"    => 1,
+    "h 105-115  |  L"    => 2,
+    "h 115-125  |  XL"   => 3,
+    "h 125-135  |  XXL"  => 4
   }
 
   CHILD_SIZES = {
-    "Age Less Then 2 years"   =>  0,
-    "Age More Then 2 Years"   =>  1
+    "Age"     =>  0,
+    "Hight"   =>  1
   }
 
   # Consmetic constants class
