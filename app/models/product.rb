@@ -1,48 +1,48 @@
 class Product < ActiveRecord::Base
   # Main
-  INDUSTRY = %w[fashion cosmetic child]
+  INDUSTRY = %w[Fashion Cosmetic Child]
   enum industry: INDUSTRY
 
-  GENDERS = %w[unisex male female]
+  GENDERS = %w[Unisex Male Female]
   enum gender: GENDERS
 
   ADULT_TYPES = {
-    "shirt"      =>   0,
-    "tshirt"     =>   1,
-    "underwear"  =>   2,
-    "trouser"    =>   3,
-    "jacket"     =>   4,
-    "blazer"     =>   5,
-    "belt"       =>   6,
-    "hat"        =>   7,
-    "glove"      =>   8
+    "Shirt"      =>   0,
+    "Tshirt"     =>   1,
+    "Underwear"  =>   2,
+    "Trouser"    =>   3,
+    "Jacket"     =>   4,
+    "Blazer"     =>   5,
+    "Belt"       =>   6,
+    "Hat"        =>   7,
+    "Glove"      =>   8
   }
 
   CHILD_TYPES = {
-    "cloth"      =>   9,
-    "toy"        =>   10,
-    "education"  =>   11,
-    "food"       =>   12,
-    "nappy"      =>   13,
-    "hygiene"    =>   14,
-    "furtiture"  =>   15,
-    "school"     =>   16,
-    "transport"  =>   17
+    "Cloth"      =>   9,
+    "Toy"        =>   10,
+    "Education"  =>   11,
+    "Food"       =>   12,
+    "Nappy"      =>   13,
+    "Hygiene"    =>   14,
+    "Furtiture"  =>   15,
+    "School"     =>   16,
+    "Transport"  =>   17
   }
 
   COMMON_TYPES = {
-    "shoe"       =>   18,
-    "sock"       =>   19
+    "Shoe"       =>   18,
+    "Sock"       =>   19
   }
 
   TYPES = ADULT_TYPES.merge(CHILD_TYPES).merge(COMMON_TYPES)
 
   SIZES = {
-    "russian_sizes"   =>   0,
-    "euro_sizes"      =>   1,
-    "american_sizes"  =>   2,
-    "british_sizes"   =>   3,
-    "asian_sizes"     =>   4
+    "Russian Sizes"   =>   0,
+    "Euro Sizes"      =>   1,
+    "American Sizes"  =>   2,
+    "British Sizes"   =>   3,
+    "Asian sizes"     =>   4
   }
 
   # Child constants class
