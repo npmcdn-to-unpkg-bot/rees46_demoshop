@@ -1,8 +1,10 @@
 class Product < ActiveRecord::Base
+  # Main
   INDUSTRY = %w[fashion cosmetic child]
+  enum industry: INDUSTRY
 
-  # Fashion constants class
   GENDERS = %w[unisex male female]
+  enum gender: GENDERS
 
   ADULT_TYPES = {
     "shirt"      =>   0,
@@ -35,8 +37,6 @@ class Product < ActiveRecord::Base
 
   TYPES = ADULT_TYPES.merge(CHILD_TYPES).merge(COMMON_TYPES)
 
-
-
   SIZES = {
     "russian_sizes"   =>   0,
     "euro_sizes"      =>   1,
@@ -45,8 +45,31 @@ class Product < ActiveRecord::Base
     "asian_sizes"     =>   4
   }
 
+  # Child constants class
+  AGE_MORE_LESS_2 = {
+    "0"     => 0,
+    "0.25"  => 1,
+    "0.5"   => 2,
+    "0.75"  => 3,
+    "1"     => 4,
+    "1.5"   => 5
+  }
+
+  CHILD_HIGHT_SIZES = {
+    "h80-94"    => 0,
+    "h95-105"   => 1,
+    "h105-115"  => 2,
+    "h115-125"  => 3,
+    "h125-135"  => 4
+  }
+
+  CHILD_SIZES = {
+    "Age Less Then 2 years"   =>  0,
+    "Age More Then 2 Years"   =>  1
+  }
+
   # Consmetic constants class
-  PART_TYES = {
+  PART_TYPES = {
     "hair" => 0,
     "face" => 1,
     "body" => 2,
@@ -74,24 +97,10 @@ class Product < ActiveRecord::Base
     "fading"      =>  10
   }
 
-  # Child constants class
-  AGE = {
-    "0"     => 0,
-    "0.25"  => 1,
-    "0.5"   => 2,
-    "0.75"  => 3,
-    "1"     => 4,
-    "1.5"   => 5
-  }
 
   # BOOLEAN_TYPES Consmetic
   HYPOALLERGENIC = {  "NO" => 0, "YES" => 1}
   PERIODIC = {  "NO" => 0, "YES" => 1 }
-
-  # Main type
-  enum industry: INDUSTRY
-
-  enum gender: GENDERS
 
   RUSSIAN_SIZES = {
     "35" => 0,
@@ -182,6 +191,7 @@ class Product < ActiveRecord::Base
     "54" => 19,
     "55" => 20
   }
+
 
   mount_uploader :image, ImageUploader
 

@@ -44,7 +44,7 @@
   #cosmetic-param.hidden.country-sizes
     = f.input :hypoallergenic, as: :radio_buttons, :checked => [0, true], collection: Product::HYPOALLERGENIC, :item_wrapper_class => 'radio-inline'
     hr
-    = f.input :part_types, as: :check_boxes, include_hidden: false, collection: Product::PART_TYES, :item_wrapper_class => 'radio-inline'
+    = f.input :part_types, as: :check_boxes, include_hidden: false, collection: Product::PART_TYPES, :item_wrapper_class => 'radio-inline'
     hr
     = f.input :skin_types, as: :check_boxes, include_hidden: false, collection: Product::SKIN_TYPES, :item_wrapper_class => 'radio-inline'
     hr
@@ -63,7 +63,7 @@
   #child-param.hidden.country-sizes
     = f.input :type, as: :radio_buttons, collection: Product::CHILD_TYPES.merge(Product::COMMON_TYPES), :item_wrapper_class => 'radio-inline'
     hr
-    = f.input :ages, as: :check_boxes, include_hidden: false, collection: Product::AGE, :item_wrapper_class => 'radio-inline'
+    = f.input :ages, as: :radio_buttons, collection: Product::CHILD_SIZES, :item_wrapper_class => 'radio-inline'
     hr
     
     
