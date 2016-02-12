@@ -70,31 +70,31 @@ class Product < ActiveRecord::Base
 
   # Consmetic constants class
   PART_TYPES = {
-    "hair" => 0,
-    "face" => 1,
-    "body" => 2,
-    "intim"=> 3,
-    "hand" => 4,
-    "leg"  => 5,
+    "Hair" => 0,
+    "Face" => 1,
+    "Body" => 2,
+    "Intim"=> 3,
+    "Hand" => 4,
+    "Leg"  => 5,
   }
   SKIN_TYPES = {
-    "dry"     =>  0,
-    "normal"  =>  1,
-    "oily"    =>  2,
-    "comby"   =>  3,
+    "Dry"     =>  0,
+    "Normal"  =>  1,
+    "Oily"    =>  2,
+    "Comby"   =>  3,
   }
   CONDITIONS = {
-    "colored"     =>  0,
-    "damaged"     =>  1,
-    "waved"       =>  2,
-    "seborea"     =>  3,
-    "akne"        =>  4,
-    "loss"        =>  5,
-    "grow"        =>  6,
-    "dehydrated"  =>  7,
-    "sensitive"   =>  8,
-    "problem"     =>  9,
-    "fading"      =>  10
+    "Colored"     =>  0,
+    "Damaged"     =>  1,
+    "Waved"       =>  2,
+    "Seborea"     =>  3,
+    "Akne"        =>  4,
+    "Loss"        =>  5,
+    "Grow"        =>  6,
+    "Dehydrated"  =>  7,
+    "Sensitive"   =>  8,
+    "Problem"     =>  9,
+    "Fading"      =>  10
   }
 
 
