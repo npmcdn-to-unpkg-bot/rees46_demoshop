@@ -14,6 +14,9 @@
   = f.input :brand
   = f.input :industry, as: :select, collection: Product::INDUSTRY
   /= f.input :industry, as: :select, collection: Product.industries
+  #gender.hidden.country-sizes
+    = f.input :gender, as: :radio_buttons, collection: Product::GENDERS, :item_wrapper_class => 'radio-inline'
+    hr
   #fashion-param.hidden.country-sizes
     = f.input :type, as: :radio_buttons, collection: Product::ADULT_TYPES.merge(Product::COMMON_TYPES), :item_wrapper_class => 'radio-inline'
     hr
@@ -34,9 +37,7 @@
     hr
   #pro-product_size_4.hidden.group-sizes
     = f.input :asian_sizes, as: :check_boxes, include_hidden: false, collection: Product::ASIAN_SIZES, :item_wrapper_class => 'radio-inline'
-  #gender.hidden.country-sizes
-    = f.input :gender, as: :radio_buttons, collection: Product::GENDERS, :item_wrapper_class => 'radio-inline'
-    hr
+
   #periodic.hidden.country-sizes
     = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, :item_wrapper_class => 'radio-inline'
     hr
