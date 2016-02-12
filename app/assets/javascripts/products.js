@@ -9,12 +9,19 @@ $( document ).on("last-element-rendered", function() {
       $('#cosmetic-param, #gender, #periodic').removeClass('hidden');
     } else if (industry === "child") {
       $(".country-sizes, .group-sizes").addClass('hidden');
-      $('#child-param , #size-types, #periodic').removeClass('hidden');
+      $('#child-param, #gender, #periodic').removeClass('hidden');
     }
   });
-
+  
+  // This is for product size
   $('[name="product[size]"]').on('change', function() {
     $(".group-sizes").addClass('hidden');
+    $('#pro-' + $(this).attr('id')).removeClass('hidden');
+  });
+
+  // This is for product child size
+  $('[name="product[child_sizes]"]').on('change', function() {
+    $(".child_group_sizes").addClass('hidden');
     $('#pro-' + $(this).attr('id')).removeClass('hidden');
   });
 });
