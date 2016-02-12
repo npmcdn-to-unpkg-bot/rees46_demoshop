@@ -4,7 +4,7 @@ class Product < ActiveRecord::Base
   # Fashion constants class
   GENDER_TYPES = %w[unisex male female]
 
-  ADULT_TYPES = {
+  TYPE_TYPES = {
     "shirt"      =>   0,
     "tshirt"     =>   1,
     "underwear"  =>   2,
@@ -13,28 +13,21 @@ class Product < ActiveRecord::Base
     "blazer"     =>   5,
     "belt"       =>   6,
     "hat"        =>   7,
-    "glove"      =>   8
+    "glove"      =>   8,
+    # child types
+    "cloth"      =>   9,
+    "toy"        =>   10,
+    "education"  =>   11,
+    "food"       =>   12,
+    "nappy"      =>   13,
+    "hygiene"    =>   14,
+    "furtiture"  =>   15,
+    "school"     =>   16,
+    "transport"  =>   17,
+    # common types
+    "shoe"       =>   18,
+    "sock"       =>   19,
   }
-
-  CHILD_TYPES = {
-    "cloth"     =>  0,
-    "sock"      =>  1,
-    "toy"       =>  2,
-    "education" =>  3,
-    "food"      =>  4,
-    "nappy"     =>  5,
-    "hygiene"   =>  6,
-    "furtiture" =>  7,
-    "school"    =>  8,
-    "transport" =>  9
-  }
-
-  COMMON_TYPES = {
-    "shoe"  =>  0,
-    "sock"  =>  1,
-  }
-
-
 
   SIZE_TYPES = {
     "russian_sizes"   =>   0,

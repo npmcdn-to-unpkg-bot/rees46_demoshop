@@ -61,7 +61,7 @@
     
     
   #child-param.hidden.country-sizes
-    = f.input :child, as: :radio_buttons, collection: Product::CHILD, :item_wrapper_class => 'radio-inline'
+    = f.input :type, as: :radio_buttons, collection: Product::TYPE_TYPES, :item_wrapper_class => 'radio-inline'
     hr
     = f.input :ages, as: :check_boxes, include_hidden: false, collection: Product::AGE, :item_wrapper_class => 'radio-inline'
     hr
