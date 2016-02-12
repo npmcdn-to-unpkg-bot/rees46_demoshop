@@ -22,6 +22,16 @@ $( document ).on("last-element-rendered", function() {
   // This is for product child size
   $('[name="product[child_sizes]"]').on('change', function() {
     $(".child_group_sizes").addClass('hidden');
-    $('#pro-' + $(this).attr('id')).removeClass('hidden');
+    $('#chi-' + $(this).attr('id')).removeClass('hidden');
+  });
+
+  // Show child size when type have sizes
+  $('[name="product[type]"]').on('change', function() {
+    var value = $(this).val();
+    if (['18', '19', '9'].indexOf(value) > -1) {
+      $('#child_sizes').removeClass('hidden');
+    } else if (value) {
+      $(".child_sizes, .child_group_sizes").addClass('hidden');
+    }
   });
 });
