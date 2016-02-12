@@ -65,10 +65,11 @@
     hr
     = f.input :child_sizes, as: :radio_buttons, collection: Product::CHILD_SIZES, :item_wrapper_class => 'radio-inline'
     hr
-    = f.input :ages, as: :check_boxes, include_hidden: false, collection: Product::CHILD_AGE_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :age_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_AGE_SIZES, :item_wrapper_class => 'radio-inline'
     hr
-    = f.input :ages, as: :check_boxes, include_hidden: false, collection: Product::CHILD_HIGHT_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_HIGHT_SIZES, :item_wrapper_class => 'radio-inline'
     hr
+    add_column :products, :ages, :integer, array: true, null: false, default: []
     
     
   br
