@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  INDUSTRY_TYPES = %w[fashion cosmetic kids]
+  INDUSTRY_TYPES = %w[fashion cosmetic child]
 
   # Fashion constants class
   GENDER_TYPES = %w[unisex male female]
@@ -55,7 +55,7 @@ class Product < ActiveRecord::Base
     "fading"      =>  10
   }
 
-  # Kids constants class
+  # Child constants class
   CHILD = {
     "cloth"     =>  0,
     "shoe"      =>  1,

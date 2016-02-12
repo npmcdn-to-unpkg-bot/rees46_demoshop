@@ -7,7 +7,7 @@ $( document ).on("last-element-rendered", function() {
     } else if (industry === "cosmetic") {
       $(".country-sizes, .group-sizes").addClass('hidden');
       $('#cosmetic-param, #gender, #periodic').removeClass('hidden');
-    } else if (industry === "kids") {
+    } else if (industry === "child") {
       $(".country-sizes, .group-sizes").addClass('hidden');
       $('#kids-param , #gender, #size-types, #periodic').removeClass('hidden');
     }

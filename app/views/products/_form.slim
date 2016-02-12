@@ -60,7 +60,7 @@
     = f.link_to_add "Add Volume", :volumes  
     
     
-  #kids-param.hidden.country-sizes
+  #child-param.hidden.country-sizes
     = f.input :child, as: :radio_buttons, collection: Product::CHILD, :item_wrapper_class => 'radio-inline'
     hr
     = f.input :ages, as: :check_boxes, include_hidden: false, collection: Product::AGE, :item_wrapper_class => 'radio-inline'

@@ -22,10 +22,10 @@
               li= msg
       .col-md-3
       - if @product.industry == "fashion"
-        - if @product.send(@product.size).any?
+        - if @product.send(Product::SIZE_TYPES.keys[@product.size]).any?
           .clr
-            = @product.size.upcase
-            = f.input :size_id, as: :select, collection:    Product.const_get(@product.size.upcase), :item_wrapper_class => 'radio-inline'
+            = Product::SIZE_TYPES.keys[@product.size].upcase.gsub('_', ' ')
+            = f.input :size_id, as: :select, collection:    Product.const_get(Product::SIZE_TYPES.keys[@product.size].upcase), :item_wrapper_class => 'radio-inline'
             = f.input :product_id, as: :hidden, :input_html => { :value => @product.id }
       - elsif @product.industry == "cosmetic"
         - @product.volumes.each do |v|
