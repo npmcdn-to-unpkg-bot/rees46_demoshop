@@ -12,13 +12,13 @@
   = f.input :description, as: :text, :input_html => { class: "redactor" }
   = f.input :price
   = f.input :brand
-  = f.input :industry, as: :select, collection: Product::INDUSTRY_TYPES
+  = f.input :industry, as: :select, collection: Product::INDUSTRY
   /= f.input :industry, as: :select, collection: Product.industries
   #fashion-param.hidden.country-sizes
-    = f.input :type, as: :radio_buttons, collection: Product::TYPE_TYPES, :item_wrapper_class => 'radio-inline'
+    = f.input :type, as: :radio_buttons, collection: Product::ADULT_TYPES.merge(Product::COMMON_TYPES), :item_wrapper_class => 'radio-inline'
     hr
   #size-types.hidden.country-sizes
-    = f.input :size, as: :radio_buttons, collection: Product::SIZE_TYPES, :item_wrapper_class => 'radio-inline'
+    = f.input :size, as: :radio_buttons, collection: Product::SIZES, :item_wrapper_class => 'radio-inline'
     hr
   #pro-product_size_0.hidden.group-sizes
     = f.input :russian_sizes, as: :check_boxes, include_hidden: false, collection: Product::RUSSIAN_SIZES, :item_wrapper_class => 'radio-inline'
@@ -35,7 +35,7 @@
   #pro-product_size_4.hidden.group-sizes
     = f.input :asian_sizes, as: :check_boxes, include_hidden: false, collection: Product::ASIAN_SIZES, :item_wrapper_class => 'radio-inline'
   #gender.hidden.country-sizes
-    = f.input :gender, as: :radio_buttons, collection: Product::GENDER_TYPES, :item_wrapper_class => 'radio-inline'
+    = f.input :gender, as: :radio_buttons, collection: Product::GENDERS, :item_wrapper_class => 'radio-inline'
     hr
   #periodic.hidden.country-sizes
     = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, :item_wrapper_class => 'radio-inline'
@@ -61,7 +61,7 @@
     
     
   #child-param.hidden.country-sizes
-    = f.input :type, as: :radio_buttons, collection: Product::TYPE_TYPES, :item_wrapper_class => 'radio-inline'
+    = f.input :type, as: :radio_buttons, collection: Product::CHILD_TYPES.merge(Product::COMMON_TYPES), :item_wrapper_class => 'radio-inline'
     hr
     = f.input :ages, as: :check_boxes, include_hidden: false, collection: Product::AGE, :item_wrapper_class => 'radio-inline'
     hr

@@ -1,10 +1,10 @@
 class Product < ActiveRecord::Base
-  INDUSTRY_TYPES = %w[fashion cosmetic child]
+  INDUSTRY = %w[fashion cosmetic child]
 
   # Fashion constants class
-  GENDER_TYPES = %w[unisex male female]
+  GENDERS = %w[unisex male female]
 
-  TYPE_TYPES = {
+  ADULT_TYPES = {
     "shirt"      =>   0,
     "tshirt"     =>   1,
     "underwear"  =>   2,
@@ -13,8 +13,10 @@ class Product < ActiveRecord::Base
     "blazer"     =>   5,
     "belt"       =>   6,
     "hat"        =>   7,
-    "glove"      =>   8,
-    # child types
+    "glove"      =>   8
+  }
+
+  CHILD_TYPES = {
     "cloth"      =>   9,
     "toy"        =>   10,
     "education"  =>   11,
@@ -23,13 +25,19 @@ class Product < ActiveRecord::Base
     "hygiene"    =>   14,
     "furtiture"  =>   15,
     "school"     =>   16,
-    "transport"  =>   17,
-    # common types
-    "shoe"       =>   18,
-    "sock"       =>   19,
+    "transport"  =>   17
   }
 
-  SIZE_TYPES = {
+  COMMON_TYPES = {
+    "shoe"       =>   18,
+    "sock"       =>   19
+  }
+
+  TYPES = ADULT_TYPES.merge(CHILD_TYPES).merge(COMMON_TYPES)
+
+
+
+  SIZES = {
     "russian_sizes"   =>   0,
     "euro_sizes"      =>   1,
     "american_sizes"  =>   2,
@@ -81,9 +89,9 @@ class Product < ActiveRecord::Base
   PERIODIC = {  "NO" => 0, "YES" => 1 }
 
   # Main type
-  enum industry: INDUSTRY_TYPES
+  enum industry: INDUSTRY
 
-  enum gender: GENDER_TYPES
+  enum gender: GENDERS
 
   RUSSIAN_SIZES = {
     "35" => 0,
