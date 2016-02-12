@@ -18,9 +18,9 @@
     = f.input :gender, as: :radio_buttons, collection: Product::GENDERS, :item_wrapper_class => 'radio-inline'
     hr
   #fashion-param.hidden.country-sizes
-    = f.input :type, as: :radio_buttons, collection: Product::ADULT_TYPES.merge(Product::COMMON_TYPES), :item_wrapper_class => 'radio-inline'
+    = f.input :type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::ADULT_TYPES), :item_wrapper_class => 'radio-inline'
     hr
-  #size-types.hidden.country-sizes
+  #size-types.hidden.country-sizes.country-sizes-types
     = f.input :size, as: :radio_buttons, collection: Product::SIZES, :item_wrapper_class => 'radio-inline'
     hr
   #pro-product_size_0.hidden.group-sizes
