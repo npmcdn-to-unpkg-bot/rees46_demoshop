@@ -64,7 +64,6 @@ ActiveRecord::Schema.define(version: 20160211145000) do
     t.integer  "fashion"
     t.integer  "type"
     t.integer  "size"
-    t.integer  "kids"
     t.integer  "cosmetic"
     t.integer  "hypoallergenic", default: 0
     t.integer  "periodic"

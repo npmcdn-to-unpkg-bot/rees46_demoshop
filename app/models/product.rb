@@ -4,19 +4,37 @@ class Product < ActiveRecord::Base
   # Fashion constants class
   GENDER_TYPES = %w[unisex male female]
 
-  TYPE_TYPES = {
-    "shoe"       =>   0,
-    "shirt"      =>   1,
-    "tshirt"     =>   2,
-    "underwear"  =>   3,
-    "trouser"    =>   4,
-    "jacket"     =>   5,
-    "blazer"     =>   6,
-    "sock"       =>   7,
-    "belt"       =>   8,
-    "hat"        =>   9,
-    "glove"      =>   10
+  ADULT_TYPES = {
+    "shirt"      =>   0,
+    "tshirt"     =>   1,
+    "underwear"  =>   2,
+    "trouser"    =>   3,
+    "jacket"     =>   4,
+    "blazer"     =>   5,
+    "belt"       =>   6,
+    "hat"        =>   7,
+    "glove"      =>   8
   }
+
+  CHILD_TYPES = {
+    "cloth"     =>  0,
+    "sock"      =>  1,
+    "toy"       =>  2,
+    "education" =>  3,
+    "food"      =>  4,
+    "nappy"     =>  5,
+    "hygiene"   =>  6,
+    "furtiture" =>  7,
+    "school"    =>  8,
+    "transport" =>  9
+  }
+
+  COMMON_TYPES = {
+    "shoe"  =>  0,
+    "sock"  =>  1,
+  }
+
+
 
   SIZE_TYPES = {
     "russian_sizes"   =>   0,
@@ -56,19 +74,6 @@ class Product < ActiveRecord::Base
   }
 
   # Child constants class
-  CHILD = {
-    "cloth"     =>  0,
-    "shoe"      =>  1,
-    "sock"      =>  2,
-    "toy"       =>  3,
-    "education" =>  4,
-    "food"      =>  5,
-    "nappy"     =>  6,
-    "hygiene"   =>  7,
-    "furtiture" =>  8,
-    "school"    =>  9,
-    "transport" =>  10
-  }
   AGE = {
     "0"     => 0,
     "0.25"  => 1,
