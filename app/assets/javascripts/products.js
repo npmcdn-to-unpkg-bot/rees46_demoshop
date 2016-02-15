@@ -13,16 +13,6 @@ $( document ).on("last-element-rendered", function() {
     }
   });
 
-  // This is for product Periodic
-  // $('[name="product[periodic]"]').on('change', function() {
-  //   var value = $(this).val();
-  //   if (['12', '13', '17'].indexOf(value) > -1) {
-  //     $('#periodic, #size-types').removeClass('hidden');
-  //   } else if (value) {
-  //     $(".country-periodic, .child_group_sizes, .group-sizes, .country-sizes-types").addClass('hidden');
-  //   }
-  // });
-
   // This is for product size
   $('[name="product[size]"]').on('change', function() {
     $(".group-sizes").addClass('hidden');
