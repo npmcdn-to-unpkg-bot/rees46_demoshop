@@ -38,7 +38,7 @@
   #pro-product_size_4.hidden.group-sizes
     = f.input :asian_sizes, as: :check_boxes, include_hidden: false, collection: Product::ASIAN_SIZES, :item_wrapper_class => 'radio-inline'
 
-  #periodic.hidden.country-sizes
+  #periodic.hidden.country-periodic
     = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, :item_wrapper_class => 'radio-inline'
     hr
       

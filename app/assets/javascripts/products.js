@@ -9,9 +9,19 @@ $( document ).on("last-element-rendered", function() {
       $('#cosmetic-param, #gender, #periodic').removeClass('hidden');
     } else if (industry === "Child") {
       $(".country-sizes, .group-sizes").addClass('hidden');
-      $('#child-param, #gender, #periodic').removeClass('hidden');
+      $('#child-param, #gender').removeClass('hidden');
     }
   });
+
+  // This is for product Periodic
+  // $('[name="product[periodic]"]').on('change', function() {
+  //   var value = $(this).val();
+  //   if (['12', '13', '17'].indexOf(value) > -1) {
+  //     $('#periodic, #size-types').removeClass('hidden');
+  //   } else if (value) {
+  //     $(".country-periodic, .child_group_sizes, .group-sizes, .country-sizes-types").addClass('hidden');
+  //   }
+  // });
 
   // This is for product size
   $('[name="product[size]"]').on('change', function() {
@@ -25,13 +35,15 @@ $( document ).on("last-element-rendered", function() {
     $('#chi-' + $(this).attr('id')).removeClass('hidden');
   });
 
-  // Show child/adult size when type have sizes
+  // Show child/adult size & Periodic when type have sizes/Periodic
   $('[name="product[type]"]').on('change', function() {
     var value = $(this).val();
     if (['18', '19', '9','0','1','2','3','4','5'].indexOf(value) > -1) {
-      $('#child_sizes, #size-types').removeClass('hidden');
+      $('#size-types, #child_sizes').removeClass('hidden');
+    } else if (['12', '13', '17'].indexOf(value) > -1) {
+      $('#periodic, #size-types').removeClass('hidden');
     } else if (value) {
-      $(".child_sizes, .child_group_sizes, .group-sizes, .country-sizes-types").addClass('hidden');
+      $(".child_sizes, .child_group_sizes, .group-sizes, .country-sizes-types, .country-periodic").addClass('hidden');
     }
   });
 });
