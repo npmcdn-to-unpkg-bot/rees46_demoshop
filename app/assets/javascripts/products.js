@@ -2,10 +2,10 @@ $( document ).on("last-element-rendered", function() {
   $('#product_industry').on('change', function() {
     var industry = $(this).val();
     if (industry === "Fashion") {
-      $(".country-sizes, .group-sizes").addClass('hidden');
+      $(".country-sizes, .group-sizes, .child_sizes").addClass('hidden');
       $('#fashion-param, #gender').removeClass('hidden');
     } else if (industry === "Cosmetic") {
-      $(".country-sizes, .group-sizes").addClass('hidden');
+      $(".country-sizes, .group-sizes, .child_sizes").addClass('hidden');
       $('#cosmetic-param, #gender, #periodic').removeClass('hidden');
     } else if (industry === "Child") {
       $(".country-sizes, .group-sizes").addClass('hidden');
