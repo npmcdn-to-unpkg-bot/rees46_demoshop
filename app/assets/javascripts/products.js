@@ -9,9 +9,10 @@ $( document ).on("last-element-rendered", function() {
       $('#cosmetic-param, #gender, #periodic').removeClass('hidden');
     } else if (industry === "Child") {
       $(".country-sizes, .group-sizes").addClass('hidden');
-      $('#child-param, #gender').removeClass('hidden');
+      $('#gender, #child_sizes, #child-param').removeClass('hidden');
     }
   });
+
 
   // This is for product size
   $('[name="product[size]"]').on('change', function() {
@@ -29,11 +30,11 @@ $( document ).on("last-element-rendered", function() {
   $('[name="product[type]"]').on('change', function() {
     var value = $(this).val();
     if (['18', '19', '9','0','1','2','3','4','5'].indexOf(value) > -1) {
-      $('#size-types, #child_sizes').removeClass('hidden');
+      $('#size-types').removeClass('hidden');
     } else if (['12', '13', '17'].indexOf(value) > -1) {
       $('#periodic, #size-types').removeClass('hidden');
     } else if (value) {
-      $(".child_sizes, .child_group_sizes, .group-sizes, .country-sizes-types, .country-periodic").addClass('hidden');
+      $(".child_group_sizes, .group-sizes, .country-sizes-types, .country-periodic").addClass('hidden');
     }
   });
 });

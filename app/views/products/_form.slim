@@ -17,6 +17,16 @@
   #gender.hidden.country-sizes
     = f.input :gender, as: :radio_buttons, collection: Product::GENDERS, :item_wrapper_class => 'radio-inline'
     hr
+  #child_sizes.hidden.child_sizes
+    = f.input :child_sizes, as: :radio_buttons, collection: Product::CHILD_SIZES, :item_wrapper_class => 'radio-inline'
+    hr
+  #chi-product_child_sizes_1.hidden.child_group_sizes
+    = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_HIGHT_SIZES, :item_wrapper_class => 'radio-inline'
+    hr
+    
+  #chi-product_child_sizes_0.hidden.child_group_sizes
+    = f.input :age_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_AGE_SIZES, :item_wrapper_class => 'radio-inline'
+    hr
   #fashion-param.hidden.country-sizes
     = f.input :type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::ADULT_TYPES), :item_wrapper_class => 'radio-inline'
     hr
@@ -64,15 +74,6 @@
   #child-param.hidden.country-sizes
     = f.input :type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::CHILD_TYPES), :item_wrapper_class => 'radio-inline'
     hr
-    #child_sizes.hidden.child_sizes
-      = f.input :child_sizes, as: :radio_buttons, collection: Product::CHILD_SIZES, :item_wrapper_class => 'radio-inline'
-      hr
-    #chi-product_child_sizes_0.hidden.child_group_sizes
-      = f.input :age_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_AGE_SIZES, :item_wrapper_class => 'radio-inline'
-      hr
-    #chi-product_child_sizes_1.hidden.child_group_sizes
-      = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_HIGHT_SIZES, :item_wrapper_class => 'radio-inline'
-      hr
     
   br
   = f.input :category_id, as: :select, collection: Category.all
