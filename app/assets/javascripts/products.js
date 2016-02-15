@@ -31,10 +31,13 @@ $( document ).on("last-element-rendered", function() {
     var value = $(this).val();
     if (['18', '19', '9','0','1','2','3','4','5'].indexOf(value) > -1) {
       $('#size-types').removeClass('hidden');
-    } else if (['12', '13'].indexOf(value) > -1) {
+    } else if (['13'].indexOf(value) > -1) {
       $('#periodic, #size-types').removeClass('hidden');
+      $('#hypoallergenic').addClass('hidden');
+    } else if (['12'].indexOf(value) > -1) {
+      $('#hypoallergenic, #periodic').removeClass('hidden');
     } else if (value) {
-      $(".child_group_sizes, .group-sizes, .country-sizes-types, .country-periodic").addClass('hidden');
+      $(".child_group_sizes, .group-sizes, .country-sizes-types, .country-periodic, .country-hypoallergenic").addClass('hidden');
     }
   });
 });
