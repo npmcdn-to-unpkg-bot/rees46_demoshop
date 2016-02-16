@@ -4,6 +4,6 @@ class StoreController < ApplicationController
   end
 
   def dashboard
-    @orders = Order.order("created_at DESC")
+    @orders = Order.order('created_at DESC')
   end
 end

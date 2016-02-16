@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :destroy]
 
-  def show    
+  def show
   end
 
   def destroy

@@ -18,7 +18,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to categories_path, notice: "Category was saved successfully"
+      redirect_to categories_path, notice: 'Category was saved successfully'
     else
       render :new
     end
@@ -29,7 +29,7 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update_attributes(category_params)
-      redirect_to categories_path, notice: "Category was update successfully"
+      redirect_to categories_path, notice: 'Category was update successfully'
     else
       render :edit
     end
@@ -37,9 +37,9 @@ class CategoriesController < ApplicationController
 
   def destroy
     if @category.destroy
-      redirect_to @category, notice: "Category was delete successfully"
+      redirect_to @category, notice: 'Category was delete successfully'
     else
-      redirect_to root_path, notice: "You dont have permission to delete this"
+      redirect_to root_path, notice: 'You dont have permission to delete this'
     end
   end
 
