@@ -28,7 +28,7 @@ $( document ).on("last-element-rendered", function() {
 
   // when click Age more than 2 remove ages sizes form age less then 2
   $('#product_child_ages_1').on('change', function() {
-    $("#child-less, .type-sizes, .group-sizes, .country-sizes-types").addClass('hidden');
+    $("#child-less, .type-sizes, .group-sizes, .country-sizes-types, #size-types").addClass('hidden');
     $('#child-tyes').removeClass('hidden');
   });
 
@@ -36,11 +36,13 @@ $( document ).on("last-element-rendered", function() {
   $('[name="product[type]"]').on('change', function() {
     var value = $(this).val();
     if (['18', '19', '9','0','1','2','3','4','5'].indexOf(value) > -1) {
+      $('#hypoallergenic, #periodic').addClass('hidden');
       $('#size-types').removeClass('hidden');
     } else if (['13'].indexOf(value) > -1) {
       $('#periodic').removeClass('hidden');
-      $('#hypoallergenic, #product_size').addClass('hidden');
+      $('.group-sizes, .country-sizes-types, #hypoallergenic').addClass('hidden');
     } else if (['12'].indexOf(value) > -1) {
+      $('.group-sizes, .country-sizes-types').addClass('hidden');
       $('#hypoallergenic, #periodic').removeClass('hidden');
     } else if (value) {
       $(".child_group_sizes, .group-sizes, .country-sizes-types, .country-periodic, .country-hypoallergenic").addClass('hidden');
