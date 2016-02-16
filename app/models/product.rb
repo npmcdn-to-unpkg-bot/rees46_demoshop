@@ -57,11 +57,11 @@ class Product < ActiveRecord::Base
   }
 
   CHILD_HIGHT_SIZES = {
-    "h 80-94 CM"    => 0,
-    "h 95-105 CM"   => 1,
-    "h 105-115 CM"  => 2,
-    "h 115-125 CM"  => 3,
-    "h 125-135 CM"  => 4
+    "h 80-94 cm"    => 0,
+    "h 95-105 cm"   => 1,
+    "h 105-115 cm"  => 2,
+    "h 115-125 cm"  => 3,
+    "h 125-135 cm"  => 4
   }
 
   AGES = {
