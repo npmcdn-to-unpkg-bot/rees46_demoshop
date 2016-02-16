@@ -9,64 +9,64 @@
           li= msg
   = f.input :title
   = f.input :image
-  = f.input :description, as: :text, :input_html => { class: "redactor" }
+  = f.input :description, as: :text, input_html: { class: "redactor" }
   = f.input :price
   = f.input :brand
   = f.input :industry, as: :select, collection: Product::INDUSTRY
   /= f.input :industry, as: :select, collection: Product.industries
   #gender.hidden.country-sizes
-    = f.input :gender, as: :radio_buttons, collection: Product::GENDERS, :item_wrapper_class => 'radio-inline'
+    = f.input :gender, as: :radio_buttons, collection: Product::GENDERS, item_wrapper_class: 'radio-inline'
     hr
   #child_age_sizes.hidden.country-sizes
-    = f.input :child_ages, as: :radio_buttons, collection: Product::AGES, :item_wrapper_class => 'radio-inline'
+    = f.input :child_ages, as: :radio_buttons, collection: Product::AGES, item_wrapper_class: 'radio-inline'
     hr
   #chi-product_child_sizes_1.hidden.child_group_sizes
-    = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_HIGHT_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_HIGHT_SIZES, item_wrapper_class: 'radio-inline'
     hr
     
   #child-less.product_child_sizes_0.hidden.child_age_sizes
-    = f.input :age_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_AGE_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :age_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_AGE_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #child-tyes.hidden.type-sizes
-    = f.input :type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::CHILD_TYPES), :item_wrapper_class => 'radio-inline'
+    = f.input :type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::CHILD_TYPES), item_wrapper_class: 'radio-inline'
     hr
   #fashion-param.hidden.country-sizes
-    = f.input :type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::ADULT_TYPES), :item_wrapper_class => 'radio-inline'
+    = f.input :type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::ADULT_TYPES), item_wrapper_class: 'radio-inline'
     hr
   #size-types.hidden.country-sizes.country-sizes-types
-    = f.input :size, as: :radio_buttons, collection: Product::SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :size, as: :radio_buttons, collection: Product::SIZES, item_wrapper_class: 'radio-inline'
     hr
   #pro-product_size_0.hidden.group-sizes
-    = f.input :russian_sizes, as: :check_boxes, include_hidden: false, collection: Product::RUSSIAN_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :russian_sizes, as: :check_boxes, include_hidden: false, collection: Product::RUSSIAN_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #pro-product_size_1.hidden.group-sizes
-    = f.input :euro_sizes, as: :check_boxes, include_hidden: false, collection: Product::EURO_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :euro_sizes, as: :check_boxes, include_hidden: false, collection: Product::EURO_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #pro-product_size_2.hidden.group-sizes
-    = f.input :british_sizes, as: :check_boxes, include_hidden: false, collection: Product::BRITISH_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :british_sizes, as: :check_boxes, include_hidden: false, collection: Product::BRITISH_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #pro-product_size_3.hidden.group-sizes
-    = f.input :american_sizes, as: :check_boxes, include_hidden: false, collection: Product::AMERICAN_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :american_sizes, as: :check_boxes, include_hidden: false, collection: Product::AMERICAN_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #pro-product_size_4.hidden.group-sizes
-    = f.input :asian_sizes, as: :check_boxes, include_hidden: false, collection: Product::ASIAN_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :asian_sizes, as: :check_boxes, include_hidden: false, collection: Product::ASIAN_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #pro-product_size_5.hidden.group-sizes
-    = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_HIGHT_SIZES, :item_wrapper_class => 'radio-inline'
+    = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_HIGHT_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #periodic.hidden.country-periodic
-    = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, :item_wrapper_class => 'radio-inline'
+    = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, item_wrapper_class: 'radio-inline'
     hr
   #hypoallergenic.hidden.country-hypoallergenic
-    = f.input :hypoallergenic, as: :radio_buttons, :checked => [0, true], collection: Product::HYPOALLERGENIC, :item_wrapper_class => 'radio-inline'
+    = f.input :hypoallergenic, as: :radio_buttons, :checked => [0, true], collection: Product::HYPOALLERGENIC, item_wrapper_class: 'radio-inline'
     hr
     
   #cosmetic-param.hidden.country-sizes
-    = f.input :part_types, as: :check_boxes, include_hidden: false, collection: Product::PART_TYPES, :item_wrapper_class => 'radio-inline'
+    = f.input :part_types, as: :check_boxes, include_hidden: false, collection: Product::PART_TYPES, item_wrapper_class: 'radio-inline'
     hr
-    = f.input :skin_types, as: :check_boxes, include_hidden: false, collection: Product::SKIN_TYPES, :item_wrapper_class => 'radio-inline'
+    = f.input :skin_types, as: :check_boxes, include_hidden: false, collection: Product::SKIN_TYPES, item_wrapper_class: 'radio-inline'
     hr
-    = f.input :conditions, as: :check_boxes, include_hidden: false, collection: Product::CONDITIONS, :item_wrapper_class => 'radio-inline'
+    = f.input :conditions, as: :check_boxes, include_hidden: false, collection: Product::CONDITIONS, item_wrapper_class: 'radio-inline'
     hr
     
     // Nested form
