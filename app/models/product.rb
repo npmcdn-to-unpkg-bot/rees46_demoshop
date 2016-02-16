@@ -64,8 +64,8 @@ class Product < ActiveRecord::Base
   }
 
   CHILD_SIZES = {
-    "Age"     =>  0,
-    "Hight"   =>  1
+    "Age"     =>  1,
+    "Hight"   =>  2
   }
 
   # Consmetic constants class

@@ -25,26 +25,27 @@
         - if Product::SIZES.keys[@product.size].present?
           .clr
             = Product::SIZES.keys[@product.size].upcase
-            = f.input :size_id, as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), :item_wrapper_class => 'radio-inline'
-            = f.input :product_id, as: :hidden, :input_html => { :value => @product.id }
+            = f.input :size_id, as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), item_wrapper_class: 'radio-inline'
+            = f.input :product_id, as: :hidden, input_html: { :value => @product.id }
       - elsif @product.industry == "Cosmetic"
         - @product.volumes.each do |v|
           .clr
             p Value:- #{v.value} ml
             p Value Price :- #{ number_to_currency(v.value_price) }
       - elsif @product.industry == "Child"
+        /- binding.pry
         - if Product::CHILD_SIZES.keys[@product.child_sizes].present? 
           .clr
-
-          - if Product::CHILD_SIZES.values[@product.child_sizes] == 0
+          /- binding.pry
+          - if Product::CHILD_SIZES.keys[@product.child_sizes] == "Age"
             = f.input :size_id, as: :select, collection: Product::CHILD_AGE_SIZES, item_wrapper_class: 'radio-inline'
-            = f.input :product_id, as: :hidden, :input_html => { :value => @product.id }
 
-          - else Product::CHILD_SIZES.values[@product.child_sizes] == 1
+          - else Product::CHILD_SIZES.keys[@product.child_sizes] == "Hight"
             = f.input :size_id, as: :select, collection: Product::CHILD_HIGHT_SIZES, item_wrapper_class: 'radio-inline'
-            = f.input :product_id, as: :hidden, :input_html => { :value => @product.id }
             
-        / - elsif Product::CHILD_SIZES.keys[@product.size].present? 
+          = f.input :product_id, as: :hidden, input_html: { :value => @product.id }
+            
+        / - else Product::SIZES.keys[@product.size].present?
         /   .clr
         /     = Product::SIZES.keys[@product.size].upcase
         /     = f.input :size_id, as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), :item_wrapper_class => 'radio-inline'
