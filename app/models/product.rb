@@ -40,8 +40,8 @@ class Product < ActiveRecord::Base
   SIZES = {
     "Russian Sizes"   =>   0,
     "Euro Sizes"      =>   1,
-    "British Sizes"  =>   2,
-    "American Sizes"   =>   3,
+    "British Sizes"   =>   2,
+    "American Sizes"  =>   3,
     "Asian sizes"     =>   4,
     "Hight"           =>   5
   }
