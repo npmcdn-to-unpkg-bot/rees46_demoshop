@@ -40,9 +40,10 @@ class Product < ActiveRecord::Base
   SIZES = {
     "Russian Sizes"   =>   0,
     "Euro Sizes"      =>   1,
-    "American Sizes"  =>   2,
-    "British Sizes"   =>   3,
-    "Asian sizes"     =>   4
+    "British Sizes"  =>   2,
+    "American Sizes"   =>   3,
+    "Asian sizes"     =>   4,
+    "Hight"           =>   5
   }
 
   # Child constants class
@@ -63,11 +64,12 @@ class Product < ActiveRecord::Base
     "h 125-135 CM"  => 4
   }
 
-  CHILD_SIZES = {
-    "Age"     =>  1,
-    "Hight"   =>  2
+  AGES = {
+    "Age less then 2" => 0,
+    "Age more than 2" => 1
   }
 
+  attr_accessor  :child_ages
   # Consmetic constants class
   PART_TYPES = {
     "Hair" => 0,
