@@ -42,8 +42,8 @@
         - elsif Product::SIZES.keys[@product.size].present?
           .clr
             = Product::SIZES.keys[@product.size].upcase
-            - binding.pry
-            = f.input :size_id, as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size]), :item_wrapper_class => 'radio-inline'
+            /- binding.pry
+            = f.input :size_id, as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), item_wrapper_class: 'radio-inline'
             = f.input :product_id, as: :hidden, :input_html => { :value => @product.id }
         
       h4.col-md-3

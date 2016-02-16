@@ -38,12 +38,12 @@ class Product < ActiveRecord::Base
   TYPES = ADULT_TYPES.merge(CHILD_TYPES).merge(COMMON_TYPES)
 
   SIZES = {
-    "Russian Sizes"   =>   0,
-    "Euro Sizes"      =>   1,
-    "British Sizes"   =>   2,
-    "American Sizes"  =>   3,
-    "Asian sizes"     =>   4,
-    "Hight"           =>   5
+    "Russian Sizes"      =>   0,
+    "Euro Sizes"         =>   1,
+    "British Sizes"      =>   2,
+    "American Sizes"     =>   3,
+    "Asian sizes"        =>   4,
+    "Child Hight sizes"  =>   5
   }
 
   # Child constants class
@@ -54,14 +54,6 @@ class Product < ActiveRecord::Base
     "9-12 мес"    => 3,
     "12-18 мес"   => 4,
     "18-24 мес"   => 5
-  }
-
-  CHILD_HIGHT_SIZES = {
-    "h 80-94 cm"    => 0,
-    "h 95-105 cm"   => 1,
-    "h 105-115 cm"  => 2,
-    "h 115-125 cm"  => 3,
-    "h 125-135 cm"  => 4
   }
 
   AGES = {
@@ -193,6 +185,13 @@ class Product < ActiveRecord::Base
     "55" => 20
   }
 
+  CHILD_HIGHT_SIZES = {
+    "h 80-94 cm"    => 0,
+    "h 95-105 cm"   => 1,
+    "h 105-115 cm"  => 2,
+    "h 115-125 cm"  => 3,
+    "h 125-135 cm"  => 4
+  }
 
   mount_uploader :image, ImageUploader
 
