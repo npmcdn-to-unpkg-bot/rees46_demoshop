@@ -13,7 +13,6 @@ $( document ).on("last-element-rendered", function() {
     }
   });
 
-
   // This is for product size
   $('[name="product[size]"]').on('change', function() {
     $(".group-sizes").addClass('hidden');

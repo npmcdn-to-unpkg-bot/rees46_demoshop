@@ -69,7 +69,6 @@ class Product < ActiveRecord::Base
     "Age more than 2" => 1
   }
 
-  attr_accessor  :child_ages
   # Consmetic constants class
   PART_TYPES = {
     "Hair" => 0,
