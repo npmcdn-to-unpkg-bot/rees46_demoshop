@@ -206,6 +206,19 @@ class Product < ActiveRecord::Base
   # # Price should be not less then $100 :) lets do some business
   # validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
 
+  def clauses_done?
+    # some clauses
+    if industry == "Fashion"
+      true
+    elsif industry == "Cosmetic"
+      true
+    elsif industry == "Child"
+      true
+    else
+      false
+    end
+  end
+
   private
 
   def ensure_not_referenced_by_any_line_item

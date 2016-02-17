@@ -12,16 +12,16 @@ table
         = item.product.title
         |
         /- binding.pry
-        / li= Product::SIZES.keys[item.product.size]
-        / |
-        / li= Product.const_get(Product::SIZES.keys[item.product.size].gsub(' ', '_').upcase).keys[item.size_id]
+        li= Product::SIZES.keys[item.product.size]
+        |
+        li= Product.const_get(Product::SIZES.keys[item.product.size].gsub(' ', '_').upcase).keys[item.size_id]
         |
         
-        li= Product::AGE_SIZES.keys[item.product.child_ages]
-        |
-        = number_to_currency(item.total_price)
-        br
-        br	
+        / li= Product::AGE_SIZES.keys[item.product.child_ages]
+        / |
+        / = number_to_currency(item.total_price)
+        / br
+        / br	
   hr
   tr
 hr
