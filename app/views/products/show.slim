@@ -34,13 +34,13 @@
             p Value:- #{v.value} ml
             p Value Price :- #{ number_to_currency(v.value_price) }
       - elsif @product.industry == "Child"
-        /-binding.pry
-        - if @product.child_ages &&      Product::AGE_SIZES.keys[@product.child_ages].present? 
+        - if Product::AGES.values[@product.child_ages] == 0
+          = Product::AGE_SIZES.keys[@product.child_ages].present? 
           .clr
-          = f.input :size_id, label: "Ages" ,as: :select, collection: Product::AGE_SIZES, item_wrapper_class: 'radio-inline'
+          = f.input :size_id, label: "Ages" ,as: :select, collection: Product::AGES, item_wrapper_class: 'radio-inline'
             
           = f.input :product_id, as: :hidden, input_html: { :value => @product.id }
-            
+              
         - elsif Product::SIZES.keys[@product.size].present?
           .clr
             = Product::SIZES.keys[@product.size].upcase
