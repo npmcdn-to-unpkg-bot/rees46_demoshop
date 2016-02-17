@@ -47,7 +47,7 @@ class Product < ActiveRecord::Base
   }.freeze
 
   # Child constants class
-  CHILD_AGE_SIZES = {
+  AGE_SIZES = {
     "0-3 мес"     => 0,
     "3-6 мес"     => 1,
     "6-9 мес"     => 2,

@@ -25,7 +25,7 @@
     hr
     
   #child-less.product_child_sizes_0.hidden.child_age_sizes
-    = f.input :age_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_AGE_SIZES, item_wrapper_class: 'radio-inline'
+    = f.input :age_sizes, as: :check_boxes, include_hidden: false, collection: Product::AGE_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #child-tyes.hidden.type-sizes
     = f.input :type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::CHILD_TYPES), item_wrapper_class: 'radio-inline'
