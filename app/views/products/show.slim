@@ -40,12 +40,17 @@
           = f.input :size_id, label: "Ages" ,as: :select, collection: Product::AGES, item_wrapper_class: 'radio-inline'
             
           = f.input :product_id, as: :hidden, input_html: { :value => @product.id }
-              
-        - elsif Product::SIZES.keys[@product.size].present?
+        
+        - elsif @product.size && Product::SIZES.keys[@product.size].present?
           .clr
             = Product::SIZES.keys[@product.size].upcase
             = f.input :size_id, as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), :item_wrapper_class => 'radio-inline'
             = f.input :product_id, as: :hidden, :input_html => { :value => @product.id }
+        /- elsif @product.size && Product::SIZES.keys[@product.size].blank?
+        
+          
+          .clr
+
         
       h4.col-md-3
         = number_to_currency(@product.price)
