@@ -11,17 +11,18 @@ table
         | x 
         = item.product.title
         |
-        /- binding.pry
-        li= Product::SIZES.keys[item.product.size]
-        |
-        li= Product.const_get(Product::SIZES.keys[item.product.size].gsub(' ', '_').upcase).keys[item.size_id]
-        |
-        
-        / li= Product::AGE_SIZES.keys[item.product.child_ages]
-        / |
-        / = number_to_currency(item.total_price)
-        / br
-        / br	
+        - if item.product.size && Product::SIZES.keys[item.product.size].present?
+          li= Product::SIZES.keys[item.product.size]
+          |
+          li= Product.const_get(Product::SIZES.keys[item.product.size].gsub(' ', '_').upcase).keys[item.size_id]
+        - elsif Product::AGE_SIZES.keys[item.product.child_ages].present?
+          li= Product::AGE_SIZES.keys[item.product.child_ages]
+          |
+          = number_to_currency(item.total_price)
+        - else
+          false
+          br
+          br	
   hr
   tr
 hr
