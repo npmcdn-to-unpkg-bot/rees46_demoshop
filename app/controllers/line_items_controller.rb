@@ -19,6 +19,6 @@ class LineItemsController < ApplicationController
 
   def line_item_params
     #binding.pry
-    params.require(:line_item).permit(:product_id, :size_id )
+    params.require(:line_item).permit(:product_id, :size_id, :age_sizes )
   end
 end
