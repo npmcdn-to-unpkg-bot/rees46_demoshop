@@ -36,7 +36,7 @@
         - if Product::AGES.values[@product.child_ages] == 0
           = Product::AGE_SIZES.keys[@product.child_ages].present? 
           .clr
-          = f.input :size_id, label: "Ages" ,as: :select, collection: Product::AGES, item_wrapper_class: 'radio-inline'
+          = f.input :size_id, label: "Ages" ,as: :select, collection: Product::AGE_SIZES, item_wrapper_class: 'radio-inline'
         
         - elsif @product.size && Product::SIZES.keys[@product.size].present?
           .clr
