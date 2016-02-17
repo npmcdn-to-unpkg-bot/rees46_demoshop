@@ -6,7 +6,7 @@ $( document ).on("last-element-rendered", function() {
       $('#fashion-param, #gender').removeClass('hidden');
     } else if (industry === "Cosmetic") {
       $(".country-sizes, .group-sizes, .child_age_sizes, .product_type").addClass('hidden');
-      $('#cosmetic-param, #gender, #periodic').removeClass('hidden');
+      $('#cosmetic-param, #gender, #periodic, #hypoallergenic').removeClass('hidden');
     } else if (industry === "Child") {
       $(".country-sizes, .group-sizes, .country-periodic").addClass('hidden');
       $('#gender, #child_age_sizes').removeClass('hidden');
