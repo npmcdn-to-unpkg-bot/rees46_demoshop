@@ -32,7 +32,7 @@
           .clr
             p Value:- #{v.value} ml
             p Value Price :- #{ number_to_currency(v.value_price) }
-        - if @product.hypoallergenic? == false
+        - if @product.hypoallergenic
             p
             strong No Hypoallergenic
         - else
