@@ -28,13 +28,10 @@
       - elsif @product.industry == "Cosmetic"
         - @product.volumes.each do |v|
           .clr
-            p Value:- #{v.value} ml
-            p Value Price :- #{ number_to_currency(v.value_price) }
-        - if @product.hypoallergenic
+            p Value: #{v.value} ml
+            p Value Price : #{ number_to_currency(v.value_price) }
+        - if @product.hypoallergenic?
             p
-            strong No Hypoallergenic
-        - else
-            p 
             strong Yes Hypoallergenic
         .clr
       - elsif @product.industry == "Child"
