@@ -24,9 +24,7 @@
       - if @product.industry == "Fashion"
         - if Product::SIZES.keys[@product.size].present?
           .clr
-            h4
-              = Product::SIZES.keys[@product.size].upcase
-            = f.input :size_id, as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), item_wrapper_class: 'radio-inline'
+            = f.input :size_id, label: "#{Product::SIZES.keys[@product.size].upcase}", as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), item_wrapper_class: 'radio-inline'
       - elsif @product.industry == "Cosmetic"
         - @product.volumes.each do |v|
           .clr
