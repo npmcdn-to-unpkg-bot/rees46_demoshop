@@ -1,0 +1,3 @@
+- if Product::SIZES.keys[@product.size].present?
+  .clr
+    = f.input :size_id, label: "#{Product::SIZES.keys[@product.size].upcase}", as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), item_wrapper_class: 'radio-inline'

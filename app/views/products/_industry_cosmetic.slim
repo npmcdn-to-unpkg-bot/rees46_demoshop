@@ -1,0 +1,8 @@
+- @product.volumes.each do |v|
+  .clr
+    p Value: #{v.value} ml
+    p Value Price : #{ number_to_currency(v.value_price) }
+- if @product.hypoallergenic?
+    p
+    strong Yes Hypoallergenic
+.clr

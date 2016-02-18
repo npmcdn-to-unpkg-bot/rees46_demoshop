@@ -22,35 +22,16 @@
               li= msg
       .col-md-3
       - if @product.industry == "Fashion"
-        - if Product::SIZES.keys[@product.size].present?
-          .clr
-            = f.input :size_id, label: "#{Product::SIZES.keys[@product.size].upcase}", as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), item_wrapper_class: 'radio-inline'
+        = render "industry_fashion", :f => f
+        
       - elsif @product.industry == "Cosmetic"
-        - @product.volumes.each do |v|
-          .clr
-            p Value: #{v.value} ml
-            p Value Price : #{ number_to_currency(v.value_price) }
-        - if @product.hypoallergenic?
-            p
-            strong Yes Hypoallergenic
-        .clr
+        = render "industry_cosmetic", :f => f
+        
       - elsif @product.industry == "Child"
-        - if Product::AGES.values[@product.child_ages] == 0
-          = Product::AGE_SIZES.keys[@product.child_ages].present? 
-          .clr
-          = f.input :size_id, label: "Ages" ,as: :select, collection: Product::AGE_SIZES, item_wrapper_class: 'radio-inline'
+        = render "industry_child", :f => f
         
-        - elsif @product.size && Product::SIZES.keys[@product.size].present?
-          .clr
-            = Product::SIZES.keys[@product.size].upcase
-            = f.input :size_id, as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), :itemwrapper_class => 'radio-inline'
-        - elsif @product.size && Product::SIZES.keys[@product.size].blank?
       = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
-          
-          
-          .clr
-
-        
+      
       h4.col-md-3
         = number_to_currency(@product.price)
         br
