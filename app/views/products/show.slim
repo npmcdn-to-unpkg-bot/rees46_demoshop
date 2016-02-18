@@ -32,6 +32,13 @@
           .clr
             p Value:- #{v.value} ml
             p Value Price :- #{ number_to_currency(v.value_price) }
+        - if @product.hypoallergenic? == false
+            p
+            strong No Hypoallergenic
+        - else
+            p 
+            strong Yes Hypoallergenic
+        .clr
       - elsif @product.industry == "Child"
         - if Product::AGES.values[@product.child_ages] == 0
           = Product::AGE_SIZES.keys[@product.child_ages].present? 
