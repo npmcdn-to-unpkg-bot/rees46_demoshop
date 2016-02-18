@@ -4,7 +4,6 @@ class LineItemsController < ApplicationController
 
   def create
     product = Product.find(line_item_params[:product_id])
-    # @line_item = @cart.add_product(line_item_params)
     @line_item = @cart.line_items.create(line_item_params)
 
     if @line_item.save
@@ -18,7 +17,6 @@ class LineItemsController < ApplicationController
   private
 
   def line_item_params
-    #binding.pry
     params.require(:line_item).permit(:product_id, :size_id, :age_sizes )
   end
 end
