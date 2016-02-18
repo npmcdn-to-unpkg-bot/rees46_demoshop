@@ -12,6 +12,7 @@ class LineItem < ActiveRecord::Base
   private
 
   def nil_sizes?
+     #binding.pry
     if self.product.size?
       true
     elsif self.product.size
@@ -19,6 +20,8 @@ class LineItem < ActiveRecord::Base
     elsif self.product.age_sizes?
       true
     elsif self.product.hight_sizes?
+      true
+    elsif self.product.part_types?
       false
     else
       false
