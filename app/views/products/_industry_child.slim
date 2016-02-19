@@ -5,5 +5,5 @@
 
 - elsif @product.size && Product::SIZES.keys[@product.size].present?
   .clr
-  = render "products_sizes", :f => f
+  = render "product_sizes", :f => f
 - elsif @product.size && Product::SIZES.keys[@product.size].blank?
