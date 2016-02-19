@@ -42,4 +42,18 @@
           br
           br
           = f.submit "Add to Cart"
-          
+      .clr
+      br
+      br
+
+      h1.text-center Size Chart
+      table[border="1" width="100%"]
+        tr
+          td
+            table[border="1" width="100%"]
+              tr
+                th
+                  | Country
+                th
+                  | Sizes
+              = render  "size_chart"
