@@ -218,6 +218,10 @@ class Product < ActiveRecord::Base
     end
   end
 
+  def product_size?
+    russian_sizes.present? || euro_sizes.present? || american_sizes.present? || british_sizes.present? || asian_sizes.present?
+  end
+
   private
 
   def ensure_not_referenced_by_any_line_item
