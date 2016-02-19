@@ -1,39 +1,45 @@
-.row
-  .col-xs-5
-    h1= @product.title
-    = image_tag @product.image, class: 'img-responsive'
-    br
-    h3 Brand Name:
-    = @product.brand 
-    
-    h1 Related Products
-    = link_to @product.category.name, category_path(@product.category)
+.container
+    .row
+    .col-xs-5
+      hr
+      = link_to "Home > ", root_path
+      = @product.gender
+      hr
+      = image_tag @product.image, class: 'img-responsive'
+      br
+      h3 Brand Name:
+      = @product.brand 
       
-  .col-xs-5[style="top: 68px;"]
-    = @product.description.html_safe
-    = simple_form_for @line_item do |f|
-      - if @line_item.errors.any?
-        #error_explanation
-          h2
-            = pluralize(@line_item.errors.count, "error")
-            |  prohibited this product size from being saved:
-          ul
-            - @line_item.errors.full_messages.each do |msg|
-              li= msg
-      .col-md-3
-      - if @product.industry == "Fashion"
-        = render "industry_fashion", :f => f
+      h1 Related Products
+      = link_to @product.category.name, category_path(@product.category)
         
-      - elsif @product.industry == "Cosmetic"
-        = render "industry_cosmetic", :f => f
+    .col-xs-5[style="top: 68px;"]
+      h1= @product.title
+      = @product.description.html_safe
+      = simple_form_for @line_item do |f|
+        - if @line_item.errors.any?
+          #error_explanation
+            h2
+              = pluralize(@line_item.errors.count, "error")
+              |  prohibited this product size from being saved:
+            ul
+              - @line_item.errors.full_messages.each do |msg|
+                li= msg
+        .col-md-3
+        - if @product.industry == "Fashion"
+          = render "industry_fashion", :f => f
+          
+        - elsif @product.industry == "Cosmetic"
+          = render "industry_cosmetic", :f => f
+          
+        - elsif @product.industry == "Child"
+          = render "industry_child", :f => f
+          
+        = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
         
-      - elsif @product.industry == "Child"
-        = render "industry_child", :f => f
-        
-      = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
-      
-      h4.col-md-3
-        = number_to_currency(@product.price)
-        br
-        br
-        = f.submit "Add to Cart"
+        h4.col-md-3
+          = number_to_currency(@product.price)
+          br
+          br
+          = f.submit "Add to Cart"
+          
