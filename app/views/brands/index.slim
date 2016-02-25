@@ -1,2 +1,16 @@
-<h1>Brands#index</h1>
-<p>Find me in app/views/brands/index.html.erb</p>
+h1 Welcome to Brand Page
+
+.container
+  .row
+    .col-md-6
+      = link_to "Create new Brand name", new_brand_path, class: "btn btn-primary"
+      br
+      br
+      h1 All Brands name
+      - @brands.each do |brand|
+        ul
+          = brand.name
+          - if current_user && current_user.has_role?(:admin)
+            = link_to "Edit", edit_brand_path(brand), class: 'btn btn-primary'
+            = link_to "Delete", brand, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+          br
