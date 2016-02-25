@@ -9,7 +9,7 @@ h1 Welcome to Brand Page
       h1 All Brands name
       - @brands.each do |brand|
         ul
-          = brand.name
+          li= brand.name
           - if current_user && current_user.has_role?(:admin)
             = link_to "Edit", edit_brand_path(brand), class: 'btn btn-primary'
             = link_to "Delete", brand, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
