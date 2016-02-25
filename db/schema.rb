@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217113004) do
+ActiveRecord::Schema.define(version: 20160225122005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "brands", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -81,6 +87,7 @@ ActiveRecord::Schema.define(version: 20160217113004) do
     t.integer  "hight_sizes",    default: [], null: false, array: true
     t.integer  "child_ages"
     t.integer  "child_sizes"
+    t.integer  "brand_id"
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
