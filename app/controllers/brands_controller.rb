@@ -1,4 +1,8 @@
 class BrandsController < ApplicationController
+  before_action :find_brand, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :admin_permission, except: :show
+
   def index
     @brands = Brand.all
   end

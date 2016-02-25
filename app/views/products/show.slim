@@ -8,7 +8,7 @@
       = image_tag @product.image, class: 'img-responsive'
       br
       h3 Brand Name:
-      = @product.brand 
+      = link_to @product.brand.name, brand_path(@product.brand)
       
       h1 Related Products
       = link_to @product.category.name, category_path(@product.category)
