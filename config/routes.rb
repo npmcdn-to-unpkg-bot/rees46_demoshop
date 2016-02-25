@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'store#index'
   get 'dashboard' => 'store#dashboard'
   resources :categories
+  resources :brands
   resources :products
   resources :line_items, only: :create
   resources :carts, only: [:idex, :show, :destroy]
