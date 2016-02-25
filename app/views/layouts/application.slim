@@ -31,7 +31,7 @@ html lang="en"
     nav.navbar.navbar-inverse role="navigation"
       .container-fluid
         /! Brand and toggle get grouped for better mobile display
-        = render 'layouts/header'
+        = render "layouts/header"
         .navbar-collapse
       .container-fluid
     .container
@@ -39,11 +39,7 @@ html lang="en"
         .span9
           = bootstrap_flash
           = yield
-      .row
-      footer
-      br
-      br
-        p © Company 2016
+      = render "layouts/footer"
 
 
 javascript:
