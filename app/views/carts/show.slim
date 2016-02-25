@@ -1,43 +1,25 @@
 - if notice 
     = notice
 
-h2 Your Cart
+.container
+  .row
+    .col-md-10.col-md-offset-1
+      h2 My Cart
+      .cart-hr
+      .row
+        .col-md-6
 
-table
-  - @cart.line_items.each do |item|
-    tr
-      td
-        = item.quantity
-        | x 
-        = item.product.title
-        |
-        //- binding.pry
-        - if item.product.size && Product::SIZES.keys[item.product.size].present?
-          li= Product::SIZES.keys[item.product.size]
-          |
-          li= Product.const_get(Product::SIZES.keys[item.product.size].gsub(' ', '_').upcase).keys[item.size_id]
-        - elsif item.product.child_ages && Product::AGE_SIZES.keys[item.product.child_ages].present? 
-          li= Product::AGE_SIZES.key(item.size_id)
-          |
-        - elsif Product::PART_TYPES.keys[item.product.part_types[item.size_id.to_i]].present?
-            /  - item.product.volumes.each do |v|
-            /   hr
-            /    p Value:- #{v.value} ml
-            /    p Value Price :- #{ number_to_currency(v.value_price) }
-            /   hr
-        - else
-          false
-          |
-          = number_to_currency(item.total_price)
-          br
-          br	
-  hr
-  tr
-hr
-    td Total
-    td 
-      |   
-      = number_to_currency(@cart.total_price)
-hr
-= button_to "Checkout", new_order_path, method: :get
-= button_to "Empty cart", @cart, method: :delete, data: { confirm: "Are you sure?" }
+        .col-md-2
+          h5.text-center Size
+        .col-md-2
+          h5.text-right QTY
+        .col-md-2
+          h5.text-right PRICE
+      hr
+      - @cart.line_items.each do |item|
+        = render "cart_list", item: item
+
+      .col-md-6
+        = button_to "Checkout", new_order_path, method: :get
+      .col-md-6.text-ri
+        = button_to "Empty cart", @cart, method: :delete, data: { confirm: "Are you sure?" }
