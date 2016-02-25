@@ -1,10 +1,12 @@
 .container
   .row
     h1.text-center This is DashBoard for Admin
-    .col-md-6
+    .col-md-4.text-center
       = link_to "Create New Category", categories_path, class: 'btn btn-default'
-    .col-md-6
+    .col-md-4.text-center
         = link_to "Create New Product", products_path, class: 'btn btn-default'
+    .col-md-4.text-center
+        = link_to "Create New Brand", brands_path, class: 'btn btn-default'
 br
 br
 .container
