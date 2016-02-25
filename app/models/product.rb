@@ -195,6 +195,7 @@ class Product < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   belongs_to :category
+  belongs_to :brand
   has_many :line_items
   has_many :volumes, dependent: :destroy
   accepts_nested_attributes_for :volumes, reject_if: ->(attributes) { attributes['value'].blank? }, allow_destroy: true
