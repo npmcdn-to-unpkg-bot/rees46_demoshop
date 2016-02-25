@@ -9,6 +9,8 @@
 /! Collect the nav links, forms, and other content for toggling
 #bs-example-navbar-collapse-1.collapse.navbar-collapse
   ul.nav.navbar-nav
+    - Category.all.each do |category|
+      li= link_to category.name, category_path(category)
   ul.nav.navbar-nav.navbar-right
     - if current_user && current_user.has_role?(:admin)
       li= link_to 'Admin Board', dashboard_path
