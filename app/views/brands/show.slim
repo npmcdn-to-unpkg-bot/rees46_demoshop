@@ -1,2 +1,4 @@
-<h1>Brands#show</h1>
-<p>Find me in app/views/brands/show.html.erb</p>
+h1  Brand
+.row
+  - @brands.each do |brand|
+    = render 'brands/product_cart', product: product
