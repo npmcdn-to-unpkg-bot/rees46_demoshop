@@ -16,9 +16,9 @@
     - else
       false
   .col-md-1.right
-      = link_to "-  ", decrement_line_item_path(item), method: :patch
-      = item.quantity
-      = link_to "  +", increment_line_item_path(item), method: :patch
+    = link_to "-  ", decrement_line_item_path(item), method: :patch
+    = item.quantity
+    = link_to "  +", increment_line_item_path(item), method: :patch
 
   .col-md-1
     p.text-right = number_to_currency(item.total_price)

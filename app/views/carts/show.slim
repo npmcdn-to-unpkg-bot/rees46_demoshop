@@ -17,7 +17,7 @@
       hr
       / - @cart.line_items.each do |item|
       /   = render "cart_list", item: item or only one line
-      = render partial: "cart_list", collection: @cart.line_items, as: :item
+      = render partial: "cart_list", collection: @cart.line_items.order(:id), as: :item
       h5.text-right Total  #{number_to_currency(@cart.total_price)}
 
       br
