@@ -3,8 +3,8 @@
     .row
       .col-md-3
         = image_tag item.product.image.thumb
-      .col-md-3
-        = item.product.title
+      .col-md-3[style="width: 350px;"]
+        p= item.product.title
         
   .col-md-3
     - if item.product.size && Product::SIZES.keys[item.product.size].present?
