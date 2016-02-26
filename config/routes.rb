@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   resources :categories
   resources :brands
   resources :products
-  resources :line_items, only: :create do
+  resources :line_items, only: [:create, :destroy] do
     patch 'increment', on: :member
     patch 'decrement', on: :member
   end
-  resources :carts, only: [:idex, :show, :destroy]
+  resources :carts, only: [:index, :show, :destroy]
 end

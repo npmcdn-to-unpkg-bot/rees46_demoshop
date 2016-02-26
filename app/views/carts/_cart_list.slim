@@ -20,8 +20,11 @@
     = item.quantity
     = button_to "+", increment_line_item_path(item), method: :patch
 
-  .col-md-2.text-right
+  .col-md-1
     p.text-right = number_to_currency(item.total_price)
+  .col-md-1
+    p.text-right
+      = button_to "X", line_item_path(item), method: :delete, data: { confirm: "Are you sure?" }
 .cart-hr
 
     

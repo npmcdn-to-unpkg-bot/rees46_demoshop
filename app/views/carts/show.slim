@@ -1,20 +1,19 @@
-- if notice 
-    = notice
-
 .container
   .row
     .col-md-10.col-md-offset-1
-      h2 My Cart
+      h2 Shoping Cart
       .cart-hr
       .row
         .col-md-6
-
+          h5.text-center Items
         .col-md-2
           h5.text-center Size
         .col-md-2
           h5.text-right QTY
-        .col-md-2
+        .col-md-1
           h5.text-right PRICE
+        .col-md-1
+          h5.text-right
       hr
       / - @cart.line_items.each do |item|
       /   = render "cart_list", item: item or only one line

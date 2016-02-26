@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
   include CurrentCart
-  before_action :set_cart, only: [:create, :increment, :decrement]
-  before_action :find_line_item, only: [:increment, :decrement]
+  before_action :set_cart, only: [:create, :increment, :decrement, :destroy]
+  before_action :find_line_item, only: [:increment, :decrement, :destroy]
 
   def create
     product = Product.find(line_item_params[:product_id])
@@ -29,10 +29,17 @@ class LineItemsController < ApplicationController
     redirect_to @line_item.cart
   end
 
+  def destroy
+    if @line_item.destroy
+      redirect_to @line_item.cart, notice: "Product was successfully remove form line item"
+    else
+      redirect_to @line_item.cart, notice: "Somethign is worng"
+    end
+  end
+
   private
 
   def find_line_item
-  #binding.pry
     @line_item = @cart.line_items.find(params[:id])
   end
 
