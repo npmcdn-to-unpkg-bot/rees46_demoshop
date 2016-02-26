@@ -16,8 +16,10 @@
         .col-md-2
           h5.text-right PRICE
       hr
-      - @cart.line_items.each do |item|
-        = render "cart_list", item: item
+      / - @cart.line_items.each do |item|
+      /   = render "cart_list", item: item or only one line
+      = render partial: "cart_list", collection: @cart.line_items, as: :item
+      h5.text-right Total  #{number_to_currency(@cart.total_price)}
 
       .col-md-6
         = button_to "Checkout", new_order_path, method: :get

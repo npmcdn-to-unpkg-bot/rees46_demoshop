@@ -5,6 +5,6 @@ h1 Rees46 Demo Store
     .col-xs-4.col-md-4
       .thumbnail
         h5= link_to product.title, product_path(product)
-        = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product)
+        = link_to image_tag(product.image.medium, class: "img-responsive"), product_path(product)
         p
           strong= number_to_currency(product.price)
