@@ -15,7 +15,10 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
-//= require jquery
 //= require bootstrap-sprockets
 //= require redactor-rails
 //= require jquery_nested_form
+
+$(document).ready(function(){
+  $('.dropdown-toggle').dropdown();
+});

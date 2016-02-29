@@ -28,12 +28,8 @@ html lang="en"
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
     = javascript_include_tag "application"
   body
-    nav.navbar.navbar-inverse role="navigation"
-      .container-fluid
-        /! Brand and toggle get grouped for better mobile display
-        = render "layouts/header"
-        .navbar-collapse
-      .container-fluid
+    = render "layouts/header"
+
     .container
       .row
         .span9
