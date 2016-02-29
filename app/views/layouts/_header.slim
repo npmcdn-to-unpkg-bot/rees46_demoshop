@@ -11,14 +11,12 @@ header
           = link_to 'Rees46Demoshop', root_path
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav
-          - Category.all.each do |category|
+          - Category.where(parent_id: nil).each do |category|
             li.dropdown
-              - if category.parent_id.nil?
-                a#drop.dropdown-toggle href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'
-                  = category.name
-                    span.caret
+              /a#drop.dropdown-toggle href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'
+              = link_to category.name, category_path(category)
+              - if category.children.any?
                 ul.dropdown-menu role='menu' aria-labelledby='drop'
-                  li= link_to category.name, category_path(category)
                   - category.walk_tree do |c, level|
                     li= link_to "#{'-> '*level}#{c.name}", category_path(c)
 
