@@ -16,9 +16,10 @@ h1 Welcome to Category
               = link_to "Edit", edit_category_path(category), class: 'btn btn-primary'
               = link_to "Delete", category, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
             br
-            /= link_to 'Edit', edit_category_path(category) unless category.parent.nil?
             ul
               - category.walk_tree do |c, level|
                 li
                   = "#{'-> '*level}#{c.name}"
+                  = link_to "Edit", edit_category_path(c), class: 'btn btn-primary'
+                  = link_to "Delete", c, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
                   br
