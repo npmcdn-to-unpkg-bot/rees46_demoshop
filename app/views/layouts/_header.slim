@@ -20,7 +20,7 @@ header
                 ul.dropdown-menu role='menu' aria-labelledby='drop'
                   li= link_to category.name, category_path(category)
                   - category.walk_tree do |c, level|
-                    li= link_to "#{'-> '*level}#{c.name}", category_path(category)
+                    li= link_to "#{'-> '*level}#{c.name}", category_path(c)
 
         ul.nav.navbar-nav.navbar-right
           li.dropdown
