@@ -29,4 +29,19 @@
       .col-md-4.text-center
         = button_to "Checkout", new_order_path, method: :get, class: "btn btn-success"
       .col-md-4.text-center
-        = button_to "Empty cart", @cart, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+        #remove_from_cart
+          = button_to "Empty cart", @cart, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+
+
+javascript:
+  function afterInitRees46() {
+    REES46.addReadyListener(function () {
+      $('#remove_from_cart').click(function () {
+          REES46.pushData('remove_from_cart', {
+            item_id: '#{@product_id}',
+            price: '#{@cart.total_price}',
+            is_available: '1',
+          });
+      });
+    });
+  }

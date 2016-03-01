@@ -1,4 +1,25 @@
 javascript:
-  $(document).ready(function(){
-    $(document).trigger("last-element-rendered");
+  $(function(){
+    var callback;
+    if (typeof(afterInitRees46) === 'function') {
+      callback = afterInitRees46
+    } else {
+      callback = function() {}
+    }
+
+    function initREES46 () {
+      REES46.init('357382bf66ac0ce2f1722677c59511', {
+        id:"#{current_user.id}",
+        email:"#{current_user.email}",
+        location:"5"
+     }, callback);
+    };
+
+    var script = document.createElement('script');
+    script.src = '//cdn.rees46.com/rees46_script2.js';
+    script.async = true;
+    script.onload = function() {
+    initREES46();
+    };
+    $('head')[0].appendChild(script);
   });

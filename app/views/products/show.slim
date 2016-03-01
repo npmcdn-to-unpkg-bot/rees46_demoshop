@@ -41,20 +41,39 @@
           = number_to_currency(@product.price)
           br
           br
-          = f.submit "Add to Cart"
+          #add-to-cart-button
+            = f.submit "Add to Cart"
       .clr
       br
       br
-      / /- binding.pry
-      / - if @product.product_size?
-      /   h1.text-center Size Chart
-      /   table[border="1" width="100%"]
-      /     tr
-      /       td
-      /         table[border="1" width="100%"]
-      /           tr
-      /             th
-      /               | Country
-      /             th
-      /               | Sizes
-      /           = render  "size_chart"
+javascript:
+  function afterInitRees46() {
+    REES46.addReadyListener(function () {
+      REES46.pushData('view', {
+        item_id: '#{@product.id}',
+        price: '#{@product.price}',
+        is_available: '1',
+        category_id: '#{@product.category_id}'
+      });
+    });
+
+    REES46.addReadyListener(function () {
+      $('#add-to-cart-button').click(function () {
+        REES46.pushData('cart', {
+          item_id: '#{@product.id}',
+          price: '#{@product.price}',
+          is_available: '1',
+          category_id: '#{@product.category_id}'
+        });
+      });
+    });
+
+    REES46.addReadyListener(function () {
+      REES46.pushData('remove_from_cart', {
+        item_id: '#{@product.id}',
+        price: '#{@product.price}',
+        is_available: '1',
+        category_id: '#{@product.category_id}'
+      });
+    });
+  }

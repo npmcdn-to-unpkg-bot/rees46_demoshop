@@ -27,9 +27,6 @@ gem 'pg'
 gem 'unicorn'
 gem 'capistrano-rails', group: :development
 
-# For Demoshop Rees46
-gem 'rees46', '~> 0.1.0.0'
-
 # Tamplate
 gem 'slim', '~> 3.0', '>= 3.0.6'
 

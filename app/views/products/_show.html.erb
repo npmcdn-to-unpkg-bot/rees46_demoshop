@@ -1,0 +1,25 @@
+<!-- <script type='text/javascript'>
+  $(function () {
+
+    function checkVariable() {
+      console.log('check REES46 defined');
+      if  (typeof REES46 != 'undefined') {
+        console.log('REES46 is finally defined. no timeout needed.');
+        REES46.addReadyListener(function () {
+          REES46.pushData('view', {
+            item_id: '<%= @product.id %>',
+            price: '<%= @product.price %>',
+            is_available: "1",
+            category_id: '<%= @product.category_id %>'
+          });
+        });
+      } else {
+        console.log('REES46 not defined. repeat timeout.');
+        setTimeout(checkVariable,1000);
+      }
+    }
+
+    setTimeout(checkVariable,1000);
+
+  });
+</script> -->
