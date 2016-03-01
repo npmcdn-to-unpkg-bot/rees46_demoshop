@@ -1,14 +1,12 @@
-
-- @products.each do |product|
-  tr
+tr
+  td
+    = product.title
+  td
+    = product.description.html_safe
+  td
+    = product.price
+  - if current_user && current_user.has_role?(:admin)
     td
-      = product.title
+      = link_to "edit", edit_product_path(product)
     td
-      = product.description.html_safe
-    td
-      = product.price
-    - if current_user && current_user.has_role?(:admin)
-      td
-        = link_to "edit", edit_product_path(product)
-      td
-        = link_to "Delete", product, method: :delete, data: { confirm: "Are you sure?" }
+      = link_to "Delete", product, method: :delete, data: { confirm: "Are you sure?" }

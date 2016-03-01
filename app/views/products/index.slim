@@ -22,4 +22,4 @@ br
           th
             | Delete
     tbody
-      = render "index"
+      = render partial: "index", collection: @products, as: :product
