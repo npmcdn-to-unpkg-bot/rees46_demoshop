@@ -23,9 +23,23 @@
   .col-md-1
     p.text-right = number_to_currency(item.total_price)
   .col-md-1
-    p.text-right
+    #remove_single_from_cart.p.text-right
       = button_to "X", line_item_path(item), method: :delete, data: { confirm: "Are you sure?" }
 .cart-hr
 
 br
 br
+
+  javascript:
+    function afterInitRees46() {
+      REES46.addReadyListener(function () {
+        $('#remove_single_from_cart').click(function () {
+          REES46.pushData('remove_from_cart', {
+            item_id: '#{item.product_id}',
+            price: '#{number_to_currency(item.product.price)}',
+            is_available: '1',
+            category_id: '#{item.product.category_id}'
+          });
+        });
+      });
+    }

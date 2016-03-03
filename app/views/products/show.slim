@@ -67,13 +67,4 @@ javascript:
         });
       });
     });
-
-    REES46.addReadyListener(function () {
-      REES46.pushData('remove_from_cart', {
-        item_id: '#{@product.id}',
-        price: '#{@product.price}',
-        is_available: '1',
-        category_id: '#{@product.category_id}'
-      });
-    });
   }
