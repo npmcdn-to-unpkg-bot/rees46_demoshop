@@ -2,8 +2,6 @@ tr
   td
     = product.title
   td
-    = product.description.html_safe
-  td
     = product.price
   - if current_user && current_user.has_role?(:admin)
     td
