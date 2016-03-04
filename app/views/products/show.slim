@@ -13,7 +13,7 @@
       h1 Related Products
       = link_to @product.category.name, category_path(@product.category)
         
-    .col-xs-5[style="top: 68px;"]
+    .col-xs-4
       h1= @product.title
       = @product.description.html_safe
       = simple_form_for @line_item do |f|
@@ -37,10 +37,8 @@
           
         = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
         
-        h4.col-md-3
-          = @product.price()
-          |
-          i.fa.fa-rub
+        h4.col-md-4
+          = number_to_currency(@product.price,  unit: "₽ ")
           br
           br
           #add-to-cart-button
