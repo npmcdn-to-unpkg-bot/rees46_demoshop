@@ -19,6 +19,7 @@ gem 'nested_form'
 gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'redactor-rails', '~> 0.5.0'
+gem 'font-awesome-rails'
 
 # Database
 gem 'pg'

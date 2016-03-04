@@ -38,7 +38,9 @@
         = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
         
         h4.col-md-3
-          = number_to_currency(@product.price)
+          = @product.price()
+          |
+          i.fa.fa-rub
           br
           br
           #add-to-cart-button
