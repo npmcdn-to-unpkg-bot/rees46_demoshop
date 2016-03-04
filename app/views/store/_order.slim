@@ -1,5 +1,10 @@
   tr
     td
+      - order.line_items.each do |ol|
+        = image_tag ol.product.image.thumb
+    td
+      = order.id
+    td
       = order.name
     td
       = order.address
