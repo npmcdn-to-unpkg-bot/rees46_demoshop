@@ -6,7 +6,7 @@
       .col-md-3[style="width: 350px;"]
         p= item.product.title
         
-  .col-md-3
+  .col-md-2
     - if item.product.size && Product::SIZES.keys[item.product.size].present?
       li= Product::SIZES.keys[item.product.size]
       li= Product.const_get(Product::SIZES.keys[item.product.size].gsub(' ', '_').upcase).keys[item.size_id]
@@ -20,8 +20,8 @@
     = item.quantity
     = link_to "  +", increment_line_item_path(item), method: :patch
 
-  .col-md-1
-    p.text-right = number_to_currency(item.total_price)
+  .col-md-2
+    p.text-right = number_to_currency(item.total_price,  unit: "₽ ")
   .col-md-1
     #remove_single_from_cart.p.text-right
       = button_to "X", line_item_path(item), method: :delete, data: { confirm: "Are you sure?" }

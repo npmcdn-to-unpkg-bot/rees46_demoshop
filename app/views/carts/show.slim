@@ -6,11 +6,11 @@
       .row
         .col-md-6
           h5.text-center ITEMS
-        .col-md-2
+        .col-md-1
           h5.text-center SIZES
         .col-md-2
           h5.text-right QTY
-        .col-md-1
+        .col-md-2
           h5.text-right PRICE
         .col-md-1
           h5.text-right
@@ -18,8 +18,7 @@
       / - @cart.line_items.each do |item|
       /   = render "cart_list", item: item or only one line
       = render partial: "cart_list", collection: @cart.line_items.order(:id), as: :item
-      h5.text-right Total  #{number_to_currency(@cart.total_price)}
-
+      h5.text-right Total  #{number_to_currency(@cart.total_price,  unit: "₽ ")}
       br
       br
       .col-md-4.text-center
