@@ -16,13 +16,15 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.add_line_items_form_cart(@cart)
 
-    if @order.save
-      Cart.destroy(session[:cart_id])
-      session[:cart_id] = nil
-
-      redirect_to root_path, notice: 'Thanks for your Order'
-    else
-      render :new
+    respond_to do |format|
+      if @order.save
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+        format.html { redirect_to root_path, notice: 'Thanks for your Order' }
+        format.js
+      else
+        render :new
+      end
     end
   end
 

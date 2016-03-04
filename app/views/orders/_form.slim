@@ -1,4 +1,4 @@
-= simple_form_for(@order) do |f|
+= simple_form_for(@order, remote: true) do |f|
   - if @order.errors.any?
       h2
         = pluralize(@order.errors.count, "error")
@@ -10,4 +10,5 @@
   = f.input :name
   = f.input :address
   = f.input :email
-  = f.submit "Place Order"
+  #order_purchase
+    = f.submit "Place Order"
