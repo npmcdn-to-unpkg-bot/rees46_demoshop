@@ -1,11 +1,16 @@
-<% @cart.line_items.each do |item|%>
-REES46.addReadyListener(function () {
-   REES46.pushData('purchase', [{
-     item_id: '<%= item.product_id %>',
-     price: '<%= number_to_currency(item.product.price) %>',
-     is_available: '1',
-     category_id: '<%= item.product.category_id %>'
-   }], '<%= @order.id %>');
- });
-<% end %>
-window.location.href = "<%= root_url %>";
+var valid = "<%= @order.valid?.to_s %>";
+if(valid == "false"){
+   $('#messages').html("<%= j render 'order_messages' %>");
+ }else{
+   <% @cart.line_items.each do |item|%>
+      REES46.addReadyListener(function () {
+         REES46.pushData('purchase', [{
+           item_id: '<%= item.product_id %>',
+           price: '<%= number_to_currency(item.product.price) %>',
+           is_available: '1',
+           category_id: '<%= item.product.category_id %>'
+         }], '<%= @order.id %>');
+       });
+    <% end %>
+   window.location.href = "<%= root_url %>";
+ }
