@@ -8,6 +8,9 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
 
+  def show
+  end
+
   def new
     @order = Order.new
   end
@@ -17,16 +20,13 @@ class OrdersController < ApplicationController
     @order.add_line_items_form_cart(@cart)
 
     respond_to do |format|
-      if @order.valid?
-        @order.save
+      if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        format.html { redirect_to store_url, notice: 'Thank you for order' }
-        format.json { render :show, status: :created, location: @order }
-        format.js
+        format.html { redirect_to root_path, notice: 'Thanks for your Order'  }
       else
         format.json { render json: @order.errors, status: :unprocessable_entity }
-        format.js
+        format.html { render :new }
       end
     end
   end

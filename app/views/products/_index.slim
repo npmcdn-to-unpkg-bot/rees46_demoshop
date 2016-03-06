@@ -2,7 +2,7 @@ tr
   td
     = product.title
   td
-    = product.price
+    = number_to_currency(product.price,  unit: "₽ ")
   - if current_user && current_user.has_role?(:admin)
     td
       = link_to "edit", edit_product_path(product)
