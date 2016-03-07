@@ -1,6 +1,12 @@
-h2 Thanks for your order 
+h2.text-center Thanks for your order 
+h2.text-center Your Product Details
 
-= button_to 'Back to store', root_url
+/ .right
+/   p= item.product_id
+/   p= number_to_currency(item.product.price, unit: '₽ ')
+/   p= @order.id
+
+= button_to 'Back to store', root_path
 
 - @cart.line_items.each do |item|
   javascript:

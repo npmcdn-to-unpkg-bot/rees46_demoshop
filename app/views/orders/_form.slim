@@ -13,3 +13,16 @@
   = f.input :email
 
   = f.submit "Place Order"
+
+- @cart.line_items.each do |item|
+  javascript:
+    function afterInitRees46() {
+      REES46.addReadyListener(function () {
+         REES46.pushData('purchase', [{
+           item_id: '#{item.product_id}',
+           price: '#{number_to_currency(item.product.price, unit: '₽ ')}',
+           is_available: '1',
+           category_id: '#{item.product.category_id}'
+         }], '#{@order.id}');
+       });
+    }

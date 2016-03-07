@@ -9,6 +9,7 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @line_item = LineItem.all
   end
 
   def new
@@ -19,15 +20,13 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.add_line_items_form_cart(@cart)
 
-    respond_to do |format|
-      if @order.save
-        Cart.destroy(session[:cart_id])
-        session[:cart_id] = nil
-        format.html { redirect_to root_path, notice: 'Thanks for your Order'  }
-      else
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-        format.html { render :new }
-      end
+    if @order.save
+      Cart.destroy(session[:cart_id])
+      session[:cart_id] = nil
+
+      redirect_to @order, notice: 'Thanks for your Order'
+    else
+      render :new
     end
   end
 
