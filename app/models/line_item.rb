@@ -9,6 +9,10 @@ class LineItem < ActiveRecord::Base
     product.price * quantity
   end
 
+  def total_quantity
+    quantity
+  end
+
   private
 
   def nil_sizes?

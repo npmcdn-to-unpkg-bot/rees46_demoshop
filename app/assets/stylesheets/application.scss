@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require redactor-rails
+ *= require jquery-ui
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
