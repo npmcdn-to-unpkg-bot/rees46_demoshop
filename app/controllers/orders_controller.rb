@@ -9,7 +9,6 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @line_item = LineItem.all
   end
 
   def new
@@ -24,7 +23,7 @@ class OrdersController < ApplicationController
       Cart.destroy(session[:cart_id])
       session[:cart_id] = nil
 
-      redirect_to @order, notice: 'Thanks for your Order'
+      redirect_to @order
     else
       render :new
     end
