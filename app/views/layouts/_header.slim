@@ -24,6 +24,7 @@ header
           - unless @cart.nil?
             li[style=" margin-top: 20px; "]
               = @cart.total_quantity
+            // when cart was empty but click it its create new cart have to fixed it 
             li= link_to cart_path(@cart)
               i.fa.fa-shopping-basket.fa-2x
           li.dropdown
