@@ -1,5 +1,6 @@
 class ProductsInfo
-  attr_accessor :products
+  attr_reader :products
+
   def initialize(line_items)
     @products = []
     @line_items = line_items
