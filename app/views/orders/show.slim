@@ -6,23 +6,9 @@ h2.text-center Your Product Details
 
 javascript:
   function afterInitRees46() {
-    var line_items = '#{@order.line_items.to_json.html_safe}'
-
-
-    JSON.parse(line_items).forEach(function(item, i, line_items){
-    console.log(item['id']),
-    console.log(item['product_id'])
-    console.log(item['quantity'])
-    console.log(item['order_id'])
-
+    var line_items = '#{ProductsInfo.new(Order.last.line_items).get_products_info.to_json.html_safe}'
 
     REES46.addReadyListener(function () {
-       REES46.pushData('purchase', [{
-         item_id: item['product_id'],
-         price: item['product.price'],
-         is_available: '1',
-         category_id: item['category_id']
-       }], item['order_id']);
-     });
+       REES46.pushData('purchase', JSON.parse(line_items), '#{@order.id}');
     });
   }
