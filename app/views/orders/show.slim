@@ -1,24 +1,28 @@
 h2.text-center Thanks for your order 
 h2.text-center Your Product Details
 
+
 = link_to 'Back to store', root_path, class: 'btn btn-default'
 
 javascript:
   function afterInitRees46() {
+    var line_items = '#{@order.line_items.to_json.html_safe}'
+
+
+    JSON.parse(line_items).forEach(function(item, i, line_items){
+    console.log(item['id']),
+    console.log(item['product_id'])
+    console.log(item['quantity'])
+    console.log(item['order_id'])
+
+
     REES46.addReadyListener(function () {
-     REES46.pushData('purchase', [{
-        item_id: '146',
-        price: '134',
-        is_available: '1',
-        categories: ['24'],
-        amount: 4
-        },
-        {
-        item_id: '32',
-        price: '5555',
-        is_available: '1',
-        categories: ['25'],
-        amount: 1
-        }], '16548');
+       REES46.pushData('purchase', [{
+         item_id: item['product_id'],
+         price: item['product.price'],
+         is_available: '1',
+         category_id: item['category_id']
+       }], item['order_id']);
+     });
     });
   }
