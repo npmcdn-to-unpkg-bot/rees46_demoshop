@@ -20,20 +20,25 @@ class LineItemsController < ApplicationController
   end
 
   def increment
-    @line_item.update(quantity: (@line_item.quantity += 1))
-    redirect_to @line_item.cart
+    respond_to do |format|
+      format.js do
+        @line_item.update(quantity: (@line_item.quantity += 1))
+      end
+    end
   end
 
   def decrement
-    if @line_item.update(quantity: (@line_item.quantity -= 1)) && @line_item.quantity == 0
-      @line_item.destroy
-
+    respond_to do |format|
+    @line_item.update(quantity: (@line_item.quantity -= 1))
+    @line_item.destroy if @line_item.quantity == 0
+    if !@cart.line_items.any?
       @cart.destroy if @cart.id == session[:cart_id]
       session[:cart_id] = nil
-      redirect_to root_path, notice: 'Your cart currently empty.'
+      format.js
     else
-      @line_item.save!
+      format.js
     end
+  end
   end
 
   def destroy

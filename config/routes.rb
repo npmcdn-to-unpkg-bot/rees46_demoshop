@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   resources :brands
   resources :products
   resources :line_items, only: [:create, :destroy] do
-    patch 'increment', on: :member
-    patch 'decrement', on: :member
+    get 'increment', on: :member
+    get 'decrement', on: :member
   end
   resources :carts, only: [:index, :show, :destroy]
 end

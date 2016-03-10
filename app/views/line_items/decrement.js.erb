@@ -1,0 +1,11 @@
+
+if("<%= @cart.line_items.any?%>" == 'false'){
+  window.location.href = "<%= root_url %>";
+}else{
+  if('<%= @line_item.quantity == 0 %>' == 'true'){
+    $('.row_<%= @line_item.id %>').next('.underline').hide();
+    $('.row_<%= @line_item.id %>').fadeOut();
+  }else{
+    $('.quantity_<%= @line_item.id %>').html('<%= @line_item.quantity %>');
+  }
+}
