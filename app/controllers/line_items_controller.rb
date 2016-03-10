@@ -25,11 +25,12 @@ class LineItemsController < ApplicationController
   end
 
   def decrement
-    @line_item.update(quantity: (@line_item.quantity -= 1))
-    redirect_to @line_item.cart, notice: 'Your cart is empty'
-
-    if @line_item.quantity == 0
+    if @line_item.update(quantity: (@line_item.quantity -= 1)) && @line_item.quantity == 0
       @line_item.destroy
+
+      @cart.destroy if @cart.id == session[:cart_id]
+      session[:cart_id] = nil
+      redirect_to root_path, notice: 'Your cart currently empty.'
     else
       @line_item.save!
     end

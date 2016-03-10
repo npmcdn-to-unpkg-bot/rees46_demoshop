@@ -13,6 +13,8 @@ class OrdersController < ApplicationController
   end
 
   def new
+    return (redirect_to root_path, notice: 'Your cart is empty') if @cart.line_items.empty?
+
     @order = Order.new
   end
 
