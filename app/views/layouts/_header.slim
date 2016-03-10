@@ -21,12 +21,15 @@ header
                     li= link_to "#{'-> '*level}#{c.name}", category_path(c)
 
         ul.nav.navbar-nav.navbar-right
-          - unless @cart.nil?
-            li[style=" margin-top: 20px; "]
-              = @cart.total_quantity
-            // when cart was empty but click it its create new cart have to fixed it 
+          li[style=" margin-top: 20px; "]
+            = @cart.total_quantity
+          - if @cart.line_items.any?
             li= link_to cart_path(@cart)
               i.fa.fa-shopping-basket.fa-2x
+          - else
+            li = link_to ''
+              i.fa.fa-shopping-basket.fa-2x
+
           li.dropdown
             - if user_signed_in?
               a#drop.dropdown-toggle href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'
