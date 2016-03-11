@@ -13,6 +13,10 @@
 
 #recommender_recently_viewed
 
+.clr
+
+#recommender_interesting
+
 javascript:
   var cf_popular = function(data){
     // jQuery code
@@ -40,6 +44,19 @@ javascript:
     }
   };
 
+  var cf_interesting = function(data){
+    // jQuery code
+    if(data.length > 0) {
+      var url = 'get_urls';
+      $.ajax({
+        type: "POST",
+        url: 'get_urls',
+        data: {ids: data, recommender: 'interesting'},
+      });
+      return false;
+    }
+  };
+
   function afterInitRees46() {
     REES46.addReadyListener(function () {
       REES46.recommend({
@@ -52,5 +69,12 @@ javascript:
       REES46.recommend({
         recommender_type: 'recently_viewed'
       }, cf_recently_viewed);
+    });
+
+    REES46.addReadyListener(function () {
+      REES46.recommend({
+        recommender_type: 'interesting',
+        item: '#{product.id}'
+      }, cf_interesting);
     });
   }
