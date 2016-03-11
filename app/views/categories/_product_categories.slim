@@ -4,3 +4,28 @@
   = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product)
   h4
     = number_to_currency(product.price)
+
+.clr
+
+#recommender_container
+javascript:
+  var callback_function = function(data){
+    // jQuery code
+    if(data.length > 0) {
+      var url = 'categories/store/get_popular_urls';
+      $.ajax({
+        type: "POST",
+        url: 'categories/store/get_popular_urls',
+        data: {ids: data, recommender: 'popular'},
+      });
+      return false;
+    }
+  };
+  function afterInitRees46() {
+    REES46.addReadyListener(function () {
+      REES46.recommend({
+        recommender_type: 'popular',
+        category: ''
+        }, callback_function );
+      });
+  }

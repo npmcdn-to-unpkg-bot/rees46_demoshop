@@ -3,11 +3,14 @@ Rails.application.routes.draw do
 
   get 'store/index'
   post 'store/get_popular_urls' => 'store#get_popular_urls'
+
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
   root 'store#index'
   get 'dashboard' => 'store#dashboard'
-  resources :categories
+  resources :categories do
+    post 'store/get_popular_urls' => 'store#get_popular_urls'
+  end
   resources :brands
   resources :products
   resources :line_items, only: [:create, :destroy] do
