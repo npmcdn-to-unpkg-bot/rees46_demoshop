@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   resources :categories do
     post 'store/get_popular_urls' => 'store#get_popular_urls'
   end
+  post 'categories/get_urls' => 'categories#get_urls'
+
+
+
+
   resources :brands
   resources :products
   resources :line_items, only: [:create, :destroy] do
