@@ -1,17 +1,4 @@
-
-/ .row
-/   .rees46.rees46-recommend
-/     .recommender-block-title.text-center
-/       h1 Perhaps It would be interest for You
-/   .recommended-items
-/     .recommended-item
-/       - @products.each do |product|
-/         .col-xs-3.col-md-3
-/           .recommended-item-photo
-/             = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product)
-/           p
-/             strong= number_to_currency(product.price,  unit: "₽ ")
-h3.text-center May be you will like it 
+h3.text-center Populer 
 .row
   - products.each do |product|
     .col-xs-4.col-md-4
