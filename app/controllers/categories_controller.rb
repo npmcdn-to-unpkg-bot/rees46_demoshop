@@ -2,8 +2,6 @@ class CategoriesController < ApplicationController
   before_action :find_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :admin_permission, except: :show
-  include CurrentCart
-  before_action :set_cart
 
   def index
     @categories = Category.where(parent_id: nil)

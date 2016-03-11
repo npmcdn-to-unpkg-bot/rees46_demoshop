@@ -1,9 +1,7 @@
 class BrandsController < ApplicationController
-  include CurrentCart
   before_action :find_brand, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :admin_permission, except: :show
-  before_action :set_cart
 
   def index
     @brands = Brand.all
