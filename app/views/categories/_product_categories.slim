@@ -26,6 +26,12 @@ javascript:
       REES46.recommend({
         recommender_type: 'popular',
         category: ''
-        }, callback_function );
-      });
+      }, callback_function );
+    });
+
+    REES46.addReadyListener(function () {
+      REES46.recommend({
+        recommender_type: 'recently_viewed'
+      }, callback_function);
+    });
   }
