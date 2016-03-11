@@ -19,7 +19,7 @@ javascript:
       $.ajax({
         type: "POST",
         url: 'store/get_popular_urls',
-        data: {ids: data},
+        data: {ids: data, recommender: 'popular'},
       });
       return false;
     }

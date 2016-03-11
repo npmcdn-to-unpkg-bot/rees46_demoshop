@@ -7,8 +7,14 @@ class StoreController < ApplicationController
   end
 
   def get_popular_urls
-    params[:ids] = [128, 129]
-    @products = Product.find(params[:ids])
+    @products = []
+    params[:ids].each do |id|
+      if Product.where(id: id).any?
+        @products << Product.find(id)
+      end
+    end
+
+    @recommender = params[:recommender]
     respond_to do |format|
       format.js
     end

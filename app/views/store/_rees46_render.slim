@@ -15,7 +15,7 @@ h3.text-center May be you will like it
 .row
   - products.each do |product|
     .col-xs-4.col-md-4
-      = product.title
+      = link_to product.title, product_path(product, recommdend_by: @recommender)
       = image_tag(product.image.thumb, class: "img-responsive")
       = product.price
       
