@@ -44,6 +44,24 @@ class ProductsController < ApplicationController
     end
   end
 
+  def get_products_urls
+    @products = []
+    if params[:ids] != nil
+      params[:ids].each do |id|
+        if Product.where(id: id).any?
+          @products << Product.find(id)
+        end
+      end
+    else
+      false
+    end
+
+    @recommender = params[:recommender]
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
 
   def admin_permission

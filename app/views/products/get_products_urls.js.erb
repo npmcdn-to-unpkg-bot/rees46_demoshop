@@ -1,0 +1,5 @@
+jQuery('#recommender_also_bought').html("<%= j render(partial: 'rees46_also_bought.slim', locals: { products: @products, recommender: @recommender }) %>");
+
+jQuery('#recommender_similer').html("<%= j render(partial: 'rees46_similer.slim', locals: { products: @products, recommender: @recommender }) %>");
+
+jQuery('#recommender_interesting').html("<%= j render(partial: 'rees46_interesting.slim', locals: { products: @products, recommender: @recommender }) %>");

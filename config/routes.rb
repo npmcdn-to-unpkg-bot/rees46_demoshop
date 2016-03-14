@@ -13,11 +13,12 @@ Rails.application.routes.draw do
   end
   post 'categories/get_urls' => 'categories#get_urls'
 
-
-
-
   resources :brands
-  resources :products
+  resources :products do
+    post 'get_products_urls' => 'products#get_products_urls'
+  end
+  post 'products/get_products_urls' => 'products#get_products_urls'
+
   resources :line_items, only: [:create, :destroy] do
     get 'increment', on: :member
     get 'decrement', on: :member

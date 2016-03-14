@@ -1,5 +1,5 @@
 .container
-    .row
+  .row
     .col-xs-5
       hr
       = link_to "Home > ", root_path
@@ -12,7 +12,7 @@
       
       h1 Related Products
       = link_to @product.category.name, category_path(@product.category)
-        
+
     .col-xs-4
       h1= @product.title
       = @product.description.html_safe
@@ -36,7 +36,7 @@
           = render "industry_child", :f => f
           
         = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
-        
+
         h4.col-md-4
           = number_to_currency(@product.price,  unit: "₽ ")
           br
@@ -46,7 +46,74 @@
       .clr
       br
       br
+
+.clr
+
+#recommender_also_bought
+
+.clr
+
+#recommender_similer
+
+.clr
+
+#recommender_interesting
+
+.clr
+
 javascript:
+  var cf_also_bought = function(data){
+    // jQuery code
+    if(data.length > 0) {
+      $.ajax({
+        type: "POST",
+        url: 'get_products_urls',
+        data: {ids: data, recommender: 'also_bought'},
+      });
+      return false;
+    } else {
+      console.log("Not work or id nil")
+      var url = 'get_products_urls';
+      $.ajax({
+        type: "POST",
+        url: 'get_products_urls',
+        data: {ids: data, recommender: 'also_bought'},
+      });
+    }
+  };
+
+  var cf_similer = function(data){
+    // jQuery code
+    if(data.length > 0) {
+      $.ajax({
+        type: "POST",
+        url: 'get_products_urls',
+        data: {ids: data, recommender: 'similar'},
+      });
+      return false;
+    } else {
+      console.log("Not work or id nil, similar")
+      $.ajax({
+        type: "POST",
+        url: 'get_products_urls',
+        data: {ids: data, recommender: 'similar'},
+      });
+    }
+  };
+
+  var cf_interesting = function(data){
+    // jQuery code
+    if(data.length > 0) {
+      var url = 'get_products_urls';
+      $.ajax({
+        type: "POST",
+        url: 'get_products_urls',
+        data: {ids: data, recommender: 'interesting'},
+      });
+      return false;
+    }
+  };
+
   function afterInitRees46() {
     REES46.addReadyListener(function () {
       REES46.pushData('view', {
@@ -66,5 +133,28 @@ javascript:
           category_id: '#{@product.category_id}'
         });
       });
+    });
+
+    REES46.addReadyListener(function () {
+      REES46.recommend({
+        recommender_type: 'also_bought',
+        item: '#{@product.id}'
+        }, cf_also_bought);
+    });
+
+    REES46.addReadyListener(function () {
+      REES46.recommend({
+        recommender_type: 'similar',
+        item: '#{@product.id}'
+        //cart: [4, 102]
+        //categories:'2,41'
+        }, cf_similer);
+    });
+
+    REES46.addReadyListener(function () {
+      REES46.recommend({
+        recommender_type: 'interesting',
+        item: '#{@product.id}'
+        }, cf_interesting);
     });
   }
