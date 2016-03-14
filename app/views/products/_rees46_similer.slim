@@ -1,6 +1,6 @@
 h3.text-center Similer products 
 
-- products[0,3].each do |product|
+- products.take(4).each do |product|
   .col-xs-4.col-md-4
     = link_to product.title, product_path(product, recommdend_by: @recommender)
     = image_tag(product.image.thumb, class: "img-responsive")
