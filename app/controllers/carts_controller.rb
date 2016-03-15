@@ -10,6 +10,20 @@ class CartsController < ApplicationController
     redirect_to root_path, notice: 'Your cart currently empty.'
   end
 
+  def get_cart_urls
+    @products = []
+    params[:ids].each do |id|
+      if Product.where(id: id).any?
+        @products << Product.find(id)
+      end
+    end
+
+    @recommender = params[:recommender]
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
 
   def set_cart

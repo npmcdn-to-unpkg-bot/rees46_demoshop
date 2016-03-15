@@ -33,6 +33,25 @@
 // May be we need to show each now in side network show only one product
 - @cart.line_items.each do |item|
   javascript:
+    var cf_see_also = function(data){
+      // jQuery code
+      if(data.length > 0) {
+        $.ajax({
+          type: "POST",
+          url: 'get_cart_urls',
+          data: {ids: data, recommender: 'see_also'},
+        });
+        return false;
+      } else {
+        console.log("Not work or id nil")
+        $.ajax({
+          type: "POST",
+          url: 'get_cart_urls',
+          data: {ids: data, recommender: 'see_also'},
+        });
+      }
+    };
+
     function afterInitRees46() {
       REES46.addReadyListener(function () {
         $('#remove_all_from_cart').click(function () {
@@ -43,5 +62,12 @@
             category_id: '#{item.product.category_id}'
           });
         });
+      });
+
+      REES46.addReadyListener(function () {
+        REES46.recommend({
+          recommender_type: 'see_also',
+          cart: ['#{item.product_id']
+          }, cf_see_also);
       });
     }
