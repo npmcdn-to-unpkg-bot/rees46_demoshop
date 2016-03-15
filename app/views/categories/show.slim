@@ -1,4 +1,18 @@
 h1  Category
 .row
   - @products.each do |product|
-    = render 'categories/product_categories', product: product
+    .col-md-3
+      = render 'categories/product_categories', product: product
+
+.row
+  .clr
+
+  #recommender_popular
+
+  .clr
+
+  #recommender_recently_viewed
+
+  .clr
+
+  #recommender_interesting

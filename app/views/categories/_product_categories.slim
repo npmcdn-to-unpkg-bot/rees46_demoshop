@@ -1,21 +1,6 @@
-.col-md-3
-  h3
-    = link_to product.title, product_path(product)
-  = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product)
-  h4
-    = number_to_currency(product.price)
-
-.clr
-
-#recommender_popular
-
-.clr
-
-#recommender_recently_viewed
-
-.clr
-
-#recommender_interesting
+= link_to product.title, product_path(product)
+= link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product)
+= number_to_currency(product.price)
 
 javascript:
   var cf_popular = function(data){
