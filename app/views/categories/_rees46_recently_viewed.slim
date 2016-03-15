@@ -1,7 +1,7 @@
 h3.text-center Your recently visited Products
-.row
-  - products.take(4).each do |product|
-    .col-xs-4.col-md-4
-      = link_to product.title, product_path(product, recommdend_by: @recommender)
-      = image_tag(product.image.thumb, class: "img-responsive")
-      = product.price
+
+- products.take(4).each do |product|
+  .col-xs-4.col-md-4
+    = link_to product.title, product_path(product, recommdend_by: @recommender)
+    = image_tag(product.image.thumb, class: "img-responsive")
+    = product.price
