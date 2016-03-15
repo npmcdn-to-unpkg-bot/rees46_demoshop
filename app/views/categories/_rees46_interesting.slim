@@ -1,7 +1,7 @@
 h3.text-center You may like it :)
 
 - products.take(4).each do |product|
-  .col-xs-4.col-md-4
+  .col-md-3
     = link_to product.title, product_path(product, recommdend_by: @recommender)
     = image_tag(product.image.thumb, class: "img-responsive")
     = product.price

@@ -2,7 +2,7 @@ h1 Rees46 Demo Store
 
 .row
   - @products.each do |product|
-    .col-xs-4.col-md-4
+    .col-md-4
       .thumbnail
         h5= link_to product.title, product_path(product)
         = link_to image_tag(product.image.medium, class: "img-responsive"), product_path(product)
