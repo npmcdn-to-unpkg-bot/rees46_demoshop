@@ -54,7 +54,7 @@ javascript:
 
   function afterInitRees46() {
     var line_items = '#{ProductsInfo.new(Cart.last.line_items).get_cart_products_info.to_json.html_safe}'
-    console.log(JSON.parse(line_items))
+
     REES46.addReadyListener(function () {
       $('#remove_all_from_cart').click(function () {
         REES46.pushData('remove_from_cart', JSON.parse(line_items));
