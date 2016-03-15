@@ -31,43 +31,40 @@
         #remove_all_from_cart
           = button_to "Empty cart", @cart, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
 // May be we need to show each now in side network show only one product
-- @cart.line_items.each do |item|
-  javascript:
-    var cf_see_also = function(data){
-      // jQuery code
-      if(data.length > 0) {
-        $.ajax({
-          type: "POST",
-          url: 'get_cart_urls',
-          data: {ids: data, recommender: 'see_also'},
-        });
-        return false;
-      } else {
-        console.log("Not work or id nil")
-        $.ajax({
-          type: "POST",
-          url: 'get_cart_urls',
-          data: {ids: data, recommender: 'see_also'},
-        });
-      }
-    };
 
-    function afterInitRees46() {
-      REES46.addReadyListener(function () {
-        $('#remove_all_from_cart').click(function () {
-          REES46.pushData('remove_from_cart', {
-            item_id: '#{item.product_id}',
-            price: '#{number_to_currency(item.product.price)}',
-            is_available: '1',
-            category_id: '#{item.product.category_id}'
-          });
-        });
+javascript:
+  var cf_see_also = function(data){
+    // jQuery code
+    if(data.length > 0) {
+      $.ajax({
+        type: "POST",
+        url: 'get_cart_urls',
+        data: {ids: data, recommender: 'see_also'},
       });
-
-      REES46.addReadyListener(function () {
-        REES46.recommend({
-          recommender_type: 'see_also',
-          cart: ['#{item.product_id']
-          }, cf_see_also);
+      return false;
+    } else {
+      console.log("Not work or id nil")
+      $.ajax({
+        type: "POST",
+        url: 'get_cart_urls',
+        data: {ids: data, recommender: 'see_also'},
       });
     }
+  };
+
+  function afterInitRees46() {
+    var line_items = '#{ProductsInfo.new(Cart.last.line_items).get_cart_products_info.to_json.html_safe}'
+    console.log(JSON.parse(line_items))
+    REES46.addReadyListener(function () {
+      $('#remove_all_from_cart').click(function () {
+        REES46.pushData('remove_from_cart', JSON.parse(line_items));
+      });
+    });
+
+    REES46.addReadyListener(function () {
+      REES46.recommend({
+        recommender_type: 'see_also',
+        cart: []
+        }, cf_see_also);
+    });
+  }
