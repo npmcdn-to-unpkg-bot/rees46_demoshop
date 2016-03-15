@@ -12,7 +12,7 @@ h1 Rees46 Demo Store
   #recommender_popular
 
 javascript:
-  var callback_function = function(data){
+  var cf_popular = function(data){
     // jQuery code
     if(data.length > 0) {
       var url = 'store/get_popular_urls';
@@ -29,6 +29,6 @@ javascript:
       REES46.recommend({
         recommender_type: 'popular',
         category: ''
-        }, callback_function );
+        }, cf_popular );
       });
   }
