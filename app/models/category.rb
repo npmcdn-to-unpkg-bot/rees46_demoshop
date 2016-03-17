@@ -3,7 +3,7 @@ class Category < ActiveRecord::Base
   acts_as_tree order: 'name'
   extend FriendlyId
   friendly_id :name, use: :slugged
-  
+
   has_many :products
   validates :name, presence: true
 
