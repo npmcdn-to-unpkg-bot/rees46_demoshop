@@ -25,7 +25,7 @@ class ProductsInfo
       product[:item_id] = l.product.id
       product[:price] = l.product.price
       product[:is_available] = 1
-      product[:categories] = l.product.category_id
+      product[:categories] = [l.product.category_id]
       products << product
     end
     products
