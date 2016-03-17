@@ -41,7 +41,7 @@ class ProductsInfo
     products
   end
 
-  def get_cart_ids
+  def get_cart_products_ids
     @line_items.map do |li|
       li.product_id
     end
