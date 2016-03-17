@@ -25,7 +25,7 @@ div[class="row row_#{item.id}"]
     p.text-right = number_to_currency(item.total_price,  unit: "₽ ")
   .col-md-1
     #remove_single_from_cart.p.text-right
-      = button_to "X", line_item_path(item), method: :delete, data: { confirm: "Are you sure?" }
+      = button_to "X", line_item_path(item), method: :delete
 .cart-hr.underline
 
 br
