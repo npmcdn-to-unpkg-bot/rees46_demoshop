@@ -53,7 +53,7 @@ javascript:
 
   function afterInitRees46() {
     var line_items = '#{ProductsInfo.new(Cart.last.line_items).get_cart_products_info.to_json.html_safe}'
-    var cart_products_ids = '#{ProductsInfo.new(Order.last.line_items).get_cart_products_ids}'
+    var cart_products_ids = '#{ProductsInfo.new(@cart.line_items).get_cart_products_ids}'
     console.log(cart_products_ids)
     REES46.addReadyListener(function () {
       $('#remove_all_from_cart').click(function () {
