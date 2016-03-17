@@ -116,7 +116,7 @@ javascript:
 
   function afterInitRees46() {
     var cart_products_ids = '#{ProductsInfo.new(Order.last.line_items).get_cart_products_ids}'
-    var categories_ids = '#{ProductsInfo.new(Order.last.line_items).get_categories_ids.to_json.html_safe}'
+    var categories_ids = '#{ProductsInfo.new(Order.last.line_items).get_categories_ids}'
     console.log(cart_products_ids);
     console.log(categories_ids);
 

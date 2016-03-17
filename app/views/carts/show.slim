@@ -57,7 +57,7 @@ javascript:
 
   function afterInitRees46() {
     var line_items = '#{ProductsInfo.new(Order.last.line_items).get_cart_products_info.to_json.html_safe}'
-    var cart_products_ids = '#{ProductsInfo.new(@cart.line_items).get_cart_products_ids}'
+    var cart_products_ids = JSON.parse('#{ProductsInfo.new(@cart.line_items).get_cart_products_ids}');
     console.log(line_items)
     console.log(cart_products_ids)
     REES46.addReadyListener(function () {
@@ -75,7 +75,7 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'see_also',
-        cart: [128, 130]  // cart: cart_products_ids
+        cart: cart_products_ids
         }, cf_see_also);
     });
   }
