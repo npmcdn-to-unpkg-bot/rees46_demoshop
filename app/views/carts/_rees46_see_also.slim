@@ -1,6 +1,6 @@
 h1.text-center You see also
 
-- products.take(4).each do |product|
+- products.each do |product|
   .col-md-3
     = link_to product.title, product_path(product, recommdend_by: @recommender)
     = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product, recommdend_by: @recommender)
