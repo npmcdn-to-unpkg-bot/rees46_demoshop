@@ -38,6 +38,7 @@ gem 'mini_magick', '~> 4.3', '>= 4.3.6'
 
 # Other
 gem 'acts_as_tree', '~> 2.4'
+gem 'friendly_id', '~> 3.2', '>= 3.2.1.1'
 
 # Users
 gem 'devise', '~> 3.5', '>= 3.5.6'
