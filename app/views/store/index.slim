@@ -8,8 +8,8 @@ h1 Rees46 Demo Store
         = link_to image_tag(product.image.medium, class: "img-responsive"), product_path(product)
         p
           strong= number_to_currency(product.price,  unit: "₽ ")
-.row
-  #recommender_popular
+
+#recommender_popular
 
 javascript:
   var cf_popular = function(data){
@@ -31,7 +31,7 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'popular',
-        category: categories_ids
+        //category: categories_ids
         }, cf_popular );
       });
   }
