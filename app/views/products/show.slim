@@ -115,7 +115,7 @@ javascript:
   };
 
   function afterInitRees46() {
-    var cart_products_ids = '#{ProductsInfo.new(Order.last.line_items).get_cart_products_ids}'
+    var cart_products_ids = JSON.parse('#{ProductsInfo.new(Order.last.line_items).get_cart_products_ids}')
     var categories_ids = '#{ProductsInfo.new(Order.last.line_items).get_categories_ids}'
     console.log(cart_products_ids);
     console.log(categories_ids);
@@ -160,8 +160,8 @@ javascript:
       REES46.recommend({
         recommender_type: 'similar',
         item: '#{@product.id}',
-        //cart: cart_products_ids,
-        //categories: categories_ids,
+        cart: cart_products_ids,
+        categories: categories_ids,
         limit: 4
         }, cf_similer);
     });
