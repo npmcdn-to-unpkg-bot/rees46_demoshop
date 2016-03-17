@@ -1,7 +1,7 @@
 h1 Rees46 Demo Store
 
 .row
-  - @products.each do |product|
+  - @products.limit(12).each do |product|
     .col-md-4
       .thumbnail
         h5= link_to product.title, product_path(product)
