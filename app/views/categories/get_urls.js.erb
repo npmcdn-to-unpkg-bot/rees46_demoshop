@@ -1,5 +1,11 @@
-jQuery('#recommender_recently_viewed').html("<%= j render(partial: 'rees46_recently_viewed.slim', locals: { products: @products, recommender: @recommender }) %>");
+<% if (@recommender == 'popular') %>
+  jQuery('#recommender_popular').html("<%= j render(partial: 'rees46_popular.slim', locals: { products: @products, recommender: @recommender }) %>");
+<% end %>
 
-jQuery('#recommender_interesting').html("<%= j render(partial: 'rees46_interesting.slim', locals: { products: @products, recommender: @recommender }) %>");
+<% if (@recommender == 'recently_viewed') %>
+  jQuery('#recommender_recently_viewed').html("<%= j render(partial: 'rees46_recently_viewed.slim', locals: { products: @products, recommender: @recommender }) %>");
+<% end %>
 
-jQuery('#recommender_popular').html("<%= j render(partial: 'store/rees46_popular.slim', locals: { products: @products, recommender: @recommender }) %>");
+<% if (@recommender == 'interesting') %>
+  jQuery('#recommender_interesting').html("<%= j render(partial: 'rees46_interesting.slim', locals: { products: @products, recommender: @recommender }) %>");
+<% end %>
