@@ -23,5 +23,8 @@ Rails.application.routes.draw do
     get 'increment', on: :member
     get 'decrement', on: :member
   end
-  resources :carts, only: [:index, :show, :destroy]
+  resources :carts, only: [:index, :show, :destroy] do
+    post 'get_cart_urls' => 'carts#get_cart_urls'
+  end
+  post 'carts/get_cart_urls' => 'carts#get_cart_urls'
 end

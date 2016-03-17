@@ -12,9 +12,11 @@ class CartsController < ApplicationController
 
   def get_cart_urls
     @products = []
-    params[:ids].each do |id|
-      if Product.where(id: id).any?
-        @products << Product.find(id)
+    if params[:ids] != nil
+      params[:ids].each do |id|
+        if Product.where(id: id).any?
+          @products << Product.find(id)
+        end
       end
     end
 

@@ -1,0 +1,7 @@
+h1 Similar products
+
+- products.take(4).each do |product|
+  .col-md-3
+    = link_to product.title, product_path(product, recommdend_by: @recommender)
+    = image_tag(product.image.thumb, class: "img-responsive")
+    = product.price
