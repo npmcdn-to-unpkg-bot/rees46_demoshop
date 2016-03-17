@@ -25,10 +25,13 @@ javascript:
     }
   };
   function afterInitRees46() {
+  var categories_ids = '#{ProductsInfo.new(Order.last.line_items).get_categories_ids}'
+  console.log(categories_ids);
+  
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'popular',
-        category: ''
+        category: categories_ids
         }, cf_popular );
       });
   }
