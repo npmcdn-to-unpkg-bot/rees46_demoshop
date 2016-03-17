@@ -115,6 +115,11 @@ javascript:
   };
 
   function afterInitRees46() {
+    var cart_ids = '#{ProductsInfo.new(Order.last.line_items).get_cart_ids}'
+    var categories_ids = '#{ProductsInfo.new(Order.last.line_items).get_categories_ids.to_json.html_safe}'
+    console.log(cart_ids);
+    console.log(categories_ids);
+
     REES46.addReadyListener(function () {
       REES46.pushData('view', {
         item_id: '#{@product.id}',
@@ -145,9 +150,9 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'similar',
-        item: '#{@product.id}'
-        //cart: [4, 102]
-        //categories:'2,41'
+        item: '#{@product.id}',
+        cart: cart_ids,
+        categories: categories_ids
         }, cf_similer);
     });
 
