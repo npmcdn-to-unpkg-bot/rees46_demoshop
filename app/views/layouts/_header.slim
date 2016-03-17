@@ -11,15 +11,7 @@ header
           = link_to 'Rees46Demoshop', root_path
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav
-          - Category.where(parent_id: nil).each do |category|
-            li.dropdown
-              /a#drop.dropdown-toggle href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'
-              = link_to category.name, category_path(category)
-              - if category.children.any?
-                ul.dropdown-menu role='menu' aria-labelledby='drop'
-                  - category.walk_tree do |c, level|
-                    li= link_to "#{'-> '*level}#{c.name}", category_path(c)
-
+          = render "layouts/categories_menu"
         ul.nav.navbar-nav.navbar-right
           li[style=" margin-top: 20px; "]
             = @cart.total_quantity
