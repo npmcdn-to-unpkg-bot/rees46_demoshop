@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!, except: [:show, :get_products_urls]
   before_action :admin_permission, except: [:show, :get_products_urls]
 
   def index
