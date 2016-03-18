@@ -11,11 +11,14 @@
 	clear: both;
 }
 
-.thumbnail
-{
+.thumbnail {
     margin-bottom: 20px;
     padding: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
+    height: 350px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
 }
