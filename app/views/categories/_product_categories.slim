@@ -45,7 +45,7 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'popular',
-        //category: '#{product.category_id}',
+        category: '#{@category.id}',
         limit: 4
       }, cf_popular );
     });
