@@ -16,7 +16,8 @@ div[class="row row_#{item.id}"]
     - else
       false
   .col-md-1.right
-    = link_to "-  ", decrement_line_item_path(item), remote: true
+    .remove_single_from_cart
+      = link_to "-  ", decrement_line_item_path(item), remote: true
     div[class="quantity_#{item.id}"]
       = item.quantity
     = link_to "  +", increment_line_item_path(item), remote: true
@@ -24,8 +25,8 @@ div[class="row row_#{item.id}"]
   .col-md-2
     p.text-right = number_to_currency(item.total_price,  unit: "₽ ")
   .col-md-1
-    #remove_single_from_cart.p.text-right
-      = button_to "X", line_item_path(item), method: :delete
+    .remove_single_from_cart
+      = button_to "X", line_item_path(item), method: :delete, data: { confirm: 'are u sure?' }
 .cart-hr.underline
 
 br

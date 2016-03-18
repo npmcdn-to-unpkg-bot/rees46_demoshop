@@ -23,13 +23,11 @@
       br
       .col-md-4.text-center
         = link_to "Continue shopping", root_path, class: "btn btn-primary"
-          
-        end
+
       .col-md-4.text-center
         = button_to "Checkout", new_order_path, method: :get, class: "btn btn-success"
       .col-md-4.text-center
-        #remove_all_from_cart
-          = button_to "Empty cart", @cart, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+        = button_to "Empty cart", @cart, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
 
 .clr
 
@@ -56,19 +54,14 @@ javascript:
   };
 
   function afterInitRees46() {
-    var line_items = '#{ProductsInfo.new(Order.last.line_items).get_cart_products_info.to_json.html_safe}'
+    var remove_items = '#{ProductsInfo.new(@cart.line_items).get_cart_products_info.to_json.html_safe}'
     var cart_products_ids = JSON.parse('#{ProductsInfo.new(@cart.line_items).get_cart_products_ids}');
-    console.log(line_items)
+    console.log(remove_items)
     console.log(cart_products_ids)
-    REES46.addReadyListener(function () {
-      $('#remove_all_from_cart').click(function () {
-        REES46.pushData('remove_from_cart', JSON.parse(line_items));
-      });
-    });
 
     REES46.addReadyListener(function () {
-      $('#remove_single_from_cart').click(function () {
-        REES46.pushData('remove_from_cart', JSON.parse(line_items));
+      $('.remove_single_from_cart').click(function () {
+        REES46.pushData('remove_from_cart', JSON.parse(remove_items));
       });
     });
 
