@@ -55,6 +55,7 @@ javascript:
   };
 
   function afterInitRees46() {
+    var remove_items = '#{ProductsInfo.new(@cart.line_items).get_cart_products_info.to_json.html_safe}'
     var cart_products_ids = JSON.parse('#{ProductsInfo.new(@cart.line_items).get_cart_products_ids}');
 
     REES46.addReadyListener(function () {
