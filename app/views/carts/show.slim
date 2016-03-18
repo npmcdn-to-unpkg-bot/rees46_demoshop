@@ -59,7 +59,10 @@ javascript:
     var cart_products_ids = JSON.parse('#{ProductsInfo.new(@cart.line_items).get_cart_products_ids}');
 
     REES46.addReadyListener(function () {
-      $('.remove_single_from_cart').click(function () {
+      $('.remove_single_from_cart_delete').click(function () {
+          REES46.pushData('remove_from_cart', JSON.parse(remove_items));
+      });
+      $('.remove_single_from_cart_decrement').click(function () {
         if ($(this).next().text() == 1) {
           REES46.pushData('remove_from_cart', JSON.parse(remove_items));
         }
