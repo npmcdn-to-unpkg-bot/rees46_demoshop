@@ -128,7 +128,7 @@ javascript:
         item_id: '#{@product.id}',
         price: '#{@product.price}',
         is_available: '1',
-        category_id: '#{@product.category_id}'
+        categories: '#{[@product.category_id].to_s}'
       });
     });
 
@@ -138,7 +138,7 @@ javascript:
           item_id: '#{@product.id}',
           price: '#{@product.price}',
           is_available: '1',
-          category_id: '#{@product.category_id}'
+          categories: '#{[@product.category_id].to_s}'
         });
       });
     });
@@ -147,6 +147,7 @@ javascript:
       REES46.recommend({
         recommender_type: 'also_bought',
         item: '#{@product.id}',
+        cart: cart_products_ids,
         limit: 4
         }, cf_also_bought);
     });
@@ -155,6 +156,7 @@ javascript:
       REES46.recommend({
         recommender_type: 'interesting',
         item: '#{@product.id}',
+        cart: '#{@cart.line_items.pluck(:product_id)}',
         limit: 4
         }, cf_interesting);
     });
@@ -163,8 +165,8 @@ javascript:
       REES46.recommend({
         recommender_type: 'similar',
         item: '#{@product.id}',
-        cart: cart_products_ids,
-        categories: categories_ids,
+        cart: '#{@cart.line_items.pluck(:product_id)}',
+        categories: '#{@cart.line_items.pluck(:category_id)}',
         limit: 4
         }, cf_similer);
     });
