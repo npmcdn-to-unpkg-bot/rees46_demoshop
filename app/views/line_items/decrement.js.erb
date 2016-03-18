@@ -4,7 +4,7 @@ if("<%= @cart.line_items.any?%>" == 'false'){
 }else{
   if('<%= @line_item.quantity == 0 %>' == 'true'){
     $('.row_<%= @line_item.id %>').next('.underline').hide();
-    $('.row_<%= @line_item.id %>').fadeOut();
+    $('.row_<%= @line_item.id %>').fadeOut().rempve;
   }else{
     $('.quantity_<%= @line_item.id %>').html('<%= @line_item.quantity %>');
   }

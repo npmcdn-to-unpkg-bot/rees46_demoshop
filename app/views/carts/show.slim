@@ -30,6 +30,7 @@
         = button_to "Empty cart", @cart, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
 
 .clr
+hr
 
 #recommender_see_also
 
@@ -54,14 +55,13 @@ javascript:
   };
 
   function afterInitRees46() {
-    var remove_items = '#{ProductsInfo.new(@cart.line_items).get_cart_products_info.to_json.html_safe}'
     var cart_products_ids = JSON.parse('#{ProductsInfo.new(@cart.line_items).get_cart_products_ids}');
-    console.log(remove_items)
-    console.log(cart_products_ids)
 
     REES46.addReadyListener(function () {
       $('.remove_single_from_cart').click(function () {
-        REES46.pushData('remove_from_cart', JSON.parse(remove_items));
+        if ($(this).next().text() == 1) {
+          REES46.pushData('remove_from_cart', JSON.parse(remove_items));
+        }
       });
     });
 
