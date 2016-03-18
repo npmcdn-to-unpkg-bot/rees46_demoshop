@@ -12,7 +12,7 @@ div[class="row row_#{item.id}"]
       li= Product.const_get(Product::SIZES.keys[item.product.size].gsub(' ', '_').upcase).keys[item.size_id]
     - elsif item.product.child_ages && Product::AGE_SIZES.keys[item.product.child_ages].present? 
       li= Product::AGE_SIZES.key(item.size_id)
-    - elsif Product::PART_TYPES.keys[item.product.part_types[item.size_id.to_i]].present?
+    - elsif item.size_id && Product::PART_TYPES.keys[item.product.part_types[item.size_id.to_i]].present?
     - else
       false
   .col-md-1.right
