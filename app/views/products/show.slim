@@ -118,11 +118,6 @@ javascript:
   };
 
   function afterInitRees46() {
-    var cart_products_ids = JSON.parse('#{ProductsInfo.new(Order.last.line_items).get_cart_products_ids}')
-    var categories_ids = '#{ProductsInfo.new(Order.last.line_items).get_categories_ids}'
-    console.log(cart_products_ids);
-    console.log(categories_ids);
-
     REES46.addReadyListener(function () {
       REES46.pushData('view', {
         item_id: '#{@product.id}',
@@ -147,7 +142,7 @@ javascript:
       REES46.recommend({
         recommender_type: 'also_bought',
         item: '#{@product.id}',
-        cart: cart_products_ids,
+        cart: '#{@cart.line_items.pluck(:product_id)}',
         limit: 4
         }, cf_also_bought);
     });
@@ -166,7 +161,7 @@ javascript:
         recommender_type: 'similar',
         item: '#{@product.id}',
         cart: '#{@cart.line_items.pluck(:product_id)}',
-        categories: '#{@cart.line_items.pluck(:category_id)}',
+        //categories: ['#{@product.category_id}'],
         limit: 4
         }, cf_similer);
     });

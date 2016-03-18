@@ -24,10 +24,7 @@ javascript:
       return false;
     }
   };
-  function afterInitRees46() {
-  var categories_ids = '#{ProductsInfo.new(Order.last.line_items).get_categories_ids}'
-  console.log(categories_ids);
-  
+  function afterInitRees46() {  
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'popular',

@@ -45,6 +45,7 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'popular',
+        cart: ['#{@cart.product_ids_in_cart.join('').to_i}'],
         category: '#{@category.id}',
         limit: 4
       }, cf_popular );
@@ -53,6 +54,7 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'recently_viewed',
+        cart: ['#{@cart.product_ids_in_cart.join('').to_i}'],
         limit: 4
       }, cf_recently_viewed);
     });
@@ -60,6 +62,7 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'interesting',
+        cart: ['#{@cart.product_ids_in_cart.join('').to_i}'],
         item: '#{product.id}',
         limit: 4
       }, cf_interesting);

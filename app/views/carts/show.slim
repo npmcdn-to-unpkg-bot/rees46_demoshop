@@ -69,30 +69,31 @@ javascript:
     REES46.addReadyListener(function () {
       $('.remove_single_from_cart_delete').click(function () {
         REES46.pushData('remove_from_cart', {
-        item_id: '#{@product.id',
-        price: '#{@product.price',
+        item_id: '#{@cart.line_items.pluck(:product_id)}',
+        price: '#{@cart.product_price_in_cart.join(' ').to_i}',
         is_available: '1',
-        categories: '#{[@product.category_id].to_s}'
-      }
+        categories: '#{[@cart.category_ids_in_cart]}'
       });
-    });
-    
-    REES46.addReadyListener(function () {
-      REES46.pushData('remove_from_cart', {
-      $('.remove_single_from_cart_decrement').click(function () {
-        if ($(this).next().text() == 1) {
-          item_id: '#{@product.id',
-          price: '#{@product.price',
-          is_available: '1',
-          categories: '#{[@product.category_id].to_s}'
-        }
       });
     });
 
     REES46.addReadyListener(function () {
+      $('.remove_single_from_cart_decrement').click(function () {
+        if ($(this).next().text() == 1) {
+          REES46.pushData('remove_from_cart', {
+            item_id: '#{@cart.line_items.pluck(:product_id)}',
+            price: '#{@cart.product_price_in_cart.join(' ').to_i}',
+            is_available: '1',
+            categories: '#{[@cart.category_ids_in_cart]}'
+        });
+        }
+      });
+    });
+    console.log('#{@cart.product_ids_in_cart.join(",").to_i}')
+    REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'see_also',
-        cart: '#{@cart.line_items.pluck(:product_id)}',
+        cart: ['#{@cart.product_ids_in_cart.join(',').to_i}'],
         limit: 4
         }, cf_see_also);
     });
