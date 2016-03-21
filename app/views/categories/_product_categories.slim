@@ -54,7 +54,7 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'recently_viewed',
-        cart: ['#{@cart.product_ids_in_cart.join('').to_i}'],
+        cart: ['#{@cart.product_ids_in_cart}'],
         limit: 4
       }, cf_recently_viewed);
     });
@@ -62,7 +62,7 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'interesting',
-        cart: ['#{@cart.product_ids_in_cart.join('').to_i}'],
+        cart: ['#{@cart.product_ids_in_cart}'],
         limit: 4
       }, cf_interesting);
     });

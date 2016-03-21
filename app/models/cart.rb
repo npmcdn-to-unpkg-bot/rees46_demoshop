@@ -9,7 +9,7 @@ class Cart < ActiveRecord::Base
     line_items.to_a.sum(&:total_quantity)
   end
 
-  def product_id_in_cart
+  def product_ids_in_cart
     line_items.map {|li| li.product_id }
   end
 
