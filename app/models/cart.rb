@@ -10,7 +10,7 @@ class Cart < ActiveRecord::Base
   end
 
   def product_ids_in_cart
-    line_items.map {|li| li.product_id }
+    line_items.select {|li| li.product_id }
   end
 
   def product_price_in_cart

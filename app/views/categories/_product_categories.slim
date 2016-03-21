@@ -42,10 +42,13 @@ javascript:
   };
 
   function afterInitRees46() {
+    var cart_product_ids = '#{ProductsInfo.new(@cart.line_items).product_ids_in_cart.to_json.html_safe}'
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'popular',
-        cart: ['#{@cart.product_ids_in_cart.join('').to_i}'],
+        cart: JSON.parse(cart_product_ids).map(function(el){
+          return el.cart
+        }),
         category: '#{@category.id}',
         limit: 4
       }, cf_popular );
@@ -54,7 +57,9 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'recently_viewed',
-        cart: ['#{@cart.product_ids_in_cart}'],
+        cart: JSON.parse(cart_product_ids).map(function(el){
+          return el.cart
+        }),
         limit: 4
       }, cf_recently_viewed);
     });
@@ -62,7 +67,9 @@ javascript:
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'interesting',
-        cart: ['#{@cart.product_ids_in_cart}'],
+        cart: JSON.parse(cart_product_ids).map(function(el){
+          return el.cart
+        }),
         limit: 4
       }, cf_interesting);
     });

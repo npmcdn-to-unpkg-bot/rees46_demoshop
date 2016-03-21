@@ -41,12 +41,14 @@ class ProductsInfo
   #   products
   # end
   #
-  # def get_cart_products_ids
-  #   product = ''
-  #   @line_items.map do |li|
-  #     li.product_id
-  #   end
-  # end
+  def product_ids_in_cart
+    @line_items.each do |l|
+      product = {}
+      product[:cart] = l.product.id
+      products << product
+    end
+    products
+  end
   #
   # def get_categories_ids
   #   @line_items.map do |li|
