@@ -123,7 +123,7 @@ javascript:
         item_id: '#{@product.id}',
         price: '#{@product.price}',
         is_available: '1',
-        categories: '#{[@product.category_id].to_s}'
+        categories: '#{@product.category_id}'
       });
     });
 
@@ -133,7 +133,7 @@ javascript:
           item_id: '#{@product.id}',
           price: '#{@product.price}',
           is_available: '1',
-          categories: '#{[@product.category_id].to_s}'
+          categories: '#{@product.category_id}'
         });
       });
     });
