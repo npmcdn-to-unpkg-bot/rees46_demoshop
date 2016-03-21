@@ -63,7 +63,6 @@ javascript:
       REES46.recommend({
         recommender_type: 'interesting',
         cart: ['#{@cart.product_ids_in_cart.join('').to_i}'],
-        item: '#{product.id}',
         limit: 4
       }, cf_interesting);
     });
