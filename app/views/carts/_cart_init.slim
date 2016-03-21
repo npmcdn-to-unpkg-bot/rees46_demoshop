@@ -1,37 +1,3 @@
-div[class="row row_#{item.id}"]
-  .col-md-6
-    .row
-      .col-md-3
-        = image_tag item.product.image.thumb
-      .col-md-3[style="width: 350px;"]
-        p= item.product.title
-        
-  .col-md-2
-    - if item.product.size && Product::SIZES.keys[item.product.size].present?
-      li= Product::SIZES.keys[item.product.size]
-      li= Product.const_get(Product::SIZES.keys[item.product.size].gsub(' ', '_').upcase).keys[item.size_id]
-    - elsif item.product.child_ages && Product::AGE_SIZES.keys[item.product.child_ages].present? 
-      li= Product::AGE_SIZES.key(item.size_id)
-    - elsif item.size_id && Product::PART_TYPES.keys[item.product.part_types[item.size_id.to_i]].present?
-    - else
-      false
-  .col-md-1.right
-    .remove_single_from_cart_decrement
-      = link_to "-  ", decrement_line_item_path(item), remote: true
-    div[class="quantity_#{item.id}"]
-      = item.quantity
-    = link_to "  +", increment_line_item_path(item), remote: true
-
-  .col-md-2
-    p.text-right = number_to_currency(item.total_price,  unit: "₽ ")
-  .col-md-1
-    .remove_single_from_cart_delete
-      = button_to "X", line_item_path(item), method: :delete
-.cart-hr.underline
-
-br
-br
-
 javascript:
   var cf_see_also = function(data){
     // jQuery code
@@ -76,6 +42,7 @@ javascript:
       });
     });
     
+  function afterInitRees46() {
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'see_also',
