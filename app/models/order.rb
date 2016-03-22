@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
 
   validates :name, :address, :email, presence: true
 
-  after_save :decrement_product_stock
+  after_create :decrement_product_stock
 
   def add_line_items_form_cart(cart)
     cart.line_items.each do |item|
@@ -15,9 +15,8 @@ class Order < ActiveRecord::Base
   private
 
   def decrement_product_stock
-    self.line_items.each do |li|
-      binding.pry
-      li.product.update(stock: li.product.stock - li.quantity)
+    line_items.each do |li|
+      li.product.decrement_stock(li.quantity)
     end
   end
 end

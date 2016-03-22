@@ -223,6 +223,13 @@ class Product < ActiveRecord::Base
     russian_sizes.present? || euro_sizes.present? || american_sizes.present? || british_sizes.present? || asian_sizes.present?
   end
 
+  def decrement_stock(value)
+    reload
+    self.stock = stock - value
+    fail if stock < 0
+    save(validate: false)
+  end
+
   private
 
   def ensure_not_referenced_by_any_line_item
