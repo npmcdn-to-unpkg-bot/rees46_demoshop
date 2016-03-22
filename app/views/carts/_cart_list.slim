@@ -53,13 +53,14 @@ javascript:
   };
   function afterInitRees46() {
     var cart_product_ids = '#{ProductsInfo.new(@cart.line_items).product_ids_in_cart.to_json.html_safe}'
+
     REES46.addReadyListener(function () {
       $('.remove_single_from_cart_decrement').click(function () {
         if ($(this).next().text() == 1) {
           REES46.pushData('remove_from_cart', {
             item_id: '#{item.product_id}',
             price: '#{item.product.price}',
-            is_available: '#{@product.is_available?}',
+            is_available: '#{item.product.is_available?}',
             categories: '#{item.product.category_id}'
         });
         }
@@ -71,7 +72,7 @@ javascript:
         REES46.pushData('remove_from_cart', {
         item_id: '#{item.product_id}',
         price: '#{item.product.price}',
-        is_available: '#{@product.is_available?}',
+        is_available: '#{item.product.is_available?}',
         categories: '#{item.product.category_id}'
       });
       });
