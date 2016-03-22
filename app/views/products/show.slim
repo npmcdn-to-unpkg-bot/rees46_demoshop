@@ -134,7 +134,7 @@ javascript:
       REES46.pushData('view', {
         item_id: '#{@product.id}',
         price: '#{@product.price}',
-        is_available: '1',
+        is_available: '#{@product.is_available?}',
         categories: '#{@product.category_id}'
       });
     });
@@ -144,7 +144,7 @@ javascript:
         REES46.pushData('cart', {
           item_id: '#{@product.id}',
           price: '#{@product.price}',
-          is_available: '1',
+          is_available: '#{@product.is_available?}',
           categories: '#{@product.category_id}'
         });
       });
