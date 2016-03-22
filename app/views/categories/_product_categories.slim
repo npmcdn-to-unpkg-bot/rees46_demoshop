@@ -1,6 +1,6 @@
 = link_to product.title, product_path(product)
 = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product)
-= number_to_currency(product.price)
+= number_to_currency(product.price,  unit: "₽ ")
 
 javascript:
   var cf_popular = function(data){
