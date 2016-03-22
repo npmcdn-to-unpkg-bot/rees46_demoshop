@@ -230,6 +230,10 @@ class Product < ActiveRecord::Base
     save(validate: false)
   end
 
+  def is_available?
+    self.stock > 0 ? 1 : 0
+  end
+
   private
 
   def ensure_not_referenced_by_any_line_item

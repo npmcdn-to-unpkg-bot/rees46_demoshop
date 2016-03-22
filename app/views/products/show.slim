@@ -128,7 +128,8 @@ javascript:
 
   function afterInitRees46() {
     var cart_product_ids = '#{ProductsInfo.new(@cart.line_items).product_ids_in_cart.to_json.html_safe}'
-    console.log("#{@product.stock}")
+    //console.log("#{@product.stock?}")
+    console.log("#{@product.is_available?}")
     REES46.addReadyListener(function () {
       REES46.pushData('view', {
         item_id: '#{@product.id}',
