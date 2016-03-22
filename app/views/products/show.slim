@@ -48,7 +48,10 @@
           br
           br
           #add-to-cart-button
-            = f.submit "Add to Cart"
+            - if @product.stock == 0 
+              false
+            - else
+              = f.submit "Add to Cart"
       .clr
       br
       br
