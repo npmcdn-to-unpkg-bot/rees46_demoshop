@@ -8,6 +8,7 @@ h1 Rees46 Demo Store
         = link_to image_tag(product.image.medium, class: "img-responsive"), product_path(product)
         p
           strong= number_to_currency(product.price,  unit: "₽ ")
+          .text-right= print_stock(product.stock)
 
 #recommender_popular
 
