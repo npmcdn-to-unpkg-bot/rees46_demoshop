@@ -27,4 +27,7 @@ Rails.application.routes.draw do
     post 'get_cart_urls' => 'carts#get_cart_urls'
   end
   post 'carts/get_cart_urls' => 'carts#get_cart_urls'
+
+  # get 'parsers' => 'parsers/rees46_demo'
+  resources :parsers, only: :index
 end
