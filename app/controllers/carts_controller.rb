@@ -2,6 +2,9 @@ class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :destroy]
 
   def show
+    if !@cart.line_items.present?
+      redirect_to root_path, notice: 'Your cart currently empty.'
+    end
   end
 
   def destroy
