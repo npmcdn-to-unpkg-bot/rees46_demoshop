@@ -3,6 +3,8 @@ class CartsController < ApplicationController
 
   def show
     if !@cart.line_items.present?
+      @cart.destroy if @cart.id == session[:cart_id]
+      session[:cart_id] = nil
       redirect_to root_path, notice: 'Your cart currently empty.'
     end
   end
