@@ -1,5 +1,5 @@
 li[style=" margin-top: 20px; "]
-  = @cart.total_quantity
+  = @cart.line_items.size
 - if @cart.line_items.any?
   li= link_to cart_path(@cart)
     i.fa.fa-shopping-basket.fa-2x
