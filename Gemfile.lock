@@ -346,6 +346,7 @@ DEPENDENCIES
   meta_request
   mini_magick (~> 4.3, >= 4.3.6)
   nested_form
+  nokogiri (~> 1.6, >= 1.6.7.2)
   pg
   poltergeist
   pry

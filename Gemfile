@@ -32,9 +32,10 @@ gem 'capistrano-rails', group: :development
 # Tamplate
 gem 'slim', '~> 3.0', '>= 3.0.6'
 
-# Image Files process
+# Files process
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3', '>= 4.3.6'
+gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
 
 # Other
 gem 'acts_as_tree', '~> 2.4'
