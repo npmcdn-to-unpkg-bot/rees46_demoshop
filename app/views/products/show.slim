@@ -9,9 +9,6 @@
       br
       h3 Brand Name:
       = link_to @product.brand.name, brand_path(@product.brand)
-      
-      h1 Related Products
-      = link_to @product.category.name, category_path(@product.category)
 
     .col-xs-4
       h1= @product.title
