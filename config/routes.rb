@@ -30,4 +30,5 @@ Rails.application.routes.draw do
 
   # get 'parsers' => 'parsers/rees46_demo'
   resources :parsers, only: :index
+  get 'store/xml_rees46'
 end

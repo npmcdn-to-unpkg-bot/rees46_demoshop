@@ -17,6 +17,11 @@ class StoreController < ApplicationController
     end
   end
 
+  def xml_rees46
+    @products = Product.all
+    @categories = Category.all
+  end
+
   def dashboard
     @orders = Order.order('created_at DESC')
   end
