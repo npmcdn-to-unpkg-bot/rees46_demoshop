@@ -13,6 +13,11 @@ xml.xml_catalog do
     xml.categories do
       @categories.each do |category|
         xml.category("#{category.name}","id"=>"#{category.id}")
+          if category.children.any?
+            category.walk_tree do |c, level|
+              xml.subcategory("#{c.name}","parentId" => "#{c.id}") 
+            end
+          end
       end
     end
 
