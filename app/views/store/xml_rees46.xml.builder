@@ -43,7 +43,7 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           xml.picture "#{product_url(product.image)}"
           xml.vendor "#{product.brand.name}"
           xml.name "#{product.title}"
-          xml.description "#{product.description}"
+          xml.description "#{ActionView::Base.full_sanitizer.sanitize(product.description)}"
         }
       end
     end
