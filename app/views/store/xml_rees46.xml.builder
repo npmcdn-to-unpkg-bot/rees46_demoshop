@@ -17,7 +17,7 @@ xml.xml_catalog do
     end
 
     xml.offers do |offer|
-      @products.each do |product|
+      @products.where.not(stock: 0).each do |product|
           xml.offer("id" => "#{product.id}", "available" => "#{product.is_available? == 1}") {
             xml.url 'localhost:3000'
             xml.price "#{product.price}"
@@ -29,8 +29,8 @@ xml.xml_catalog do
           }
       end
 
-      @products.each do |product|
-          xml.offer("id" => "#{product.id}", "available" => "#{product.is_available? == 0}") {
+      @products.where(stock: 0).each do |product|
+          xml.offer("id" => "#{product.id}", "available" => "#{product.is_available? == 1}") {
             xml.url 'localhost:3000'
             xml.price "#{product.price}"
             xml.currencyId "RUB"
