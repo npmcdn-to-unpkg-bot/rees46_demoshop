@@ -192,6 +192,8 @@ class Product < ActiveRecord::Base
     'h 125-135 cm'  => 4
   }.freeze
 
+  before_destroy :ensure_not_referenced_by_any_line_item
+
   mount_uploader :image, ImageUploader
 
   belongs_to :category
@@ -199,8 +201,6 @@ class Product < ActiveRecord::Base
   has_many :line_items
   has_many :volumes, dependent: :destroy
   accepts_nested_attributes_for :volumes, reject_if: ->(attributes) { attributes['value'].blank? }, allow_destroy: true
-
-  before_destroy :ensure_not_referenced_by_any_line_item
 
   # validates :title, :image, :description, :brand, :category_id, presence: true
   # validates :title, uniqueness: true
