@@ -12,12 +12,4 @@ class Cart < ActiveRecord::Base
   def product_ids_in_cart
     line_items.select {|li| li.product_id }
   end
-
-  def product_price_in_cart
-    line_items.select {|li| li.product.price.to_i }
-  end
-
-  def category_ids_in_cart
-    line_items.select {|li| li.product.category_id }
-  end
 end
