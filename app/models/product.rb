@@ -234,6 +234,14 @@ class Product < ActiveRecord::Base
     self.stock > 0 ? 1 : 0
   end
 
+  def gender_typs?
+    if gender == 'Male'
+      return 'm'
+    else gender == 'Female'
+      return 'f'
+    end
+  end
+
   private
 
   def ensure_not_referenced_by_any_line_item
