@@ -83,7 +83,6 @@ ActiveRecord::Schema.define(version: 20160322094552) do
     t.integer  "gender"
     t.integer  "industry"
     t.integer  "fashion"
-    t.integer  "type"
     t.integer  "size"
     t.integer  "cosmetic"
     t.integer  "hypoallergenic",                         default: 0
@@ -104,6 +103,7 @@ ActiveRecord::Schema.define(version: 20160322094552) do
     t.integer  "child_sizes"
     t.integer  "brand_id"
     t.integer  "stock",                                  default: 0
+    t.integer  "product_type"
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree

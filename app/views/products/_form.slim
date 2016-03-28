@@ -29,10 +29,10 @@
     = f.input :age_sizes, as: :check_boxes, include_hidden: false, collection: Product::AGE_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #child-tyes.hidden.type-sizes
-    = f.input :type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::CHILD_TYPES), item_wrapper_class: 'radio-inline'
+    = f.input :product_type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::CHILD_TYPES), item_wrapper_class: 'radio-inline'
     hr
   #fashion-param.hidden.country-sizes
-    = f.input :type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::ADULT_TYPES), item_wrapper_class: 'radio-inline'
+    = f.input :product_type, as: :radio_buttons, collection: Product::COMMON_TYPES.merge(Product::ADULT_TYPES), item_wrapper_class: 'radio-inline'
     hr
   #size-types.hidden.country-sizes.country-sizes-types
     = f.input :size, as: :radio_buttons, collection: Product::SIZES, item_wrapper_class: 'radio-inline'

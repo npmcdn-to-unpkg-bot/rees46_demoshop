@@ -32,7 +32,7 @@ $( document ).on("last-element-rendered", function() {
   });
 
   // Show child/adult size & Periodic when type have sizes/Periodic
-  $('[name="product[type]"]').on('change', function() {
+  $('[name="product[product_type]"]').on('change', function() {
     var value = $(this).val();
     if (['18', '19', '9', '0', '1', '2', '3', '4', '5'].indexOf(value) > -1) {
       $('#hypoallergenic, #periodic').addClass('hidden');
