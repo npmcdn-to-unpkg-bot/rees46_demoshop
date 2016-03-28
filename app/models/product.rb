@@ -234,7 +234,7 @@ class Product < ActiveRecord::Base
     self.stock > 0 ? 1 : 0
   end
 
-  def gender_typs?
+  def gender_type
     if gender == 'Male'
       return 'm'
     else gender == 'Female'
@@ -250,7 +250,7 @@ class Product < ActiveRecord::Base
     end
   end
 
-  def human_avilable_sizes
+  def human_available_sizes
     self.send(Product::SIZES.keys[self.size].gsub(' ', '_').downcase).map { |value|
       [
         Product.const_get(Product::SIZES.keys[self.size].gsub(' ', '_').upcase).keys[value],
