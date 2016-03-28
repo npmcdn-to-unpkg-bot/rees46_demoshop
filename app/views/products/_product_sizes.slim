@@ -1,1 +1,1 @@
-= f.input :size_id, label: "#{Product::SIZES.keys[@product.size].camelcase}", as: :select, collection:    Product.const_get(Product::SIZES.keys[@product.size].gsub(' ', '_').upcase), item_wrapper_class: 'radio-inline'
+= f.input :size_id, label: "#{Product::SIZES.keys[@product.size].camelcase}", as: :select, collection: @product.human_avilable_sizes, item_wrapper_class: 'radio-inline'

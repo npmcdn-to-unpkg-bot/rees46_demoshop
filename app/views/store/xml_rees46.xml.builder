@@ -41,7 +41,7 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                 #   xml.size "#{ps[product.size.to_i]}"
                 # end
                 if product.size && Product::SIZES.keys[product.size].present?
-                  Product.const_get(Product::SIZES.keys[product.size.to_i].gsub(' ', '_').upcase).each do |ps|
+                  product.human_avilable_sizes.each do |ps|
                     xml.size "#{ps[product.size.to_i]}"
                   end
                 end

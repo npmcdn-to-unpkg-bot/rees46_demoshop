@@ -242,6 +242,22 @@ class Product < ActiveRecord::Base
     end
   end
 
+  def size_collection?
+    if Product::SIZES.keys[0]
+      return product[:russian_sizes]
+    elsif Product::SIZES.keys[1]
+      return product[:euro_sizes]
+    end
+  end
+
+  def human_avilable_sizes
+    self.send(Product::SIZES.keys[self.size].gsub(' ', '_').downcase).map { |value|
+      [
+        Product.const_get(Product::SIZES.keys[self.size].gsub(' ', '_').upcase).keys[value],
+        value
+      ]}
+  end
+
   private
 
   def ensure_not_referenced_by_any_line_item
