@@ -34,7 +34,7 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           xml.description "#{ActionView::Base.full_sanitizer.sanitize(product.description)}"
           if product.industry == "Fashion"
             xml.fashion {
-              xml.gender "#{product.gender_typs?}"
+              xml.gender "#{product.gender_type?}"
               xml.type "#{Product::COMMON_TYPES.merge(Product::ADULT_TYPES).keys[product.product_type.to_i]}"
               xml.sizes {
                 # Product.const_get(Product::SIZES.keys[product.size.to_i].gsub(' ', '_').upcase).each do |ps|
@@ -49,12 +49,12 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               }
           elsif product.industry == "Cosmetic"
             xml.cosmetic {
-              xml.gender "#{product.gender_typs?}"
+              xml.gender "#{product.gender_type?}"
               xml.type "#{product}"
             }
           elsif product.industry == "Child"
             xml.child {
-              xml.gender "#{product.gender_typs?}"
+              xml.gender "#{product.gender_type?}"
               xml.type "#{product}"
             }
           end
