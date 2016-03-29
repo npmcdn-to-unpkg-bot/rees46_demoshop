@@ -262,6 +262,10 @@ class Product < ActiveRecord::Base
     self.conditions.map { |condition| Product::CONDITIONS.keys[condition]}
   end
 
+  def human_available_child_ages
+    self.age_sizes.map {|pas| Product::AGE_SIZES.keys[pas]}
+  end
+
   private
 
   def ensure_not_referenced_by_any_line_item
