@@ -98,7 +98,11 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"
               end
-              xml.type "#{product}"
+              if Product::AGES.values[product.child_ages] == 0
+                product.human_available_child_ages.each do |ca|
+                  xml.type "#{ca}"
+                end
+              end
             }
           end
         }

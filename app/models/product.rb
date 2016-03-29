@@ -42,9 +42,9 @@ class Product < ActiveRecord::Base
     'Euro Sizes'         =>   1,
     'British Sizes'      =>   2,
     'American Sizes'     =>   3,
-    'Asian sizes'        =>   4,
-    'Child Hight sizes'  =>   5
-  }.freeze
+    'Asian Sizes'        =>   4,
+    'Hight Sizes'  =>   5
+  }
 
   # Child constants class
   AGE_SIZES = {
@@ -184,7 +184,7 @@ class Product < ActiveRecord::Base
     '55' => 20
   }.freeze
 
-  CHILD_HIGHT_SIZES = {
+  HIGHT_SIZES = {
     'h 80-94 cm'    => 0,
     'h 95-105 cm'   => 1,
     'h 105-115 cm'  => 2,
