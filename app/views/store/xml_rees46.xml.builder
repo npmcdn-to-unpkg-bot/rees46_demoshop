@@ -109,6 +109,10 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                   end
                 end
               end
+
+              if !product.periodic.nil?
+                xml.periodic "#{product.periodic}"
+              end
             }
           end
         }
