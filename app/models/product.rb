@@ -49,11 +49,11 @@ class Product < ActiveRecord::Base
   # Child constants class
   AGE_SIZES = {
     "0-3 мес"     => 0,
-    "3-6 мес"     => 1,
-    "6-9 мес"     => 2,
-    "9-12 мес"    => 3,
-    "12-18 мес"   => 4,
-    "18-24 мес"   => 5
+    "3-6 мес"     => 0.25,
+    "6-9 мес"     => 0.5,
+    "9-12 мес"    => 0.75,
+    "12-18 мес"   => 2,
+    "18-24 мес"   => 1.5
   }.freeze
 
   AGES = {
@@ -185,11 +185,11 @@ class Product < ActiveRecord::Base
   }.freeze
 
   HIGHT_SIZES = {
-    'h 80-94 cm'    => 0,
-    'h 95-105 cm'   => 1,
-    'h 105-115 cm'  => 2,
-    'h 115-125 cm'  => 3,
-    'h 125-135 cm'  => 4
+    'h80-94'    => 0,
+    'h95-105'   => 1,
+    'h105-115'  => 2,
+    'h115-125'  => 3,
+    'h125-135'  => 4
   }.freeze
 
   before_destroy :ensure_not_referenced_by_any_line_item
