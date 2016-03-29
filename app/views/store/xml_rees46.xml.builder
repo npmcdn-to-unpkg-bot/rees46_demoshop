@@ -71,6 +71,16 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                   end
                 end
               }
+
+              xml.volumes {
+                product.volumes.each do |v|
+                  xml.volume {
+                    xml.value "#{v.value}"
+                    xml.price  "#{v.value_price}"
+                  }
+                end
+              }
+              xml.periodic "#{product.periodic}"
             }
           elsif product.industry == "Child"
             xml.child {
