@@ -14,7 +14,7 @@
   = f.input :stock
   = f.input :brand_id, as: :select, collection: Brand.all
   = f.input :industry, as: :select, collection: Product::INDUSTRY
-  /= f.input :industry, as: :select, collection: Product.industries
+
   #gender.hidden.country-sizes
     = f.input :gender, as: :radio_buttons, collection: Product::GENDERS, item_wrapper_class: 'radio-inline'
     hr
