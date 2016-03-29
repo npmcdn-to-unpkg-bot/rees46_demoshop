@@ -80,7 +80,9 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                   }
                 end
               }
-              xml.periodic "#{product.periodic}"
+              if !product.periodic.nil?
+                xml.periodic "#{product.periodic}"
+              end
             }
           elsif product.industry == "Child"
             xml.child {
