@@ -47,7 +47,30 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           elsif product.industry == "Cosmetic"
             xml.cosmetic {
               xml.gender "#{product.gender_type}"
-              xml.type "#{product}"
+              xml.hypoallergenic "#{product.hypoallergenic}"
+              xml.part_types {
+                if product.part_types
+                  product.human_available_part_types.each do |part_type|
+                    xml.part_type "#{part_type}".downcase
+                  end
+                end
+              }
+
+              xml.skin_types {
+                if product.skin_types
+                  product.human_available_skin_types.each do |skin_type|
+                    xml.skin_type "#{skin_type}".downcase
+                  end
+                end
+              }
+
+              xml.conditions {
+                if product.conditions
+                  product.human_available_conditions.each do |condition|
+                    xml.condition "#{condition}"
+                  end
+                end
+              }
             }
           elsif product.industry == "Child"
             xml.child {

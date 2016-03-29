@@ -258,6 +258,18 @@ class Product < ActiveRecord::Base
       ]}
   end
 
+  def human_available_part_types
+    self.part_types.map { |pt| Product::PART_TYPES.keys[pt]}
+  end
+
+  def human_available_skin_types
+    self.skin_types.map { |st| Product::SKIN_TYPES.keys[st]}
+  end
+
+  def human_available_conditions
+    self.conditions.map { |condition| Product::CONDITIONS.keys[condition]}
+  end
+
   private
 
   def ensure_not_referenced_by_any_line_item
