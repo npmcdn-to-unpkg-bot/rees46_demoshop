@@ -1,4 +1,5 @@
 - if Product::AGES.values[@product.child_ages.to_i] == 0
+  //= Product::AGE_SIZES.keys[@product.child_ages].present?
   .clr
   = f.input :size_id, label: "Ages" ,as: :select, collection: @product.human_available_child_ages, item_wrapper_class: 'radio-inline'
 
