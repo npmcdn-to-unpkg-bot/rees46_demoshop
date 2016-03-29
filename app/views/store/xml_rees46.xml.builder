@@ -32,9 +32,12 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           xml.vendor "#{product.brand.name}"
           xml.name "#{product.title}"
           xml.description "#{ActionView::Base.full_sanitizer.sanitize(product.description)}"
+
           if product.industry == "Fashion"
             xml.fashion {
-              xml.gender "#{product.gender_type}"
+              if !product.gender_type.nil?
+                xml.gender "#{product.gender_type}"
+              end
               xml.type "#{Product::COMMON_TYPES.merge(Product::ADULT_TYPES).keys[product.product_type.to_i]}".downcase
               xml.sizes {
                 if !product.size.nil?
@@ -46,9 +49,12 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                 end
                 }
               }
+
           elsif product.industry == "Cosmetic"
             xml.cosmetic {
-              xml.gender "#{product.gender_type}"
+              if !product.gender_type.nil?
+                xml.gender "#{product.gender_type}"
+              end
               xml.hypoallergenic "#{product.hypoallergenic}"
               xml.part_types {
                 if product.part_types
@@ -86,9 +92,12 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                 xml.periodic "#{product.periodic}"
               end
             }
+
           elsif product.industry == "Child"
             xml.child {
-              xml.gender "#{product.gender_type}"
+              if !product.gender_type.nil?
+                xml.gender "#{product.gender_type}"
+              end
               xml.type "#{product}"
             }
           end
