@@ -66,8 +66,8 @@ class Product < ActiveRecord::Base
   }.freeze
 
   AGES = {
-    'Age less then 2' => 0,
-    'Age more than 2' => 1
+    'Age less then 2 years' => 0,
+    'Age more than 2 years' => 1
   }.freeze
 
   # Consmetic constants class
