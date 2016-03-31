@@ -45,8 +45,11 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               xml.sizes {
                 if !product.size.nil?
                   if product.size == 2 && Product::SIZES.keys[2].present?
-
                     product.human_available_british_sizes.each do |ps|
+                      xml.size "#{ps}"
+                    end
+                  elsif product.size == 1 && Product::SIZES.keys[1].present?
+                    product.human_available_euro_sizes.each do |ps|
                       xml.size "#{ps}"
                     end
 

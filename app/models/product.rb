@@ -145,6 +145,25 @@ class Product < ActiveRecord::Base
     '58' => 15
   }.freeze
 
+  EURO_SIZES_PREFIXED = {
+    'e36' => 0,
+    'e37' => 1,
+    'e38' => 2,
+    'e39' => 3,
+    'e40' => 4,
+    'e41' => 5,
+    'e42' => 6,
+    'e43' => 7,
+    'e44' => 8,
+    'e46' => 9,
+    'e48' => 10,
+    'e50' => 11,
+    'e52' => 12,
+    'e54' => 13,
+    'e56' => 14,
+    'e58' => 15
+  }.freeze
+
   AMERICAN_SIZES = {
     XS: 0,
     S:  1,
@@ -167,7 +186,7 @@ class Product < ActiveRecord::Base
     '8'   => 8,
     '9'   => 9,
     '9.5' => 10
-  }
+  }.freeze
 
   BRITISH_SIZES_PREFIXED = {
     'b3'   => 0,
@@ -279,8 +298,11 @@ class Product < ActiveRecord::Base
   end
 
   def human_available_british_sizes
-    binding.pry
     self.british_sizes.map { |pt| Product::BRITISH_SIZES_PREFIXED.keys[pt]}
+  end
+
+  def human_available_euro_sizes
+    self.euro_sizes.map { |pt| Product::EURO_SIZES_PREFIXED.keys[pt]}
   end
 
   def human_available_skin_types
