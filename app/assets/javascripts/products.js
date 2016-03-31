@@ -1,13 +1,13 @@
 $( document ).on("last-element-rendered", function() {
   $('#product_industry').on('change', function() {
     var industry = $(this).val();
-    if (industry === "Fashion") {
+    if (industry === "fashion") {
       $(".country-sizes, .group-sizes, .child_age_sizes").addClass('hidden');
       $('#fashion-param, #gender').removeClass('hidden');
-    } else if (industry === "Cosmetic") {
+    } else if (industry === "cosmetic") {
       $(".country-sizes, .group-sizes, .child_age_sizes, .product_type").addClass('hidden');
       $('#cosmetic-param, #gender, #periodic, #hypoallergenic').removeClass('hidden');
-    } else if (industry === "Child") {
+    } else if (industry === "child") {
       $(".country-sizes, .group-sizes, .country-periodic").addClass('hidden');
       $('#gender, #child_age_sizes').removeClass('hidden');
     }
