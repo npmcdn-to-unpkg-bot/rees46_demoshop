@@ -1,6 +1,5 @@
-- Category.where(parent_id: nil).each do |category|
+- Category.where(parent_id: nil).where.not(slug: "categories-industry").each do |category|
   li.dropdown
-    /a#drop.dropdown-toggle href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'
     = link_to category.name, category_path(category)
     - if category.children.any?
       ul.dropdown-menu role='menu' aria-labelledby='drop'
