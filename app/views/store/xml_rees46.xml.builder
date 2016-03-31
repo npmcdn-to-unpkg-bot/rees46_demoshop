@@ -44,7 +44,13 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               end
               xml.sizes {
                 if !product.size.nil?
-                  if product.size && Product::SIZES.keys[product.size].present?
+                  if product.size == 2 && Product::SIZES.keys[2].present?
+
+                    product.human_available_british_sizes.each do |ps|
+                      xml.size "#{ps}"
+                    end
+
+                  elsif product.size && Product::SIZES.keys[product.size].present?
                     product.human_available_sizes.each do |ps|
                       xml.size "#{ps[0]}"
                     end
@@ -106,11 +112,17 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               end
               if Product::AGES.values[product.child_ages] == 0
                 xml.age {
-                  xml.min product.mac_child_ages.first
-                  xml.max product.mac_child_ages.last
+                  xml.min product.child_ages_prefixed.first
+                  xml.max product.child_ages_prefixed.last
                 }
               else
-                if product.size && Product::SIZES.keys[product.size].present?
+                if product.size == 1 && Product::SIZES.keys[product.size == 1].present?
+
+                  product.human_available_sizes.each do |ps|
+                    xml.size "#{ps[0] << "e"}"
+                  end
+
+                elsif product.size && Product::SIZES.keys[product.size].present?
                   product.human_available_sizes.each do |ps|
                     xml.size "#{ps[0]}"
                   end

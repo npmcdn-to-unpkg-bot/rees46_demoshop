@@ -167,7 +167,22 @@ class Product < ActiveRecord::Base
     '8'   => 8,
     '9'   => 9,
     '9.5' => 10
+  }
+
+  BRITISH_SIZES_PREFIXED = {
+    'b3'   => 0,
+    'b4'   => 1,
+    'b5'   => 2,
+    'b5.5' => 3,
+    'b6'   => 4,
+    'b6.5' => 5,
+    'b7'   => 6,
+    'b7.5' => 7,
+    'b8'   => 8,
+    'b9'   => 9,
+    'b9.5' => 10
   }.freeze
+
 
   ASIAN_SIZES = {
     '35' => 0,
@@ -263,6 +278,11 @@ class Product < ActiveRecord::Base
     self.part_types.map { |pt| Product::PART_TYPES.keys[pt]}
   end
 
+  def human_available_british_sizes
+    binding.pry
+    self.british_sizes.map { |pt| Product::BRITISH_SIZES_PREFIXED.keys[pt]}
+  end
+
   def human_available_skin_types
     self.skin_types.map { |st| Product::SKIN_TYPES.keys[st]}
   end
@@ -275,7 +295,7 @@ class Product < ActiveRecord::Base
     self.age_sizes.map {|pas| Product::AGE_SIZES.keys[pas]}
   end
 
-  def mac_child_ages
+  def child_ages_prefixed
     self.age_sizes.map {|pas| Product::AGE_SIZES_VALUES.keys[pas]}
   end
 
