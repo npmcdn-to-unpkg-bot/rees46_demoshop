@@ -101,7 +101,7 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"
               end
-              if product.product_type.nil?
+              if !product.product_type.nil?
                 xml.type "#{Product::COMMON_TYPES.merge(Product::ADULT_TYPES).keys[product.product_type.to_i]}".downcase
               end
               if Product::AGES.values[product.child_ages] == 0
