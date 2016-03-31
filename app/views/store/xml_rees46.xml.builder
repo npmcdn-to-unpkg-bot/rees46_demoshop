@@ -40,10 +40,10 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                 xml.gender "#{product.gender_type}"
               end
               if !product.product_type.nil?
-                xml.type "#{Product::COMMON_TYPES.merge(Product::ADULT_TYPES).keys[product.product_type.to_i]}".downcase
+                xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
               end
-              xml.sizes {
-                if !product.size.nil?
+              if !product.size.nil?
+                xml.sizes {
                   if product.size == 2 && Product::SIZES.keys[2].present?
                     product.human_available_british_sizes.each do |ps|
                       xml.size "#{ps}"
@@ -58,8 +58,8 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                       xml.size "#{ps[0]}"
                     end
                   end
-                end
                 }
+              end
               }
 
           elsif product.industry == "Cosmetic"
@@ -111,7 +111,7 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                 xml.gender "#{product.gender_type}"
               end
               if !product.product_type.nil?
-                xml.type "#{Product::COMMON_TYPES.merge(Product::ADULT_TYPES).keys[product.product_type.to_i]}".downcase
+                xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
               end
               if Product::AGES.values[product.child_ages] == 0
                 xml.age {
@@ -153,7 +153,118 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           xml.picture "#{image_url(product.image)}"
           xml.vendor "#{product.brand.name}"
           xml.name "#{product.title}"
-          xml.description "#{ActionView::Base.full_sanitizer.sanitize(product.description)}"
+          if product.description.nil?
+            xml.description "#{ActionView::Base.full_sanitizer.sanitize(product.description)}"
+          end
+          if product.industry == "Fashion"
+            xml.fashion {
+              if !product.gender_type.nil?
+                xml.gender "#{product.gender_type}"
+              end
+              if !product.product_type.nil?
+                xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
+              end
+              if !product.size.nil?
+                xml.sizes {
+                  if product.size == 2 && Product::SIZES.keys[2].present?
+                    product.human_available_british_sizes.each do |ps|
+                      xml.size "#{ps}"
+                    end
+                  elsif product.size == 1 && Product::SIZES.keys[1].present?
+                    product.human_available_euro_sizes.each do |ps|
+                      xml.size "#{ps}"
+                    end
+
+                  elsif product.size && Product::SIZES.keys[product.size].present?
+                    product.human_available_sizes.each do |ps|
+                      xml.size "#{ps[0]}"
+                    end
+                  end
+                }
+              end
+              }
+
+          elsif product.industry == "Cosmetic"
+            xml.cosmetic {
+              if !product.gender_type.nil?
+                xml.gender "#{product.gender_type}"
+              end
+              xml.hypoallergenic "#{product.hypoallergenic}"
+              xml.part_types {
+                if product.part_types
+                  product.human_available_part_types.each do |part_type|
+                    xml.part_type "#{part_type}".downcase
+                  end
+                end
+              }
+
+              xml.skin_types {
+                if product.skin_types
+                  product.human_available_skin_types.each do |skin_type|
+                    xml.skin_type "#{skin_type}".downcase
+                  end
+                end
+              }
+
+              xml.conditions {
+                if product.conditions
+                  product.human_available_conditions.each do |condition|
+                    xml.condition "#{condition}"
+                  end
+                end
+              }
+
+              xml.volumes {
+                product.volumes.each do |v|
+                  xml.volume {
+                    xml.value "#{v.value}"
+                    xml.price  "#{v.value_price}"
+                  }
+                end
+              }
+              if !product.periodic.nil?
+                xml.periodic "#{product.periodic}"
+              end
+            }
+
+          elsif product.industry == "Child"
+            xml.child {
+              if !product.gender_type.nil?
+                xml.gender "#{product.gender_type}"
+              end
+              if !product.product_type.nil?
+                xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
+              end
+              if Product::AGES.values[product.child_ages] == 0
+                xml.age {
+                  xml.min product.child_ages_prefixed.first
+                  xml.max product.child_ages_prefixed.last
+                }
+              else
+                if !product.size.nil?
+                  "#{binding.pry}"
+                  if product.size == 2 && Product::SIZES.keys[2].present?
+                    product.human_available_british_sizes.each do |ps|
+                      xml.size "#{ps}"
+                    end
+                  elsif product.size == 1 && Product::SIZES.keys[1].present?
+                    product.human_available_euro_sizes.each do |ps|
+                      xml.size "#{ps}"
+                    end
+
+                  elsif product.size && Product::SIZES.keys[product.size].present?
+                    product.human_available_sizes.each do |ps|
+                      xml.size "#{ps[0]}"
+                    end
+                  end
+                end
+              end
+
+              if !product.periodic.nil?
+                xml.periodic "#{product.periodic}"
+              end
+            }
+          end
         }
       end
     end
