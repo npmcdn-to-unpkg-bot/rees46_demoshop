@@ -22,7 +22,7 @@
     = f.input :child_ages, as: :radio_buttons, collection: Product::AGES, item_wrapper_class: 'radio-inline'
     hr
   #chi-product_child_sizes_1.hidden.child_group_sizes
-    = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_HIGHT_SIZES, item_wrapper_class: 'radio-inline'
+    = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::HIGHT_SIZES, item_wrapper_class: 'radio-inline'
     hr
     
   #child-less.product_child_sizes_0.hidden.child_age_sizes
@@ -53,7 +53,7 @@
     = f.input :asian_sizes, as: :check_boxes, include_hidden: false, collection: Product::ASIAN_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #pro-product_size_5.hidden.group-sizes
-    = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::CHILD_HIGHT_SIZES, item_wrapper_class: 'radio-inline'
+    = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::HIGHT_SIZES, item_wrapper_class: 'radio-inline'
     hr
   #periodic.hidden.country-periodic
     = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, item_wrapper_class: 'radio-inline'

@@ -31,8 +31,9 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           xml.picture "#{image_url(product.image)}"
           xml.vendor "#{product.brand.name}"
           xml.name "#{product.title}"
-          xml.description "#{ActionView::Base.full_sanitizer.sanitize(product.description)}"
-
+          if product.description.nil?
+            xml.description "#{ActionView::Base.full_sanitizer.sanitize(product.description)}"
+          end
           if product.industry == "Fashion"
             xml.fashion {
               if !product.gender_type.nil?
@@ -104,9 +105,10 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                 xml.type "#{Product::COMMON_TYPES.merge(Product::ADULT_TYPES).keys[product.product_type.to_i]}".downcase
               end
               if Product::AGES.values[product.child_ages] == 0
-                product.age_sizes.map {|pas| Product::AGE_SIZES.values[pas]}.each do |ca|
-                  xml.age "#{ca}"
-                end
+                xml.age {
+                  xml.min product.mac_child_ages.first
+                  xml.max product.mac_child_ages.last
+                }
               else
                 if product.size && Product::SIZES.keys[product.size].present?
                   product.human_available_sizes.each do |ps|

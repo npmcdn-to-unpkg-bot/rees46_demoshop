@@ -48,12 +48,21 @@ class Product < ActiveRecord::Base
 
   # Child constants class
   AGE_SIZES = {
-    "0-3 мес"     => 0,
-    "3-6 мес"     => 0.25,
-    "6-9 мес"     => 0.5,
-    "9-12 мес"    => 0.75,
-    "12-18 мес"   => 2,
-    "18-24 мес"   => 1.5
+    "0-3 mo"     => 0,
+    "3-6 mo"     => 1,
+    "6-9 mo"     => 2,
+    "9-12 mo"    => 3,
+    "12-18 mo"   => 4,
+    "18-24 mo"   => 5
+  }.freeze
+
+  AGE_SIZES_VALUES = {
+    "0"      => 0,
+    "0.25"   => 1,
+    "0.5"    => 2,
+    "0.75"   => 3,
+    "1"      => 4,
+    "1.5"    => 5
   }.freeze
 
   AGES = {
@@ -264,6 +273,10 @@ class Product < ActiveRecord::Base
 
   def human_available_child_ages
     self.age_sizes.map {|pas| Product::AGE_SIZES.keys[pas]}
+  end
+
+  def mac_child_ages
+    self.age_sizes.map {|pas| Product::AGE_SIZES_VALUES.keys[pas]}
   end
 
   private
