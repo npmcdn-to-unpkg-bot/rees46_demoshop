@@ -23,13 +23,13 @@
               - @line_item.errors.full_messages.each do |msg|
                 li= msg
         .col-md-3
-        - if @product.industry == "Fashion"
+        - if @product.industry == "fashion"
           = render "industry_fashion", :f => f
           
-        - elsif @product.industry == "Cosmetic"
+        - elsif @product.industry == "cosmetic"
           = render "industry_cosmetic", :f => f
           
-        - elsif @product.industry == "Child"
+        - elsif @product.industry == "child"
           = render "industry_child", :f => f
           
         = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
