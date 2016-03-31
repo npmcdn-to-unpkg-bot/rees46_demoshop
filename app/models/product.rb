@@ -250,11 +250,11 @@ class Product < ActiveRecord::Base
   # validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
 
   def show_product_id?
-    if industry == "Fashion"
+    if industry == "fashion"
       true
-    elsif industry == "Cosmetic"
+    elsif industry == "cosmetic"
       true
-    elsif industry == "Child"
+    elsif industry == "child"
       true
     else
       false
