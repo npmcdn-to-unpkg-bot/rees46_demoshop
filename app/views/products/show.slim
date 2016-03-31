@@ -154,10 +154,11 @@ javascript:
         cart: JSON.parse(cart_product_ids).map(function(el){
           return el.cart
         }),
-        limit: 4
+        limit: 4,
+        modification: '#{@product.category.human_categories_industry}'
         }, cf_also_bought);
     });
-
+    console.log('#{@product.category.human_categories_industry}')
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'interesting',
@@ -165,7 +166,8 @@ javascript:
         cart: JSON.parse(cart_product_ids).map(function(el){
           return el.cart
         }),
-        limit: 4
+        limit: 4,
+        modification: '#{@product.category.human_categories_industry}'
         }, cf_interesting);
     });
 
@@ -178,7 +180,7 @@ javascript:
         }),
         //categories: ['#{@product.category_id}'],
         limit: 4,
-        modification: 'fashion'
+        modification: '#{@product.category.human_categories_industry}'
         }, cf_similer);
     });
   }
