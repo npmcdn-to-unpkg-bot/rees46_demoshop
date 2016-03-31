@@ -1,7 +1,6 @@
 class Product < ActiveRecord::Base
   # Main
-  INDUSTRY = %w(Fashion Cosmetic Child).freeze
-  enum industry: INDUSTRY
+  enum industry: [:fashion, :cosmetic, :child]
 
   GENDERS = %w(Unisex Male Female).freeze
   enum gender: GENDERS
