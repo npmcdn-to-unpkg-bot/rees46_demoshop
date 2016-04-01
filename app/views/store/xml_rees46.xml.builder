@@ -28,6 +28,7 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           xml.url "#{product_url(product)}"
           xml.price "#{product.price}"
           xml.currencyId "RUB"
+          xml.categoryId  "#{product.category_id}"
           xml.picture "#{image_url(product.image)}"
           xml.vendor "#{product.brand.name}"
           xml.name "#{product.title}"
