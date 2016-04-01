@@ -1,6 +1,7 @@
 h1 Welcome to Products Page
 - if current_user && current_user.has_role?(:admin)
   = link_to "Create New Products", new_product_path, class: 'btn btn-default'
+  = render "import_products"
 br
 br
 

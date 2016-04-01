@@ -1,0 +1,6 @@
+h2.text-center Import Products
+
+= form_tag import_products_path do |f|
+  = file_field_tag :file
+  br
+  = submit_tag "Import"

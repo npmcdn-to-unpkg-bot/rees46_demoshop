@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'roo-xls'
 
 # Form
 gem 'simple_form'
@@ -36,7 +37,6 @@ gem 'slim', '~> 3.0', '>= 3.0.6'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3', '>= 4.3.6'
 gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
-gem 'importer', '~> 0.5.0'
 
 # Other
 gem 'acts_as_tree', '~> 2.4'

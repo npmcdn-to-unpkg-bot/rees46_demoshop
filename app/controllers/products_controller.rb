@@ -2,7 +2,6 @@ class ProductsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :get_products_urls]
   before_action :admin_permission, except: [:show, :get_products_urls]
-  before_save :import
 
   def index
     @products = Product.all
@@ -64,6 +63,8 @@ class ProductsController < ApplicationController
   end
 
   def import
+    Product.import(params[:xml_file])
+    redirect_to products_path, notice: "O paa"
   end
 
   private
