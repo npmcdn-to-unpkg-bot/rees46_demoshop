@@ -1,5 +1,6 @@
 xml.instruct!
-xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
+xml.declare! :DOCTYPE, :yml_catalog, :SYSTEM, "shops.dtd"
+xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
   xml.shop do
     xml.name 'Rees46 Demo'
     xml.company 'REES46'
@@ -35,7 +36,7 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           if product.description.nil?
             xml.description "#{ActionView::Base.full_sanitizer.sanitize(product.description)}"
           end
-          if product.industry == "Fashion"
+          if product.industry == "fashion"
             xml.fashion {
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"
@@ -63,7 +64,7 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               end
               }
 
-          elsif product.industry == "Cosmetic"
+          elsif product.industry == "cosmetic"
             xml.cosmetic {
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"
@@ -106,7 +107,7 @@ xml.xml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               end
             }
 
-          elsif product.industry == "Child"
+          elsif product.industry == "child"
             xml.child {
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"

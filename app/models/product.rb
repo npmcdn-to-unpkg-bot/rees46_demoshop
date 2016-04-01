@@ -277,9 +277,9 @@ class Product < ActiveRecord::Base
   end
 
   def gender_type
-    if gender == 'Male'
+    if self.gender == 'Male'
       return 'm'
-    else gender == 'Female'
+    else self.gender == 'Female'
       return 'f'
     end
   end
