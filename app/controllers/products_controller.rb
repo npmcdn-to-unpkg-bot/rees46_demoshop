@@ -63,8 +63,8 @@ class ProductsController < ApplicationController
   end
 
   def import
-    Product.import(params[:xml_file])
-    redirect_to products_path, notice: "O paa"
+    Product.import(params[:file])
+    redirect_to products_path, notice: "Products was imported"
   end
 
   private
