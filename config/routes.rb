@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :brands
   resources :products do
     post 'get_products_urls' => 'products#get_products_urls'
+    collection { post :import}
   end
   post 'products/get_products_urls' => 'products#get_products_urls'
 
