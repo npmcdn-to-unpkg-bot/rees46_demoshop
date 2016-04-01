@@ -111,6 +111,8 @@ GEM
     concurrent-ruby (1.0.0)
     coolline (0.5.0)
       unicode_utils (~> 1.4)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     debug_inspector (0.0.2)
     devise (3.5.6)
       bcrypt (~> 3.0)
@@ -136,6 +138,8 @@ GEM
       posix-spawn (~> 0.3.6)
     hirb (0.7.3)
     i18n (0.7.0)
+    importer (0.5.0)
+      crack (>= 0.1.6)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -256,6 +260,7 @@ GEM
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
     ruby-progressbar (1.7.5)
+    safe_yaml (1.0.4)
     sass (3.4.21)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -339,6 +344,7 @@ DEPENDENCIES
   devise (~> 3.5, >= 3.5.6)
   font-awesome-rails
   friendly_id (~> 5.1.0)
+  importer (~> 0.5.0)
   jazz_hands!
   jbuilder (~> 2.0)
   jquery-rails
