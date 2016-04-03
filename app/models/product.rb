@@ -1,3 +1,5 @@
+require 'nokogiri'
+
 class Product < ActiveRecord::Base
   # Main
   enum industry: [:fashion, :cosmetic, :child]
@@ -244,6 +246,8 @@ class Product < ActiveRecord::Base
   has_many :volumes, dependent: :destroy
   accepts_nested_attributes_for :volumes, reject_if: ->(attributes) { attributes['value'].blank? }, allow_destroy: true
 
+  attr_accessor :xml_file
+
   # validates :title, :image, :description, :brand, :category_id, presence: true
   # validates :title, uniqueness: true
   # # Price should be not less then $100 :) lets do some business
@@ -320,24 +324,24 @@ class Product < ActiveRecord::Base
     self.age_sizes.map {|pas| Product::AGE_SIZES_VALUES.keys[pas]}
   end
 
-  def self.import(file)
-    allowed_attributes = [ "id","name","price","created_at","updated_at"]
-    spreadsheet = open_spreadsheet(file)
-    header = spreadsheet.row(1)
-    (2..spreadsheet.last_row).each do |i|
-      row = Hash[[header, spreadsheet.row(1)].transpose]
-      product = find_by_id(row[:id]) || new
-      product.attributes = row.to_hash.select {|k,v| allowed_attributes.include? k }
-      product.save!
+  def self.import(doc)
+    parsed_products = doc.xpath('//book').map do |i|
+      {
+          'title' => i.elements[0].inner_text,
+          'description' => i.elements[1].inner_text,
+      }
+    end
+    self.transaction do
+      parsed_products.each do |product|
+        Product.create!(
+            title: product['title'],
+            description: product['description'],
+        )
+      end
     end
   end
 
-  def open_spreadsheet(file)
-    case File.extname(file.original_filename)
-    when ".csv" then CSV.new(file.path), nil, :ignore)
-    else raise "Unknown file type: #{file.original_filename}"
-    end
-  end
+
   private
 
   def ensure_not_referenced_by_any_line_item

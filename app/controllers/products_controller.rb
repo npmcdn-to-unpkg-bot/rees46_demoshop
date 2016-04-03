@@ -63,8 +63,20 @@ class ProductsController < ApplicationController
   end
 
   def import
-    Product.import(params[:file])
-    redirect_to products_path, notice: "Products was imported"
+    # if params[:xml_file]
+    #   file = params[:xml_file]
+    #   doc = Nokogiri::XML::Document.parse(file)
+    #   total_product = doc.xpath('//book').length
+    #   Product.import(doc)
+    #   redirect_to products_path, notice: "#{total_product} Product added."
+    # end
+
+    items = Nokogiri::XML(params[:xml_file]).xpath("//book")
+    items.each do |item|
+        Product.create!(:title => item.at_xpath("title").text,
+                     :description => item.at_xpath("description").text)
+    end
+    redirect_to products_path, :notice => " imported successfully!"
   end
 
   private
