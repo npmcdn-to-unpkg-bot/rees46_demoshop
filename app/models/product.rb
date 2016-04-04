@@ -246,8 +246,6 @@ class Product < ActiveRecord::Base
   has_many :volumes, dependent: :destroy
   accepts_nested_attributes_for :volumes, reject_if: ->(attributes) { attributes['value'].blank? }, allow_destroy: true
 
-  attr_accessor :xml_file
-
   # validates :title, :image, :description, :brand, :category_id, presence: true
   # validates :title, uniqueness: true
   # # Price should be not less then $100 :) lets do some business
@@ -324,19 +322,30 @@ class Product < ActiveRecord::Base
     self.age_sizes.map {|pas| Product::AGE_SIZES_VALUES.keys[pas]}
   end
 
+
   def self.import(doc)
-    parsed_products = doc.xpath('//book').map do |i|
-      {
-          'title' => i.elements[0].inner_text,
-          'description' => i.elements[1].inner_text,
-      }
-    end
-    self.transaction do
-      parsed_products.each do |product|
-        Product.create!(
-            title: product['title'],
-            description: product['description'],
-        )
+    parsed_products = doc.xpath('//shop/offers/offer')
+    if !self.fashion.nil?
+      self.transaction do
+        parsed_products.each do |product|
+
+            Product.create!(
+              price: product.at_xpath('price').text,
+              category_id: product.at_xpath('categoryId').text,
+              image: product.at_xpath('picture').text,
+              brand_id: product.at_xpath('vendor').text,
+              title: product.at_xpath('name').text,
+              description: product.at_xpath('description').text,
+              gender: product.at_xpath('fashion/gender').present? ? product.at_xpath('fashion/gender').text.gsub("m","Male").gsub("f","Female") : nil,
+
+              product_type: product.at_xpath('fashion/type').present? ? product.at_xpath('fashion/type').text : '',
+
+              size: product.at_xpath('fashion/sizes/size').present? ? product.at_xpath('fashion/sizes/size').text : nil,
+
+              euro_sizes: product.at_xpath('fashion/sizes/size').present? ?
+              product.at_xpath('fashion/sizes/size').text : nil,
+            )
+        end
       end
     end
   end

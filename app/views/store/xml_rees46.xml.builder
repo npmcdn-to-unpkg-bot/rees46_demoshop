@@ -152,13 +152,16 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           xml.url "#{product_url(product)}"
           xml.price "#{product.price}"
           xml.currencyId "RUB"
+          xml.categoryId  "#{product.category_id}"
           xml.picture "#{image_url(product.image)}"
-          xml.vendor "#{product.brand.name}"
+          if !product.brand.nil?
+            xml.vendor "#{product.brand.name}"
+          end
           xml.name "#{product.title}"
-          if product.description.nil?
+          if !product.description.empty?
             xml.description "#{ActionView::Base.full_sanitizer.sanitize(product.description)}"
           end
-          if product.industry == "Fashion"
+          if product.industry == "fashion"
             xml.fashion {
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"
@@ -186,7 +189,7 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               end
               }
 
-          elsif product.industry == "Cosmetic"
+          elsif product.industry == "cosmetic"
             xml.cosmetic {
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"
@@ -229,7 +232,7 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               end
             }
 
-          elsif product.industry == "Child"
+          elsif product.industry == "child"
             xml.child {
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"
@@ -244,7 +247,6 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                 }
               else
                 if !product.size.nil?
-                  "#{binding.pry}"
                   if product.size == 2 && Product::SIZES.keys[2].present?
                     product.human_available_british_sizes.each do |ps|
                       xml.size "#{ps}"
@@ -269,6 +271,8 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           end
         }
       end
+
+
     end
   end
 end

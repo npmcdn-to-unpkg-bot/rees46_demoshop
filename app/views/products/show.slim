@@ -8,7 +8,8 @@
       = image_tag @product.image, class: 'img-responsive'
       br
       h3 Brand Name:
-      = link_to @product.brand.name, brand_path(@product.brand)
+      - if !@product.brand.nil?
+        = link_to @product.brand.name, brand_path(@product.brand)
 
     .col-xs-4
       h1= @product.title

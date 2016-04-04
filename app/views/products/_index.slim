@@ -1,6 +1,6 @@
 tr
   td
-    = product.title
+    = link_to product.title, product_path(product)
   td
     = number_to_currency(product.price,  unit: "₽ ")
   - if current_user && current_user.has_role?(:admin)
