@@ -324,7 +324,11 @@ class Product < ActiveRecord::Base
 
 
   def self.import(doc)
-    parsed_products = doc.xpath('//shop/offers/offer')
+    parsed_products = doc.xpath('//shop/offers/offer').take(2)
+    image = Image.new
+    ad_image_url = URL.parse("#{'picture'}")
+    image.image = open(ad_image_url)
+    image()
     if !self.fashion.nil?
       self.transaction do
         parsed_products.each do |product|
@@ -336,14 +340,11 @@ class Product < ActiveRecord::Base
               brand_id: product.at_xpath('vendor').text,
               title: product.at_xpath('name').text,
               description: product.at_xpath('description').text,
+
               gender: product.at_xpath('fashion/gender').present? ? product.at_xpath('fashion/gender').text.gsub("m","Male").gsub("f","Female") : nil,
 
               product_type: product.at_xpath('fashion/type').present? ? product.at_xpath('fashion/type').text : '',
 
-              size: product.at_xpath('fashion/sizes/size').present? ? product.at_xpath('fashion/sizes/size').text : nil,
-
-              euro_sizes: product.at_xpath('fashion/sizes/size').present? ?
-              product.at_xpath('fashion/sizes/size').text : nil,
             )
         end
       end
