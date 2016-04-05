@@ -325,10 +325,7 @@ class Product < ActiveRecord::Base
 
   def self.import(doc)
     parsed_products = doc.xpath('//shop/offers/offer').take(2)
-    image = Image.new
-    ad_image_url = URL.parse("#{'picture'}")
-    image.image = open(ad_image_url)
-    image()
+
     if !self.fashion.nil?
       self.transaction do
         parsed_products.each do |product|
@@ -336,7 +333,7 @@ class Product < ActiveRecord::Base
             Product.create!(
               price: product.at_xpath('price').text,
               category_id: product.at_xpath('categoryId').text,
-              image: product.at_xpath('picture').text,
+              remote_image_url: product.at_xpath('picture').text.strip,
               brand_id: product.at_xpath('vendor').text,
               title: product.at_xpath('name').text,
               description: product.at_xpath('description').text,
