@@ -323,13 +323,13 @@ class Product < ActiveRecord::Base
   end
 
 
-  def self.import(doc)
+  def self.import(doc, category)
     parsed_products = doc.xpath('//shop/offers/offer').take(2)
 
     if !self.fashion.nil?
       self.transaction do
         parsed_products.each do |product|
-
+          if product.at_xpath('categoryId').text == category
             Product.create!(
               price: product.at_xpath('price').text,
               category_id: product.at_xpath('categoryId').text,
@@ -343,10 +343,12 @@ class Product < ActiveRecord::Base
               product_type: product.at_xpath('fashion/type').present? ? product.at_xpath('fashion/type').text : '',
 
             )
+          end
         end
       end
     end
   end
+
 
 
   private

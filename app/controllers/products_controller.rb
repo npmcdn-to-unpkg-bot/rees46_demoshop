@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @category = Category.all
   end
 
   def new
@@ -67,11 +68,10 @@ class ProductsController < ApplicationController
       file = params[:xml_file]
       doc = Nokogiri::XML::Document.parse(file)
       total_product = doc.xpath('//shop/offers/offer').take(2).length
-      Product.import(doc)
+
+      Product.import(doc, params[:category_id])
       redirect_to products_path, notice: "#{total_product} Product added."
     end
-    # Product.import(:xml_file)
-    # redirect_to products_path, :notice => " imported successfully!"
   end
 
   private
