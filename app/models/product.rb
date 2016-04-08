@@ -326,10 +326,9 @@ class Product < ActiveRecord::Base
   def self.import(doc, category, cat_id, lit_num)
     parsed_products = doc.xpath('//offer').take(lit_num.to_i)
 
-    if !self.fashion.nil?
-      self.transaction do
-        parsed_products.each do |product|
-
+    self.transaction do
+      parsed_products.each do |product|
+          if product.at_xpath('categoryId').text == cat_id
             Product.create!(
               price: product.at_xpath('price').text,
               category_id: product.at_xpath('categoryId').text.gsub(cat_id,category),
@@ -337,34 +336,10 @@ class Product < ActiveRecord::Base
               brand_id: product.at_xpath('vendor').text,
               title: product.at_xpath('name').text,
               description: product.at_xpath('description').text,
-
-              gender: product.at_xpath('//gender').present? ? product.at_xpath('//gender').text.gsub("m","Male").gsub("f","Female") : nil,
-
-              product_type: product.at_xpath('//type').present? ? product.at_xpath('//type').text : '',
             )
-          #end
         end
       end
     end
-    # ignore_list = [] # ignore list
-    #
-    # parsed_products.each do |node|
-    #   if !ignore_list.include? node.xpath("./name").inner_text.strip
-    #     binding.pry
-    #     Product.create(:title => node.xpath("./name").inner_text.downcase,
-    #     :description => node.xpath("./description").inner_text,
-    #     # :brand => Brand.find_or_create_by_name(clean_field_key(node.xpath("./brand").inner_text).downcase),
-    #     # :merchant => Merchant.find_or_create_by_name(clean_field_key(node.xpath("./programName").inner_text).downcase),
-    #
-    #     :image => node.xpath("./picture").inner_text.strip,
-    #
-    #     # :category_id => Category.find_or_create_by(node.xpath("./categoryId").inner_text.downcase),
-    #
-    #     :price => node.xpath("./price").inner_text.strip,
-    #     )
-    #   end
-    # end
-
   end
 
 
