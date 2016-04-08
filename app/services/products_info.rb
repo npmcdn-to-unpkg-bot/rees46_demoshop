@@ -6,7 +6,7 @@ class ProductsInfo
     @line_items = line_items
   end
 
-  def get_products_info
+  def products_info
     @line_items.each do |l|
       product = {}
       product[:item_id] = l.product.id

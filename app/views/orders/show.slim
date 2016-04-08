@@ -11,7 +11,7 @@ br
 
 javascript:
   function afterInitRees46() {
-    var line_items = '#{ProductsInfo.new(Order.last.line_items).get_products_info.to_json.html_safe}'
+    var line_items = '#{ProductsInfo.new(Order.last.line_items).products_info.to_json.html_safe}'
     console.log(line_items)
     REES46.addReadyListener(function () {
        REES46.pushData('purchase', JSON.parse(line_items), '#{@order.id}');

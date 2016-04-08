@@ -272,7 +272,7 @@ class Product < ActiveRecord::Base
     save(validate: false)
   end
 
-  def is_available?
+  def available?
     stock > 0 ? 1 : 0
   end
 

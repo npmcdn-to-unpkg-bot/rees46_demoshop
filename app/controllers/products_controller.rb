@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :get_products_urls]
-  before_action :admin_permission, except: [:show, :get_products_urls]
+  before_action :authenticate_user!, except: [:show, :products_urls]
+  before_action :admin_permission, except: [:show, :products_urls]
 
   def index
     @products = Product.all
@@ -45,7 +45,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  def get_products_urls
+  def products_urls
     @products = []
     if !params[:ids].nil?
       params[:ids].each do |id|

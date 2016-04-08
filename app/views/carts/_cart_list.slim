@@ -39,7 +39,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: "POST",
-        url: 'get_cart_urls',
+        url: 'cart_urls',
         data: {ids: data, recommender: 'see_also'},
       });
       return false;
@@ -47,7 +47,7 @@ javascript:
       console.log("Not work or id nil")
       $.ajax({
         type: "POST",
-        url: 'get_cart_urls',
+        url: 'cart_urls',
         data: {ids: data, recommender: 'see_also'},
       });
     }
@@ -61,7 +61,7 @@ javascript:
           REES46.pushData('remove_from_cart', {
             item_id: '#{item.product_id}',
             price: '#{item.product.price}',
-            is_available: '#{item.product.is_available?}',
+            is_available: '#{item.product.available?}',
             categories: '#{item.product.category_id}'
         });
         }
@@ -73,7 +73,7 @@ javascript:
         REES46.pushData('remove_from_cart', {
         item_id: '#{item.product_id}',
         price: '#{item.product.price}',
-        is_available: '#{item.product.is_available?}',
+        is_available: '#{item.product.available?}',
         categories: '#{item.product.category_id}'
       });
       });

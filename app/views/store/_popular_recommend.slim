@@ -2,10 +2,10 @@ javascript:
   var cf_popular = function(data){
     // jQuery code
     if(data.length > 0) {
-      var url = 'store/get_popular_urls';
+      var url = 'store/popular_urls';
       $.ajax({
         type: "POST",
-        url: 'store/get_popular_urls',
+        url: 'store/popular_urls',
         data: {ids: data, recommender: 'popular'},
       });
       return false;

@@ -25,7 +25,7 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
 
     xml.offers do |offer|
       @products.where.not(stock: 0).each do |product|
-        xml.offer("id" => "#{product.id}", "available" => "#{product.is_available? == 1}") {
+        xml.offer("id" => "#{product.id}", "available" => "#{product.available? == 1}") {
           xml.url "#{product_url(product)}"
           xml.price "#{product.price}"
           xml.currencyId "RUB"
@@ -148,7 +148,7 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
       end
 
       @products.where(stock: 0).each do |product|
-        xml.offer("id" => "#{product.id}", "available" => "#{product.is_available? == 1}") {
+        xml.offer("id" => "#{product.id}", "available" => "#{product.available? == 1}") {
           xml.url "#{product_url(product)}"
           xml.price "#{product.price}"
           xml.currencyId "RUB"

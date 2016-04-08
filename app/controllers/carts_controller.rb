@@ -15,7 +15,7 @@ class CartsController < ApplicationController
     redirect_to root_path, notice: 'Your cart currently empty.'
   end
 
-  def get_cart_urls
+  def cart_urls
     @products = []
     unless params[:ids].nil?
       params[:ids].each do |id|
