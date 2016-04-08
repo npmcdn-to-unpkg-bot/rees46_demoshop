@@ -326,7 +326,6 @@ class Product < ActiveRecord::Base
   def self.import(doc, category, cat_id, lit_num)
     parsed_products = doc.xpath('//offer').take(lit_num.to_i)
 
-    self.transaction do
       parsed_products.each do |product|
           if product.at_xpath('categoryId').text == cat_id
             Product.create!(
@@ -339,7 +338,6 @@ class Product < ActiveRecord::Base
             )
         end
       end
-    end
   end
 
 
