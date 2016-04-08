@@ -86,6 +86,7 @@ class Product < ActiveRecord::Base
     'Oily'    =>  2,
     'Comby'   =>  3
   }.freeze
+
   CONDITIONS = {
     'Colored'     =>  0,
     'Damaged'     =>  1,
@@ -322,7 +323,6 @@ class Product < ActiveRecord::Base
     self.age_sizes.map {|pas| Product::AGE_SIZES_VALUES.keys[pas]}
   end
 
-  attr_accessor :stranger_category
   def self.import(doc, category, cat_id, lit_num)
     parsed_products = doc.xpath('//offer').take(lit_num.to_i)
 
@@ -339,8 +339,6 @@ class Product < ActiveRecord::Base
         end
       end
   end
-
-
 
   private
 
