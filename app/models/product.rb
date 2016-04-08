@@ -329,7 +329,7 @@ class Product < ActiveRecord::Base
     if !self.fashion.nil?
       self.transaction do
         parsed_products.each do |product|
-          #if product.at_xpath('categoryId').text == category
+
             Product.create!(
               price: product.at_xpath('price').text,
               category_id: product.at_xpath('categoryId').text.gsub(cat_id,category),
@@ -338,10 +338,9 @@ class Product < ActiveRecord::Base
               title: product.at_xpath('name').text,
               description: product.at_xpath('description').text,
 
-              gender: product.at_xpath('fashion/gender').present? ? product.at_xpath('fashion/gender').text.gsub("m","Male").gsub("f","Female") : nil,
+              gender: product.at_xpath('//gender').present? ? product.at_xpath('//gender').text.gsub("m","Male").gsub("f","Female") : nil,
 
-              product_type: product.at_xpath('fashion/type').present? ? product.at_xpath('fashion/type').text : '',
-
+              product_type: product.at_xpath('//type').present? ? product.at_xpath('//type').text : '',
             )
           #end
         end
