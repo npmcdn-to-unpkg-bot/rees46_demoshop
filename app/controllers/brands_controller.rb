@@ -19,7 +19,7 @@ class BrandsController < ApplicationController
     @brand = Brand.new(brand_params)
 
     if @brand.save
-      redirect_to brands_path, notice: "Brand was save successfully"
+      redirect_to brands_path, notice: 'Brand was save successfully'
     else
       render :new
     end
@@ -30,7 +30,7 @@ class BrandsController < ApplicationController
 
   def update
     if @brand.update_attributes(brand_params)
-      redirect_to brands_path, notice: "Brand was successfully update"
+      redirect_to brands_path, notice: 'Brand was successfully update'
     else
       render :edit
     end
@@ -38,9 +38,9 @@ class BrandsController < ApplicationController
 
   def destroy
     if @brand.destroy
-      redirect_to brands_path, notice: "Brand was successfully remove"
+      redirect_to brands_path, notice: 'Brand was successfully remove'
     else
-      redirect_to brands_path, notice: "Sorry you dont have permission to delte this"
+      redirect_to brands_path, notice: 'Sorry you dont have permission to delte this'
     end
   end
 

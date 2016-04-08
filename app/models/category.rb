@@ -17,12 +17,14 @@ class Category < ActiveRecord::Base
   end
 
   def human_categories_industry
-    if  self.categories_industry == 0
+    if categories_industry == 0
       return 'fashion'
-    elsif  self.categories_industry == 1
+    elsif categories_industry == 1
       return 'cosmetic'
-    else  self.categories_industry == 2
+    elsif categories_industry == 2
       return 'child'
+    else
+      false
     end
   end
 end

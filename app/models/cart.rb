@@ -10,6 +10,6 @@ class Cart < ActiveRecord::Base
   end
 
   def product_ids_in_cart
-    line_items.select {|li| li.product_id }
+    line_items.select(&:product_id)
   end
 end

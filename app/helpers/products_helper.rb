@@ -1,9 +1,5 @@
 module ProductsHelper
   def print_stock(stock)
-    if stock > 0
-      return 'In Stock'
-    else
-      return 'Out of Stock'
-    end
+    stock > 0 ? 'In Stock' : 'Out of Stock'
   end
 end

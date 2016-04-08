@@ -46,9 +46,7 @@ class CategoriesController < ApplicationController
   def get_urls
     @products = []
     params[:ids].each do |id|
-      if Product.where(id: id).any?
-        @products << Product.find(id)
-      end
+      @products << Product.find(id) if Product.where(id: id).any?
     end
 
     @recommender = params[:recommender]

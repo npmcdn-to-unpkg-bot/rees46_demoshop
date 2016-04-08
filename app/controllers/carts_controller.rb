@@ -2,7 +2,7 @@ class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :destroy]
 
   def show
-    if !@cart.line_items.present?
+    unless @cart.line_items.present?
       @cart.destroy if @cart.id == session[:cart_id]
       session[:cart_id] = nil
       redirect_to root_path, notice: 'Your cart currently empty.'
@@ -17,11 +17,9 @@ class CartsController < ApplicationController
 
   def get_cart_urls
     @products = []
-    if params[:ids] != nil
+    unless params[:ids].nil?
       params[:ids].each do |id|
-        if Product.where(id: id).any?
-          @products << Product.find(id)
-        end
+        @products << Product.find(id) if Product.where(id: id).any?
       end
     end
 

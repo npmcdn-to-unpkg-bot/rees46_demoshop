@@ -1,5 +1,3 @@
-require 'nokogiri'
-
 class Product < ActiveRecord::Base
   # Main
   enum industry: [:fashion, :cosmetic, :child]
@@ -44,26 +42,26 @@ class Product < ActiveRecord::Base
     'British Sizes'      =>   2,
     'American Sizes'     =>   3,
     'Asian Sizes'        =>   4,
-    'Hight Sizes'  =>   5
-  }
+    'Hight Sizes' => 5
+  }.freeze
 
   # Child constants class
   AGE_SIZES = {
-    "0-3 mo"     => 0,
-    "3-6 mo"     => 1,
-    "6-9 mo"     => 2,
-    "9-12 mo"    => 3,
-    "12-18 mo"   => 4,
-    "18-24 mo"   => 5
+    '0-3 mo'     => 0,
+    '3-6 mo'     => 1,
+    '6-9 mo'     => 2,
+    '9-12 mo'    => 3,
+    '12-18 mo'   => 4,
+    '18-24 mo'   => 5
   }.freeze
 
   AGE_SIZES_VALUES = {
-    "0"      => 0,
-    "0.25"   => 1,
-    "0.5"    => 2,
-    "0.75"   => 3,
-    "1"      => 4,
-    "1.5"    => 5
+    '0'      => 0,
+    '0.25'   => 1,
+    '0.5'    => 2,
+    '0.75'   => 3,
+    '1'      => 4,
+    '1.5'    => 5
   }.freeze
 
   AGES = {
@@ -204,7 +202,6 @@ class Product < ActiveRecord::Base
     'b9.5' => 10
   }.freeze
 
-
   ASIAN_SIZES = {
     '35' => 0,
     '36' => 1,
@@ -253,11 +250,11 @@ class Product < ActiveRecord::Base
   # validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
 
   def show_product_id?
-    if industry == "fashion"
+    if industry == 'fashion'
       true
-    elsif industry == "cosmetic"
+    elsif industry == 'cosmetic'
       true
-    elsif industry == "child"
+    elsif industry == 'child'
       true
     else
       false
@@ -276,68 +273,70 @@ class Product < ActiveRecord::Base
   end
 
   def is_available?
-    self.stock > 0 ? 1 : 0
+    stock > 0 ? 1 : 0
   end
 
   def gender_type
-    if self.gender == 'Male'
+    if gender == 'Male'
       return 'm'
-    else self.gender == 'Female'
+    elsif gender == 'Female'
       return 'f'
+    else
+      false
     end
   end
 
   def human_available_sizes
-    self.send(Product::SIZES.keys[self.size].gsub(' ', '_').downcase).map { |value|
+    send(Product::SIZES.keys[size].tr(' ', '_').downcase).map do |value|
       [
-        Product.const_get(Product::SIZES.keys[self.size].gsub(' ', '_').upcase).keys[value],
+        Product.const_get(Product::SIZES.keys[size].tr(' ', '_').upcase).keys[value],
         value
-      ]}
+      ]
+    end
   end
 
   def human_available_part_types
-    self.part_types.map { |pt| Product::PART_TYPES.keys[pt]}
+    part_types.map { |pt| Product::PART_TYPES.keys[pt] }
   end
 
   def human_available_british_sizes
-    self.british_sizes.map { |pt| Product::BRITISH_SIZES_PREFIXED.keys[pt]}
+    british_sizes.map { |pt| Product::BRITISH_SIZES_PREFIXED.keys[pt] }
   end
 
   def human_available_euro_sizes
-    self.euro_sizes.map { |pt| Product::EURO_SIZES_PREFIXED.keys[pt]}
+    euro_sizes.map { |pt| Product::EURO_SIZES_PREFIXED.keys[pt] }
   end
 
   def human_available_skin_types
-    self.skin_types.map { |st| Product::SKIN_TYPES.keys[st]}
+    skin_types.map { |st| Product::SKIN_TYPES.keys[st] }
   end
 
   def human_available_conditions
-    self.conditions.map { |condition| Product::CONDITIONS.keys[condition]}
+    conditions.map { |condition| Product::CONDITIONS.keys[condition] }
   end
 
   def human_available_child_ages
-    self.age_sizes.map {|pas| Product::AGE_SIZES.keys[pas]}
+    age_sizes.map { |pas| Product::AGE_SIZES.keys[pas] }
   end
 
   def child_ages_prefixed
-    self.age_sizes.map {|pas| Product::AGE_SIZES_VALUES.keys[pas]}
+    age_sizes.map { |pas| Product::AGE_SIZES_VALUES.keys[pas] }
   end
 
   def self.import(doc, category, cat_id, lit_num)
     parsed_products = doc.xpath('//offer').take(lit_num.to_i)
 
-      parsed_products.each do |product|
-          if product.at_xpath('categoryId').text == cat_id
-            Product.create!(
-              price: product.at_xpath('price').text,
-              category_id: product.at_xpath('categoryId').text.gsub(cat_id,category),
-              remote_image_url: product.at_xpath('picture').text.strip,
-              brand_id: product.at_xpath('vendor').text,
-              title: product.at_xpath('name').text,
-              description: product.at_xpath('description').text,
-            )
-        end
-      end
+    parsed_products.each do |product|
+      next unless product.at_xpath('categoryId').text == cat_id
+      Product.create!(
+        price: product.at_xpath('price').text,
+        category_id: product.at_xpath('categoryId').text.gsub(cat_id, category),
+        remote_image_url: product.at_xpath('picture').text.strip,
+        brand_id: product.at_xpath('vendor').text,
+        title: product.at_xpath('name').text,
+        description: product.at_xpath('description').text
+      )
+    end
   end
 
   private

@@ -47,11 +47,9 @@ class ProductsController < ApplicationController
 
   def get_products_urls
     @products = []
-    if params[:ids] != nil
+    if !params[:ids].nil?
       params[:ids].each do |id|
-        if Product.where(id: id).any?
-          @products << Product.find(id)
-        end
+        @products << Product.find(id) if Product.where(id: id).any?
       end
     else
       false
@@ -73,7 +71,6 @@ class ProductsController < ApplicationController
       redirect_to products_path, notice: "#{total_product} Product added."
     end
   end
-
 
   private
 

@@ -28,23 +28,23 @@ class LineItemsController < ApplicationController
 
   def decrement
     respond_to do |format|
-    @line_item.update(quantity: (@line_item.quantity -= 1))
-    @line_item.destroy if @line_item.quantity == 0
-    if !@cart.line_items.any?
-      @cart.destroy if @cart.id == session[:cart_id]
-      session[:cart_id] = nil
-      format.js
-    else
-      format.js
+      @line_item.update(quantity: (@line_item.quantity -= 1))
+      @line_item.destroy if @line_item.quantity == 0
+      if !@cart.line_items.any?
+        @cart.destroy if @cart.id == session[:cart_id]
+        session[:cart_id] = nil
+        format.js
+      else
+        format.js
+      end
     end
-  end
   end
 
   def destroy
     if @line_item.destroy
-      redirect_to @line_item.cart, notice: "Product was successfully remove form line item"
+      redirect_to @line_item.cart, notice: 'Product was successfully remove form line item'
     else
-      redirect_to @line_item.cart, notice: "Somethign is worng"
+      redirect_to @line_item.cart, notice: 'Somethign is worng'
     end
   end
 
