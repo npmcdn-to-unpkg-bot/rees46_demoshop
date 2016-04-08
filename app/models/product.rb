@@ -323,8 +323,8 @@ class Product < ActiveRecord::Base
   end
 
   attr_accessor :stranger_category
-  def self.import(doc, category, cat_id)
-    parsed_products = doc.xpath('//offer').take(2)
+  def self.import(doc, category, cat_id, lit_num)
+    parsed_products = doc.xpath('//offer').take(lit_num.to_i)
 
     if !self.fashion.nil?
       self.transaction do
