@@ -322,17 +322,17 @@ class Product < ActiveRecord::Base
     self.age_sizes.map {|pas| Product::AGE_SIZES_VALUES.keys[pas]}
   end
 
-
-  def self.import(doc, category)
-    parsed_products = doc.xpath('//shop/offers/offer').take(2)
+  attr_accessor :stranger_category
+  def self.import(doc, category, cat_id)
+    parsed_products = doc.xpath('//offer').take(2)
 
     if !self.fashion.nil?
       self.transaction do
         parsed_products.each do |product|
-          if product.at_xpath('categoryId').text == category
+          #if product.at_xpath('categoryId').text == category
             Product.create!(
               price: product.at_xpath('price').text,
-              category_id: product.at_xpath('categoryId').text,
+              category_id: product.at_xpath('categoryId').text.gsub(cat_id,category),
               remote_image_url: product.at_xpath('picture').text.strip,
               brand_id: product.at_xpath('vendor').text,
               title: product.at_xpath('name').text,
@@ -343,10 +343,29 @@ class Product < ActiveRecord::Base
               product_type: product.at_xpath('fashion/type').present? ? product.at_xpath('fashion/type').text : '',
 
             )
-          end
+          #end
         end
       end
     end
+    # ignore_list = [] # ignore list
+    #
+    # parsed_products.each do |node|
+    #   if !ignore_list.include? node.xpath("./name").inner_text.strip
+    #     binding.pry
+    #     Product.create(:title => node.xpath("./name").inner_text.downcase,
+    #     :description => node.xpath("./description").inner_text,
+    #     # :brand => Brand.find_or_create_by_name(clean_field_key(node.xpath("./brand").inner_text).downcase),
+    #     # :merchant => Merchant.find_or_create_by_name(clean_field_key(node.xpath("./programName").inner_text).downcase),
+    #
+    #     :image => node.xpath("./picture").inner_text.strip,
+    #
+    #     # :category_id => Category.find_or_create_by(node.xpath("./categoryId").inner_text.downcase),
+    #
+    #     :price => node.xpath("./price").inner_text.strip,
+    #     )
+    #   end
+    # end
+
   end
 
 

@@ -5,6 +5,10 @@ h2.text-center Import Products
   br
   = label_tag 'Mine Category'
   = select_tag :category_id, options_for_select(Category.all.map {|c| [c.name, c.id ] })
+  br
+  = label_tag 'Stranger Category: '
+
+  = text_field_tag "stranger_category"
 
   br
   br
