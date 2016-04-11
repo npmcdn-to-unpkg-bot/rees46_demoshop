@@ -129,33 +129,34 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                   xml.max product.child_ages_prefixed.last
                 }
               end
+              if !product.product_type.nil? || !product.size.nil? || !product.periodic.nil?
+                xml.fashion {
+                  if !product.product_type.nil?
+                    xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
+                  end
 
-              xml.fashion {
-                if !product.product_type.nil?
-                  xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
-                end
+                  if !product.size.nil?
+                    if product.size == 2 && Product::SIZES.keys[2].present?
+                      product.human_available_british_sizes.each do |ps|
+                        xml.size "#{ps}"
+                      end
+                    elsif product.size == 1 && Product::SIZES.keys[1].present?
+                      product.human_available_euro_sizes.each do |ps|
+                        xml.size "#{ps}"
+                      end
 
-                if !product.size.nil?
-                  if product.size == 2 && Product::SIZES.keys[2].present?
-                    product.human_available_british_sizes.each do |ps|
-                      xml.size "#{ps}"
-                    end
-                  elsif product.size == 1 && Product::SIZES.keys[1].present?
-                    product.human_available_euro_sizes.each do |ps|
-                      xml.size "#{ps}"
-                    end
-
-                  elsif product.size && Product::SIZES.keys[product.size].present?
-                    product.human_available_sizes.each do |ps|
-                      xml.size "#{ps[0]}"
+                    elsif product.size && Product::SIZES.keys[product.size].present?
+                      product.human_available_sizes.each do |ps|
+                        xml.size "#{ps[0]}"
+                      end
                     end
                   end
-                end
 
-                if !product.periodic.nil?
-                  xml.periodic "#{product.periodic}"
-                end
-              }
+                  if !product.periodic.nil?
+                    xml.periodic "#{product.periodic}"
+                  end
+                }
+              end
 
               xml.cosmetic {
 
