@@ -158,55 +158,57 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                 }
               end
 
-              xml.cosmetic {
+              if !product.part_types.empty? || !product.skin_types.empty? || !product.conditions.empty? || !product.volumes.empty? || !product.periodic.nil?
+                xml.cosmetic {
 
-                xml.hypoallergenic "#{product.hypoallergenic}"
+                  xml.hypoallergenic "#{product.hypoallergenic}"
 
-                if !product.part_types.empty?
-                  xml.part_types {
-                    if product.part_types
-                      product.human_available_part_types.each do |part_type|
-                        xml.part_type "#{part_type}".downcase
+                  if !product.part_types.empty?
+                    xml.part_types {
+                      if product.part_types
+                        product.human_available_part_types.each do |part_type|
+                          xml.part_type "#{part_type}".downcase
+                        end
                       end
-                    end
-                  }
-                end
+                    }
+                  end
 
-                if !product.skin_types.empty?
-                  xml.skin_types {
-                    if product.skin_types
-                      product.human_available_skin_types.each do |skin_type|
-                        xml.skin_type "#{skin_type}".downcase
+                  if !product.skin_types.empty?
+                    xml.skin_types {
+                      if product.skin_types
+                        product.human_available_skin_types.each do |skin_type|
+                          xml.skin_type "#{skin_type}".downcase
+                        end
                       end
-                    end
-                  }
-                end
+                    }
+                  end
 
-                if !product.conditions.empty?
-                  xml.conditions {
-                    if product.conditions
-                      product.human_available_conditions.each do |condition|
-                        xml.condition "#{condition}"
+                  if !product.conditions.empty?
+                    xml.conditions {
+                      if product.conditions
+                        product.human_available_conditions.each do |condition|
+                          xml.condition "#{condition}"
+                        end
                       end
-                    end
-                  }
-                end
+                    }
+                  end
 
-                if !product.volumes.empty?
-                  xml.volumes {
-                    product.volumes.each do |v|
-                      xml.volume {
-                        xml.value "#{v.value}"
-                        xml.price  "#{v.value_price}"
-                      }
-                    end
-                  }
-                end
+                  if !product.volumes.empty?
+                    xml.volumes {
+                      product.volumes.each do |v|
+                        xml.volume {
+                          xml.value "#{v.value}"
+                          xml.price  "#{v.value_price}"
+                        }
+                      end
+                    }
+                  end
 
-                if !product.periodic.nil?
-                  xml.periodic "#{product.periodic}"
-                end
-              }
+                  if !product.periodic.nil?
+                    xml.periodic "#{product.periodic}"
+                  end
+                }
+              end
             }
           end
         }
