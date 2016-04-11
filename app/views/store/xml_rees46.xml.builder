@@ -112,15 +112,19 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"
               end
-              if !product.product_type.nil?
-                xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
-              end
+
               if Product::AGES.values[product.child_ages] == 0
                 xml.age {
                   xml.min product.child_ages_prefixed.first
                   xml.max product.child_ages_prefixed.last
                 }
-              else
+              end
+
+              xml.fashion {
+                if !product.product_type.nil?
+                  xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
+                end
+
                 if !product.size.nil?
                   if product.size == 2 && Product::SIZES.keys[2].present?
                     product.human_available_british_sizes.each do |ps|
@@ -137,11 +141,11 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                     end
                   end
                 end
-              end
 
-              if !product.periodic.nil?
-                xml.periodic "#{product.periodic}"
-              end
+                if !product.periodic.nil?
+                  xml.periodic "#{product.periodic}"
+                end
+              }
             }
           end
         }
@@ -237,15 +241,19 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"
               end
-              if !product.product_type.nil?
-                xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
-              end
+
               if Product::AGES.values[product.child_ages] == 0
                 xml.age {
                   xml.min product.child_ages_prefixed.first
                   xml.max product.child_ages_prefixed.last
                 }
-              else
+              end
+
+              xml.fashion {
+                if !product.product_type.nil?
+                  xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
+                end
+
                 if !product.size.nil?
                   if product.size == 2 && Product::SIZES.keys[2].present?
                     product.human_available_british_sizes.each do |ps|
@@ -262,11 +270,11 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                     end
                   end
                 end
-              end
 
-              if !product.periodic.nil?
-                xml.periodic "#{product.periodic}"
-              end
+                if !product.periodic.nil?
+                  xml.periodic "#{product.periodic}"
+                end
+              }
             }
           end
         }

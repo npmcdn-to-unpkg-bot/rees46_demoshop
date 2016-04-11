@@ -282,8 +282,6 @@ class Product < ActiveRecord::Base
       return 'm'
     elsif gender == 'Female'
       return 'f'
-    else
-      false
     end
   end
 
