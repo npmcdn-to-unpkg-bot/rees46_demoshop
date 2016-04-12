@@ -20,8 +20,6 @@ class Category < ActiveRecord::Base
       return 'cosmetic'
     elsif categories_industry == 2
       return 'child'
-    else
-      false
     end
   end
 end
