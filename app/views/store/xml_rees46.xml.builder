@@ -267,7 +267,10 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
               if !product.gender_type.nil?
                 xml.gender "#{product.gender_type}"
               end
-              xml.hypoallergenic "#{product.hypoallergenic}"
+
+              if !product.hypoallergenic.nil?
+                xml.hypoallergenic "#{product.hypoallergenic}"
+              end
 
               if !product.part_types.nil?
                 xml.part_types {
