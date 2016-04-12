@@ -4,7 +4,7 @@ class Category < ActiveRecord::Base
 
   acts_as_tree order: 'name'
 
-  friendly_id :name, use: [:slugged, :history]
+  friendly_id :name, use: :slugged
 
   has_many :products
   has_many :children, class_name: 'Category', foreign_key: :parent_id, dependent: :destroy
@@ -12,9 +12,6 @@ class Category < ActiveRecord::Base
 
   validates :name, presence: true
 
-  def should_generate_new_friendly_id?
-    new_record?
-  end
 
   def human_categories_industry
     if categories_industry == 0
