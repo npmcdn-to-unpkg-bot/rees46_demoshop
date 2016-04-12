@@ -165,10 +165,12 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
             }
           end
 
-          if !product.part_types.empty? || !product.skin_types.empty? || !product.conditions.empty? || !product.volumes.empty? || !product.periodic.nil?
+          if !product.part_types.empty? || !product.skin_types.empty? || !product.conditions.empty? || !product.volumes.empty? || !product.periodic.nil? || !product.hypoallergenic.nil?
             xml.cosmetic {
 
-              xml.hypoallergenic "#{product.hypoallergenic}"
+              if !product.hypoallergenic.nil?
+                xml.hypoallergenic "#{product.hypoallergenic}"
+              end
 
               if !product.part_types.empty?
                 xml.part_types {
@@ -361,10 +363,12 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
             }
           end
 
-          if !product.part_types.empty? || !product.skin_types.empty? || !product.conditions.empty? || !product.volumes.empty? || !product.periodic.nil?
+          if !product.part_types.empty? || !product.skin_types.empty? || !product.conditions.empty? || !product.volumes.empty? || !product.periodic.nil? || !product.hypoallergenic.nil?
             xml.cosmetic {
 
-              xml.hypoallergenic "#{product.hypoallergenic}"
+              if !product.hypoallergenic.nil?
+                xml.hypoallergenic "#{product.hypoallergenic}"
+              end
 
               if !product.part_types.empty?
                 xml.part_types {
