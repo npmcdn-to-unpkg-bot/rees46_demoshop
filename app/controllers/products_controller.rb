@@ -61,8 +61,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  require 'xml'
-
   def import
     if params[:xml_file]
       file = params[:xml_file]
@@ -74,6 +72,8 @@ class ProductsController < ApplicationController
 
       Product.import(content, params[:category_id], params[:stranger_category], params[:limit_number])
       redirect_to products_path, notice: "#{total_product} Product added."
+    else
+      redirect_to products_path, notice: "Upload file and fill up form please"
     end
   end
 
