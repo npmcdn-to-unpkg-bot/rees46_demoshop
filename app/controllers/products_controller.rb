@@ -70,8 +70,11 @@ class ProductsController < ApplicationController
 
       total_product = content.root.find('//offer').take(params[:limit_number].to_i).length
 
-      Product.import(content, params[:category_id], params[:stranger_category], params[:limit_number])
-      redirect_to products_path, notice: "#{total_product} Product added."
+      if Product.import(content, params[:category_id], params[:stranger_category], params[:limit_number]) == false
+        redirect_to products_path, notice: "Cant find stranger category id."
+      else
+        redirect_to products_path, notice: "#{total_product} Product added."
+      end
     else
       redirect_to products_path, notice: "Upload file and fill up form please"
     end

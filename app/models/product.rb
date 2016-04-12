@@ -343,16 +343,19 @@ class Product < ActiveRecord::Base
     parsed_products = content.root.find('//offer').take(lit_num.to_i)
 
     parsed_products.each do |product|
-    next unless product.find_first('categoryId').content == cat_id
-    Product.create(
-        price: product.find_first('price').content,
-        category_id: product.find_first('categoryId').content.gsub(cat_id, category),
+      if product.find_first('categoryId').content == cat_id
+        Product.create(
+            price: product.find_first('price').content,
+            category_id: product.find_first('categoryId').content.gsub(cat_id, category),
 
-        remote_image_url: product.find_first('picture').content.strip,
-        brand_id: product.find_first('vendor').content,
-        title: product.find_first('name').content,
-        description: product.find_first('description').content
-    )
+            remote_image_url: product.find_first('picture').content.strip,
+            brand_id: product.find_first('vendor').content,
+            title: product.find_first('name').content,
+            description: product.find_first('description').content
+        )
+      else
+        return false
+      end
     end
   end
 
