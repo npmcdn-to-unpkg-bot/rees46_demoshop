@@ -57,7 +57,7 @@
     = f.input :periodic, as: :radio_buttons, collection: Product::PERIODIC, item_wrapper_class: 'radio-inline'
     hr
   #hypoallergenic.hidden.country-hypoallergenic
-    = f.input :hypoallergenic, as: :radio_buttons, :checked => [0, true], collection: Product::HYPOALLERGENIC, item_wrapper_class: 'radio-inline'
+    = f.input :hypoallergenic, as: :radio_buttons, include_hidden: false, collection: Product::HYPOALLERGENIC, item_wrapper_class: 'radio-inline'
     hr
     
   #cosmetic-param.hidden.country-sizes
