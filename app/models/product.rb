@@ -326,20 +326,6 @@ class Product < ActiveRecord::Base
   end
 
   def self.import(content, category, cat_id, lit_num)
-    # parsed_products = doc.xpath('//offer').take(lit_num.to_i)
-    #
-    # parsed_products.each do |product|
-    #   next unless product.at_xpath('categoryId').text == cat_id
-    #   Product.create!(
-    #     price: product.at_xpath('price').text,
-    #     category_id: product.at_xpath('categoryId').text.gsub(cat_id, category),
-    #     remote_image_url: product.at_xpath('picture').text.strip,
-    #     brand_id: product.at_xpath('vendor').text,
-    #     title: product.at_xpath('name').text,
-    #     description: product.at_xpath('description').text
-    #   )
-    # end
-
     parsed_products = content.root.find('//offer').take(lit_num.to_i)
 
     parsed_products.each do |product|
