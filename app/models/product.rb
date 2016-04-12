@@ -41,8 +41,7 @@ class Product < ActiveRecord::Base
     'Euro Sizes'         =>   1,
     'British Sizes'      =>   2,
     'American Sizes'     =>   3,
-    'Asian Sizes'        =>   4,
-    'Hight Sizes' => 5
+    'Hight Sizes'        =>   4
   }.freeze
 
   # Child constants class
