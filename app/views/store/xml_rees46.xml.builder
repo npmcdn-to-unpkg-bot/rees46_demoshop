@@ -134,89 +134,89 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                 end
               }
             end
-          end
+            if !product.product_type.nil? || !product.size.nil? || !product.periodic.nil?
+              xml.fashion {
+                if !product.product_type.nil?
+                  xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
+                end
 
-          if !product.product_type.nil? || !product.size.nil? || !product.periodic.nil?
-            xml.fashion {
-              if !product.product_type.nil?
-                xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
-              end
+                if !product.size.nil?
+                  if product.size == 2 && Product::SIZES.keys[2].present?
+                    product.human_available_british_sizes.each do |ps|
+                      xml.size "#{ps}"
+                    end
+                  elsif product.size == 1 && Product::SIZES.keys[1].present?
+                    product.human_available_euro_sizes.each do |ps|
+                      xml.size "#{ps}"
+                    end
 
-              if !product.size.nil?
-                if product.size == 2 && Product::SIZES.keys[2].present?
-                  product.human_available_british_sizes.each do |ps|
-                    xml.size "#{ps}"
-                  end
-                elsif product.size == 1 && Product::SIZES.keys[1].present?
-                  product.human_available_euro_sizes.each do |ps|
-                    xml.size "#{ps}"
-                  end
-
-                elsif product.size && Product::SIZES.keys[product.size].present?
-                  product.human_available_sizes.each do |ps|
-                    xml.size "#{ps[0]}"
+                  elsif product.size && Product::SIZES.keys[product.size].present?
+                    product.human_available_sizes.each do |ps|
+                      xml.size "#{ps[0]}"
+                    end
                   end
                 end
-              end
 
-              if !product.periodic.nil?
-                xml.periodic "#{product.periodic}"
-              end
-            }
-          end
+                if !product.periodic.nil?
+                  xml.periodic "#{product.periodic}"
+                end
+              }
+            end
 
-          if !product.part_types.empty? || !product.skin_types.empty? || !product.conditions.empty? || !product.volumes.empty? || !product.periodic.nil? || !product.hypoallergenic.nil?
-            xml.cosmetic {
+            if !product.part_types.empty? || !product.skin_types.empty? || !product.conditions.empty? || !product.volumes.empty? || !product.periodic.nil? || !product.hypoallergenic.nil?
+              xml.cosmetic {
 
-              if !product.hypoallergenic.nil?
-                xml.hypoallergenic "#{product.hypoallergenic}"
-              end
+                if !product.hypoallergenic.nil?
+                  xml.hypoallergenic "#{product.hypoallergenic}"
+                end
 
-              if !product.part_types.empty?
-                xml.part_types {
-                  if product.part_types
-                    product.human_available_part_types.each do |part_type|
-                      xml.part_type "#{part_type}".downcase
+                if !product.part_types.empty?
+                  xml.part_types {
+                    if product.part_types
+                      product.human_available_part_types.each do |part_type|
+                        xml.part_type "#{part_type}".downcase
+                      end
                     end
-                  end
-                }
-              end
+                  }
+                end
 
-              if !product.skin_types.empty?
-                xml.skin_types {
-                  if product.skin_types
-                    product.human_available_skin_types.each do |skin_type|
-                      xml.skin_type "#{skin_type}".downcase
+                if !product.skin_types.empty?
+                  xml.skin_types {
+                    if product.skin_types
+                      product.human_available_skin_types.each do |skin_type|
+                        xml.skin_type "#{skin_type}".downcase
+                      end
                     end
-                  end
-                }
-              end
+                  }
+                end
 
-              if !product.conditions.empty?
-                xml.conditions {
-                  if product.conditions
-                    product.human_available_conditions.each do |condition|
-                      xml.condition "#{condition}"
+                if !product.conditions.empty?
+                  xml.conditions {
+                    if product.conditions
+                      product.human_available_conditions.each do |condition|
+                        xml.condition "#{condition}"
+                      end
                     end
-                  end
-                }
-              end
+                  }
+                end
 
-              if !product.volumes.empty?
-                xml.volumes {
-                  product.volumes.each do |v|
-                    xml.volume {
-                      xml.value "#{v.value}"
-                      xml.price  "#{v.value_price}"
-                    }
-                  end
-                }
-              end
+                if !product.volumes.empty?
+                  xml.volumes {
+                    product.volumes.each do |v|
+                      xml.volume {
+                        xml.value "#{v.value}"
+                        xml.price  "#{v.value_price}"
+                      }
+                    end
+                  }
+                end
 
-              if !product.periodic.nil?
-                xml.periodic "#{product.periodic}"
-              end
-            }
+                if !product.periodic.nil?
+                  xml.periodic "#{product.periodic}"
+                end
+              }
+            end
+
           end
 
         }
@@ -335,90 +335,91 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
                 end
               }
             end
-          end
+            if !product.product_type.nil? || !product.size.nil? || !product.periodic.nil?
+              xml.fashion {
+                if !product.product_type.nil?
+                  xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
+                end
 
-          if !product.product_type.nil? || !product.size.nil? || !product.periodic.nil?
-            xml.fashion {
-              if !product.product_type.nil?
-                xml.type "#{Product::TYPES.keys[product.product_type.to_i]}".downcase
-              end
+                if !product.size.nil?
+                  if product.size == 2 && Product::SIZES.keys[2].present?
+                    product.human_available_british_sizes.each do |ps|
+                      xml.size "#{ps}"
+                    end
+                  elsif product.size == 1 && Product::SIZES.keys[1].present?
+                    product.human_available_euro_sizes.each do |ps|
+                      xml.size "#{ps}"
+                    end
 
-              if !product.size.nil?
-                if product.size == 2 && Product::SIZES.keys[2].present?
-                  product.human_available_british_sizes.each do |ps|
-                    xml.size "#{ps}"
-                  end
-                elsif product.size == 1 && Product::SIZES.keys[1].present?
-                  product.human_available_euro_sizes.each do |ps|
-                    xml.size "#{ps}"
-                  end
-
-                elsif product.size && Product::SIZES.keys[product.size].present?
-                  product.human_available_sizes.each do |ps|
-                    xml.size "#{ps[0]}"
+                  elsif product.size && Product::SIZES.keys[product.size].present?
+                    product.human_available_sizes.each do |ps|
+                      xml.size "#{ps[0]}"
+                    end
                   end
                 end
-              end
 
-              if !product.periodic.nil?
-                xml.periodic "#{product.periodic}"
-              end
-            }
+                if !product.periodic.nil?
+                  xml.periodic "#{product.periodic}"
+                end
+              }
+            end
+
+            if !product.part_types.empty? || !product.skin_types.empty? || !product.conditions.empty? || !product.volumes.empty? || !product.periodic.nil? || !product.hypoallergenic.nil?
+              xml.cosmetic {
+
+                if !product.hypoallergenic.nil?
+                  xml.hypoallergenic "#{product.hypoallergenic}"
+                end
+
+                if !product.part_types.empty?
+                  xml.part_types {
+                    if product.part_types
+                      product.human_available_part_types.each do |part_type|
+                        xml.part_type "#{part_type}".downcase
+                      end
+                    end
+                  }
+                end
+
+                if !product.skin_types.empty?
+                  xml.skin_types {
+                    if product.skin_types
+                      product.human_available_skin_types.each do |skin_type|
+                        xml.skin_type "#{skin_type}".downcase
+                      end
+                    end
+                  }
+                end
+
+                if !product.conditions.empty?
+                  xml.conditions {
+                    if product.conditions
+                      product.human_available_conditions.each do |condition|
+                        xml.condition "#{condition}"
+                      end
+                    end
+                  }
+                end
+
+                if !product.volumes.empty?
+                  xml.volumes {
+                    product.volumes.each do |v|
+                      xml.volume {
+                        xml.value "#{v.value}"
+                        xml.price  "#{v.value_price}"
+                      }
+                    end
+                  }
+                end
+
+                if !product.periodic.nil?
+                  xml.periodic "#{product.periodic}"
+                end
+              }
+            end
+
           end
 
-          if !product.part_types.empty? || !product.skin_types.empty? || !product.conditions.empty? || !product.volumes.empty? || !product.periodic.nil? || !product.hypoallergenic.nil?
-            xml.cosmetic {
-
-              if !product.hypoallergenic.nil?
-                xml.hypoallergenic "#{product.hypoallergenic}"
-              end
-
-              if !product.part_types.empty?
-                xml.part_types {
-                  if product.part_types
-                    product.human_available_part_types.each do |part_type|
-                      xml.part_type "#{part_type}".downcase
-                    end
-                  end
-                }
-              end
-
-              if !product.skin_types.empty?
-                xml.skin_types {
-                  if product.skin_types
-                    product.human_available_skin_types.each do |skin_type|
-                      xml.skin_type "#{skin_type}".downcase
-                    end
-                  end
-                }
-              end
-
-              if !product.conditions.empty?
-                xml.conditions {
-                  if product.conditions
-                    product.human_available_conditions.each do |condition|
-                      xml.condition "#{condition}"
-                    end
-                  end
-                }
-              end
-
-              if !product.volumes.empty?
-                xml.volumes {
-                  product.volumes.each do |v|
-                    xml.volume {
-                      xml.value "#{v.value}"
-                      xml.price  "#{v.value_price}"
-                    }
-                  end
-                }
-              end
-
-              if !product.periodic.nil?
-                xml.periodic "#{product.periodic}"
-              end
-            }
-          end
         }
       end
     end
