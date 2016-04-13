@@ -32,20 +32,99 @@ br
 br
 br
 
+/ .row
+/   - @products.limit(12).each do |product|
+/     .col-md-3
+/       .thumbnail
+/         h5= link_to product.title, product_path(product)
+/         = link_to image_tag(product.image.medium, class: "img-responsive"), product_path(product)
+/         p
+/           strong= number_to_currency(product.price,  unit: "₽ ") 
+/           .text-right
+/             = print_stock(product.stock ) + " "
+/             - if product.stock == 0
+/               false
+/             - else
+/               = product.stock
+
 .row
-  - @products.limit(12).each do |product|
-    .col-md-3
-      .thumbnail
-        h5= link_to product.title, product_path(product)
-        = link_to image_tag(product.image.medium, class: "img-responsive"), product_path(product)
-        p
-          strong= number_to_currency(product.price,  unit: "₽ ") 
-          .text-right
-            = print_stock(product.stock ) + " "
-            - if product.stock == 0
-              false
-            - else
-              = product.stock
+  .col-md-4
+    main role="main" 
+      .product
+        figure
+          img.product-image alt=("Product Image") src="https://raw.githubusercontent.com/itbruno/productpreview/master/assets/img/t-shirt.jpg" /
+        .product-description
+          .info
+            h1 LOREM IPSUM
+            p
+              | Lorem Ipsum is simply dummy
+              | printing and typesetting industry
+          .price
+            | 89
+        .product-sidebar
+          button.buy
+            span BUY ITEM
+          button.info
+            span MORE INFO
+          button.size
+            span SIZES
+          button.colors
+            span
+          a.color.black href="" 
+          a.color.white href="" 
+          a.color.red href="" 
+  .col-md-4
+    main role="main" 
+      .product
+        figure
+          img.product-image alt=("Product Image") src="https://raw.githubusercontent.com/itbruno/productpreview/master/assets/img/t-shirt.jpg" /
+        .product-description
+          .info
+            h1 LOREM IPSUM
+            p
+              | Lorem Ipsum is simply dummy
+              | printing and typesetting industry
+          .price
+            | 89
+        .product-sidebar
+          button.buy
+            span BUY ITEM
+          button.info
+            span MORE INFO
+          button.size
+            span SIZES
+          button.colors
+            span
+          a.color.black href="" 
+          a.color.white href="" 
+          a.color.red href="" 
+  .col-md-4
+    main role="main" 
+      .product
+        figure
+          img.product-image alt=("Product Image") src="https://raw.githubusercontent.com/itbruno/productpreview/master/assets/img/t-shirt.jpg" /
+        .product-description
+          .info
+            h1 LOREM IPSUM
+            p
+              | Lorem Ipsum is simply dummy
+              | printing and typesetting industry
+          .price
+            | 89
+        .product-sidebar
+          button.buy
+            span BUY ITEM
+          button.info
+            span MORE INFO
+          button.size
+            span SIZES
+          button.colors
+            span
+          a.color.black href="" 
+          a.color.white href="" 
+          a.color.red href="" 
+
+
 
 #recommender_popular
 
