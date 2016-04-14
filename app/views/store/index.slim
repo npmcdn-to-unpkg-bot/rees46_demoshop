@@ -27,6 +27,7 @@ h1 Home
   a.right.carousel-control data-slide="next" href="#carousel-example-generic" role="button"
     span.glyphicon.glyphicon-chevron-right aria-hidden="true"
     span.sr-only next
+
 .clr
 br
 br
@@ -46,25 +47,79 @@ br
 /               false
 /             - else
 /               = product.stock
-.container
-  .row.list-group
-    - @products.limit(12).each do |product|
-      .item.col-xs-3.col-lg-3
-        .thumbnail
-          img.group.list-group-image
-            = link_to image_tag(product.image.medium, class: "img-responsive"), product_path(product)
-          .caption
-            h4.group.inner.list-group-item-heading.title
-              = link_to truncate(product.title, :length => 100), product_path(product)
-            .clearfix
-              .pull-left
-                p.lead.text-left= number_to_currency(product.price,  unit: "₽ ", precision: 0)
-              .pull-right
-                .text-right
-                  = print_stock(product)
-                  - if product.stock == 0
-                    button.btn.disabled disabled="disabled"
-                      = "OUT OF STOCK"
+/ .container
+/   .row.list-group
+/     - @products.limit(12).each do |product|
+/       .item.col-xs-3.col-lg-3
+/         .thumbnail
+/           img
+/             .group.list-group-image
+/               = link_to image_tag(product.image.medium), product_path(product)
+/           .caption
+/             h4.group.inner.list-group-item-heading.title
+/               = link_to truncate(product.title, :length => 100), product_path(product)
+/             .clearfix
+/               .pull-left
+/                 p.lead.text-left= number_to_currency(product.price,  unit: "₽ ", precision: 0)
+/               .pull-right
+/                 .text-right
+/                   = print_stock(product)
+/                   - if product.stock == 0
+/                     button.btn.disabled disabled="disabled"
+/                       = "OUT OF STOCK"
+
+/ .container
+/   .row
+/     - @products.limit(12).each do |product|
+/       .col-xs-3.col-lg-3
+/         figure.snip1418
+/           .pro-imge
+/             = link_to image_tag(product.image.medium), product_path(product), alt: "sample85"
+/           
+/           figcaption
+/             h4.group.inner.list-group-item-heading.title
+/               = link_to product.title
+/             .clearfix
+/               .pull-left
+/                 p.lead.text-left= number_to_currency(product.price,  unit: "₽", precision: 0)
+/               .pull-right
+/                 = print_stock(product)
+/                 - if product.stock == 0
+/                   button.btn.disabled disabled="disabled"
+/                     = "OUT OF STOCK"
+/             
+/ 
+/ .center
+/   .row
+/     - @products.limit(12).each do |product|
+/       .col-md-3.col-xs-6
+/         .thumbnail
+/           = link_to image_tag(product.image.medium), product_path(product)
+/         .clearfix
+/           .pull-left
+/             p.lead.text-left= number_to_currency(product.price,  unit: "₽", precision: 0)
+/           .pull-right
+/             = print_stock(product)
+/             - if product.stock == 0
+/               button.btn.disabled disabled="disabled"
+/                 = "OUT OF STOCK"
+.row
+  - @products.limit(12).each do |product|
+    .col-sm-6.col-md-3
+      .thumbnail
+        = link_to image_tag(product.image.medium), product_path(product)
+        .caption
+          h3= link_to product.title, product_path(product)
+        .clearfix
+          .pull-left
+            p.lead.text-left= number_to_currency(product.price,  unit: "₽", precision: 0)
+          .pull-right
+            = print_stock(product)
+            - if product.stock == 0
+              button.btn.disabled disabled="disabled"
+                  = "OUT OF STOCK"
+
+.clr
 
 #recommender_popular
 br
