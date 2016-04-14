@@ -37,7 +37,7 @@ br
 .row
   - @products.limit(12).each do |product|
     .col-sm-6.col-md-3
-      .thumbnail
+      .thumbnail.product
         = link_to image_tag(product.image.medium), product_path(product)
         .caption
           h3= link_to product.title, product_path(product)
