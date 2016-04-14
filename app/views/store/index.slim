@@ -47,6 +47,24 @@ br
 /             - else
 /               = product.stock
 
+.row
+  - @products.limit(12).each do |product|
+    .item.col-md-3
+      .thumbnail
+        img.group.list-group-image
+          = link_to image_tag(product.image.medium, class: "img-responsive"), product_path(product)
+        .caption
+          h4.group.inner.list-group-item-heading
+            = link_to truncate(product.title, :length => 23), product_path(product)
+          .row
+            .col-xs-12.col-md-5
+              p.lead= number_to_currency(product.price,  unit: "₽ ", precision: 0)
+            .col-xs-12.col-md-7.text-right
+              = print_stock(product)
+              - if product.stock == 0
+                button.btn.disabled disabled="disabled"
+                  = "OUT OF STOCK"
+
 #recommender_popular
 
 = render 'store/popular_recommend'

@@ -35,14 +35,14 @@
           
         = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
 
-        h4.col-md-4
-          = number_to_currency(@product.price,  unit: "₽ ")
-        .text-right
-          = print_stock(@product.stock ) + " "
-          - if @product.stock == 0
-            false
-          - else
-            = @product.stock
+        / h4.col-md-4
+        /   = number_to_currency(@product.price,  unit: "₽ ")
+        / .text-right
+        /   = print_stock(@product.stock ) + " "
+        /   - if @product.stock == 0
+        /     false
+        /   - else
+        /     = @product.stock
           br
           br
           #add-to-cart-button
