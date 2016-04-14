@@ -55,3 +55,58 @@
   border-color: #20B2AA !important;
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
+
+// 2nd nev bar
+@import "compass";
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
+$primary : #33363D;
+$fc : #14171A;
+*,*:after,*:before{
+  @include box-sizing(border-box);
+}
+
+
+.navbar{
+  background: $primary;
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+  li{
+    display: table-cell;
+    padding: 15px;
+    min-width: 175px;
+    text-align: center;
+    a{
+      display: block;
+      color: $fc;
+      text-decoration: none;
+      font-size: 32px;
+      @include transition(.3s ease-in);
+    }
+
+    &.active{
+      a{
+        color: #fff;
+        @include text-shadow(1px 1px 2px $fc);
+      }
+    }
+    &.marker{
+      display: inline-block;
+      position: absolute;
+      height: 2px;
+      padding: 0;
+      background: #F45F5F;
+      @include transition(.3s ease-in);
+      top: calc(100% - 2px);
+      left: 15px;
+    }
+    &.anim{@include animation(.4s shake ease-in);}
+  }
+}
+
+
+@include keyframes (shake) {
+  0% { @include translateX(5px);}
+  50%{@include translateX(-5px);}
+  100%{@include translateX(0px);}
+}

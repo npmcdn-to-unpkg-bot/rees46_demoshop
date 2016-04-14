@@ -21,6 +21,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'redactor-rails', '~> 0.5.0'
 gem 'font-awesome-rails'
 gem 'jquery-ui-rails'
+gem 'compass-rails', github: 'Compass/compass-rails'
 
 # Database
 gem 'pg'
