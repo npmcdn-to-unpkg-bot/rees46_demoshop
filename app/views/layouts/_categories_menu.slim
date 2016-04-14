@@ -1,6 +1,6 @@
 - Category.where(parent_id: nil).where.not(slug: "categories-industry").each do |category|
-  #current.li.dropdown role="presentation"
-    = link_to category.name, category_path(category)
+  li.dropdown
+    = link_to category.name.upcase, category_path(category)
     - if category.children.any?
       ul.dropdown-menu role='menu' aria-labelledby='drop'
         - category.walk_tree do |c, level|

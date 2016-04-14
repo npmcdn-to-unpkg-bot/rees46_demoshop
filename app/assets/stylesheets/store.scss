@@ -57,56 +57,41 @@
 }
 
 // 2nd nev bar
-@import "compass";
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
-$primary : #33363D;
-$fc : #14171A;
-*,*:after,*:before{
-  @include box-sizing(border-box);
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(119, 119, 119, 1);
 }
-
-
-.navbar{
-  background: $primary;
-  display: inline-block;
-  padding: 0 15px;
-  position: relative;
-  li{
-    display: table-cell;
-    padding: 15px;
-    min-width: 175px;
-    text-align: center;
-    a{
-      display: block;
-      color: $fc;
-      text-decoration: none;
-      font-size: 32px;
-      @include transition(.3s ease-in);
-    }
-
-    &.active{
-      a{
-        color: #fff;
-        @include text-shadow(1px 1px 2px $fc);
-      }
-    }
-    &.marker{
-      display: inline-block;
-      position: absolute;
-      height: 2px;
-      padding: 0;
-      background: #F45F5F;
-      @include transition(.3s ease-in);
-      top: calc(100% - 2px);
-      left: 15px;
-    }
-    &.anim{@include animation(.4s shake ease-in);}
-  }
+#custom-bootstrap-menu.navbar-default {
+    font-size: 35px;
+    background-color: rgba(248, 248, 248, 1);
+    border-width: 1px;
+    border-radius: 4px;
 }
-
-
-@include keyframes (shake) {
-  0% { @include translateX(5px);}
-  50%{@include translateX(-5px);}
-  100%{@include translateX(0px);}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(119, 119, 119, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(242, 242, 242, 1);
+    background-color: rgba(237, 0, 0, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(85, 85, 85, 1);
+    background-color: rgba(161, 57, 16, 0.36);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #a13910;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #a13910;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #a13910;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #f8f8f8;
 }
