@@ -4,4 +4,4 @@
     - if category.children.any?
       ul.dropdown-menu role='menu' aria-labelledby='drop'
         - category.walk_tree do |c, level|
-          li= link_to "#{'-> '*level}#{c.name}", category_path(c)
+          li= link_to "#{'-> '*level}#{c.name.upcase}", category_path(c)
