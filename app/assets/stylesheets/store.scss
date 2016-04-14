@@ -23,7 +23,6 @@
 
 // Product image for fornt page
 
-.glyphicon { margin-right:5px; }
 .thumbnail
 {
     margin-bottom: 20px;
@@ -76,4 +75,9 @@
 .item.list-group-item:after
 {
     clear: both;
+}
+
+.title {
+  height: 40px;
+  overflow: hidden;
 }
