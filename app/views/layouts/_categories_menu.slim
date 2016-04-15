@@ -1,4 +1,4 @@
-- Category.where(parent_id: nil).where.not(slug: "categories-industry").each do |category|
+- Category.where(parent_id: nil).where.not(slug: "categories-industry").order(:id).each do |category|
   li.dropdown
     = link_to category.name.upcase, category_path(category)
     - if category.children.any?
