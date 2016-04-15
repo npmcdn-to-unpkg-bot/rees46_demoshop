@@ -27,13 +27,7 @@ header
             - else
               li = link_to 'Login', new_user_session_path
               li = link_to 'Sign up', new_user_registration_path
-  / #custom-bootstrap-menu.navbar.navbar-default[role="navigation"]
-  /   .container-fluid
-  /     .navbar-header
-  /       a.navbar-brand[href="#"]
-  /         | Brand
-  /     .collapse.navbar-collapse.navbar-menubuilder
-  /         = render "layouts/categories_menu"
+
   #custom-bootstrap-menu.navbar.navbar-default[role="navigation"]
     .container
       .navbar-header

@@ -38,7 +38,7 @@ br
       .thumbnail.product
         = link_to image_tag(product.image.medium), product_path(product)
         .caption
-          h3= link_to product.title, product_path(product)
+          h3= link_to product.title.capitalize, product_path(product)
         .clearfix
           .pull-left
             p.lead.text-left= number_to_currency(product.price,  unit: "₽", precision: 0)
