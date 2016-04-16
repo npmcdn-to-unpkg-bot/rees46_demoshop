@@ -29,6 +29,7 @@ gem 'pg'
 # Server
 gem 'unicorn'
 gem 'capistrano-rails', group: :development
+gem 'curb', '~> 0.9.3'
 
 # Tamplate
 gem 'slim', '~> 3.0', '>= 3.0.6'

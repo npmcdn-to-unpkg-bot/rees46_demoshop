@@ -346,15 +346,18 @@ class Product < ActiveRecord::Base
   #   end
   # end
 
-  require 'net/http'
+  def self.redirected_url(page)
+    result = Curl::Easy.perform(page) do |curl|
+      curl.follow_location = true
+    end
+    result.last_effective_url
+  end
 
   def self.import(doc, category, cat_id, lit_num)
     parsed_products = doc.xpath('//offer').take(lit_num.to_i)
 
     parsed_products.each do |product|
       next unless product.at_xpath('categoryId').text == cat_id
-
-      page = Net::HTTP.get_response(URI(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]))
 
       Product.create!(
         title: product.at_xpath('name').text,
@@ -363,7 +366,7 @@ class Product < ActiveRecord::Base
 
         category_id: product.at_xpath('categoryId').text.gsub(cat_id, category),
 
-        remote_image_url: page['location'],
+        remote_image_url: self.redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]),
         brand_id: product.at_xpath('vendor').text,
 
       )
