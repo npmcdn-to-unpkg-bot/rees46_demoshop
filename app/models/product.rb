@@ -325,23 +325,48 @@ class Product < ActiveRecord::Base
     age_sizes.map { |pas| Product::AGE_SIZES_VALUES.keys[pas] }
   end
 
-  def self.import(content, category, cat_id, lit_num)
-    parsed_products = content.root.find('//offer').take(lit_num.to_i)
+  # def self.import(con, category, cat_id, lit_num)
+  #   parsed_products = con.root.find('//offer').take(lit_num.to_i)
+  #
+  #   parsed_products.each do |product|
+  #     "#{binding.pry}"
+  #     if product.find_first('categoryId').content == cat_id
+  #       Product.create!(
+  #           price: product.find_first('price').content,
+  #           category_id: product.find_first('categoryId').content.gsub(cat_id, category),
+  #
+  #           remote_image_url: product.find_first('picture').content.strip,
+  #           brand_id: product.find_first('vendor').content,
+  #           title: product.find_first('name').content,
+  #           description: product.find_first('description').content
+  #       )
+  #     else
+  #       return false
+  #     end
+  #   end
+  # end
+
+  require 'net/http'
+
+  def self.import(doc, category, cat_id, lit_num)
+    parsed_products = doc.xpath('//offer').take(lit_num.to_i)
 
     parsed_products.each do |product|
-      if product.find_first('categoryId').content == cat_id
-        Product.create(
-            price: product.find_first('price').content,
-            category_id: product.find_first('categoryId').content.gsub(cat_id, category),
+      next unless product.at_xpath('categoryId').text == cat_id
 
-            remote_image_url: product.find_first('picture').content.strip,
-            brand_id: product.find_first('vendor').content,
-            title: product.find_first('name').content,
-            description: product.find_first('description').content
-        )
-      else
-        return false
-      end
+      page = Net::HTTP.get_response(URI(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]))
+
+      Product.create!(
+        title: product.at_xpath('name').text,
+        description: product.at_xpath('description').text,
+        price: product.at_xpath('price').text,
+
+        category_id: product.at_xpath('categoryId').text.gsub(cat_id, category),
+
+        remote_image_url: page['location'],
+        brand_id: product.at_xpath('vendor').text,
+
+      )
     end
   end
 
