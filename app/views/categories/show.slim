@@ -1,9 +1,58 @@
-h1  Category
+.row
+#sidebar
+  h3
+    | CART
+  #cart
+    span.empty
+      | No items in cart.
+  h3
+    | CATEGORIES
+  .checklist.categories
+    ul
+      li
+        a[href=""]
+          span
+          | New Arivals
+      li
+        a[href=""]
+          span
+          | Accesories
+      li
+        a[href=""]
+          span
+          | Bags
+      li
+        a[href=""]
+          span
+          | Dressed
+      li
+        a[href=""]
+          span
+          | Jackets
+      li
+        a[href=""]
+          span
+          | jewelry
+      li
+        a[href=""]
+          span
+          | Shoes
+      li
+        a[href=""]
+          span
+          | Shirts
+      li
+        a[href=""]
+          span
+          | Sweaters
+      li
+        a[href=""]
+          span
+          | T-shirts
 .row
   - @products.each do |product|
     .col-md-3
       = render 'categories/product_categories', product: product
-
 .row
   .clr
   hr
