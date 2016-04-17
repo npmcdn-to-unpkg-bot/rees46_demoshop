@@ -368,7 +368,6 @@ class Product < ActiveRecord::Base
 
         remote_image_url: self.redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]),
         brand_id: product.at_xpath('vendor').text,
-
       )
     end
   end
