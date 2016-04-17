@@ -72,13 +72,17 @@
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
     color: rgba(242, 242, 242, 1);
-    background-color: rgba(237, 0, 0, 1);
+    background-color: #20B2AA;
+    border-radius: 0;
+    border-top: 0;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
     color: rgba(85, 85, 85, 1);
     background-color: rgba(161, 57, 16, 0.36);
+    border-radius: 0;
+    border-top: 0;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
     border-color: #a13910;
