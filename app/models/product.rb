@@ -366,7 +366,7 @@ class Product < ActiveRecord::Base
 
         category_id: product.at_xpath('categoryId').text.gsub(cat_id, category),
 
-        remote_image_url: self.redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]),
+        remote_image_url: redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]),
         brand_id: product.at_xpath('vendor').text,
       )
     end
