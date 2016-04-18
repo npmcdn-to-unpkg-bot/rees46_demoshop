@@ -1,44 +1,17 @@
-h1.text-left Popular
-br
-br
-
-/ .row
-/   - products.each do |product|
-/     .col-md-3
-/       = link_to product.title, product_path(product, recommdend_by: @recommender)
-/       = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product, recommdend_by: @recommender)
-/       = number_to_currency(product.price,  unit: "₽ ")
-
-/ .row
-/   - products.each do |product|
-/     .col-md-2
-/       .thumbnail-recommender.product
-/         = link_to image_tag(product.image.thumb), product_path(product, recommdend_by: @recommender)
-/         .caption-recommender
-/           h3= link_to product.title.capitalize, product_path(product, recommdend_by: @recommender)
-/         .clearfix-recommender
-/           .pull-left
-/             p.lead.text-left= number_to_currency(product.price,  unit: "₽", precision: 0)
-/           .pull-right
-/             = print_stock(product)
-/             - if product.stock == 0
-/               button.btn.disabled disabled="disabled"
-/                   = "OUT OF STOCK"
-- products.each do |product|
-  .rees46-recommend
-      / .recommender-block-title
-      /   | Populer
-      .recommended-items
-        .recommended-item
-          .recommended-item-photo
-            img.item_img
-              = link_to image_tag(product.image.thumb), product_path(product, recommdend_by: @recommender)
-          .recommended-item-title
-            = link_to product.title.capitalize, product_path(product, recommdend_by: @recommender)
-          .recommended-item-price
-            = number_to_currency(product.price,  unit: "₽", precision: 0)
-          .recommended-item-action
-            = print_stock(product)
-            - if product.stock == 0
-              button.btn.disabled disabled="disabled"
-                  = "OUT OF STOCK"
+.rees46-recommend
+  .recommender-block-title
+    | Populer
+  .recommended-items
+    - products.each do |product|
+      .recommended-item
+        .recommended-item-photo
+          = link_to image_tag(product.image.medium), product_path(product, recommdend_by: @recommender)
+        .recommended-item-title
+          = link_to product.title.capitalize, product_path(product, recommdend_by: @recommender)
+        .recommended-item-price
+          = number_to_currency(product.price,  unit: "₽", precision: 0)
+        .recommended-item-action
+          = print_stock(product)
+          - if product.stock == 0
+            button.btn.disabled disabled="disabled"
+                = "OUT OF STOCK"
