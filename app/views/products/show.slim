@@ -3,7 +3,7 @@
     .col-md-8
       ol.breadcrumb
         li = link_to "HOME", root_path
-        li = link_to @product.category.name.upcase
+        li = link_to @product.category.name.upcase, @product.category
         li = link_to @product.title.upcase
 .container
   .row
