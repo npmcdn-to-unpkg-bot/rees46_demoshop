@@ -358,12 +358,11 @@ class Product < ActiveRecord::Base
 
     count = 0
     parsed_products.each do |product|
-
       if product.at_xpath('categoryId').text == cat_id
 
         count += 1
 
-        Product.create!(
+        pro_brand = Product.create!(
           title: product.at_xpath('name').text,
           description: product.at_xpath('description').text,
           price: product.at_xpath('price').text,
@@ -371,8 +370,9 @@ class Product < ActiveRecord::Base
           category_id: product.at_xpath('categoryId').text.gsub(cat_id, category),
 
           remote_image_url: redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]),
-          brand_id: product.at_xpath('vendor').text,
         )
+        brand = Brand.find_or_create_by!(name: product.at_xpath( 'vendor').text)
+        pro_brand.update brand_id: brand.id
         break if count == lit_num.to_i
       end
     end
