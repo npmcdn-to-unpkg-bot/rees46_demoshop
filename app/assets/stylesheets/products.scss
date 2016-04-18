@@ -22,3 +22,11 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.breadcrumb-title {
+  width: 400px;
+  height: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
