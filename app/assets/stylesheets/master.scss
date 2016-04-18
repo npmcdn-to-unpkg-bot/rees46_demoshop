@@ -246,3 +246,120 @@ h1 {
     font-weight:300;
     font-style:normal;
 }
+
+// recommender product
+
+.rees46-recommend {
+    display: table;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.rees46-recommend * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.rees46-recommend .recommender-block-title {
+    color: #212322;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.rees46-recommend .recommended-items {
+    height: 320px;
+    overflow: hidden;
+}
+.rees46-recommend .recommended-items .recommended-item {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #e3e3dc;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+    display: block;
+    float: left;
+    height: 300px;
+    margin: 0 14px 20px 0;
+    padding: 20px 14px;
+    text-align: center;
+    width: 182px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.rees46-recommend .recommended-items .recommended-item:hover {
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+.rees46-recommend .recommended-items .recommended-item .recommended-item-photo {
+    display: table;
+    height: 160px;
+    margin-bottom: 10px;
+    table-layout: fixed;
+    width: 100%;
+}
+.rees46-recommend .recommended-items .recommended-item .recommended-item-photo > a {
+    display: table-cell;
+    height: 160px;
+    vertical-align: middle;
+}
+.rees46-recommend .recommended-items .recommended-item .recommended-item-photo img {
+    max-height: 160px;
+    max-width: 100%;
+}
+.rees46-recommend .recommended-items .recommended-item .recommended-item-title {
+    border-bottom: 1px solid #e3e3dc;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    text-align: left;
+}
+.rees46-recommend .recommended-items .recommended-item .recommended-item-title > a {
+    color: #565555;
+    display: block;
+    font-weight: bold;
+    height: 30px;
+    max-height: 30px;
+    line-height: 15px;
+    overflow: hidden;
+    text-decoration: none;
+}
+.rees46-recommend .recommended-items .recommended-item .recommended-item-price {
+    color: #3e3f3f;
+    float: left;
+    font-weight: bold;
+    line-height: 22px;
+    padding: 3px 0;
+    text-align: left;
+}
+.rees46-recommend .recommended-items .recommended-item .recommended-item-action {
+    float: right;
+}
+.rees46-recommend .recommended-items .recommended-item .recommended-item-action > a {
+    background: #5cb85c;
+    background: -moz-linear-gradient(top, #5cb85c 0%, #5cb85c 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5cb85c), color-stop(100%,#5cb85c));
+    background: -webkit-linear-gradient(top, #5cb85c 0%,#5cb85c 100%);
+    background: -o-linear-gradient(top, #5cb85c 0%,#5cb85c 100%);
+    background: -ms-linear-gradient(top, #5cb85c 0%,#5cb85c 100%);
+    background: linear-gradient(to bottom, #5cb85c 0%,#5cb85c 100%);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: inline-block;
+    padding: 3px 10px;
+    line-height: 20px;
+    text-decoration: none;
+}
+.rees46-recommend .recommended-items .recommended-item .recommended-item-action > a:hover {
+    background: #1d5e9e;
+    background: -moz-linear-gradient(top, #1d5e9e 0%, #134271 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1d5e9e), color-stop(100%,#134271));
+    background: -webkit-linear-gradient(top, #1d5e9e 0%,#134271 100%);
+    background: -o-linear-gradient(top, #1d5e9e 0%,#134271 100%);
+    background: -ms-linear-gradient(top, #1d5e9e 0%,#134271 100%);
+    background: linear-gradient(to bottom, #1d5e9e 0%,#134271 100%);
+}
