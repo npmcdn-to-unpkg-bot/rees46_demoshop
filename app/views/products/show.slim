@@ -14,7 +14,7 @@
       - if !@product.brand.nil?
         = link_to @product.brand.name, brand_path(@product.brand)
 
-    .col-xs-4
+    .col-md-6
       h1= @product.title
       = @product.description.html_safe
       = simple_form_for @line_item do |f|
