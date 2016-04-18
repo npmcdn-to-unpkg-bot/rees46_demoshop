@@ -23,13 +23,12 @@
    height: 350px;
    border: 1px solid #F7F6F6 !important;
    border-radius: 0px !important;
- }
 
-.thumbnail > img {
-   width: 200px;
-   height: 200px;
+   img {
+   max-width:60% !important;
+   margin-top: 15px !important;
+  }
  }
-
 
 .caption {
    height: 100px;
