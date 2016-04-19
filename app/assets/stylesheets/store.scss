@@ -86,7 +86,7 @@
   margin-bottom: 10px
 }
 
-.product .titleAndPrice .note {
+.product .titleAndPrice {
   font-size: 11px;
   color: black
 }
@@ -135,6 +135,12 @@
 
 .product-btm {
   margin-bottom: 25px;
+}
+
+.img-fit {
+  img {
+    width: 269px;
+  }
 }
 
 // 2nd nev bar

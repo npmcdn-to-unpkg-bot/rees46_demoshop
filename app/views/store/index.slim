@@ -52,7 +52,7 @@ br
     .product.img
       .productImg
           img.img.lazy
-            = link_to image_tag(product.image.thumbs), product_path(product)
+            = link_to image_tag(product.image.thumbs), product_path(product), class: "img-fit"
 
       .titleAndPrice
         .title.h2
