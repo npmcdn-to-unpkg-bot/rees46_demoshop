@@ -88,7 +88,7 @@ class ProductsController < ApplicationController
       doc = Nokogiri::XML::Document.parse(file)
       total_product = doc.xpath('//offer').take(params[:limit_number].to_i).length
 
-      Product.import(doc, params[:category_id], params[:stranger_category], params[:limit_number])
+      Product.import(doc, params[:category_id], params[:stranger_category], params[:limit_number], params[:stock])
       redirect_to products_path, notice: "#{total_product} Product added."
     end
   end
