@@ -32,21 +32,36 @@ br
 br
 
 
-.row
+/ .row
+/   - @products.limit(12).each do |product|
+/     .col-sm-6.col-md-3
+/       .thumbnail.tum
+/         = link_to image_tag(product.image.medium), product_path(product)
+/         .caption
+/           h3= link_to product.title.capitalize, product_path(product)
+/         .clearfix
+/           .pull-left
+/             p.lead.text-left= number_to_currency(product.price,  unit: "₽", precision: 0)
+/           .pull-right
+/             = print_stock(product)
+/             - if product.stock == 0
+/               button.btn.disabled disabled="disabled"
+/                   = "OUT OF STOCK"
+.products
   - @products.limit(12).each do |product|
-    .col-sm-6.col-md-3
-      .thumbnail.tum
-        = link_to image_tag(product.image.medium), product_path(product)
-        .caption
-          h3= link_to product.title.capitalize, product_path(product)
-        .clearfix
-          .pull-left
-            p.lead.text-left= number_to_currency(product.price,  unit: "₽", precision: 0)
-          .pull-right
-            = print_stock(product)
-            - if product.stock == 0
-              button.btn.disabled disabled="disabled"
-                  = "OUT OF STOCK"
+    .product.img
+      .productImg
+          img.img.lazy
+            = link_to image_tag(product.image.thumbs), product_path(product)
+
+      .titleAndPrice
+        .title.h2
+          = link_to product.title.upcase, product_path(product)
+        .price.text-center
+          = number_to_currency(product.price,  unit: "₽ ", precision: 0)
+
+br
+br
 
 .clr
 
