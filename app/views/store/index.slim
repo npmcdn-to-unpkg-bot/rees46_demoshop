@@ -47,10 +47,9 @@ br
 /             - if product.stock == 0
 /               button.btn.disabled disabled="disabled"
 /                   = "OUT OF STOCK"
-
-.row
+.products
   - @products.limit(12).each do |product|
-    .product.img.col-md-3.product-btm
+    .product.img
       .productImg
           img.img.lazy
             = link_to image_tag(product.image.thumbs), product_path(product)
