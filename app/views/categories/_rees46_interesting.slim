@@ -1,7 +1,15 @@
-h3.text-center You may like it :)
+h1 You may like it :)
+br
+br
+br
 
 - products.each do |product|
-  .col-md-3
-    = link_to product.title, product_path(product, recommdend_by: @recommender)
-    = link_to image_tag(product.image.thumb, class: "img-responsive"), product_path(product, recommdend_by: @recommender)
-    = number_to_currency(product.price,  unit: "₽ ")
+  .product.img
+    .productImg
+      img.img.lazy
+        = link_to image_tag(product.image.thumbs), product_path(product, recommdend_by: @recommender), class: "img-fit"
+    .titleAndPrice
+      .title.h2
+        = link_to product.title, product_path(product, recommdend_by: @recommender)
+      .price.text-center
+        = number_to_currency(product.price,  unit: "₽ ", precision: 0)

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root 'store#index'
   get 'dashboard' => 'store#dashboard'
   resources :categories do
-    post 'store/popular_urls' => 'store#popular_urls'
+    post 'cat_urls' => 'categories#cat_urls'
   end
   post 'categories/cat_urls' => 'categories#cat_urls'
 
