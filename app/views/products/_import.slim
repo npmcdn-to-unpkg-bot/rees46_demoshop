@@ -6,26 +6,34 @@ h2.text-center Import Products
   = label_tag 'Mine Category'
   = select_tag :category_id, options_for_select(Category.all.map {|c| [c.name, c.id ] }), :prompt => "Please select"
   br
+  br
   = label_tag 'Stranger Category:-'
-
   = text_field_tag 'stranger_category'
   br
-
+  br
+  
   = label_tag 'Limit: '
-
   = text_field_tag "limit_number"
+  br
+  br
   
   = label_tag 'Stock:- '
-
   = text_field_tag "stock"
-  
+  br
+  br
   = label_tag 'Gender:-'
 
   = select_tag :gender, options_for_select(Product::GENDERS), :prompt => "Please select"
-
+  br
+  br
   = label_tag 'Fashion Type:-'
 
-  = select_tag :product_type, options_for_select(Product::COMMON_TYPES.merge(Product::ADULT_TYPES)), :prompt => "Please select"
+  = select_tag :product_type, options_for_select(Product::TYPES), :prompt => "Please select"
+  br
+  br
+  = label_tag 'Industry:-'
+
+  = select_tag :industry, options_for_select(Product.industries.keys.to_a), :prompt => "Please select"
 
   br
   br

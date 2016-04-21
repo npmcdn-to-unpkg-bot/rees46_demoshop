@@ -353,17 +353,27 @@ class Product < ActiveRecord::Base
     result.last_effective_url
   end
 
-  def self.import(doc, category, cat_id, lit_num, stock, gender, p_type)
+  def name_nil(nil_name, params_tpye)
+    if !nil_name.nil
+
+    end
+  end
+
+  def self.import(doc, category, cat_id, lit_num, stock, gender, p_type, industry)
     parsed_products = doc.xpath('//offer')
 
     count = 0
     parsed_products.each do |product|
       if product.at_xpath('categoryId').text == cat_id
-
+         if product.at_xpath('name').nil?
+           product_title = nil
+         else
+           product_title = product.at_xpath('name').text
+         end
         count += 1
 
         pro_brand = Product.create!(
-          title: product.at_xpath('name').text,
+          title: product_title,
           description: product.at_xpath('description').text,
           price: product.at_xpath('price').text,
 
@@ -374,9 +384,15 @@ class Product < ActiveRecord::Base
           stock: stock,
           gender: gender,
           product_type: p_type,
+          industry: industry,
         )
-        brand = Brand.find_or_create_by!(name: product.at_xpath( 'vendor').text)
+        brand = Brand.find_or_create_by!(name: product.at_xpath('vendor').text)
         pro_brand.update brand_id: brand.id
+
+        if pro_brand.title.nil?
+          pro_brand.update title: Product::TYPES.keys[p_type.to_i] + brand.name
+        end
+
         break if count == lit_num.to_i
       end
     end
