@@ -390,7 +390,7 @@ class Product < ActiveRecord::Base
         pro_brand.update brand_id: brand.id
 
         if pro_brand.title.nil?
-          pro_brand.update title: Product::TYPES.keys[p_type.to_i] + brand.name
+          pro_brand.update title: product.at_xpath('model').text + " " + brand.name
         end
 
         break if count == lit_num.to_i
