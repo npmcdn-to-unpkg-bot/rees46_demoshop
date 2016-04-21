@@ -353,7 +353,7 @@ class Product < ActiveRecord::Base
     result.last_effective_url
   end
 
-  def self.import(doc, category, cat_id, lit_num, stock, gender)
+  def self.import(doc, category, cat_id, lit_num, stock, gender, p_type)
     parsed_products = doc.xpath('//offer')
 
     count = 0
@@ -372,7 +372,8 @@ class Product < ActiveRecord::Base
           remote_image_url: redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]),
 
           stock: stock,
-          gender: gender.capitalize,
+          gender: gender,
+          product_type: p_type,
         )
         brand = Brand.find_or_create_by!(name: product.at_xpath( 'vendor').text)
         pro_brand.update brand_id: brand.id

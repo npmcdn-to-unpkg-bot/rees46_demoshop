@@ -4,7 +4,7 @@ h2.text-center Import Products
   = file_field_tag :xml_file
   br
   = label_tag 'Mine Category'
-  = select_tag :category_id, options_for_select(Category.all.map {|c| [c.name, c.id ] })
+  = select_tag :category_id, options_for_select(Category.all.map {|c| [c.name, c.id ] }), :prompt => "Please select"
   br
   = label_tag 'Stranger Category:-'
 
@@ -21,7 +21,11 @@ h2.text-center Import Products
   
   = label_tag 'Gender:-'
 
-  = select_tag :gender, options_for_select(Product::GENDERS)
+  = select_tag :gender, options_for_select(Product::GENDERS), :prompt => "Please select"
+
+  = label_tag 'Fashion Type:-'
+
+  = select_tag :product_type, options_for_select(Product::COMMON_TYPES.merge(Product::ADULT_TYPES)), :prompt => "Please select"
 
   br
   br
