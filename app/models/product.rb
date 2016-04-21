@@ -370,6 +370,7 @@ class Product < ActiveRecord::Base
          else
            product_title = product.at_xpath('name').text
          end
+
         count += 1
 
         pro_brand = Product.create!(
@@ -386,8 +387,13 @@ class Product < ActiveRecord::Base
           product_type: p_type,
           industry: industry,
         )
-        brand = Brand.find_or_create_by!(name: product.at_xpath('vendor').text)
-        pro_brand.update brand_id: brand.id
+
+        if product.at_xpath('vendor').nil?
+          brand = nil
+        else
+          brand = Brand.find_or_create_by!(name: product.at_xpath('vendor').text)
+          pro_brand.update brand_id: brand.id
+        end
 
         if pro_brand.title.nil?
           pro_brand.update title: product.at_xpath('model').text + " " + brand.name
