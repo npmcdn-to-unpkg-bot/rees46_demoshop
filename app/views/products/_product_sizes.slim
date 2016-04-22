@@ -1,1 +1,1 @@
-= f.input :size_id, label: "#{Product::SIZES.keys[@product.size].camelcase}", as: :select, collection: @product.human_available_sizes, item_wrapper_class: 'radio-inline'
+= f.input :size_id, label: "#{Product::SIZES.keys[@product.size].camelcase}", :label_html => {:class => "select_label"}, as: :select, collection: @product.human_available_sizes, item_wrapper_class: 'radio-inline'
