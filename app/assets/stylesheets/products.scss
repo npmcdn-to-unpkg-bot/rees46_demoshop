@@ -69,3 +69,11 @@ font-size: 25px;
   text-decoration: none;
   border-color: #f21158;
 }
+
+// Custom radio button
+
+@media all {
+  .radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    margin-top: 0 !important;
+  }
+}
