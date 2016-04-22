@@ -1,4 +1,6 @@
-h1  Brand
-.row
+h1  Brand #{@brand.name}
+br
+br
+.products
   - @products.each do |product|
     = render 'brands/product_cart', product: product
