@@ -14,9 +14,13 @@
       - if !@product.brand.nil?
         = link_to @product.brand.name, brand_path(@product.brand)
 
-    .col-md-6
-      h1= @product.title
-      = @product.description.html_safe
+    .col-md-6.itemDescription
+      h1.itemTitle
+        = @product.title
+      .price.text-center
+        = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
+      .itemP
+        = @product.description.html_safe
       = simple_form_for @line_item do |f|
         - if @line_item.errors.any?
           #error_explanation
@@ -27,32 +31,29 @@
               - @line_item.errors.full_messages.each do |msg|
                 li= msg
         .col-md-3
-        - if @product.industry == "fashion"
-          = render "industry_fashion", :f => f
-          
-        - elsif @product.industry == "cosmetic"
-          = render "industry_cosmetic", :f => f
-          
-        - elsif @product.industry == "child"
-          = render "industry_child", :f => f
-          
-        = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
+          - if @product.industry == "fashion"
+            = render "industry_fashion", :f => f
+            
+          - elsif @product.industry == "cosmetic"
+            = render "industry_cosmetic", :f => f
+            
+          - elsif @product.industry == "child"
+            = render "industry_child", :f => f
+            
+          = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
+    
 
-        / h4.col-md-4
-        /   = number_to_currency(@product.price,  unit: "₽ ")
-        / .text-right
-        /   = print_stock(@product.stock ) + " "
-        /   - if @product.stock == 0
-        /     false
-        /   - else
-        /     = @product.stock
-          br
-          br
-          #add-to-cart-button
-            - if @product.stock == 0 
-              false
-            - else
-              = f.submit "Add to Cart"
+
+        br
+        br
+        br
+        
+        .clr
+        #add-to-cart-button
+          - if @product.stock == 0 
+            false
+          - else
+            = f.submit "Add to Cart", class: "itemAddToCard"
       .clr
       br
       br

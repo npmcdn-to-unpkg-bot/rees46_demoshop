@@ -30,3 +30,50 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+// Product title
+
+.itemTitle {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.itemDescription {
+  padding: 25px;
+  margin-top: 25px
+}
+
+.itemP {
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.price {
+font-size: 25px;
+}
+
+.itemAddToCard {
+  // -webkit-border-radius: 3;
+  // -moz-border-radius: 3;
+  // border-radius: 3px;
+  // border: 2px solid black;
+  // font-size: 20px;
+  // padding: 10px 20px 10px 20px;
+  // border:  1px;
+  // text-decoration: none;
+  font-size: 18px;
+  background: white;
+  padding: 15px 49px;
+  border: 1px solid black;
+  border-radius: 7px;
+  -webkit-transition: background .1s, box-shadow .1s, border-color .2s;
+  -moz-transition: background .1s, box-shadow .1s, border-color .2s;
+  -o-transition: background .1s, box-shadow .1s, border-color .2s;
+  transition: background .1s, box-shadow .1s, border-color .2s;
+  margin: 20px 190px 0 200px;
+}
+
+.itemAddToCard:hover {
+  text-decoration: none;
+  border-color: #f21158;
+}
