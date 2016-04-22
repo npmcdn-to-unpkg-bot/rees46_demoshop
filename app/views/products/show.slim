@@ -31,7 +31,7 @@
               - @line_item.errors.full_messages.each do |msg|
                 li= msg
 
-        .col-md-10
+        .col-md-10.col-md-offset-1
           - if @product.industry == "fashion"
             = render "industry_fashion", :f => f
             
