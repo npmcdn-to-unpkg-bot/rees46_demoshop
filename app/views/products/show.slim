@@ -10,9 +10,8 @@
     .col-md-6
       = image_tag @product.image, class: 'img-responsive'
       br
-      h3 Brand Name:
       - if !@product.brand.nil?
-        = link_to @product.brand.name, brand_path(@product.brand)
+        h2 Brand Name: #{link_to @product.brand.name, brand_path(@product.brand)}
 
     .col-md-6.itemDescription
       h1.itemTitle
