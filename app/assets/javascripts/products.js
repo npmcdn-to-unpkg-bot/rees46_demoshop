@@ -48,3 +48,11 @@ $( document ).on("last-element-rendered", function() {
     }
   });
 });
+
+
+// Popup cart product
+$(document).ready(function(){
+  $('#btn').click(function(){
+    $('#server_msg_modal').modal('show');
+   });
+});
