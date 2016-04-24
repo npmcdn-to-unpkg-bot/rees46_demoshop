@@ -1,8 +1,8 @@
 .container
   .row
-    .col-md-10.col-md-offset-1
+    .col-md-10.col-md-offset-1.s_border
       h2.sh Shoping Cart
-      .cart-hr
+      hr
       .row
         .col-md-6
           h5.text-center ITEMS
@@ -23,11 +23,12 @@
       br
       .col-md-4.text-center
         = link_to "Continue shopping", root_path, class: "btn btn-primary"
-
       .col-md-4.text-center
         = button_to "Checkout", new_order_path, method: :get, class: "btn btn-success"
       .col-md-4.text-center
         = button_to "Empty cart", @cart, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+        br
+        br
 
 .clr
 hr
