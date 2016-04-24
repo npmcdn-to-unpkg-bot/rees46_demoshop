@@ -15,12 +15,14 @@ div[class="row row_#{item.id}"]
     - elsif item.size_id && Product::PART_TYPES.keys[item.product.part_types[item.size_id.to_i]].present?
     - else
       false
-  .col-md-1.right
-    .remove_single_from_cart_decrement
+  .col-md-1
+    span.qt-minus.remove_single_from_cart_decrement
       = link_to "-  ", decrement_line_item_path(item), remote: true
-    div[class="quantity_#{item.id}"]
-      = item.quantity
-    = link_to "  +", increment_line_item_path(item), remote: true
+    span.qt
+      div[class="quantity_#{item.id}"]
+        = item.quantity
+    span.qt-plus
+      = link_to "  +", increment_line_item_path(item), remote: true
 
   .col-md-2
     p.text-right[class="item_total_#{item.id}"] = number_to_currency(item.total_price,  unit: "₽ ")
