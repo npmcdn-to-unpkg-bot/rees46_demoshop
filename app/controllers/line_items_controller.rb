@@ -9,9 +9,9 @@ class LineItemsController < ApplicationController
 
     if @line_item.persisted?
       @line_item.update(quantity: (@line_item.quantity += 1))
-      redirect_to @line_item.cart
+      redirect_to product
     elsif @line_item.save
-      redirect_to @line_item.cart
+      redirect_to product # @line_item.cart
     else
       flash[:danger] = 'Please select product size !'
       redirect_to product
