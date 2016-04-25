@@ -54,34 +54,26 @@
             = f.submit "Add to Cart", class: "itemAddToCard cd-popup-trigger"
           .cd-popup[role="alert"]
             .cd-popup-container
-              / p= @product.title.upcase
-              / ul.cd-buttons
-              /   = image_tag(@product.image.thumb, class: "img-responsive")
-              /   = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
               .content.productGrowl
                 .left
-                  img[src="http://blob2.trendsbrands.ru/v20151209/thumbs/УТ000027565/c318fb49bd18be95eaf120ae1fcfa2b7/150x236.jpg"]
+                  = image_tag(@product.image.medium, class: "img-responsive")
                 .right
                   .inner
-                    .id
-                      | ID:102623
                     .title.h2
-                      a[href="http://www.trendsbrands.ru/catalog/main/woman/platya/plat_e-trends_brands_base-id102623/?recommended_by=similar"]
-                        | Платье
+                      = @product.title.upcase
                     .price
-                      | 2 190 
-                      span.rur
-                        | Р
+                      = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
                     p
                       strong
                         | Добавлено в корзину!
-                    a.button.small.fs12.h30[href="/cart/"]
-                      | перейти в корзину
-              a.cd-popup-close.img-replace[href="#0"]
-                | Close
+                    .cart_lnk
+                      = link_to "Перейти в корзину", @cart
+              .cd-popup-close
+                = link_to "Close"
       .clr
       br
       br
+
 .clr
 
 .products

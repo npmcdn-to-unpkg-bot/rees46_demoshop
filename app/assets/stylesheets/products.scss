@@ -8,19 +8,19 @@
 }
 
 .clr {
-	clear: both;
+  clear: both;
 }
 
 .thumbnail {
-    margin-bottom: 20px;
-    padding: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    height: 350px;
-    display: flex !important;
-    flex-direction: column;
-    justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  height: 350px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .breadcrumb-title {
@@ -49,7 +49,7 @@
 }
 
 .price {
-font-size: 25px;
+  font-size: 25px;
 }
 
 .itemAddToCard {
@@ -110,7 +110,7 @@ font-size: 25px;
 .cd-popup-container {
   position: relative;
   width: 90%;
-  max-width: 400px;
+  max-width: 440px;
   margin: 4em auto;
   background: #FFF;
   border-radius: .25em .25em .4em .4em;
@@ -133,99 +133,106 @@ font-size: 25px;
 
 //
 .cd-popup-container .content {
-    width: 436px;
-    min-height: 100px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box
+  width: 436px;
+  min-height: 100px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
 }
 
 .cd-popup-container .content.productGrowl {
-    display: table;
-    height: 100%;
-    padding: 10px
+  display: table;
+  height: 100%;
+  padding: 18px
 }
 
 .cd-popup-container .content.productGrowl .left, .cd-popup-container .content.productGrowl .right,
 .cd-popup-container .content.productGrowl .right .inner {
-    height: 100%
+  height: 100%
 }
 
 .cd-popup-container .content.productGrowl .left, .cd-popup-container .content.productGrowl .right {
-    display: table-cell;
-    vertical-align: top
+  display: table-cell;
+  vertical-align: top
 }
 
 .cd-popup-container .content.productGrowl .left {
-    padding-right: 10px
+  padding-right: 10px
 }
 
 .cd-popup-container .content.productGrowl .right {
-    padding-top: 7px
+  padding-top: 7px
 }
 
 .cd-popup-container .content.productGrowl .right .inner {
-    position: relative;
-    width: 230px
+  position: relative;
+  width: 230px
 }
 
 .cd-popup-container .content.productGrowl .right button, .cd-popup-container .content.productGrowl .right a.button {
-    position: absolute;
-    bottom: 0;
-    left: -4px;
-    padding-left: 21px;
-    padding-right: 21px
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+  padding-bottom: 40px;
 }
 
 .cd-popup-container .content.productGrowl .right .id {
-    font-family: futurisc, arial, sans-serif;
-    font-size: 11px;
-    margin-bottom: 5px
+  font-family: futurisc, arial, sans-serif;
+  font-size: 11px;
+  margin-bottom: 5px
 }
 
 .cd-popup-container .content.productGrowl .right .title {
-    font-size: 14px;
-    margin-bottom: 0
+  font-size: 14px;
+  margin-bottom: 0
 }
 
 .cd-popup-container .content.productGrowl .right .price {
-    margin-top: 10px;
-    font-size: 14px
+  margin-top: 10px;
+  font-size: 14px
 }
 
 .cd-popup-container .content.productGrowl .right p {
-    margin-top: 20px
+  margin-top: 20px
 }
 
 .cd-popup-container .content.infoGrowl {
-    display: table;
-    padding: 16px;
-    box-sizing: border-box;
-    min-height: 87px
+  display: table;
+  padding: 16px;
+  box-sizing: border-box;
+  min-height: 87px
 }
 
 .cd-popup-container .content.infoGrowl .left, .cd-popup-container .content.infoGrowl .right {
-    display: table-cell;
-    vertical-align: top
+  display: table-cell;
+  vertical-align: top
 }
 
 .cd-popup-container .content.infoGrowl .left {
-    padding-right: 16px;
-    width: 32px
+  padding-right: 16px;
+  width: 32px
 }
 
 .cd-popup-container .content.infoGrowl .right h2 {
-    margin-bottom: 3px
+  margin-bottom: 3px
 }
 
 .cd-popup-container .content.infoGrowl .right .msg {
-    line-height: 130%
+  line-height: 130%
 }
 
 .cd-popup-container .content.infoGrowl.error .right h2 {
-    color: red !important
+  color: red !important
 }
 
 .cd-popup-container .content.infoGrowl.withoutMessage .right h2 {
-    margin-top: 8px
+  margin-top: 8px
+}
+
+.cd-popup-close {
+  padding-bottom: 15px;
+}
+
+.cart_lnk {
+  margin-top: 130px;
 }
