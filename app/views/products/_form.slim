@@ -80,3 +80,16 @@
   br
   = f.input :category_id, as: :select, collection: Category.all
   = f.submit "Сохранить", :class => 'btn btn-primary'
+
+javascript:
+  var card = document.getElementById("product_industry");
+  if (card.selectedIndex == 1) {
+    $('#fashion-param, #gender, #size-types').removeClass('hidden');
+  }
+  else if (card.selectedIndex == 3) {
+   $('#gender, #child_age_sizes, #size-types, .type-sizes').removeClass('hidden');
+  }
+  else {
+    var selectedText = card.options[card.selectedIndex].text;
+    $('#cosmetic-param, #gender, #periodic, #hypoallergenic').removeClass('hidden')
+  }
