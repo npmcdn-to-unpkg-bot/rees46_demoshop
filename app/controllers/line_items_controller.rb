@@ -6,15 +6,16 @@ class LineItemsController < ApplicationController
     product = Product.find(line_item_params[:product_id])
 
     @line_item = @cart.line_items.find_or_initialize_by(line_item_params)
+    respond_to do |format|
+      format.js do
 
-    if @line_item.persisted?
-      @line_item.update(quantity: (@line_item.quantity += 1))
-      redirect_to product
-    elsif @line_item.save
-      redirect_to product # @line_item.cart
-    else
-      flash[:danger] = 'Please select product size !'
-      redirect_to product
+        if @line_item.persisted?
+          @line_item.update(quantity: (@line_item.quantity += 1))
+        elsif @line_item.save
+        else
+          flash[:danger] = ''
+        end
+      end
     end
   end
 

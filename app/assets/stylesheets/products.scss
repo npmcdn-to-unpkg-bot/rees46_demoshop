@@ -232,3 +232,8 @@
 .cart_lnk {
   margin-top: 130px;
 }
+
+.form-group.required .control-label:after {
+  content:" *";
+  color:red;
+}
