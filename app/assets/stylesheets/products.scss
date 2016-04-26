@@ -99,6 +99,7 @@
   -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
 }
+
 .cd-popup.is-visible {
   opacity: 1;
   visibility: visible;
@@ -151,6 +152,14 @@
   height: 100%
 }
 
+.inner {
+  p {
+    strong {
+      font-size: 20px;
+    }
+  }
+}
+
 .cd-popup-container .content.productGrowl .left, .cd-popup-container .content.productGrowl .right {
   display: table-cell;
   vertical-align: top
@@ -189,7 +198,7 @@
 
 .cd-popup-container .content.productGrowl .right .price {
   margin-top: 10px;
-  font-size: 14px
+  font-size: 17px
 }
 
 .cd-popup-container .content.productGrowl .right p {
