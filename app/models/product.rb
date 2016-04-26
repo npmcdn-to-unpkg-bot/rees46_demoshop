@@ -359,7 +359,7 @@ class Product < ActiveRecord::Base
     end
   end
 
-  def self.import(doc, category, cat_id, lit_num, stock, gender, p_type, industry)
+  def self.import(doc, category, cat_id, lit_num, stock, gender, p_type, industry, p_size, r_sizes)
     parsed_products = doc.xpath('//offer')
 
     count = 0
@@ -372,7 +372,7 @@ class Product < ActiveRecord::Base
          end
 
         count += 1
-
+        binding.pry
         pro_brand = Product.create!(
           title: product_title,
           description: product.at_xpath('description').text,
@@ -386,6 +386,8 @@ class Product < ActiveRecord::Base
           gender: gender,
           product_type: p_type,
           industry: industry,
+          size: p_size,
+          russian_sizes: r_sizes,
         )
 
         if product.at_xpath('vendor').nil?

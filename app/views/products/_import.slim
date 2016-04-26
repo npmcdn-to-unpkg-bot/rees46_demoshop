@@ -34,6 +34,20 @@ h2.text-center Import Products
   = label_tag 'Industry:-'
 
   = select_tag :industry, options_for_select(Product.industries.keys.to_a), :prompt => "Please select"
+  
+  br
+  br
+  = label_tag 'Size:-'
+
+  = select_tag :size, options_for_select(Product::SIZES.keys.to_a), :prompt => "Please select"
+  
+  br
+  br
+  
+  = label_tag 'Russian Sizes:-'
+  - Product::RUSSIAN_SIZES.each do |k,v|
+    = check_box_tag "russian_sizes[]", v
+    = k
 
   br
   br
