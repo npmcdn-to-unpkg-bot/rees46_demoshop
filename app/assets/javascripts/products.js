@@ -54,7 +54,7 @@ $( document ).on("last-element-rendered", function() {
 
 $(document).ready(function($){
   //open popup
-  $('.cd-popup-trigger').on('click', function(event){
+  $('.itemAddToCard').on('click', function(event){
     event.preventDefault();
     $('.cd-popup').addClass('is-visible');
   });

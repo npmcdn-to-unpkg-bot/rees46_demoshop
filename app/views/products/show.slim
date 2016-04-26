@@ -10,6 +10,8 @@
     .col-md-6
       = image_tag @product.image, class: 'img-responsive'
       br
+      br
+      br
       - if !@product.brand.nil?
         h2 Brand Name: #{link_to @product.brand.name, brand_path(@product.brand)}
 
@@ -45,13 +47,13 @@
         br
         br
         br
-        
+
         .clr
         #add-to-cart-button
           - if @product.stock == 0 
             false
           - else
-            = f.submit "Add to Cart", class: "itemAddToCard cd-popup-trigger"
+            = f.submit "Add to Cart", class: "itemAddToCard"
           .cd-popup[role="alert"]
             .cd-popup-container
               .content.productGrowl
