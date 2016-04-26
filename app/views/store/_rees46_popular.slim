@@ -1,20 +1,3 @@
-/ .rees46-recommend
-/   .recommender-block-title
-/     | Populer
-/   .recommended-items
-/     - products.each do |product|
-/       .recommended-item
-/         .recommended-item-photo
-/           = link_to image_tag(product.image.medium), product_path(product, recommdend_by: @recommender)
-/         .recommended-item-title
-/           = link_to product.title.capitalize, product_path(product, recommdend_by: @recommender)
-/         .recommended-item-price
-/           = number_to_currency(product.price,  unit: "₽", precision: 0)
-/         .recommended-item-action
-/           = print_stock(product)
-/           - if product.stock == 0
-/             button.btn.disabled disabled="disabled"
-/                 = "OUT OF STOCK"
 br
 br
 
