@@ -372,7 +372,6 @@ class Product < ActiveRecord::Base
          end
 
         count += 1
-        binding.pry
         pro_brand = Product.create!(
           title: product_title,
           description: product.at_xpath('description').text,
