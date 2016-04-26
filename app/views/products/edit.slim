@@ -2,3 +2,27 @@
   = render 'form'
   br
   br
+
+  javascript:
+    var card = document.getElementById("product_industry");
+    if (card.selectedIndex == 1) {
+      $('#fashion-param, #gender, #size-types').removeClass('hidden');
+    }
+    else if (card.selectedIndex == 3) {
+     $('#gender, #child_age_sizes, #size-types, .type-sizes').removeClass('hidden');
+    }
+    else {
+      var selectedText = card.options[card.selectedIndex].text;
+      $('#cosmetic-param, #gender, #periodic, #hypoallergenic').removeClass('hidden')
+    }javascript:
+      var card = document.getElementById("product_industry");
+      if (card.selectedIndex == 1) {
+        $('#fashion-param, #gender, #size-types').removeClass('hidden');
+      }
+      else if (card.selectedIndex == 3) {
+       $('#gender, #child_age_sizes, #size-types, .type-sizes').removeClass('hidden');
+      }
+      else {
+        var selectedText = card.options[card.selectedIndex].text;
+        $('#cosmetic-param, #gender, #periodic, #hypoallergenic').removeClass('hidden')
+      }
