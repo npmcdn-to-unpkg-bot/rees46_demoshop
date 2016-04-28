@@ -1,4 +1,6 @@
 
   if("<%= @line_item.errors.any?%>" == 'false'){
     $('.cd-popup').addClass('is-visible');
+  } else {
+    alert('Please select product size!')
   }
