@@ -22,6 +22,7 @@ gem 'redactor-rails', '~> 0.5.0'
 gem 'font-awesome-rails'
 gem 'jquery-ui-rails'
 gem 'compass-rails', github: 'Compass/compass-rails'
+gem 'kaminari', '~> 0.16.3'
 
 # Database
 gem 'pg'
