@@ -47,18 +47,18 @@ br
 /             - if product.stock == 0
 /               button.btn.disabled disabled="disabled"
 /                   = "OUT OF STOCK"
-.products
-  - @products.limit(12).each do |product|
-    .product.img
-      .productImg
-          img.img.lazy
-            = link_to image_tag(product.image.thumbs), product_path(product), class: "img-fit"
-
-      .titleAndPrice
-        .title.h2
-          = link_to product.title.upcase, product_path(product)
-        .price.text-center
-          = number_to_currency(product.price,  unit: "₽ ", precision: 0)
+/ .products
+/   - @products.limit(12).each do |product|
+/     .product.img
+/       .productImg
+/           img.img.lazy
+/             = link_to image_tag(product.image.thumbs), product_path(product), class: "img-fit"
+/ 
+/       .titleAndPrice
+/         .title.h2
+/           = link_to product.title.upcase, product_path(product)
+/         .price.text-center
+/           = number_to_currency(product.price,  unit: "₽ ", precision: 0)
 
 br
 br
