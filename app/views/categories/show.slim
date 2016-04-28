@@ -17,6 +17,8 @@
           h1= link_to @category.name
           - @categories.each do |c, level|
             li= link_to " #{c.name}", category_path(c)
+      br
+      br
 
     .col-md-10
       h1.text-center[style="font-size: 25px;"]
@@ -29,13 +31,10 @@
 
 .products
   .clr
-  hr
   #recommender_popular
 
   .clr
-  hr
   #recommender_recently_viewed
 
   .clr
-  hr
   #recommender_interesting
