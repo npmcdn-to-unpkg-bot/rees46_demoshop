@@ -32,6 +32,7 @@
           - @categories.each do |c|
             - @products.where(category_id: c).each do |product|
               = render 'categories/product_categories', product: product, c:c
+          .clr
           = paginate @products
           .clr
 
