@@ -24,6 +24,7 @@ class ProductsController < ApplicationController
 
   def show
     @line_item = LineItem.new
+    @category = @product.category
   end
 
   def edit
