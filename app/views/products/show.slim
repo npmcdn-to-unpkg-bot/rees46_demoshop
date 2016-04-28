@@ -96,7 +96,8 @@
   .clr
   #recommender_interesting
   .clr
-
+br
+br
 javascript:
   var cf_also_bought = function(data){
     // jQuery code
@@ -185,7 +186,7 @@ javascript:
         modification: '#{@product.category.human_categories_industry}'
         }, cf_also_bought);
     });
-    console.log('#{@product.category.human_categories_industry}')
+
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'interesting',

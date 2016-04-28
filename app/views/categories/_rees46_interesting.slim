@@ -4,13 +4,5 @@
   br
   br
   br
-  - products.each do |product|
-    .product.img
-      .productImg
-        img.img.lazy
-          = link_to image_tag(product.image.thumbs), product_path(product, recommdend_by: @recommender), class: "img-fit"
-      .titleAndPrice
-        .title.h2
-          = link_to product.title, product_path(product, recommdend_by: @recommender)
-        .price.text-center
-          = number_to_currency(product.price,  unit: "₽ ", precision: 0)
+  .row
+    = render "products/recommend_products"
