@@ -7,23 +7,25 @@
         - if @category.children.empty?
           li= link_to @category.name, category_path
 
-  
-#sidebar
-  h3 CATEGORIES
-  .checklist.categories
-    ul
-      h1= link_to @category.name
-      - @categories.each do |c, level|
-        li= link_to " #{c.name}", category_path(c)
+.container
+  .row
+    .col-md-2
+      h3 CATEGORIES
+      br
+      .checklist.categories
+        ul
+          h1= link_to @category.name
+          - @categories.each do |c, level|
+            li= link_to " #{c.name}", category_path(c)
 
-.row
-  h1.text-center[style="font-size: 25px;"]
-    = @category.name.upcase + ' COLLECTION'
-  br
+    .col-md-10
+      h1.text-center[style="font-size: 25px;"]
+        = @category.name.upcase + ' COLLECTION'
+      br
 
-  - @products.where(category_id: @category.id).each do |product|
-    .col-sm-6.col-md-3
-      = render 'categories/product_categories', product: product
+      - @products.where(category_id: @category.id).each do |product|
+        .col-md-4
+          = render 'categories/product_categories', product: product
 
 .products
   .clr
