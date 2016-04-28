@@ -1,4 +1,8 @@
 .col-md-4.col-sm-4.col-xs-6
+  br
+  - if !@category.children.empty?
+    h1= c.name
+  br
   = link_to image_tag(product.image.thumbs), product_path(product, recommdend_by: @recommender), class: "img-fit"
   .titleAndPrice
     .title

@@ -28,6 +28,11 @@
         - @products.where(category_id: @category.id).each do |product|
           = render 'categories/product_categories', product: product
 
+        - if @category.children
+          - @categories.each do |c|
+            - @products.where(category_id: c).take(3).each do |product|
+              = render 'categories/product_categories', product: product, c:c
+
 .products
   .clr
   #recommender_popular
