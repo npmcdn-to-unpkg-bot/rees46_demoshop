@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :orders
 
   get 'store/index'
-  post 'store/popular_urls' => 'store#popular_urls'
+  post 'store/font_products_urls' => 'store#font_products_urls'
 
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users

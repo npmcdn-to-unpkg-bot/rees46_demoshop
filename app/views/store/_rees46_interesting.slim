@@ -1,0 +1,16 @@
+.container
+  - if products.present?
+    hr
+    h1 Возможно, вам это понравится
+    br
+    br
+    br
+    .row
+      - @products.each do |product|
+        .col-md-3.col-sm-4.col-xs-6
+          = link_to image_tag(product.image.thumbs), product_path(product, recommdend_by: @recommender), class: "img-fit"
+          .titleAndPrice
+            .title
+              = link_to product.title.upcase, product_path(product)
+            .price
+              = number_to_currency(product.price,  unit: "₽ ", precision: 0)

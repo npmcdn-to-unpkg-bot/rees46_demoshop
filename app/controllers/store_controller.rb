@@ -3,7 +3,7 @@ class StoreController < ApplicationController
     @products = Product.order('created_at DESC')
   end
 
-  def popular_urls
+  def font_products_urls
     @products = []
     params[:ids].each do |id|
       @products << Product.find(id) if Product.where(id: id).any?
