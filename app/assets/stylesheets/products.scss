@@ -52,24 +52,9 @@
   font-size: 25px;
 }
 
-.itemAddToCard {
-  font-size: 18px;
-  background: white;
-  padding: 15px 49px;
-  border: 1px solid black;
-  border-radius: 7px;
-  -webkit-transition: background .1s, box-shadow .1s, border-color .2s;
-  -moz-transition: background .1s, box-shadow .1s, border-color .2s;
-  -o-transition: background .1s, box-shadow .1s, border-color .2s;
-  transition: background .1s, box-shadow .1s, border-color .2s;
-  margin: 20px 190px 0 200px;
+.remove_padding {
+  padding-left: 0 !important;
 }
-
-.itemAddToCard:hover {
-  text-decoration: none;
-  border-color: #f21158;
-}
-
 
 // Popup window after add to cart
 

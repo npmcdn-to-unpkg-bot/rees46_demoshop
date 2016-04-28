@@ -16,17 +16,23 @@
       br
       br
       br
+
+
+    .col-md-6
       - if !@product.brand.nil?
-        h2 Brand Name: #{link_to @product.brand.name, brand_path(@product.brand)}
-
-    .col-md-6.itemDescription
-      h1.itemTitle
-        = @product.title
-      .price.text-center
+        = link_to @product.brand.name, brand_path(@product.brand)
+      br
+      br
+      br
+      br
+      h1= @product.title
+      br
+      br
+      br
+      .price
         = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
-      .itemP
-        = @product.description.html_safe
-
+      br
+      br
       = simple_form_for @line_item, remote: true do |f|
         #errors_log
           - if @line_item.errors.any?
@@ -38,7 +44,7 @@
                 - @line_item.errors.full_messages.each do |msg|
                   li= msg
 
-        .col-md-10.col-md-offset-1
+        .col-md-10.remove_padding
           - if @product.industry == "fashion"
             = render "industry_fashion", :f => f
             
@@ -58,7 +64,7 @@
           - if @product.stock == 0 
             false
           - else
-            = f.submit "Add to Cart", class: "itemAddToCard"
+            = f.submit "Add to Cart", class: "btn btn-success"
           .cd-popup[role="alert"]
             .cd-popup-container
               .content.productGrowl
