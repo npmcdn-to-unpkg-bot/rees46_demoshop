@@ -8,9 +8,13 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @products = @category.products.page(params[:page]).per(3)
-    @products = Product.all.page(params[:page]).per(3)
-    @categories = Category.where(parent_id: @category)
+      @products = @category.products
+      if !@category.root?
+        @products = Product.all.page(params[:page]).per(12)
+      else @category.root?
+        @products = Product.all.page(params[:page]).per(3)
+      end
+      @categories = Category.where(parent_id: @category)
   end
 
   def new
