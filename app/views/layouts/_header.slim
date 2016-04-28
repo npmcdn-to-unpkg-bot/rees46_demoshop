@@ -10,10 +10,10 @@ header
         .navbar-brand
           = link_to 'REES46 Demoshop', root_path
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
-
+        ul.nav.navbar-nav
+          = render "layouts/categories_menu"
         ul.nav.navbar-nav.navbar-right
           = render "layouts/cart_total_quantity.slim"
-
           li.dropdown
             - if user_signed_in?
               a#drop.dropdown-toggle href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'
@@ -27,12 +27,3 @@ header
             - else
               li = link_to 'Login', new_user_session_path
               li = link_to 'Sign up', new_user_registration_path
-
-  #custom-bootstrap-menu.navbar.navbar-default[role="navigation"]
-    .container
-      .navbar-header
-        .navbar-brand
-          h5 REES46
-      .collapse.navbar-collapse.navbar-menubuilder
-        ul.nav.navbar-nav
-          = render "layouts/categories_menu"
