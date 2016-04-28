@@ -8,8 +8,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @products = @category.products
-    @products = Product.all
+    @products = @category.products.page(params[:page]).per(3)
+    @products = Product.all.page(params[:page]).per(3)
     @categories = Category.where(parent_id: @category)
   end
 
