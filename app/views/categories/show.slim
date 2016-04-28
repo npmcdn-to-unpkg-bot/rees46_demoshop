@@ -3,20 +3,25 @@
     .col-md-3
       ol.breadcrumb
         li = link_to "HOME", root_path
-        li = link_to @category.name.upcase
+        li = link_to @category.root.name, category_path
+        - if @category.children.empty?
+          li= link_to @category.name, category_path
+
   
 #sidebar
   h3 CATEGORIES
   .checklist.categories
     ul
-      li = link_to @category.name + "'s"
+      h1= link_to @category.name
+      - @categories.each do |c, level|
+        li= link_to " #{c.name}", category_path(c)
 
 .row
   h1.text-center[style="font-size: 25px;"]
     = @category.name.upcase + ' COLLECTION'
   br
 
-  - @products.each do |product|
+  - @products.where(category_id: @category.id).each do |product|
     .col-sm-6.col-md-3
       = render 'categories/product_categories', product: product
 

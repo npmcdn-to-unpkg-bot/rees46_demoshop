@@ -9,6 +9,7 @@ class CategoriesController < ApplicationController
 
   def show
     @products = @category.products
+    @categories = Category.where(parent_id: @category)
   end
 
   def new
