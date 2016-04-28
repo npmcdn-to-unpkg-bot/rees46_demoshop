@@ -28,11 +28,12 @@
         - @products.where(category_id: @category.id).each do |product|
           = render 'categories/product_categories', product: product
 
-        = paginate @products
         - if @category.children
           - @categories.each do |c|
             - @products.where(category_id: c).each do |product|
               = render 'categories/product_categories', product: product, c:c
+          = paginate @products
+          .clr
 
 .products
   .clr
