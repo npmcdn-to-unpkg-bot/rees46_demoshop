@@ -24,9 +24,8 @@
       h1.text-center[style="font-size: 25px;"]
         = @category.name.upcase + ' COLLECTION'
       br
-
-      - @products.where(category_id: @category.id).each do |product|
-        .col-md-4
+      .row
+        - @products.where(category_id: @category.id).each do |product|
           = render 'categories/product_categories', product: product
 
 .products
