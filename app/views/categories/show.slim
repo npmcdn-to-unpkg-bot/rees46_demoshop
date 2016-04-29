@@ -29,12 +29,17 @@
           = render 'categories/product_categories', product: product
 
         - if @category.children
-          - @categories.each do |c|
-            - @products.where(category_id: c).each do |product|
-              = render 'categories/product_categories', product: product, c:c
-          .clr
+          - @category.children.each do |child|
+            - if !child.products.empty?
+              h1= link_to child.name, category_path(child)
+              br
+            - @products.where(category_id: child).each do |product|
+              = render 'categories/product_categories', product: product
+
+        .clr
+        - if !@category.root?
           = paginate @products
-          .clr
+        .clr
 
 .products
   .clr
