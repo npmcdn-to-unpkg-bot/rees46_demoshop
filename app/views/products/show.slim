@@ -59,58 +59,35 @@
         br
         br
 
-        .clr
-        #add-to-cart-button
-          - if @product.stock == 0 
-            false
-          - else
-            = f.submit "Add to Cart", class: "btn btn-success"
-          / .cd-popup[role="alert"]
-          /   .cd-popup-container
-          /     .content.productGrowl
-          /       .left
-          /         = image_tag(@product.image.medium, class: "img-responsive")
-          /       .right
-          /         .inner
-          /           .title.h2
-          /             = @product.title.upcase
-          /           .price
-          /             = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
-          /           p
-          /             strong
-          /               | Добавлено в корзину!
-          /           .cart_lnk
-          /             = link_to "Перейти в корзину", @cart
-          /     .cd-popup-close
-          /       = link_to "Close"
-          
-          /! Button trigger modal
-          
-          #btn.btn.btn-danger
-            | using jQuery click handler
-          #server_msg_modal.modal.fade
-            .modal-dialog
-              .modal-content
-                .modal-header
-                  button.close[type="button" data-dismiss="modal" aria-label="Close"]
-                    span[aria-hidden="true"]
-                      | ×
-                  h4.modal-title
-                    = @product.title.upcase
-                .modal-body
-                  .row
-                    .col-sm-6
-                      = image_tag(@product.image.medium, class: "img-fit")
-                    .col-sm-6
-                      br
-                      br
+            .clr
+            #add-to-cart-button
+              - if @product.stock == 0 
+                false
+              - else
+                = f.submit "Add to Cart", class: "btn btn-success blabla"
+            #server_msg_modal.modal.fade
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    button.close[type="button" data-dismiss="modal" aria-label="Close"]
+                      span[aria-hidden="true"]
+                        | ×
+                    h4.modal-title
                       = @product.title.upcase
-                      br
-                      br
-                      = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
-                      br
-                      br
-                      h1= link_to "Перейти в корзину", @cart
+                  .modal-body
+                    .row
+                      .col-sm-6
+                        = image_tag(@product.image.medium, class: "img-fit")
+                      .col-sm-6
+                        br
+                        br
+                        = @product.title.upcase
+                        br
+                        br
+                        = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
+                        br
+                        br
+                        h1= link_to "Перейти в корзину", @cart
 
       .clr
       br
@@ -240,8 +217,14 @@ javascript:
         modification: '#{@product.category.human_categories_industry}'
         }, cf_similer);
     });
-    
-    $('#btn').click(function(){
-      $('#server_msg_modal').modal('show');
-     });
+
+     $('.blabla').click(function(){
+       $('#server_msg_modal').modal('show');
+      });
+
+     //open popup
+      //  $('.blabla').on('click', function(event){
+      //     event.preventDefault();
+      //     $('#server_msg_modal').modal('show');
+      //   });
   }

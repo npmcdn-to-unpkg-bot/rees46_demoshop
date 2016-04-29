@@ -28,7 +28,7 @@
       .row
         - @products.where(category_id: @category.id).each do |product|
           = render 'categories/product_categories', product: product
-
+        #recommender_popular
         - if @category.children
           - @category.children.each do |child|
             - if !child.products.empty?
