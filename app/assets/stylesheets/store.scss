@@ -34,10 +34,6 @@
   max-width:250px;
 }
 
-.product.titleAndPrice .title {
-  font-size: 18px
-}
-
 .product .titleAndPrice {
   text-align: center;
 }
@@ -89,11 +85,15 @@
   color: #ffc941 !important
 }
 
-.title a {
+.title {
+  height: 20px;
+  overflow: hidden;
+  a {
   font-family: "intro_regular";
   color: black !important;
   line-height: 130% !important;
   text-decoration: none;
+  }
 }
 
 .title:hover a {
@@ -108,9 +108,10 @@
 .img-fit {
   display: table-cell;
   vertical-align: middle;
+  height: 370px;
   img {
     width: auto;
-    height: 320px;
+    height: auto;
     max-width: 100%;
     max-height: 100%;
   }
