@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
       if !@category.root?
         @products = Product.all.page(params[:page]).per(12)
       else @category.root?
-        @products = Product.all.page(params[:page]).per(3)
+        @products = Product.all.page(params[:page]).per(12)
       end
       @categories = Category.where(parent_id: @category)
   end
