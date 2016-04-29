@@ -39,3 +39,17 @@
   background-color: rgba(0, 0, 0, 0) !important;
   border-radius: none !important;
 }
+
+// Child Category products slider
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flickity-slider {
+  left: -320px !important;
+}
+
+.flickity-page-dots {
+  display: none;
+}

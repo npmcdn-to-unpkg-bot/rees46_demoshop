@@ -32,11 +32,13 @@
         - if @category.children
           - @category.children.each do |child|
             - if !child.products.empty?
+              br
+              br
               h1= link_to child.name, category_path(child)
               br
-
-            - @products.where(category_id: child).each do |product|
-              = render 'categories/product_categories', product: product
+            .carousel.js-flickity
+              - @products.where(category_id: child).each do |product|
+                = render 'categories/product_categories', product: product
 
         .clr
         - if !@category.root?
