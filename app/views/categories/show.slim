@@ -24,11 +24,11 @@
       h1.text-center[style="font-size: 25px;"]
         = @category.name.upcase + ' COLLECTION'
       br
-
+      #recommender_popular.carousel.js-flickity
       .row
         - @products.where(category_id: @category.id).each do |product|
           = render 'categories/product_categories', product: product
-        #recommender_popular
+
         - if @category.children
           - @category.children.each do |child|
             - if !child.products.empty?
@@ -44,13 +44,8 @@
         - if !@category.root?
           = paginate @products
         .clr
+        .clr
+        #recommender_recently_viewed
 
-.products
-  .clr
-  #recommender_popular
-
-  .clr
-  #recommender_recently_viewed
-
-  .clr
-  #recommender_interesting
+        .clr
+        #recommender_interesting
