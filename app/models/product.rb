@@ -353,12 +353,6 @@ class Product < ActiveRecord::Base
     result.last_effective_url
   end
 
-  def name_nil(nil_name, params_tpye)
-    if !nil_name.nil
-
-    end
-  end
-
   def self.import(doc, category, cat_id, lit_num, stock, gender, p_type, industry, p_size, r_sizes)
     parsed_products = doc.xpath('//offer')
 
@@ -371,6 +365,12 @@ class Product < ActiveRecord::Base
            product_title = product.at_xpath('name').text
          end
 
+         if redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0])
+           image_link = redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0])
+         else
+           image_link == nil
+         end
+
         count += 1
         pro_brand = Product.create!(
           title: product_title,
@@ -379,7 +379,7 @@ class Product < ActiveRecord::Base
 
           category_id: product.at_xpath('categoryId').text.gsub(cat_id, category),
 
-          remote_image_url: redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]),
+          remote_image_url: image_link,
 
           stock: stock,
           gender: gender,

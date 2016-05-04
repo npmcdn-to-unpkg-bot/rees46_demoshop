@@ -39,13 +39,14 @@ h2.text-center Import Products
   br
   = label_tag 'Size:-'
 
-  = select_tag :size, options_for_select(Product::SIZES.keys.to_a), :prompt => "Please select"
+  = select_tag :size, options_for_select(Product::SIZES.keys.to_a), :include_blank => true
   
   br
   br
   
   = label_tag 'Russian Sizes:-'
   - Product::RUSSIAN_SIZES.each do |k,v|
+    = hidden_field_tag "russian_sizes[]", nil
     = check_box_tag "russian_sizes[]", v
     = k
 

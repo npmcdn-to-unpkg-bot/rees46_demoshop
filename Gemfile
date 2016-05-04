@@ -37,7 +37,7 @@ gem 'curb', '~> 0.9.3'
 gem 'slim-rails'
 
 # Files process
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', '~> 0.11.0'
 gem 'mini_magick', '~> 4.3', '>= 4.3.6'
 gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
 gem 'libxml-ruby', '~> 2.8'
