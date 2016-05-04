@@ -8,18 +8,10 @@ h1 Welcome to Category
       br
       h1
         = @category.nil? ? 'Main Categories' : @category.name
-      - @categories.each do |category|
-        ul
-          li
-            = category.name
-            - if current_user && current_user.has_role?(:admin)
-              = link_to "Edit", edit_category_path(category), class: 'btn btn-primary'
-              = link_to "Delete", category, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
-            br
-            ul
-              - category.walk_tree do |c, level|
-                li
-                  = "#{'-> '*level}#{c.name}"
-                  = link_to "Edit", edit_category_path(c), class: 'btn btn-primary'
-                  = link_to "Delete", c, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
-                  br
+      - Category.walk_tree do |c, level|
+          = "#{'&nbsp;&nbsp;-> '*level}#{c.name}&nbsp;".html_safe
+          = link_to "Edit", edit_category_path(c), class: 'btn btn-primary'
+          = link_to "Delete", c, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+          br
+      br
+      br
