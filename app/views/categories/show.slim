@@ -24,7 +24,8 @@
       h1.text-center[style="font-size: 25px;"]
         = @category.name.upcase + ' COLLECTION'
       br
-      #recommender_popular.carousel.js-flickity
+      //.carousel.js-flickity
+      #recommender_popular
       .row
         - @products.where(category_id: @category.id).each do |product|
           = render 'categories/product_categories', product: product

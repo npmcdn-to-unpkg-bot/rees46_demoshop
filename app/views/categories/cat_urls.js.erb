@@ -1,5 +1,5 @@
 <% if (@recommender == 'popular') %>
-  jQuery('#recommender_popular.carousel.js-flickity').html("<%= j render(partial: 'rees46_popular.slim', locals: { products: @products, recommender: @recommender }) %>");
+  jQuery('#recommender_popular').html("<%= j render(partial: 'rees46_popular.slim', locals: { products: @products, recommender: @recommender }) %>");
 <% end %>
 
 <% if (@recommender == 'recently_viewed') %>
