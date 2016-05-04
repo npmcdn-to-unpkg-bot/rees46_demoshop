@@ -24,6 +24,7 @@ gem 'jquery-ui-rails'
 gem 'compass-rails', github: 'Compass/compass-rails'
 gem 'kaminari', '~> 0.16.3'
 
+
 # Database
 gem 'pg'
 
@@ -33,7 +34,7 @@ gem 'capistrano-rails', group: :development
 gem 'curb', '~> 0.9.3'
 
 # Tamplate
-gem 'slim', '~> 3.0', '>= 3.0.6'
+gem 'slim-rails'
 
 # Files process
 gem 'carrierwave', '~> 0.10.0'

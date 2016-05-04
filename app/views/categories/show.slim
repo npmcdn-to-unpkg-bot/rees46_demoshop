@@ -41,10 +41,11 @@
               - @products.where(category_id: child).each do |product|
                 = render 'categories/product_categories', product: product
 
-        .clr
+      .clr
         - if !@category.root?
           = paginate @products
-        .clr
+      .clr
+
         .clr
         #recommender_recently_viewed
 
