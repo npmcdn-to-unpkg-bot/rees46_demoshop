@@ -4,7 +4,7 @@ class BrandsController < ApplicationController
   before_action :admin_permission, except: :show
 
   def index
-    @brands = Brand.all
+    @brands = Brand.order('name ASC').group_by{|u| u.name[0]}
   end
 
   def show
