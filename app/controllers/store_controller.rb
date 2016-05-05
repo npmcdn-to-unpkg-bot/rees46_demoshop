@@ -9,6 +9,8 @@ class StoreController < ApplicationController
       @products << Product.find(id) if Product.where(id: id).any?
     end
 
+    #@products = Product.page(params[:page]).per(24)
+
     @recommender = params[:recommender]
     respond_to do |format|
       format.js
