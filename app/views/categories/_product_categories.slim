@@ -48,13 +48,14 @@ javascript:
 
   function afterInitRees46() {
     var cart_product_ids = '#{ProductsInfo.new(@cart.line_items).product_ids_in_cart.to_json.html_safe}'
+
     REES46.addReadyListener(function () {
       REES46.recommend({
         recommender_type: 'popular',
         cart: JSON.parse(cart_product_ids).map(function(el){
           return el.cart
         }),
-        //category: '#{@category.id}',
+        category: '#{@category.id}',
         limit: 24,
         modification: '#{@category.human_categories_industry}'
       }, cf_popular );
