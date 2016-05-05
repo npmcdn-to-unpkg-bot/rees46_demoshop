@@ -8,7 +8,6 @@ class LineItemsController < ApplicationController
     @line_item = @cart.line_items.find_or_initialize_by(line_item_params)
     respond_to do |format|
       format.js do
-
         if @line_item.persisted?
           @line_item.update(quantity: (@line_item.quantity += 1))
         elsif @line_item.save
