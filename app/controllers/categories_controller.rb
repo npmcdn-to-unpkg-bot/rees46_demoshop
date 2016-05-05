@@ -9,10 +9,10 @@ class CategoriesController < ApplicationController
 
   def show
     @categories = Category.all
-    
+
     @products = @category.products.page(params[:page])
     if !@category.root?
-      @products = Product.page(params[:page]).per(8)
+      @products = Product.page(params[:page]).per(24)
     else @category.root?
       @products = Product.page(params[:page])
     end

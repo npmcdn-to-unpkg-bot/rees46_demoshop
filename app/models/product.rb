@@ -378,11 +378,11 @@ class Product < ActiveRecord::Base
            product_title = product.at_xpath('name').text
          end
 
-        if remote_image_exists?(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]) == false
-          image_link = nil
-        else
+        # if remote_image_exists?(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]) == false
           image_link = redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0])
-        end
+        # else
+        #   image_link = nil
+        # end
 
         count += 1
         pro_brand = Product.create!(
