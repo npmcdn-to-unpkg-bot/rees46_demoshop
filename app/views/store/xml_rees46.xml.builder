@@ -31,7 +31,9 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
           xml.currencyId "RUB"
           xml.categoryId  "#{product.category_id}"
           xml.picture "#{image_url(product.image)}"
-          xml.vendor "#{product.brand.name}"
+          if !product.brand.nil?
+            xml.vendor "#{product.brand.name}"
+          end
           xml.name "#{product.title}"
           if !product.description.empty?
             xml.description "#{ActionView::Base.full_sanitizer.sanitize(product.description)}"
