@@ -353,6 +353,19 @@ class Product < ActiveRecord::Base
     result.last_effective_url
   end
 
+  require 'open-uri'
+  require 'net/http'
+
+  def self.remote_image_exists?(url)
+    url = URI.parse(url)
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = (url.scheme == "https")
+
+    http.start do |http|
+      return http.head(url.request_uri)['Content-Type'].start_with? 'image'
+    end
+  end
+
   def self.import(doc, category, cat_id, lit_num, stock, gender, p_type, industry, p_size, r_sizes)
     parsed_products = doc.xpath('//offer')
 
@@ -365,11 +378,11 @@ class Product < ActiveRecord::Base
            product_title = product.at_xpath('name').text
          end
 
-         if redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0])
-           image_link = redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0])
-         else
-           image_link == nil
-         end
+        if remote_image_exists?(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]) == false
+          image_link = nil
+        else
+          image_link = redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0])
+        end
 
         count += 1
         pro_brand = Product.create!(
