@@ -1,4 +1,4 @@
 .container 
   .row
     = render partial: "popular", collection: @products, as: :product
-    /= paginate @products, :remote => true, param_name: :page
+    = paginate @products, :remote => true, param_name: :page
