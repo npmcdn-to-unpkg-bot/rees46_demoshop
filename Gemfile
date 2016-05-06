@@ -50,6 +50,10 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'rolify', '~> 5.0'
 
+# internationalize
+gem 'rails-i18n', '~> 4.0', '>= 4.0.8'
+gem 'devise-i18n'
+
 group :development, :test do
   gem 'byebug'
   gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
