@@ -12,7 +12,6 @@ class Category < ActiveRecord::Base
 
   validates :name, presence: true
 
-
   def human_categories_industry
     if categories_industry == 0
       return 'fashion'
