@@ -379,9 +379,9 @@ class Product < ActiveRecord::Base
          end
 
         # if remote_image_exists?(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]) == false
-          image_link = redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0])
-        # else
         #   image_link = nil
+        # else
+          image_link = redirected_url(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0])
         # end
 
         count += 1
