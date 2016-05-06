@@ -1,11 +1,20 @@
 <% if ( @recommender == 'also_bought') %>
   jQuery('#recommender_also_bought').html("<%= j render(partial: 'rees46_also_bought.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.delayed-as-flickity');
+  var flkty = new Flickity( elem, {
+  });
 <% end %>
 
 <% if ( @recommender == 'interesting') %>
   jQuery('#recommender_interesting').html("<%= j render(partial: 'rees46_interesting.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.delayed-i-flickity');
+  var flkty = new Flickity( elem, {
+  });
 <% end %>
 
 <% if ( @recommender == 'similar') %>
   jQuery('#recommender_similer').html("<%= j render(partial: 'rees46_similer.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.delayed-s-flickity');
+  var flkty = new Flickity( elem, {
+  });
 <% end %>

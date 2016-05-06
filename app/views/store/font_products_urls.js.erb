@@ -4,4 +4,7 @@
 
 <% if ( @recommender == 'interesting') %>
   jQuery('#recommender_interesting').html("<%= j render(partial: 'rees46_interesting.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.delayed-i-flickity');
+  var flkty = new Flickity( elem, {
+  });
 <% end %>

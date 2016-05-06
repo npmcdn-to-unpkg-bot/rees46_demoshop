@@ -188,7 +188,7 @@ javascript:
         cart: JSON.parse(cart_product_ids).map(function(el){
           return el.cart
         }),
-        limit: 4,
+        limit: 24,
         modification: '#{@product.category.human_categories_industry}'
         }, cf_also_bought);
     });
@@ -200,7 +200,7 @@ javascript:
         cart: JSON.parse(cart_product_ids).map(function(el){
           return el.cart
         }),
-        limit: 4,
+        limit: 24,
         modification: '#{@product.category.human_categories_industry}'
         }, cf_interesting);
     });
@@ -213,7 +213,7 @@ javascript:
           return el.cart
         }),
         //categories: ['#{@product.category_id}'],
-        limit: 4,
+        limit: 24,
         modification: '#{@product.category.human_categories_industry}'
         }, cf_similer);
     });
