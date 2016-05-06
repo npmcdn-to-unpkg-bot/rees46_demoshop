@@ -400,9 +400,9 @@ class Product < ActiveRecord::Base
           industry: industry,
           size: p_size,
           russian_sizes: r_sizes,
-          part_types: p_types,
-          skin_types: s_types,
-          conditions: conditions
+          # part_types: p_types,
+          # skin_types: s_types,
+          # conditions: conditions
         )
 
         if product.at_xpath('vendor').nil?
