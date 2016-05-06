@@ -3,7 +3,7 @@ ru:
     attributes:
       user:
         current_password: "Текущий пароль"
-        email: Email
+        email: Эл. адрес
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
         remember_me: "Запомнить меня"
