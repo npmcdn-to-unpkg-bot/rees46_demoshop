@@ -67,7 +67,7 @@ javascript:
         cart: JSON.parse(cart_product_ids).map(function(el){
           return el.cart
         }),
-        limit: 4,
+        limit: 24,
         modification: '#{@category.human_categories_industry}'
       }, cf_recently_viewed);
     });
@@ -78,7 +78,7 @@ javascript:
         cart: JSON.parse(cart_product_ids).map(function(el){
           return el.cart
         }),
-        limit: 4,
+        limit: 24,
         modification: '#{@category.human_categories_industry}'
       }, cf_interesting);
     });
