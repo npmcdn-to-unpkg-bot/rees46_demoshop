@@ -1,5 +1,8 @@
 <% if (@recommender == 'popular') %>
   jQuery('#recommender_popular').html("<%= j render(partial: 'rees46_popular.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.delayed-flickity');
+  var flkty = new Flickity( elem, {
+  });
 <% end %>
 
 <% if (@recommender == 'recently_viewed') %>
