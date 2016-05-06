@@ -1,5 +1,7 @@
-h2.text-center Import Products
-
+br
+br
+h1 Import Products
+br
 = form_tag import_products_path, multipart: true do |f|
   = file_field_tag :xml_file
   br
@@ -26,29 +28,43 @@ h2.text-center Import Products
   = select_tag :gender, options_for_select(Product::GENDERS), :prompt => "Please select"
   br
   br
-  = label_tag 'Fashion Type:-'
-
-  = select_tag :product_type, options_for_select(Product::TYPES), :prompt => "Please select"
-  br
-  br
-  = label_tag 'Industry:-'
-
-  = select_tag :industry, options_for_select(Product.industries.keys.to_a), :prompt => "Please select"
+  / = label_tag 'Fashion Type:-'
+  / 
+  / = select_tag :product_type, options_for_select(Product::TYPES), :prompt => "Please select"
+  / br
+  / br
+  / = label_tag 'Industry:-'
+  / 
+  / = select_tag :industry, options_for_select(Product.industries.keys.to_a), :prompt => "Please select"
+  / 
+  / br
+  / br
+  / = label_tag 'Size:-'
+  / 
+  / = select_tag :size, options_for_select(Product::SIZES.keys.to_a), :include_blank => true
+  / 
+  / br
+  / br
+  / 
+  / = label_tag 'Russian Sizes:-'
+  / - Product::RUSSIAN_SIZES.each do |k,v|
+  /   = hidden_field_tag "russian_sizes[]", nil
+  /   = check_box_tag "russian_sizes[]", v
+  /   = k
   
+  = label_tag 'PART_TYPES :-'
+  
+  = select_tag :part_types, options_for_select(Product::PART_TYPES.keys.to_a), :prompt => "Please select"
   br
   br
-  = label_tag 'Size:-'
+  
+  = label_tag 'SKIN TYPES :-'
+  = select_tag :skin_types, options_for_select(Product::SKIN_TYPES.keys.to_a), :prompt => "Please select"
 
-  = select_tag :size, options_for_select(Product::SIZES.keys.to_a), :include_blank => true
-  
   br
   br
-  
-  = label_tag 'Russian Sizes:-'
-  - Product::RUSSIAN_SIZES.each do |k,v|
-    = hidden_field_tag "russian_sizes[]", nil
-    = check_box_tag "russian_sizes[]", v
-    = k
+  = label_tag 'CONDITIONS :-'
+  = select_tag :conditions, options_for_select(Product::CONDITIONS.keys.to_a), :prompt => "Please select"
 
   br
   br
