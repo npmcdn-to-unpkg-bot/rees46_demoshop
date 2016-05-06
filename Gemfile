@@ -53,6 +53,7 @@ gem 'rolify', '~> 5.0'
 # internationalize
 gem 'rails-i18n', '~> 4.0', '>= 4.0.8'
 gem 'devise-i18n'
+gem 'russian', '~> 0.6.0'
 
 group :development, :test do
   gem 'byebug'
