@@ -4,6 +4,7 @@ en:
     new_brand: "Create new Brand name"
     names: "All Brands name"
     edit: "Edit"
+    edit_brand: "Edit Brand"
     delete: "Delete"
     confirm: "Are you sure?"
   button:

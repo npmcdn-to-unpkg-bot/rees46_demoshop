@@ -4,6 +4,7 @@ ru:
     new_brand: "ru"
     names: "ru"
     edit: "Редактировать"
+    edit_brand: "Редактировать марка"
     delete: "Удалить"
     confirmation: "Вы уверены?"
   button:

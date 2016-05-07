@@ -1,3 +1,7 @@
 en:
   activerecord:
     models:
+      brand:
+    attributes:
+      brand: 
+        name: "Name"
