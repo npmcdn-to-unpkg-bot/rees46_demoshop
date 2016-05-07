@@ -1,19 +1,19 @@
-h1 Welcome to Brand Page
+h1 = t 'brand.title'
 
 .container
   .row
-    = link_to "Create new Brand name", new_brand_path, class: "btn btn-primary"
+    = link_to t('brand.new_brand'), new_brand_path, class: "btn btn-primary"
     br
     br
-    h1 All Brands name
+    h1 = t 'brand.names'
     - @brands.each do |letter, brand|
-      .col-md-2.col-sm-4.col-xs-6
+      .col-md-3.col-sm-4.col-xs-6
         br
         - brand.each do |b|
           li= b.name
           - if current_user && current_user.has_role?(:admin)
-            = link_to "Edit", edit_brand_path(b), class: 'btn btn-primary'
-            = link_to "Delete", b, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+            = link_to t('brand.edit'), edit_brand_path(b), class: 'btn btn-primary'
+            = link_to t('brand.delete'), b, method: :delete, data: { confirm: t('brand.confirmation') }, class: "btn btn-danger"
   br
   br
   br

@@ -1,0 +1,11 @@
+en:
+  brand:
+    title: "Welcome to Brand Page"
+    new_brand: "Create new Brand name"
+    names: "All Brands name"
+    edit: "Edit"
+    delete: "Delete"
+    confirm: "Are you sure?"
+  button:
+    ok: "Ok"
+    cancel: "Cancel"

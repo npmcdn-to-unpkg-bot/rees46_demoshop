@@ -1,0 +1,11 @@
+ru:
+  brand:
+    title: "ru"
+    new_brand: "ru"
+    names: "ru"
+    edit: "Редактировать"
+    delete: "Удалить"
+    confirmation: "Вы уверены?"
+  button:
+    ok: "ru"
+    cancel: "Отмина"
