@@ -1,17 +1,12 @@
 en:
   brand:
-    title: "Welcome to Brand Page"
+    title: "Brands"
     new_brand: "Create new Brand name"
-    names: "All Brands name"
     edit: "Edit"
-    edit_brand: "Edit Brand"
-    delete: "Delete"
-    confirm: "Are you sure?"
-  button:
-    ok: "Ok"
-    cancel: "Cancel"
+
   category:
     title: "CATEGORIES"
+
   product:
     index:
       title: "Products"
@@ -24,6 +19,7 @@ en:
       price: "Price"
     root_path: "Home"
     prompt: "Please select product size!"
+
   dashboard:
     category: "Category"
     product: "Product"
@@ -35,6 +31,7 @@ en:
     t_name: "NAME"
     t_address: "ADDRESS"
     t_email: "EMAIL"
+
   category:
     title: "Welcome to Category"
     new_category: "Create New Category"

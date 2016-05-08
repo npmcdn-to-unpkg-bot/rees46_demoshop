@@ -1,17 +1,11 @@
 ru:
   brand:
-    title: "ru"
-    new_brand: "ru"
-    names: "ru"
-    edit: "Редактировать"
-    edit_brand: "Редактировать марка"
-    delete: "Удалить"
-    confirmation: "Вы уверены?"
-  button:
-    ok: "ru"
-    cancel: "Отмина"
+    title: "Маркы"
+    new_brand: "Создать новое бренд имя"
+
   category:
     title: "КАТЕГОРИИ"
+
   product:
     index:
       title: "Продукты"
@@ -24,6 +18,7 @@ ru:
       import_button: "Импорт"
     root_path: "Главная"
     prompt: "Пожалуйста, выберите размер продукта!"
+
   dashboard:
     category: "Категорий"
     product: "Продукт"
@@ -35,6 +30,7 @@ ru:
     t_name: "ИМЧ"
     t_address: "АДРЕС"
     t_email: "ЭЛ. АДРЕС"
+
   category:
     title: "Добро пожаловать в Категория"
     new_category: "Создать новую категорию"

@@ -1,11 +1,13 @@
-h1 = t 'brand.title'
+br
 
 .container
   .row
-    = link_to t('brand.new_brand'), new_brand_path, class: "btn btn-primary"
+    .col-md-6
+      h1 = t('brand.title')
+    .col-md-6
+      = link_to t('brand.new_brand'), new_brand_path, class: "btn btn-success pull-right"
     br
-    br
-    h1 = t 'brand.names'
+  hr
     - @brands.each do |letter, brand|
       .col-md-3.col-sm-4.col-xs-6
         br
