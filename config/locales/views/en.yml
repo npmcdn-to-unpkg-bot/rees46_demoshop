@@ -16,6 +16,9 @@ en:
     root_path: "Home"
     prompt: "Please select product size!"
   dashboard:
+    category: "Category"
+    product: "Product"
+    brand: "Brand"
     title: "This is DashBoard for Admin"
     order_lists: "Order Lists"
     t_img: "IMAGE"

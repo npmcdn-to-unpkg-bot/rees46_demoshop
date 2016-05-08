@@ -16,6 +16,9 @@ ru:
     root_path: "Главная"
     prompt: "Пожалуйста, выберите размер продукта!"
   dashboard:
+    category: "Категорий"
+    product: "Продукт"
+    brand: "Марка"
     title: "Панель для администратора"
     order_lists: "Cписки Pаказа"
     t_img: "ФОТО"
