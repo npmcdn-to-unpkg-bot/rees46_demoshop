@@ -2,4 +2,5 @@ ru:
   user_menu:
     destroy_user_session: "Выйти"
     edit_user_registration: "Редактировать аккаунт"
-    dashboard: "Администратор "
+    dashboard: "Администратор"
+  root_title: "REES46 ДЕМО МАГАЗИН"
