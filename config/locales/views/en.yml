@@ -35,6 +35,6 @@ en:
     t_email: "EMAIL"
 
   category:
-    title: "Welcome to Category"
+    title: "Category"
     new_category: "Create New Category"
-    all_category: "All Categories"
+    all_category: "Categories"

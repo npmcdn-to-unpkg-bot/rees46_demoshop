@@ -35,6 +35,6 @@ ru:
     t_email: "ЭЛ. АДРЕС"
 
   category:
-    title: "Добро пожаловать в Категория"
+    title: "Категория"
     new_category: "Создать новую категорию"
-    all_category: "Все категории"
+    all_category: "Категории"
