@@ -10,8 +10,8 @@ h1 Welcome to Category
         = @category.nil? ? 'Main Categories' : @category.name
       - Category.walk_tree do |c, level|
           = "#{'&nbsp;&nbsp;-> '*level}#{c.name}&nbsp;".html_safe
-          = link_to "Edit", edit_category_path(c), class: 'btn btn-primary'
-          = link_to "Delete", c, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+          = link_to t('simple_form.edit'), edit_category_path(c), class: 'btn btn-primary'
+          = link_to t('simple_form.delete'), c, method: :delete, data: { confirm: t('simple_form.confirmation') }, class: "btn btn-danger"
           br
       br
       br

@@ -18,3 +18,6 @@ ru:
       user:
         gender: 'Select your gender'
     add_to_cart: "Добавить в Корзину"
+    edit: "Редактировать"
+    delete: "Удалить"
+    confirmation: "Вы уверены?"
