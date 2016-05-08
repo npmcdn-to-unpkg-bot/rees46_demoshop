@@ -252,6 +252,8 @@ class Product < ActiveRecord::Base
   # # Price should be not less then $100 :) lets do some business
   # validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
 
+  validates_inclusion_of :product_size, in: :SIZES
+
   def show_product_id?
     if industry == 'fashion'
       true

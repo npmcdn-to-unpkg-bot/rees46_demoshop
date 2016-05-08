@@ -1,1 +1,9 @@
 en:
+  product:
+    product_size:
+      russian_sizes: "Russian Sizes"
+      euro_sizes: "Euro Sizes"
+      british_sizes: "British Sizes"
+      american_sizes: "American Sizes"
+      hight_sizes: "Hight Sizes"
+# #{Product::SIZES.keys[@product.size].camelcase}
