@@ -10,3 +10,5 @@ en:
   button:
     ok: "Ok"
     cancel: "Cancel"
+  category:
+    title: "CATEGORIES"
