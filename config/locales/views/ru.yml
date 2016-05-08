@@ -19,6 +19,9 @@ ru:
     table:
       title: "Название"
       price: "Цена"
+    import:
+      title: "Импорт Продукты"
+      import_button: "Импорт"
     root_path: "Главная"
     prompt: "Пожалуйста, выберите размер продукта!"
   dashboard:

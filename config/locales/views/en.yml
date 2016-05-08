@@ -16,6 +16,9 @@ en:
     index:
       title: "Products"
       new_product: "Create New Products"
+    import:
+      title: "Import Products"
+      import_button: "Import"
     table:
       title: "Title"
       price: "Price"

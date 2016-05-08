@@ -1,13 +1,13 @@
 .panel.panel-success
   .panel-heading
-    h1 Import Products
+    h1 = t('product.import.title')
     br
   .panel-body
     = form_tag import_products_path, multipart: true do |f|
       .col-md-6
         = file_field_tag :xml_file
         br
-        = label_tag 'Mine Category'
+        = label_tag 'Mine Category :-'
         = select_tag :category_id, options_for_select(Category.all.map {|c| [c.name, c.id ] }), :prompt => "Please select"
         br
         br
@@ -72,4 +72,4 @@
 
       br
       br
-      = submit_tag "Import", class: "btn btn-success"
+      = submit_tag t('product.import.import_button'), class: "btn btn-success"
