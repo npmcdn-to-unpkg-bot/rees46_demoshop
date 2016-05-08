@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   before_action :admin_permission, except: [:show, :products_urls]
 
   def index
-    @products = Product.all
+    @products = Product.order('created_at DESC').page(params[:page]).per(15)
     @category = Category.all
   end
 
