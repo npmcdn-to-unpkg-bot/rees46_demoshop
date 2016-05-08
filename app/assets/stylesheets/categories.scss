@@ -30,7 +30,6 @@
   padding:0;
 }
 
-
 // For link menu
 .breadcrumb {
   padding: 0 !important;
@@ -47,4 +46,10 @@
 
 .flickity-page-dots {
   display: none;
+}
+
+.checklist.categories {
+  li {
+    margin: 10px 0 0 0;
+  }
 }
