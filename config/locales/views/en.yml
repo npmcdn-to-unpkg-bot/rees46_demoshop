@@ -15,3 +15,11 @@ en:
   product:
     root_path: "Home"
     prompt: "Please select product size!"
+  dashboard:
+    title: "This is DashBoard for Admin"
+    order_lists: "Order Lists"
+    t_img: "IMAGE"
+    t_order_id: "ORDER ID"
+    t_name: "NAME"
+    t_address: "ADDRESS"
+    t_email: "EMAIL"

@@ -1,28 +1,30 @@
 .container
   .row
-    h1.text-center This is DashBoard for Admin
+    h1.text-center = t('dashboard.title')
+    br
     .col-md-4.text-center
-      = link_to "Category", categories_path, class: 'btn btn-default'
     .col-md-4.text-center
-        = link_to "Product", products_path, class: 'btn btn-default'
+      = link_to "Category", categories_path, class: 'btn btn-default', style: "margin-right: 15px;"
+      = link_to "Product", products_path, class: 'btn btn-default', style: "margin-right: 15px;"
+      = link_to "Brand", brands_path, class: 'btn btn-default', style: "margin-right: 15px;"
     .col-md-4.text-center
-        = link_to "Brand", brands_path, class: 'btn btn-default'
 br
 br
 .container
-  h1.text-center Order lists
+  h1.text-center = t('dashboard.order_lists')
+  br
   table.table.table-bordered.table-striped
     thead
       tr
         th
-          | IMAGE
+          = t('dashboard.t_img')
         th
-          | ORDER ID
+          = t('dashboard.t_order_id')
         th
-          | Name
+          = t('dashboard.t_name')
         th
-          | Address
+          = t('dashboard.t_address')
         th
-          | Email
+          = t('dashboard.t_email')
     tbody
       = render partial: "order", collection: @orders, as: :order

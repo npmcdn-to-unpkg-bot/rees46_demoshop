@@ -15,3 +15,11 @@ ru:
   product:
     root_path: "Главная"
     prompt: "Пожалуйста, выберите размер продукта!"
+  dashboard:
+    title: "Панель для администратора"
+    order_lists: "Cписки Pаказа"
+    t_img: "ФОТО"
+    t_order_id: "НОМЕР ЗАКАЗА"
+    t_name: "ИМЧ"
+    t_address: "АДРЕС"
+    t_email: "ЭЛ. АДРЕС"
