@@ -1,2 +1,2 @@
 .form-group.required
-  = f.input :size_id, label: t('product.product_size').values[@product.size], :label_html => {:class => "select_label"}, as: :select, collection: @product.human_available_sizes, item_wrapper_class: 'radio-inline', prompt: t('product.prompt')
+  = f.input :size_id, label: t('product.pro_size').values[@product.size], :label_html => {:class => "select_label"}, as: :select, collection: @product.human_available_sizes, item_wrapper_class: 'radio-inline', prompt: t('product.prompt')
