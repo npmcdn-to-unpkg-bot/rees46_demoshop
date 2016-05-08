@@ -2,7 +2,7 @@
   .row
     .col-md-8
       ol.breadcrumb
-        li = link_to "HOME", root_path
+        li = link_to t('product.root_path'), root_path
         li = link_to @product.category.root.name.upcase, category_path(@category.root)
         - if @product.category.children.empty?
           li= link_to @product.category.name, category_path(@category)

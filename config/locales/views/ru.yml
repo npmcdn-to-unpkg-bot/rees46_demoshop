@@ -12,3 +12,6 @@ ru:
     cancel: "Отмина"
   category:
     title: "КАТЕГОРИИ"
+  product:
+    root_path: "Главная"
+    prompt: "Пожалуйста, выберите размер продукта!"

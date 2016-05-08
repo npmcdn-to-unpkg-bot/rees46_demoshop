@@ -12,3 +12,6 @@ en:
     cancel: "Cancel"
   category:
     title: "CATEGORIES"
+  product:
+    root_path: "Home"
+    prompt: "Please select product size!"
