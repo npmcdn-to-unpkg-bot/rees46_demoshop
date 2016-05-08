@@ -10,19 +10,19 @@ footer
             ul.r-footer-list
               li
                 a[href="/faq"]
-                  | FAQ
+                  = t('footer_list.faq')
               li
                 a[href="/blog"]
-                  | Blog
+                  = t('footer.blog')
               li
                 a[href="/documentation"]
-                  | Documentation
+                  = t('footer.documentation')
               li
                 a[href="/contact"]
-                  | Contacts
+                  = t('footer.contacts')
               li
                 a[href="/docs/offer"]
-                  | Contract Offer
+                  = t('footer.contract_offer')
           .col-md-3.col-lg-2
             .r-si
               a.i.fa.fa-vk.fa-2x[aria-hidden="true" href="http://vk.com/p13n_ru"]
@@ -35,9 +35,9 @@ footer
           .col-md-12.col-lg-8.col-lg-offset-2
             .r-footer-contacts.r-footer-contacts_address
               address.p-adr
-                | Saint-Petersburg, Russia
+                = t('footer.address')
                 br
-                | Vladimiskiy ave, b. 17, office 501
+                = t('footer.address_br')
             .r-footer-contacts.r-footer-contacts_phone.p-tel
               gisphone._gis-phone-highlight-wrap.js_gis-phone-highlight-wrap-22919627b65904fbf78724295e9467cc._gis-phone-highlight-phone-wrap[data-ph-parsed="true"]
                 | +7 (812) 980-45-33
@@ -59,6 +59,6 @@ footer
           .col-md-6.col-lg-4
             .pull-right.r-responsive-float
               a.r-kechinov.p-org.r-text-pale[target="_blank" href="http://mkechinov.ru/"]
-                | Michael Kechinov`s
+                = t('footer.kechinov_br')
                 br
-                | Studio
+                = t('footer.kechinov')
