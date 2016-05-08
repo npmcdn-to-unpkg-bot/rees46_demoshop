@@ -6,4 +6,3 @@ en:
       british_sizes: "British Sizes"
       american_sizes: "American Sizes"
       hight_sizes: "Hight Sizes"
-# #{Product::SIZES.keys[@product.size].camelcase}
