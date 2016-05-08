@@ -14,7 +14,7 @@ br
         - brand.each do |b|
           li= b.name
           - if current_user && current_user.has_role?(:admin)
-            = link_to t('simple_form.edit'), edit_brand_path(b), class: 'btn btn-primary'
+            = link_to t('simple_form.edit'), edit_brand_path(b), class: 'btn btn-primary', style: "margin-right: 15px;"
             = link_to t('simple_form.delete'), b, method: :delete, data: { confirm: t('simple_form.confirmation') }, class: "btn btn-danger"
   br
   br
