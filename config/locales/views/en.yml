@@ -26,3 +26,7 @@ en:
     t_name: "NAME"
     t_address: "ADDRESS"
     t_email: "EMAIL"
+  category:
+    title: "Welcome to Category"
+    new_category: "Create New Category"
+    all_category: "All Categories"

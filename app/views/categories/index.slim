@@ -1,16 +1,17 @@
-h1 Welcome to Category
-
+h1 = t('category.title')
+br
 .container
   .row
     .col-md-6 
-      = link_to "Create New Category", new_category_path, :class => 'btn btn-primary'
+      = link_to t('category.new_category'), new_category_path, :class => 'btn btn-primary'
       br
       br
       h1
-        = @category.nil? ? 'Main Categories' : @category.name
+        = @category.nil? ? t('category.all_category') : @category.name
+        br
       - Category.walk_tree do |c, level|
           = "#{'&nbsp;&nbsp;-> '*level}#{c.name}&nbsp;".html_safe
-          = link_to t('simple_form.edit'), edit_category_path(c), class: 'btn btn-primary'
+          = link_to t('simple_form.edit'), edit_category_path(c), class: 'btn btn-primary', style: "margin-right: 15px;, margin-top: 15px;" 
           = link_to t('simple_form.delete'), c, method: :delete, data: { confirm: t('simple_form.confirmation') }, class: "btn btn-danger"
           br
       br
