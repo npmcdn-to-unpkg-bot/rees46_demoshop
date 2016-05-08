@@ -72,4 +72,6 @@
 
       br
       br
-      = submit_tag t('product.import.import_button'), class: "btn btn-success"
+      = button_tag(type: "submit", class: "btn btn-success") do
+        .i.fa.fa-plus.fa-lg
+          = t('product.import.import_button')

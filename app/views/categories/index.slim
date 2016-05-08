@@ -3,7 +3,9 @@ br
 .container
   .row
     .col-md-6 
-      = link_to t('category.new_category'), new_category_path, :class => 'btn btn-primary'
+      = link_to new_category_path, :class => 'btn btn-success' do
+        .i.fa.fa-plus.fa-lg
+          = t('category.new_category')
       br
       br
       h1

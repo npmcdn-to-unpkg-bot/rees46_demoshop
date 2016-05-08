@@ -9,7 +9,9 @@ br
     h1 = t('product.index.title')
   .col-md-6
     - if current_user && current_user.has_role?(:admin)
-      = link_to t('product.index.new_product'), new_product_path, class: 'btn btn-success pull-right'
+      = link_to new_product_path, class: 'btn btn-success pull-right' do
+        .i.fa.fa-plus.fa-lg
+          = t('product.index.new_product')
 hr
 
 .container
