@@ -1,72 +1,75 @@
-br
-br
-h1 Import Products
-br
-= form_tag import_products_path, multipart: true do |f|
-  = file_field_tag :xml_file
-  br
-  = label_tag 'Mine Category'
-  = select_tag :category_id, options_for_select(Category.all.map {|c| [c.name, c.id ] }), :prompt => "Please select"
-  br
-  br
-  = label_tag 'Stranger Category:-'
-  = text_field_tag 'stranger_category'
-  br
-  br
-  
-  = label_tag 'Limit: '
-  = text_field_tag "limit_number"
-  br
-  br
-  
-  = label_tag 'Stock:- '
-  = text_field_tag "stock"
-  br
-  br
-  = label_tag 'Gender:-'
+.panel.panel-success
+  .panel-heading
+    h1 Import Products
+    br
+  .panel-body
+    = form_tag import_products_path, multipart: true do |f|
+      .col-md-6
+        = file_field_tag :xml_file
+        br
+        = label_tag 'Mine Category'
+        = select_tag :category_id, options_for_select(Category.all.map {|c| [c.name, c.id ] }), :prompt => "Please select"
+        br
+        br
+        = label_tag 'Stranger Category:-'
+        = text_field_tag 'stranger_category'
+        br
+        br
 
-  = select_tag :gender, options_for_select(Product::GENDERS), :prompt => "Please select"
-  br
-  br
-  = label_tag 'Fashion Type:-'
-  
-  = select_tag :product_type, options_for_select(Product::TYPES), :prompt => "Please select"
-  br
-  br
-  = label_tag 'Industry:-'
-  
-  = select_tag :industry, options_for_select(Product.industries.keys.to_a), :prompt => "Please select"
-  
-  br
-  br
-  = label_tag 'Size:-'
-  
-  = select_tag :size, options_for_select(Product::SIZES.keys.to_a)
-  
-  br
-  br
-  
-  = label_tag 'Russian Sizes:-'
-  - Product::RUSSIAN_SIZES.each do |k,v|
-    = check_box_tag "russian_sizes[]", v
-    = k
-  br
-  br
-  
-  / = label_tag 'PART_TYPES :-'
-  / 
-  / = select_tag :part_types, options_for_select(Product::PART_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
-  / br
-  / br
-  / 
-  / = label_tag 'SKIN TYPES :-'
-  / = select_tag :skin_types, options_for_select(Product::SKIN_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
-  / 
-  / br
-  / br
-  / = label_tag 'CONDITIONS :-'
-  / = select_tag :conditions, options_for_select(Product::CONDITIONS.keys.to_a), :prompt => "Please select", :include_blank => true
+        = label_tag 'Limit: '
+        = text_field_tag "limit_number"
+        br
+        br
 
-  br
-  br
-  = submit_tag "Import"
+        = label_tag 'Stock:- '
+        = text_field_tag "stock"
+        br
+        br
+      .col-md-6
+        = label_tag 'Gender:-'
+
+        = select_tag :gender, options_for_select(Product::GENDERS), :prompt => "Please select"
+        br
+        br
+        = label_tag 'Fashion Type:-'
+
+        = select_tag :product_type, options_for_select(Product::TYPES), :prompt => "Please select"
+        br
+        br
+        = label_tag 'Industry:-'
+
+        = select_tag :industry, options_for_select(Product.industries.keys.to_a), :prompt => "Please select"
+
+        br
+        br
+        = label_tag 'Size:-'
+
+        = select_tag :size, options_for_select(Product::SIZES.keys.to_a), prompt: " "
+        
+        br
+        br
+
+        = label_tag 'Russian Sizes:- '
+        - Product::RUSSIAN_SIZES.each do |k,v|
+          = check_box_tag 'russian_sizes[]', v
+          = ' ' + k + ' '
+        br
+        br
+
+      / = label_tag 'PART_TYPES :-'
+
+      / = select_tag :part_types, options_for_select(Product::PART_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
+      / br
+      / br
+
+      / = label_tag 'SKIN TYPES :-'
+      / = select_tag :skin_types, options_for_select(Product::SKIN_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
+
+      / br
+      / br
+      / = label_tag 'CONDITIONS :-'
+      / = select_tag :conditions, options_for_select(Product::CONDITIONS.keys.to_a), :prompt => "Please select", :include_blank => true
+
+      br
+      br
+      = submit_tag "Import", class: "btn btn-success"
