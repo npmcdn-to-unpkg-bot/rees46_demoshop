@@ -1,0 +1,5 @@
+en:
+  user_menu:
+    destroy_user_session: "Logout"
+    edit_user_registration: "Edit account"
+    dashboard: "Admin Board"

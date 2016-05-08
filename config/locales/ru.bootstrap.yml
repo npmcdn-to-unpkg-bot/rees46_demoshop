@@ -1,0 +1,15 @@
+ru:
+  helpers:
+    actions: "Actions"
+    links:
+      back: "Back"
+      cancel: "Отмена"
+      confirm: "Are you sure?"
+      destroy: "Delete"
+      new: "Новый"
+      edit: "Edit"
+    titles:
+      edit: "Edit %{model}"
+      save: "Save %{model}"
+      new: "New %{model}"
+      delete: "Delete %{model}"

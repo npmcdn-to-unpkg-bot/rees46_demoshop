@@ -1,0 +1,23 @@
+ru:
+#   activerecord:
+#    attributes:
+#      article:
+#        title: "Название"
+#        body: "Текст"
+#   forms:
+#     messages:
+#       success: "Операция была успешно выполнена!"
+#     buttons:
+#      edit: "Редактировать"
+#      submit: "Отправить"
+#   user_menu:
+#     destroy_user_session: "Logout ru"
+#     edit_user_registration: "Edit account ru"
+#     dashboard: "Admin Board"
+#   articles:
+#     index:
+#       title: "Список статей"
+#     edit:
+#       title: "Редактировать статью"
+#     new:
+#       title: "Добавить статью"
