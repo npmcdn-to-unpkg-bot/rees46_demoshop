@@ -5,6 +5,6 @@ tr
     = number_to_currency(product.price,  unit: "₽ ")
   - if current_user && current_user.has_role?(:admin)
     td
-      = link_to "edit", edit_product_path(product)
+      = link_to t('simple_form.edit'), edit_product_path(product)
     td
-      = link_to "Delete", product, method: :delete, data: { confirm: "Are you sure?" }
+      = link_to t('simple_form.delete'), product, method: :delete, data: { confirm: t('simple_form.confirmation') }

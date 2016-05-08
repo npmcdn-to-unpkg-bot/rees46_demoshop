@@ -13,6 +13,12 @@ ru:
   category:
     title: "КАТЕГОРИИ"
   product:
+    index:
+      title: "Продукты"
+      new_product: "Создавать новые продукты"
+    table:
+      title: "Название"
+      price: "Цена"
     root_path: "Главная"
     prompt: "Пожалуйста, выберите размер продукта!"
   dashboard:

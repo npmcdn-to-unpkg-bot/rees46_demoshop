@@ -1,14 +1,15 @@
 br
+
 .container
   = render "import"
 br
 
 .container
   .col-md-6
-    h1 Products
+    h1 = t('product.index.title')
   .col-md-6
     - if current_user && current_user.has_role?(:admin)
-      = link_to "Create New Products", new_product_path, class: 'btn btn-success pull-right'
+      = link_to t('product.index.new_product'), new_product_path, class: 'btn btn-success pull-right'
 hr
 
 .container
@@ -18,14 +19,14 @@ hr
     thead
       tr
         th
-          | Title
+          = t('product.table.title')
         th
-          | Price
+          = t('product.table.price')
         - if current_user && current_user.has_role?(:admin)
           th
-            | Edit
+            = t('simple_form.edit')
           th
-            | Delete
+            = t('simple_form.delete')
     tbody
       = render partial: "index", collection: @products, as: :product
   = paginate @products

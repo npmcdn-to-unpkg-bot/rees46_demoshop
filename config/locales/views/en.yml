@@ -13,6 +13,12 @@ en:
   category:
     title: "CATEGORIES"
   product:
+    index:
+      title: "Products"
+      new_product: "Create New Products"
+    table:
+      title: "Title"
+      price: "Price"
     root_path: "Home"
     prompt: "Please select product size!"
   dashboard:
