@@ -1,6 +1,1 @@
-activerecord:
-  models:
-    brand:
-  attributes:
-    brand: 
-      name: "Имя"
+ru:
