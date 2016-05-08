@@ -1,4 +1,7 @@
-= simple_form_for @brand do |f|
-  = f.input :name
+.col-md-6.col-xs-offset-3
+  h1 = t('brand.new_brand')
+  br
+  = simple_form_for @brand do |f|
+    = f.input :name
 
-  = f.submit "Save", class: "btn btn-primary"
+    = f.submit t('brand.edit.save'), class: 'btn btn-success'

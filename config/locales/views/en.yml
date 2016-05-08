@@ -1,8 +1,10 @@
 en:
   brand:
     title: "Brands"
-    new_brand: "Create new Brand name"
-    edit: "Edit"
+    new_brand: "New Brand"
+    edit_brand: "Edit Brand"
+    edit:
+      save: "Save"
 
   category:
     title: "CATEGORIES"

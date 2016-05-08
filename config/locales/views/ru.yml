@@ -1,7 +1,10 @@
 ru:
   brand:
     title: "Маркы"
-    new_brand: "Создать новое бренд имя"
+    new_brand: "Новое бренд"
+    edit_brand: "Редактировать Марка"
+    edit:
+      save: "Сохранить"
 
   category:
     title: "КАТЕГОРИИ"

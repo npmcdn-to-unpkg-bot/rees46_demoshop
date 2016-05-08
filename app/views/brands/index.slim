@@ -5,7 +5,9 @@ br
     .col-md-6
       h1 = t('brand.title')
     .col-md-6
-      = link_to t('brand.new_brand'), new_brand_path, class: "btn btn-success pull-right"
+      = link_to new_brand_path, class: "btn btn-success pull-right" do
+        .i.fa.fa-plus.fa-lg
+          = t('brand.new_brand')
     br
   hr
     - @brands.each do |letter, brand|
