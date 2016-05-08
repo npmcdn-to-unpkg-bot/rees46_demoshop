@@ -1,6 +1,6 @@
 en:
   user_menu:
     destroy_user_session: "Logout"
-    edit_user_registration: "Edit account"
+    edit_user_registration: "Edit Profile"
     dashboard: "Admin Board"
   root_title: "REES46 Demoshop"
