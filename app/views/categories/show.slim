@@ -30,6 +30,7 @@
       .row
         - @products.where(category_id: @category.id).each do |product|
           = render 'categories/product_categories', product: product
+        .clr
 
         - if @category.children
           - @category.children.each do |child|
@@ -41,11 +42,6 @@
             .carousel.js-flickity
               - @products.where(category_id: child).each do |product|
                 = render 'categories/product_categories', product: product
-
-      / .clr
-      /   - if !@category.root?
-      /     = paginate @products
-      / .clr
       br
       br
         .clr
