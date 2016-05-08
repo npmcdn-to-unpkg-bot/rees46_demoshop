@@ -64,7 +64,7 @@
               - if @product.stock == 0 
                 false
               - else
-                = f.submit "Add to Cart", class: "btn btn-success blabla"
+                = f.submit t('simple_form.add_to_cart'), class: "btn btn-success blabla"
             #server_msg_modal.modal.fade
               .modal-dialog
                 .modal-content

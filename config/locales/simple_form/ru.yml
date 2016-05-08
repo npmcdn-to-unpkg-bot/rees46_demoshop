@@ -17,3 +17,4 @@ ru:
     prompts:
       user:
         gender: 'Select your gender'
+    add_to_cart: "Добавить в Корзину"
