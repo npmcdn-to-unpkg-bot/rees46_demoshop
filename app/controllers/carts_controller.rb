@@ -5,14 +5,14 @@ class CartsController < ApplicationController
     unless @cart.line_items.present?
       @cart.destroy if @cart.id == session[:cart_id]
       session[:cart_id] = nil
-      redirect_to root_path, notice: 'Your cart currently empty.'
+      redirect_to root_path, notice: t('cart.notice_controller')
     end
   end
 
   def destroy
     @cart.destroy if @cart.id == session[:cart_id]
     session[:cart_id] = nil
-    redirect_to root_path, notice: 'Your cart currently empty.'
+    redirect_to root_path, notice: t('cart.notice_controller')
   end
 
   def cart_urls

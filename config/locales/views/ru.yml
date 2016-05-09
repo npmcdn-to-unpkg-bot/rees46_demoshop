@@ -50,3 +50,4 @@ ru:
     new_order: "Checkout RU"
     empty: "Удалить Корзина"
     total: "Cумма"
+    notice_controller: "Ваша корзина пуста."

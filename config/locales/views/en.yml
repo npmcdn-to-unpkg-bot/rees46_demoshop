@@ -49,3 +49,4 @@ en:
     new_order: "Checkout"
     empty: "Empty Cart"
     total: "Total"
+    notice_controller: "Your cart currently empty."
