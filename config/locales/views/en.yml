@@ -38,3 +38,14 @@ en:
     title: "Category"
     new_category: "Create New Category"
     all_category: "Categories"
+
+  cart:
+    title: "Shoping Cart"
+    items: "ITEMS"
+    sizes: "SIZES"
+    qty: "QTY"
+    price: "PRICE"
+    root_path: "Continue shopping"
+    new_order: "Checkout"
+    empty: "Empty Cart"
+    total: "Total"

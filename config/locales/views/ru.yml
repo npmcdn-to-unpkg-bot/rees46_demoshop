@@ -38,3 +38,15 @@ ru:
     title: "Категория"
     new_category: "Создать новую категорию"
     all_category: "Категории"
+
+  cart:
+    title: "КОРЗИНА"
+    items: "ПРЕДМЕТЫ"
+    sizes: "РАЗМЕР"
+    qty: "КОЛ"
+    price: "ЦЕНА"
+    new_order: "Проверять, выписываться"
+    root_path: "Продолжить покупки"
+    new_order: "Checkout RU"
+    empty: "Удалить Корзина"
+    total: "Cумма"
