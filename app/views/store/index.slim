@@ -1,43 +1,45 @@
-#carousel-example-generic.carousel.slide data-ride="carousel"
-  /! indicators
-  ol.carousel-indicators
-    li.active data-slide-to="0" data-target="#carousel-example-generic"
-    li data-slide-to="1" data-target="#carousel-example-generic"
-    li data-slide-to="2" data-target="#carousel-example-generic"
-  /! wrapper for slides
-  .carousel-inner role="listbox"
-    .item.active
-      = image_tag 'hmprod.jpeg', :class => 'img-responsive'
-      .carousel-caption
-        |
-    .item
-      = image_tag 'hmprod-2.jpeg', :class => 'img-responsive'
-      .carousel-caption
-        | best new-york steak
-    .item
-      = image_tag 'hmprod-3.jpeg', :class => 'img-responsive'
-      .carousel-caption
-        |
-  /! controls
-  a.left.carousel-control data-slide="prev" href="#carousel-example-generic" role="button"
-    span.glyphicon.glyphicon-chevron-left aria-hidden="true"
-    span.sr-only previous
-  a.right.carousel-control data-slide="next" href="#carousel-example-generic" role="button"
-    span.glyphicon.glyphicon-chevron-right aria-hidden="true"
-    span.sr-only next
+/ #carousel-example-generic.carousel.slide data-ride="carousel"
+/   /! indicators
+/   ol.carousel-indicators
+/     li.active data-slide-to="0" data-target="#carousel-example-generic"
+/     li data-slide-to="1" data-target="#carousel-example-generic"
+/     li data-slide-to="2" data-target="#carousel-example-generic"
+/   /! wrapper for slides
+/   .carousel-inner role="listbox"
+/     .item.active
+/       = image_tag 'hmprod.jpeg', :class => 'img-responsive'
+/       .carousel-caption
+/         |
+/     .item
+/       = image_tag 'hmprod-2.jpeg', :class => 'img-responsive'
+/       .carousel-caption
+/         | best new-york steak
+/     .item
+/       = image_tag 'hmprod-3.jpeg', :class => 'img-responsive'
+/       .carousel-caption
+/         |
+/   /! controls
+/   a.left.carousel-control data-slide="prev" href="#carousel-example-generic" role="button"
+/     span.glyphicon.glyphicon-chevron-left aria-hidden="true"
+/     span.sr-only previous
+/   a.right.carousel-control data-slide="next" href="#carousel-example-generic" role="button"
+/     span.glyphicon.glyphicon-chevron-right aria-hidden="true"
+/     span.sr-only next
+/ 
+/ .clr
+/ br
+/ br
+/ br
+/ 
+/ .clr
 
-.clr
-br
-br
-br
-
-.clr
-
-#recommender_popular
-br
-br
-br
-
+.container
+  .row
+    .col-md-12
+      h1 Популярные товары в нашем магазине
+.popular-for-home
+  #recommender_popular
+  
 #recommender_interesting
 br
 br

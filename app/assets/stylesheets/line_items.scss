@@ -1,3 +1,31 @@
 // Place all the styles related to the line_items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.r-product-item {
+  margin-bottom: 40px;
+  text-align: center;
+  height: 330px;
+  padding: 20px;
+  border: 1px solid #eee;
+  box-shadow: 1px 1px 3px #aaa;
+  .picture {
+    height: 200px;
+    margin-bottom: 10px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .title {
+      overflow: hidden;
+      margin-bottom: 5px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+  }
+  .price {
+    font-size: 25px;
+  }
+}

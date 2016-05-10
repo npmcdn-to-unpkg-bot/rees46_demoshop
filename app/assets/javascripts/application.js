@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery-ui/effect-blind
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require_tree .
 //= require bootstrap-sprockets
+//= require bootstrap
 //= require redactor-rails
 //= require jquery_nested_form

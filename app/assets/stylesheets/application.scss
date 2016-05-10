@@ -15,9 +15,9 @@
  *= require redactor-rails
  *= require jquery-ui
  */
+ @import "compass/reset";
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
  @import "compass";
- @import "compass/reset";
  @import "compass/css3/box-sizing";
