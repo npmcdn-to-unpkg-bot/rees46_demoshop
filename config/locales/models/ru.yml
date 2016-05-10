@@ -1,8 +1,8 @@
 ru:
   product:
     pro_size:
-      russian_sizes: "Российские Размеры"
-      euro_sizes: "Евро Размеры"
-      british_sizes: "Британские Pазмеры"
-      american_sizes: "Американские Размеры"
+      russian_sizes: "Российские размеры"
+      euro_sizes: "Европейские размеры"
+      british_sizes: "Британские размеры"
+      american_sizes: "Американские размеры"
       hight_sizes: "Рост"

@@ -5,19 +5,19 @@ ru:
         name: "Имя"
     hints:
       user:
-        username: 'User name to sign in.'
-        password: 'No special characters, please.'
+        username: "Имя пользователя для регистрации. "
+        password: "Пожалуйста, не используйте специальные символы."
     placeholders:
       user:
-        username: 'Your username'
-        password: '****'
+        username: "Имя пользователя"
+        password: "****"
     include_blanks:
       user:
-        age: 'Rather not say'
+        age: "Предпочитаю умолчать"
     prompts:
       user:
-        gender: 'Select your gender'
-    add_to_cart: "Добавить в Корзину"
+        gender: "Выберите пол"
+    add_to_cart: "Добавить в корзину"
     edit: "Редактировать"
     delete: "Удалить"
     confirmation: "Вы уверены?"

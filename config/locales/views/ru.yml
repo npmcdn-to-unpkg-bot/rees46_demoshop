@@ -1,8 +1,8 @@
 ru:
   brand:
-    title: "Маркы"
-    new_brand: "Новое бренд"
-    edit_brand: "Редактировать Марка"
+    title: "Бренды"
+    new_brand: "Новый бренд"
+    edit_brand: "Редактировать бренд"
     edit:
       save: "Сохранить"
 
@@ -12,27 +12,27 @@ ru:
   product:
     index:
       title: "Продукты"
-      new_product: "Создавать новые продукты"
+      new_product: "Создать новый продукт"
+    import:
+      title: "Импортировать продукт"
+      import_button: "Импорт"
     table:
       title: "Название"
       price: "Цена"
-    import:
-      title: "Импорт Продукты"
-      import_button: "Импорт"
     root_path: "Главная"
     prompt: "Пожалуйста, выберите размер продукта!"
 
   dashboard:
-    category: "Категорий"
+    category: "Категория"
     product: "Продукт"
-    brand: "Марка"
-    title: "Панель для администратора"
-    order_lists: "Cписки Pаказа"
+    brand: "Бренд"
+    title: "Панель администратора"
+    order_lists: "Списки заказов"
     t_img: "ФОТО"
     t_order_id: "НОМЕР ЗАКАЗА"
-    t_name: "ИМЧ"
+    t_name: "ИМЯ"
     t_address: "АДРЕС"
-    t_email: "ЭЛ. АДРЕС"
+    t_email: "EMAIL"
 
   category:
     title: "Категория"
@@ -40,14 +40,13 @@ ru:
     all_category: "Категории"
 
   cart:
-    title: "КОРЗИНА"
+    title: "Корзина"
     items: "ПРЕДМЕТЫ"
-    sizes: "РАЗМЕР"
+    sizes: "РАЗМЕРЫ"
     qty: "КОЛ"
     price: "ЦЕНА"
-    new_order: "Проверять, выписываться"
     root_path: "Продолжить покупки"
-    new_order: "Checkout RU"
-    empty: "Удалить Корзина"
+    new_order: "Проверка"
+    empty: "Очистить корзину"
     total: "Cумма"
-    notice_controller: "Ваша корзина пуста."
+    notice_controller: "Ваша корзина пуста"
