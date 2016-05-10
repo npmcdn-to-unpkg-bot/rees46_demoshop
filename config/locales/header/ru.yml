@@ -3,4 +3,4 @@ ru:
     destroy_user_session: "Выйти"
     edit_user_registration: "Редактировать профиль"
     dashboard: "Панель администратора"
-    root_title: "REES46 ДЕМО МАГАЗИН"
+  root_title: "REES46 ДЕМО МАГАЗИН"
