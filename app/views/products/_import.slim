@@ -49,26 +49,26 @@
         br
         br
 
-        = label_tag 'Russian Sizes:- '
-        - Product::RUSSIAN_SIZES.each do |k,v|
-          = check_box_tag 'russian_sizes[]', v
-          = ' ' + k + ' '
-        br
-        br
+        / = label_tag 'Russian Sizes:- '
+        / - Product::RUSSIAN_SIZES.each do |k,v|
+        /   = check_box_tag 'russian_sizes[]', v
+        /   = ' ' + k + ' '
+        / br
+        / br
 
-      / = label_tag 'PART_TYPES :-'
+      = label_tag 'PART_TYPES :-'
 
-      / = select_tag :part_types, options_for_select(Product::PART_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
-      / br
-      / br
+      = select_tag :part_types, options_for_select(Product::PART_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
+      br
+      br
 
-      / = label_tag 'SKIN TYPES :-'
-      / = select_tag :skin_types, options_for_select(Product::SKIN_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
+      = label_tag 'SKIN TYPES :-'
+      = select_tag :skin_types, options_for_select(Product::SKIN_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
 
-      / br
-      / br
-      / = label_tag 'CONDITIONS :-'
-      / = select_tag :conditions, options_for_select(Product::CONDITIONS.keys.to_a), :prompt => "Please select", :include_blank => true
+      br
+      br
+      = label_tag 'CONDITIONS :-'
+      = select_tag :conditions, options_for_select(Product::CONDITIONS.keys.to_a), :prompt => "Please select", :include_blank => true
 
       br
       br

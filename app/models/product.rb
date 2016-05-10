@@ -365,7 +365,7 @@ class Product < ActiveRecord::Base
     end
   end
 
-  def self.import(doc, category, cat_id, lit_num, stock, gender, p_type, industry, p_size, r_sizes, _p_types, _s_types, _conditions)
+  def self.import(doc, category, cat_id, lit_num, stock, gender, p_type, industry, p_size, p_types, s_types, conditions)
     parsed_products = doc.xpath('//offer')
 
     count = 0
@@ -377,11 +377,11 @@ class Product < ActiveRecord::Base
                         product.at_xpath('name').text
                       end
 
-      # if remote_image_exists?(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]) == false
-      #   image_link = nil
-      # else
+       if remote_image_exists?(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]) == false
+         image_link = nil
+      else
       image_link = redirected_url(URI.extract(URI.encode(product.at_xpath('picture').text.strip))[0])
-      # end
+       end
 
       count += 1
       pro_brand = Product.create!(
@@ -398,10 +398,10 @@ class Product < ActiveRecord::Base
         product_type: p_type,
         industry: industry,
         size: p_size,
-        russian_sizes: r_sizes,
-      # part_types: p_types,
-      # skin_types: s_types,
-      # conditions: conditions
+        #russian_sizes: r_sizes,
+        part_types: p_types,
+        skin_types: s_types,
+        conditions: conditions
       )
 
       if product.at_xpath('vendor').nil?
