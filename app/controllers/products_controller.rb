@@ -88,8 +88,10 @@ class ProductsController < ApplicationController
       file = params[:xml_file]
       doc = Nokogiri::XML::Document.parse(file)
       total_product = doc.xpath('//offer').take(params[:limit_number].to_i).length
-
-      Product.import(doc, params[:category_id], params[:stranger_category], params[:limit_number], params[:stock], params[:gender], params[:product_type], params[:industry], params[:size], params[:part_types], params[:skin_types], params[:conditions])
+      if params[:russian_sizes].nil?
+        params[:russian_sizes] = []
+      end
+      Product.import(doc, params[:category_id], params[:stranger_category], params[:limit_number], params[:stock], params[:gender], params[:product_type], params[:industry], params[:size], params[:russian_sizes], params[:part_types], params[:skin_types], params[:conditions])
       redirect_to products_path, notice: "#{total_product} Product added."
     end
   end

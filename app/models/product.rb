@@ -365,7 +365,7 @@ class Product < ActiveRecord::Base
     end
   end
 
-  def self.import(doc, category, cat_id, lit_num, stock, gender, p_type, industry, p_size, p_types, s_types, conditions)
+  def self.import(doc, category, cat_id, lit_num, stock, gender, p_type, industry, p_size, r_sizes, p_types, s_types, conditions)
     parsed_products = doc.xpath('//offer')
 
     count = 0
@@ -398,7 +398,7 @@ class Product < ActiveRecord::Base
         product_type: p_type,
         industry: industry,
         size: p_size,
-        #russian_sizes: r_sizes,
+        russian_sizes: r_sizes,
         part_types: p_types,
         skin_types: s_types,
         conditions: conditions
