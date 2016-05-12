@@ -40,6 +40,8 @@ set :assets_dependencies, %w(app/assets lib/assets vendor/assets Gemfile.lock co
 Rake::Task["deploy:assets:precompile"].clear_actions
 class PrecompileRequired < StandardError; end
 
+after 'deploy:publishing', 'deploy:restart'
+
 namespace :deploy do
 
   desc 'Start unicorn'
