@@ -2,7 +2,7 @@ lock '3.4.0'
 
 set :application, 'demo.rees46.com'
 
-set :repo_url, 'git@rees46-rails.bitbucket.org:mkechinov/rees46_demoshop.git'
+set :repo_url, 'git@github.com:rees46/rees46_demoshop.git'
 set :scm, :git
 
 set :deploy_to, "/home/rails/#{fetch(:application)}"
@@ -10,8 +10,8 @@ set :deploy_via,      :remote_cache
 set :ssh_options,     {forward_agent: true}
 set :use_sudo,        false
 set :keep_releases, 5
-set :linked_files, %w(config/database.yml config/mongoid.yml config/secrets.yml config/unicorn.rb)
-set :linked_dirs, %w(promotions reports public/system public/uploads public/files log pids sockets vendor/bundle nginx_mapping public/shop_css public/popup_css)
+set :linked_files, %w(config/database.yml config/secrets.yml config/unicorn.rb)
+set :linked_dirs, %w(public/system public/uploads public/files log pids sockets vendor/bundle)
 
 set :normalize_asset_timestamps, false
 
@@ -25,19 +25,15 @@ set :rvm_type, :user
 set :rvm_ruby_string, '2.2.3'
 
 # Whenever
-set :whenever_roles, "#{fetch(:rails_env)}_cron"
-set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
+# set :whenever_roles, "#{fetch(:rails_env)}_cron"
+# set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 # set :whenever_command, '~/.rvm/bin/rvm default do bundle exec whenever'
 # require 'whenever/capistrano'
 
 # Sidekiq
-set :sidekiq_env, 'production'
-set :sidekiq_options, '-C config/sidekiq.yml'
-set :sidekiq_timeout, 300
-
-set :rollbar_token, '01dea71b62614ef598348b96f8cc5cee'
-set :rollbar_env, Proc.new { fetch :stage }
-set :rollbar_role, Proc.new { :app }
+# set :sidekiq_env, 'production'
+# set :sidekiq_options, '-C config/sidekiq.yml'
+# set :sidekiq_timeout, 300
 
 # Only precompile assets when necessary [config]
 set :assets_dependencies, %w(app/assets lib/assets vendor/assets Gemfile.lock config/routes.rb)
