@@ -6,32 +6,25 @@
         li= link_to @category.root.name, @category.root
         - if @category.children.empty?
           li= link_to @category.name, @category
-
 .container
   .row
     .col-md-2
-      h1 = t('category.title')
-      br
       .checklist.categories
         ul
-          h1= link_to @category.name
+          h1= @category.name
           - @categories.each do |c, level|
             li= link_to " #{c.name}", category_path(c)
       br
       br
-
     .col-md-10
       h1.text-center[style="font-size: 25px;"]
-        = @category.name.upcase + ' COLLECTION'
+        = @category.name.upcase
       br
-
       #recommender_popular
-
       .row
         - @products.where(category_id: @category.id).each do |product|
           = render 'categories/product_categories', product: product
         .clr
-
         - if @category.children
           - @category.children.each do |child|
             - if !child.products.empty?
@@ -39,25 +32,12 @@
               br
               h1= link_to child.name, category_path(child)
               br
-            - if !child.products.empty?
-              .carousel.js-flickity
-                - @products.where(category_id: child).each do |product|
-                  = render 'categories/product_categories', product: product
-
-            - if !child.children.product.empty?
-              br
-              br
-              h1= link_to child.name, category_path(child)
-              br
-            - if !child.children.product.empty?
-              .carousel.js-flickity
-                - @products.where(category_id: child.children).each do |product|
-                  = render 'categories/product_categories', product: product
-
+            .carousel.js-flickity
+              - @products.where(category_id: child).each do |product|
+                = render 'categories/product_categories', product: product
       br
       br
         .clr
         #recommender_recently_viewed
-
         .clr
         #recommender_interesting
