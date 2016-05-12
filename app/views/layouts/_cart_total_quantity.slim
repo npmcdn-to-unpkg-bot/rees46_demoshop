@@ -1,8 +1,7 @@
 li[style=" margin-top: 18px; "]
-  = @cart.line_items.size
 - if @cart.line_items.any?
-  li= link_to cart_path(@cart)
-    i.fa.fa-shopping-basket.fa-1x
+  li = link_to cart_path(@cart)
+    i.fa.fa-shopping-basket.fa-1x = @cart.line_items.size
 - else
   li = link_to ''
-    i.fa.fa-shopping-basket.fa-1x
+    i.fa.fa-shopping-basket.fa-1x = @cart.line_items.size

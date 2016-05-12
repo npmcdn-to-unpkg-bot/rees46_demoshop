@@ -16,14 +16,7 @@ stderr_path File.join(shared, 'log/unicorn.error.log')
 stdout_path File.join(shared, 'log/unicorn.access.log')
 
 before_fork do |server, worker|
-  if defined?(ActiveRecord::Base)
-    ActiveRecord::Base.connection_proxy.instance_variable_get(:@shards).each do |shard, connection_pool|
-      connection_pool.disconnect!
-    end
-
-    ActiveRecord::Base.connection.disconnect!
-  end
-
+  ActiveRecord::Base.connection.disconnect!
   old_pid = "#{server.config[:pid]}.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
@@ -34,12 +27,7 @@ before_fork do |server, worker|
 end
 
 after_fork do |server, worker|
-  if defined?(ActiveRecord::Base)
-    ActiveRecord::Base.establish_connection
-    ActiveRecord::Base.connection_proxy.instance_variable_get(:@shards).each do |shard, connection_pool|
-      connection_pool.clear_reloadable_connections!
-    end
-  end
+  ActiveRecord::Base.establish_connection
 end
 
 # before_exec do |server|
