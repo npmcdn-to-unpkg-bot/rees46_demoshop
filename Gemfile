@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
+ruby '2.2.3'
 
 # Rails core gems
 gem 'rails', '4.2.5'
@@ -29,7 +30,11 @@ gem 'pg'
 
 # Server
 gem 'unicorn'
+gem 'capistrano', '~> 3.4.0', group: :development
+gem 'rvm-capistrano', group: :development
+gem 'capistrano-rvm', group: :development
 gem 'capistrano-rails', group: :development
+gem 'capistrano-bundler', group: :development
 gem 'curb', '~> 0.9.3'
 
 # Tamplate
@@ -60,6 +65,7 @@ group :development, :test do
   gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
   gem 'poltergeist'
   gem 'timecop'
+  gem 'rspec-rails', require: false
 end
 
 group :development do
