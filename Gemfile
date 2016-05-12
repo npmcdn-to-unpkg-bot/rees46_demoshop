@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
+ruby '2.3.1'
 
 # Rails core gems
 gem 'rails', '4.2.5'
@@ -29,7 +30,11 @@ gem 'pg'
 
 # Server
 gem 'unicorn'
+gem 'capistrano', '~> 3.4.0', group: :development
+gem 'rvm-capistrano', group: :development
+gem 'capistrano-rvm', group: :development
 gem 'capistrano-rails', group: :development
+gem 'capistrano-bundler', group: :development
 gem 'curb', '~> 0.9.3'
 
 # Tamplate
