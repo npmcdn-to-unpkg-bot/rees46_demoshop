@@ -21,5 +21,6 @@
 /config/database.yml
 /config/secrets.yml
 /public/system
+/public/assets
 /public/uploads
 rees46_demoshop.iml
