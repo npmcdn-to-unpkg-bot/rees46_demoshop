@@ -1,5 +1,6 @@
 class Category < ActiveRecord::Base
   extend ActsAsTree::TreeWalker
+  extend ActsAsTree::TreeView
   extend FriendlyId
 
   acts_as_tree order: 'name'
