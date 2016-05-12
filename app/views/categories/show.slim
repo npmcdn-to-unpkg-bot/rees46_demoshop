@@ -39,9 +39,21 @@
               br
               h1= link_to child.name, category_path(child)
               br
-            .carousel.js-flickity
-              - @products.where(category_id: child).each do |product|
-                = render 'categories/product_categories', product: product
+            - if !child.products.empty?
+              .carousel.js-flickity
+                - @products.where(category_id: child).each do |product|
+                  = render 'categories/product_categories', product: product
+
+            - if !child.children.product.empty?
+              br
+              br
+              h1= link_to child.name, category_path(child)
+              br
+            - if !child.children.product.empty?
+              .carousel.js-flickity
+                - @products.where(category_id: child.children).each do |product|
+                  = render 'categories/product_categories', product: product
+
       br
       br
         .clr
