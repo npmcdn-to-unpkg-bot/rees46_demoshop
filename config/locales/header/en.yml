@@ -3,4 +3,6 @@ en:
     destroy_user_session: "Logout"
     edit_user_registration: "Edit Profile"
     dashboard: "Admin Board"
-  root_title: "REES46 Demo Store"
+    login: "Login"
+    singup: "Sign Up"
+  root_title: "REES46 Demoshop"
