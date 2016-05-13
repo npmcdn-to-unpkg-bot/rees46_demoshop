@@ -3,10 +3,11 @@
     .col-md-8
       ol.breadcrumb
         li = link_to t('product.root_path'), root_path
-        li = link_to @product.category.root.name.upcase, category_path(@category.root)
-        - if @product.category.children.empty?
+        - if !@product.category.nil?
+          li = link_to @product.category.root.name.upcase, category_path(@category.root)
+        - if !@product.category.nil?
           li= link_to @product.category.name, category_path(@category)
-        li.breadcrumb-title = link_to @product.title.upcase
+        li.breadcrumb-title = @product.title.upcase
 
 
 .container
@@ -189,7 +190,7 @@ javascript:
           return el.cart
         }),
         limit: 24,
-        modification: '#{@product.category.human_categories_industry}'
+        modification: '#{@product.category.try(:human_categories_industry)}'
         }, cf_also_bought);
     });
 
@@ -201,7 +202,7 @@ javascript:
           return el.cart
         }),
         limit: 24,
-        modification: '#{@product.category.human_categories_industry}'
+        modification: '#{@product.category.try(:human_categories_industry)}'
         }, cf_interesting);
     });
 
@@ -214,7 +215,7 @@ javascript:
         }),
         //categories: ['#{@product.category_id}'],
         limit: 24,
-        modification: '#{@product.category.human_categories_industry}'
+        modification: '#{@product.category.try(:human_categories_industry)}'
         }, cf_similer);
     });
   }
