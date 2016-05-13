@@ -8,10 +8,17 @@ javascript:
     }
     
     function initREES46 () {
-      REES46.init('357382bf66ac0ce2f1722677c59511', {
-        id:"#{current_user.id if user_signed_in?}",
-        email:"#{current_user.email if user_signed_in?}",
-     }, callback);
+      var email = "#{current_user.email if user_signed_in?}";
+      var user_info = new Object();
+      var user = #{user_signed_in? ? current_user.id : 'null'}
+      user_info = {id: user, email: email}
+
+        if (user === null ) {
+          user_info = null
+        }
+        console.log(user_info)
+        console.log()
+      REES46.init('357382bf66ac0ce2f1722677c59511', user_info, callback);
     };
 
     var script = document.createElement('script');

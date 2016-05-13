@@ -348,3 +348,12 @@ h1 {
   background: -ms-linear-gradient(top, #1d5e9e 0%,#134271 100%);
   background: linear-gradient(to bottom, #1d5e9e 0%,#134271 100%);
 }
+
+// Header cart style
+.header_cart {
+  margin-top: 32px;
+  display: flex;
+  .basket {
+    margin-left: 15px;
+  }
+}

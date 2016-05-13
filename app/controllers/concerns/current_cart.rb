@@ -9,4 +9,9 @@ module CurrentCart
     @cart = Cart.create
     session[:cart_id] = @cart.id
   end
+
+  def find_cart
+    @cart = Cart.find(session[:cart_id]) if session[:cart_id].present?
+  rescue ActiveRecord::RecordNotFound
+  end
 end

@@ -47,7 +47,7 @@ javascript:
   };
 
   function afterInitRees46() {
-    var cart_product_ids = '#{ProductsInfo.new(@cart.line_items).product_ids_in_cart.to_json.html_safe}'
+    var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
 
     REES46.addReadyListener(function () {
       REES46.recommend({

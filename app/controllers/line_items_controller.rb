@@ -1,5 +1,5 @@
 class LineItemsController < ApplicationController
-  before_action :set_cart, only: [:create, :increment, :decrement, :destroy]
+  before_action :set_cart
   before_action :find_line_item, only: [:increment, :decrement, :destroy]
 
   def create

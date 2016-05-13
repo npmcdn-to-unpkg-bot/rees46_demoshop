@@ -46,7 +46,7 @@ ru:
     qty: "КОЛ"
     price: "ЦЕНА"
     root_path: "Продолжить покупки"
-    new_order: "Проверка"
+    new_order: "Оформить заказ"
     empty: "Очистить корзину"
     total: "Cумма"
     notice_controller: "Ваша корзина пуста"
