@@ -7,16 +7,8 @@
         li= link_to @category.name, @category
 
 .row
-  .col-md-2
-    .checklist.categories
-      ul
-        /h1= @category.name
-        / - @categories.each do |c, level|
-        /     li= link_to " #{c.name}", category_path(c)
-    br
-    br
-  .col-md-10
-    h1.text-center[style="font-size: 25px;"]
+  .col-md-12
+    h1.text-center
       = @category.name.upcase
     br
     #recommender_popular
@@ -29,7 +21,8 @@
           - if !child.products.empty?
             br
             br
-            h1= link_to child.name, category_path(child)
+            .category_title
+              h1= link_to child.name, category_path(child)
             br
           - if !child.products.empty?
             .carousel.js-flickity data-flickity-options=("{ \"cellAlign\": \"left\" }") 
@@ -38,7 +31,8 @@
           - if !child.children.product.empty?
             br
             br
-            h1= link_to child.name, category_path(child)
+            .category_title
+              h1= link_to child.name, category_path(child)
             br
           - if !child.children.product.empty?
             .carousel.js-flickity data-flickity-options=("{ \"cellAlign\": \"left\" }") 
