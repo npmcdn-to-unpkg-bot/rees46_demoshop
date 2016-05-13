@@ -1,29 +1,14 @@
 <% if ( @recommender == 'popular') %>
   var recommender = 'popular'
-  console.log(recommender)
-  $('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
-  var elem = document.querySelector('.' + recommender);
-  var flkty = new Flickity( elem, {
-    cellAlign: 'left'
-  });
+  <%= render 'categories/recommender.js.erb', recommender: @recommender  %>
 <% end %>
 
 <% if ( @recommender == 'recently_viewed')%>
   var recommender = 'recently_viewed'
-  console.log('#recommender_' + recommender)
-  $('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
-  var elem = document.querySelector('.' + recommender);
-  var flkty = new Flickity( elem, {
-    cellAlign: 'left'
-  });
+  <%= render 'categories/recommender.js.erb',  recommender: @recommender %>
 <% end %>
 
 <% if ( @recommender == 'interesting') %>
   var recommender = 'interesting'
-  console.log(recommender)
-  $('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
-  var elem = document.querySelector('.' + recommender);
-  var flkty = new Flickity( elem, {
-    cellAlign: 'left'
-  });
+  <%= render 'categories/recommender.js.erb', recommender: @recommender  %>
 <% end %>

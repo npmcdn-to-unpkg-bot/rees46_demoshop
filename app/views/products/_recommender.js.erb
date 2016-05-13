@@ -1,0 +1,5 @@
+$('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
+var elem = document.querySelector('.' + recommender);
+var flkty = new Flickity( elem, {
+  cellAlign: 'left'
+});
