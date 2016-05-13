@@ -33,7 +33,7 @@
               h1= link_to child.name, category_path(child)
               br
             - if !child.products.empty?
-              .carousel.js-flickity
+              .carousel.js-flickity data-flickity-options=("{ \"cellAlign\": \"left\" }") 
                 - @products.where(category_id: child).each do |product|
                   = render 'categories/product_categories', product: product
             - if !child.children.product.empty?
@@ -42,7 +42,7 @@
               h1= link_to child.name, category_path(child)
               br
             - if !child.children.product.empty?
-              .carousel.js-flickity
+              .carousel.js-flickity data-flickity-options=("{ \"cellAlign\": \"left\" }") 
                 - @products.where(category_id: child.children).each do |product|
                   = render 'categories/product_categories', product: product
       br
