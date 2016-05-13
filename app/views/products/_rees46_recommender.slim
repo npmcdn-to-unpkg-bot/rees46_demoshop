@@ -3,9 +3,9 @@
     hr
     - if @recommender == "interesting"
       h1 Возможно, вам это понравится
-    - elsif @recommender == "similar"
+    - if @recommender == "similar"
       h1 Похожие товары
-    - else @recommender == "also_bought"
+    - if @recommender == "also_bought"
       h1 С этим товаром покупают
     br
     br

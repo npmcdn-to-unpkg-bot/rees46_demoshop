@@ -1,22 +1,28 @@
-<% if (@recommender == 'popular') %>
-  jQuery('#recommender_popular').html("<%= j render(partial: 'rees46_popular.slim', locals: { products: @products, recommender: @recommender }) %>");
-  var elem = document.querySelector('.delayed-flickity');
+<% if ( @recommender == 'popular') %>
+  var recommender = 'popular'
+  console.log(recommender)
+  $('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.' + recommender);
   var flkty = new Flickity( elem, {
     cellAlign: 'left'
   });
 <% end %>
 
-<% if (@recommender == 'recently_viewed') %>
-  jQuery('#recommender_recently_viewed').html("<%= j render(partial: 'rees46_recently_viewed.slim', locals: { products: @products, recommender: @recommender }) %>");
-  var elem = document.querySelector('.delayed-rv-flickity');
+<% if ( @recommender == 'recently_viewed')%>
+  var recommender = 'recently_viewed'
+  console.log('#recommender_' + recommender)
+  $('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.' + recommender);
   var flkty = new Flickity( elem, {
     cellAlign: 'left'
   });
 <% end %>
 
-<% if (@recommender == 'interesting') %>
-  jQuery('#recommender_interesting').html("<%= j render(partial: 'rees46_interesting.slim', locals: { products: @products, recommender: @recommender }) %>");
-  var elem = document.querySelector('.delayed-i-flickity');
+<% if ( @recommender == 'interesting') %>
+  var recommender = 'interesting'
+  console.log(recommender)
+  $('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.' + recommender);
   var flkty = new Flickity( elem, {
     cellAlign: 'left'
   });

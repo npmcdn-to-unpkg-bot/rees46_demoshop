@@ -1,27 +1,29 @@
-// var recommender = <% @recommender %>
-//
-// <% if ( @recommender == 'also_bought') %>
-//   jQuery('#recommender_' + recommender).html("<%= j render(partial: 'rees46_also_bought.slim', locals: { products: @products, recommender: @recommender }) %>");
-//   var elem = document.querySelector('.delayed-as-flickity');
-//   var flkty = new Flickity( elem, {
-//     cellAlign: 'left'
-//   });
-// <% end %>
-
-<% if ( @recommender == 'interesting') %>
-  var recommender = 'interesting'
+<% if ( @recommender == 'also_bought') %>
+  var recommender = 'also_bought'
   console.log(recommender)
-  jQuery('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
-  var elem = document.querySelector('.interesting');
+  $('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.' + recommender);
   var flkty = new Flickity( elem, {
     cellAlign: 'left'
   });
 <% end %>
 
-//<% if ( @recommender == 'similar') %>
-//  jQuery('#recommender_' + recommender).html("<%= j render(partial: 'rees46_similer.slim', locals: { products: @products, recommender: @recommender }) %>");
-//  var elem = document.querySelector('.delayed-s-flickity');
-//  var flkty = new Flickity( elem, {
-//    cellAlign: 'left'
-//  });
-//<% end %>
+<% if ( @recommender == 'interesting') %>
+  var recommender = 'interesting'
+  console.log(recommender)
+  $('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.' + recommender);
+  var flkty = new Flickity( elem, {
+    cellAlign: 'left'
+  });
+<% end %>
+
+<% if ( @recommender == 'similar')%>
+  var recommender = 'similar'
+  console.log('#recommender_' + recommender)
+  $('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
+  var elem = document.querySelector('.' + recommender);
+  var flkty = new Flickity( elem, {
+    cellAlign: 'left'
+  });
+<% end %>

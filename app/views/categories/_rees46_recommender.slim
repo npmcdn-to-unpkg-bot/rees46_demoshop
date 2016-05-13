@@ -1,0 +1,14 @@
+- if products.present?
+  hr
+  - if @recommender == "popular"
+    h1 Возможно, вам это понравится
+  - if @recommender == "recently_viewed"
+    h1 Популярные товары
+  - if @recommender == "interesting"
+    h1 С этим товаром покупают
+  br
+  br
+  br
+  .row
+    div class="carousel js-flickity #{recommender}"
+      = render "recommend_cat_products"
