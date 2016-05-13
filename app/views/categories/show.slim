@@ -6,7 +6,7 @@
         li= link_to @category.root.name, @category.root
         - if @category.children.empty?
           li= link_to @category.name, @category
-.container
+
   .row
     .col-md-2
       .checklist.categories
