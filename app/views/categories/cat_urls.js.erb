@@ -1,14 +1,14 @@
-<% if ( @recommender == 'popular') %>
+<% if  @recommender == 'popular' %>
   var recommender = 'popular'
   <%= render 'categories/recommender.js.erb', recommender: @recommender  %>
 <% end %>
 
-<% if ( @recommender == 'recently_viewed')%>
+<% if  @recommender == 'recently_viewed'%>
   var recommender = 'recently_viewed'
   <%= render 'categories/recommender.js.erb',  recommender: @recommender %>
 <% end %>
 
-<% if ( @recommender == 'interesting') %>
+<% if  @recommender == 'interesting' %>
   var recommender = 'interesting'
   <%= render 'categories/recommender.js.erb', recommender: @recommender  %>
 <% end %>

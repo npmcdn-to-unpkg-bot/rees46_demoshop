@@ -1,11 +1,13 @@
 - if products.present?
   hr
-  - if @recommender == "popular"
-    h1 Возможно, вам это понравится
-  - if @recommender == "recently_viewed"
-    h1 Популярные товары
-  - if @recommender == "interesting"
-    h1 С этим товаром покупают
+  - rec = @recommender
+  - case rec
+    - when "popular"
+      h1 Возможно, вам это понравится
+    - when "recently_viewed"
+      h1 Популярные товары
+    - when  "interesting"
+      h1 С этим товаром покупают
   br
   br
   br
