@@ -1,14 +1,16 @@
-<% if ( @recommender == 'also_bought') %>
+<% rec = @recommender %>
+<% render_product_template = render 'products/recommender.js.erb', recommender: @recommender %>
+
+<% case rec %>
+  <% when 'also_bought' %>
   var recommender = 'also_bought'
-  <%= render 'products/recommender.js.erb', recommender: @recommender  %>
-<% end %>
+  <%= render_product_template %>
 
-<% if ( @recommender == 'interesting') %>
+  <% when 'interesting') %>
   var recommender = 'interesting'
-  <%= render 'products/recommender.js.erb', recommender: @recommender  %>
-<% end %>
+  <%= render_product_template %>
 
-<% if ( @recommender == 'similar')%>
+  <% when 'similar' %>
   var recommender = 'similar'
-  <%= render 'products/recommender.js.erb', recommender: @recommender  %>
+  <%= render_product_template %>
 <% end %>

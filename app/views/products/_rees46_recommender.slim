@@ -1,12 +1,14 @@
 .container
   - if products.present?
     hr
-    - if @recommender == "interesting"
-      h1 Возможно, вам это понравится
-    - if @recommender == "similar"
-      h1 Похожие товары
-    - if @recommender == "also_bought"
-      h1 С этим товаром покупают
+    - rec = @recommender
+    - case rec
+      - when "interesting"
+        h1 Возможно, вам это понравится
+      - when "similar"
+        h1 Похожие товары
+      - when "also_bought"
+        h1 С этим товаром покупают
     br
     br
     br
