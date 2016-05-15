@@ -144,7 +144,9 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-bootstrap-views (0.0.8)
     devise-i18n (1.0.1)
+    devise-i18n-views (0.3.7)
     diff-lcs (1.2.5)
     diffy (3.1.0)
     erubis (2.7.0)
@@ -393,7 +395,9 @@ DEPENDENCIES
   compass-rails!
   curb (~> 0.9.3)
   devise (~> 3.5, >= 3.5.6)
+  devise-bootstrap-views (~> 0.0.8)
   devise-i18n
+  devise-i18n-views (~> 0.3.7)
   font-awesome-rails
   friendly_id (~> 5.1.0)
   jazz_hands!

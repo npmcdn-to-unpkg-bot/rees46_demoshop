@@ -52,6 +52,8 @@ gem 'friendly_id', '~> 5.1.0'
 
 # Users
 gem 'devise', '~> 3.5', '>= 3.5.6'
+gem 'devise-i18n-views', '~> 0.3.7'
+gem 'devise-bootstrap-views', '~> 0.0.8'
 gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'rolify', '~> 5.0'
 

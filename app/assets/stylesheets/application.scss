@@ -14,6 +14,7 @@
  *= require_tree .
  *= require redactor-rails
  *= require jquery-ui
+ *= require devise_bootstrap_views
  */
  @import "compass/reset";
  @import "bootstrap-sprockets";
