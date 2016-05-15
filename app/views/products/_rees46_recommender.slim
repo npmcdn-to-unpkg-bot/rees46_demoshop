@@ -1,17 +1,16 @@
-.container
-  - if products.present?
-    hr
-    - rec = @recommender
-    - case rec
-      - when "interesting"
-        h1 Возможно, вам это понравится
-      - when "similar"
-        h1 Похожие товары
-      - when "also_bought"
-        h1 С этим товаром покупают
-    br
-    br
-    br
-    .row
-      div class="carousel js-flickity #{recommender}"
-        = render "recommend_products"
+- if products.present?
+  hr
+  - rec = @recommender
+  - case rec
+    - when 'also_bought'
+      h1 С этим товаром покупают
+    - when 'interesting'
+      h1 Возможно, вам это понравится
+    - when 'similar'
+      h1 Похожие товары
+  br
+  br
+  br
+  .row
+    div class="carousel js-flickity #{recommender}"
+      = render "recommend_products"

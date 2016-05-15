@@ -99,15 +99,14 @@
 .products
   #recommender_also_bought
   .clr
-  #recommender_similer
-  .clr
   #recommender_interesting
+  .clr
+  #recommender_similar
   .clr
 br
 br
 javascript:
   var cf_also_bought = function(data){
-    // jQuery code
     if(data.length > 0) {
       $.ajax({
         type: "POST",
@@ -116,52 +115,39 @@ javascript:
       });
       return false;
     } else {
-      console.log("Not work or id nil")
-      var url = 'products_urls';
-      $.ajax({
-        type: "POST",
-        url: 'products_urls',
-        data: {ids: data, recommender: 'also_bought'},
-      });
-    }
-  };
-
-  var cf_similer = function(data){
-    // jQuery code
-    if(data.length > 0) {
-      $.ajax({
-        type: "POST",
-        url: 'products_urls',
-        data: {ids: data, recommender: 'similar'},
-      });
-      return false;
-    } else {
-      console.log("Not work or id nil, similar")
-      $.ajax({
-        type: "POST",
-        url: 'products_urls',
-        data: {ids: data, recommender: 'similar'},
-      });
+      console.log("Check why not work also_bought")
     }
   };
 
   var cf_interesting = function(data){
-    // jQuery code
     if(data.length > 0) {
-      var url = 'products_urls';
       $.ajax({
         type: "POST",
         url: 'products_urls',
         data: {ids: data, recommender: 'interesting'},
       });
       return false;
+    } else {
+      console.log("Check why not work interesting")
+    }
+  };
+
+  var cf_similar = function(data){
+    if(data.length > 0) {
+      $.ajax({
+        type: "POST",
+        url: 'products_urls',
+        data: {ids: data, recommender: 'similar'},
+      });
+      return false;
+    } else {
+      console.log("Check why not work similar")
     }
   };
 
   function afterInitRees46() {
     var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
-    //console.log("#{@product.stock?}")
-    console.log("#{@product.available?}")
+
     REES46.addReadyListener(function () {
       REES46.pushData('view', {
         item_id: '#{@product.id}',
@@ -207,15 +193,16 @@ javascript:
     });
 
     REES46.addReadyListener(function () {
+      console.log('#{@product.category_id}')
       REES46.recommend({
         recommender_type: 'similar',
         item: '#{@product.id}',
         cart: JSON.parse(cart_product_ids).map(function(el){
           return el.cart
         }),
-        //categories: ['#{@product.category_id}'],
+        categories: '#{@product.category_id}',
         limit: 24,
         modification: '#{@product.category.try(:human_categories_industry)}'
-        }, cf_similer);
+        }, cf_similar);
     });
   }
