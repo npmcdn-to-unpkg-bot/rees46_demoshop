@@ -1,7 +1,11 @@
 li
   .header_cart
     - if !@cart.try(:line_items).nil?
-      = link_to cart_path(@cart), class: 'basket'
-        span.glyphicon.glyphicon-shopping-cart = " #{@cart.line_items.size}"
+      = link_to cart_path(@cart)
+        span.glyphicon.glyphicon-shopping-cart
+        span.cart-count
+          = "#{@cart.line_items.size}"
     - else
-        span.glyphicon.glyphicon-shopping-cart = " 0"
+      span.glyphicon.glyphicon-shopping-cart
+        span.cart-count
+          = "0"

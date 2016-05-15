@@ -351,9 +351,11 @@ h1 {
 
 // Header cart style
 .header_cart {
-  margin-top: 32px;
+  margin-top: 26px;
   display: flex;
-  .basket {
-    margin-left: 15px;
-  }
+}
+
+.cart-count {
+  font-size: 18px;
+  padding-left: 5px;
 }
