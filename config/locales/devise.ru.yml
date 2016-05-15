@@ -93,7 +93,7 @@ ru:
       signed_out: "Выход из системы выполнен."
     shared:
       links:
-        back: "Назад"
+        back: "Вернуться к администратора панель"
         didn_t_receive_confirmation_instructions: "Не получили подтверждение?"
         didn_t_receive_unlock_instructions: "Не получили код разблокировки?"
         forgot_your_password: "Забыли пароль?"
