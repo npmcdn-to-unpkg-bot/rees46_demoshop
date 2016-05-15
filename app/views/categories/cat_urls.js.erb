@@ -1,14 +1,13 @@
-<% if  @recommender == 'popular' %>
-  var recommender = 'popular'
-  <%= render 'categories/recommender.js.erb', recommender: @recommender  %>
-<% end %>
-
-<% if  @recommender == 'recently_viewed'%>
-  var recommender = 'recently_viewed'
-  <%= render 'categories/recommender.js.erb',  recommender: @recommender %>
-<% end %>
-
-<% if  @recommender == 'interesting' %>
-  var recommender = 'interesting'
-  <%= render 'categories/recommender.js.erb', recommender: @recommender  %>
+<% rec = @recommender %>
+<% redner_template = render 'categories/recommender.js.erb', recommender: @recommender %>
+<% case rec %>
+  <% when 'popular' %>
+    var recommender = 'popular'
+    <%= redner_template %>
+  <% when 'recently_viewed'%>
+    var recommender = 'recently_viewed'
+    <%= redner_template %>
+  <% when 'interesting' %>
+    var recommender = 'interesting'
+    <%= redner_template  %>
 <% end %>
