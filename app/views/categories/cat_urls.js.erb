@@ -1,13 +1,13 @@
 <% rec = @recommender %>
-<% redner_template = render 'categories/recommender.js.erb', recommender: @recommender %>
+<% redner_category_template = render 'categories/recommender.js.erb', recommender: @recommender %>
 <% case rec %>
   <% when 'popular' %>
     var recommender = 'popular'
-    <%= redner_template %>
+    <%= redner_category_template %>
   <% when 'recently_viewed'%>
     var recommender = 'recently_viewed'
-    <%= redner_template %>
+    <%= redner_category_template %>
   <% when 'interesting' %>
     var recommender = 'interesting'
-    <%= redner_template  %>
+    <%= redner_category_template  %>
 <% end %>
