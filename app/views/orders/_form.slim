@@ -7,9 +7,11 @@
       - @order.errors.full_messages.each do |msg|
         li
           = msg
+  .row
+    .col-md-4.col-md-offset-4
+      h1 = t('order.form.title')
+      = f.input :name, label: t('order.form.input_name')
+      = f.input :address, label: t('order.form.input_address')
+      = f.input :email, label: t('order.form.input_email')
 
-  = f.input :name
-  = f.input :address
-  = f.input :email
-
-  = f.submit "Place Order"
+      = f.submit t('order.submit')

@@ -50,3 +50,13 @@ en:
     empty: "Empty Cart"
     total: "Total"
     notice_controller: "Your cart currently empty."
+  order:
+    title: "Checkout"
+    input_name: "Name"
+    input_address: "Address"
+    input_email: "Email"
+    submit: "Place Order"
+    show:
+      title: "Thanks for your order "
+      order_id: "Your order id:-"
+      root_link: "Back to store"

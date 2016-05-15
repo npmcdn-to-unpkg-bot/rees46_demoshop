@@ -32,7 +32,7 @@ ru:
     t_order_id: "НОМЕР ЗАКАЗА"
     t_name: "ИМЯ"
     t_address: "АДРЕС"
-    t_email: "EMAIL"
+    t_email: "ЭЛ. АДРЕС"
 
   category:
     title: "Категория"
@@ -50,3 +50,15 @@ ru:
     empty: "Очистить корзину"
     total: "Cумма"
     notice_controller: "Ваша корзина пуста"
+
+  order:
+    form:
+      title: "Оформить заказ"
+      input_name: "Имя"
+      input_address: "Адрес"
+      input_email: "ЭЛ. АДРЕС"
+      submit: "Разместить заказ"
+    show:
+      title: "Спасибо за ваш заказ"
+      order_id: "Ваш заказа номер:-"
+      root_link: "Вернуться на главную страницу"

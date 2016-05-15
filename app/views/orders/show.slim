@@ -1,13 +1,13 @@
-h2.text-center Thanks for your order 
-h2.text-center Your Product Details
-
-h5 Your order id:-  #{@order.id}
-
-br
-br
-
-.clr
-= link_to 'Back to store', root_path, class: 'btn btn-default'
+.row
+  .col-md-4.col-md-offset-4
+    h1 = t('order.show.title')
+    h5
+      span
+        = t('order.show.order_id')
+      span
+        = @order.id
+    .clr
+    = link_to t('order.show.root_link'), root_path, class: 'btn btn-warning'
 
 javascript:
   function afterInitRees46() {
