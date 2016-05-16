@@ -2,10 +2,10 @@ li
   .header_cart
     - if !@cart.try(:line_items).nil?
       = link_to cart_path(@cart)
-        span.glyphicon.glyphicon-shopping-cart
         span.cart-count
+          span.glyphicon.glyphicon-shopping-cart
           = "#{@cart.line_items.size}"
     - else
-      span.glyphicon.glyphicon-shopping-cart
-        span.cart-count
-          = "0"
+      span.cart-count
+        span.glyphicon.glyphicon-shopping-cart
+        = "0"

@@ -351,11 +351,14 @@ h1 {
 
 // Header cart style
 .header_cart {
-  margin-top: 26px;
+  margin-top: 27px;
   display: flex;
 }
 
 .cart-count {
-  font-size: 18px;
-  padding-left: 5px;
+  font-size: 17px;
+  .glyphicon {
+    font-size: 13px;
+    padding-right: 5px;
+  }
 }
