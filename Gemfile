@@ -17,7 +17,6 @@ gem 'simple_form'
 gem 'nested_form'
 
 # Use SCSS for stylesheets
-# gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'redactor-rails', '~> 0.5.0'
 gem 'font-awesome-rails'
@@ -58,7 +57,7 @@ gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'rolify', '~> 5.0'
 
 # Notifier
-# gem 'rollbar', '~> 2.11', '>= 2.11.3'
+gem 'rollbar'
 
 # internationalize
 gem 'rails-i18n', '~> 4.0', '>= 4.0.8'
