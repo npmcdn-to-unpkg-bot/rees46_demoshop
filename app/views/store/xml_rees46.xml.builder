@@ -11,15 +11,12 @@ xml.yml_catalog("date"=>"#{Time.now.strftime("%d/%m/%Y %H:%M")}") do
     end
 
     xml.categories do
-      @categories.each do |category|
-        xml.category("#{category.name}","id"=>"#{category.id}")
-          if category.children.any?
-            category.walk_tree do |c, level|
-              xml.category("id"=>"#{c.id}", "parentId" => "#{category.id}") {
-                xml.text! "#{c.name}"
-              }
-            end
-          end
+      @categories.where.not(slug: "categories-industry").each do |category|
+        if !category.parent
+          xml.category("#{category.name}","id"=>"#{category.id}")
+        else
+          xml.category("#{category.name}","id"=>"#{category.id}", "parentId" => "#{category.parent.id}")
+        end
       end
     end
 

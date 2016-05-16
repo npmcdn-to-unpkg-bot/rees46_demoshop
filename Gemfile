@@ -58,7 +58,7 @@ gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'rolify', '~> 5.0'
 
 # Notifier
-gem 'rollbar', '~> 2.11', '>= 2.11.3'
+# gem 'rollbar', '~> 2.11', '>= 2.11.3'
 
 # internationalize
 gem 'rails-i18n', '~> 4.0', '>= 4.0.8'
