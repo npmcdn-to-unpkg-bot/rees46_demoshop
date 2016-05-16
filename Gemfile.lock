@@ -397,7 +397,7 @@ DEPENDENCIES
   compass-rails!
   curb (~> 0.9.3)
   devise (~> 3.5, >= 3.5.6)
-  devise-bootstrap-views (~> 0.0.8)
+  devise-bootstrap-views
   devise-i18n
   devise-i18n-views (~> 0.3.7)
   font-awesome-rails
