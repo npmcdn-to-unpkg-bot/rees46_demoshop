@@ -1,19 +1,15 @@
 .container
   .row
     h1.text-center = t('dashboard.title')
-    br
 
-    .col-md-4.text-center.col-md-offset-4
-      = link_to t('dashboard.category'), categories_path, class: 'btn btn-default', style: "margin-right: 15px;"
-      = link_to t('dashboard.product'), products_path, class: 'btn btn-default', style: "margin-right: 15px;"
-      = link_to t('dashboard.brand'), brands_path, class: 'btn btn-default', style: "margin-right: 15px;"
+    .col-md-12.text-center.dashboard-menu
+      = link_to t('dashboard.category'), categories_path, class: 'btn btn-default'
+      = link_to t('dashboard.product'), products_path, class: 'btn btn-default'
+      = link_to t('dashboard.brand'), brands_path, class: 'btn btn-default'
 
-br
-br
-.container
   h1.text-center = t('dashboard.order_lists')
-  br
-  table.table.table-bordered.table-striped
+
+  table.table.table-bordered.table-striped.dashboard-table
     thead
       tr
         th
