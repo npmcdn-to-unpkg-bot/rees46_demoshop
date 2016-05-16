@@ -8,13 +8,13 @@ javascript:
     }
     
     function initREES46 () {
-      var email = "#{user_signed_in? ? current_user.email : 'null'}";
+      var email = #{user_signed_in? ? current_user.email : 'null'};
       var user_info = new Object();
-      var user = #{user_signed_in? ? current_user.id : 'null'}
-      user_info = {id: user, email: email}
+      var user = #{user_signed_in? ? current_user.id : 'null'};
+      user_info = {id: user, email: email};
 
         if (user === null ) {
-          user_info = null
+          user_info = null;
         }
       REES46.init('357382bf66ac0ce2f1722677c59511', user_info, callback);
     };
