@@ -2,9 +2,6 @@
   = f.input :value
 .col-md-4
   = f.input :value_price
-.col-md-2
-  br
-  p 
-    strong
-      = f.link_to_remove "Remove"
+.col-md-2.value-remove-button
+  = f.link_to_remove "Remove", class: 'btn btn-danger'
 .clr
