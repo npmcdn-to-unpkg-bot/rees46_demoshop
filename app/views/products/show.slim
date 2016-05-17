@@ -9,31 +9,16 @@
           li= link_to @product.category.name, category_path(@category)
         li.breadcrumb-title = @product.title.upcase
 
-
-.container
   .row
     .col-md-6
       = image_tag @product.image, class: 'img-responsive show-img'
-      br
-      br
-      br
-
 
     .col-md-6
-      - if !@product.brand.nil?
-        = link_to @product.brand.name, brand_path(@product.brand)
-      br
-      br
-      br
-      br
+      / - if !@product.brand.nil?
+      /   = link_to @product.brand.name, brand_path(@product.brand)
       h1= @product.title
-      br
-      br
-      br
       .price
         = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
-      br
-      br
       = simple_form_for @line_item, remote: true do |f|
         #errors_log
           - if @line_item.errors.any?
@@ -56,10 +41,6 @@
             = render "industry_child", :f => f
             
           = f.input :product_id, as: :hidden, :input_html => { :value => @product.id } if @product.show_product_id?
-        br
-        br
-        br
-
             .clr
             #add-to-cart-button
               - if @product.stock == 0 
@@ -80,20 +61,11 @@
                       .col-sm-6
                         = image_tag(@product.image.medium, class: "img-fit")
                       .col-sm-6
-                        br
-                        br
                         = @product.title.upcase
-                        br
-                        br
                         = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
-                        br
-                        br
                         h1= link_to "Перейти в корзину", @cart
-
       .clr
-      br
-      br
-
+      
 .clr
 
 .products
@@ -103,8 +75,7 @@
   .clr
   #recommender_similar
   .clr
-br
-br
+
 javascript:
   var cf_also_bought = function(data){
     if(data.length > 0) {
