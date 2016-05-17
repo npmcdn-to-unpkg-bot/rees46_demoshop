@@ -15,25 +15,17 @@
         .col-md-1
           h5.text-right
       hr
-      / - @cart.line_items.each do |item|
-      /   = render "cart_list", item: item or only one line
       = render partial: "cart_list", collection: @cart.line_items.order(:id), as: :item
-      
+
       h1.text-right.cart_total = t('cart.total') + " " + "#{number_to_currency(@cart.total_price,  unit: "₽ ")}"
-      br
-      br
-      .col-md-4.text-center
+
+      .col-md-4.text-center.cart-buttons
         = link_to t('cart.root_path'), root_path, class: "btn btn-primary"
-      .col-md-4.text-center
+      .col-md-4.text-center.cart-buttons
         = button_to t('cart.new_order'), new_order_path, method: :get, class: "btn btn-success"
-      .col-md-4.text-center
+      .col-md-4.text-center.cart-buttons
         = button_to t('cart.empty'), @cart, method: :delete, data: { confirm: t('simple_form.confirmation') }, class: "btn btn-danger"
-        br
-        br
 
 .clr
-br
-br
-br
 
 #recommender_see_also
