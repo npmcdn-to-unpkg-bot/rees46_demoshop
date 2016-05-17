@@ -1,15 +1,14 @@
-.row
-  .col-md-12
-    ol.breadcrumb
-      li= link_to "HOME", root_path
-      li= link_to @category.root.name, @category.root
-      - if @category.children.empty?
-        li= link_to @category.name, @category
 
-.row
-  .col-md-12
-    h1.text-center
-      = @category.name.upcase
+.col-md-12
+  ol.breadcrumb
+    li= link_to "HOME", root_path
+    li= link_to @category.root.name, @category.root
+    - if @category.children.empty?
+      li= link_to @category.name, @category
+
+.col-md-12
+  h1.text-center
+    = @category.name.upcase
 
 #recommender_popular
 - @products.where(category_id: @category.id).each do |product|
