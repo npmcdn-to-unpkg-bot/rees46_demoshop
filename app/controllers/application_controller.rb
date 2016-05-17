@@ -16,6 +16,6 @@ class ApplicationController < ActionController::Base
   end
 
   def find_menu_categories
-    @menu_categories = Category.where(parent_id: nil).where.not(slug: "categories-industry").order(:id)
+    @menu_categories = Category.where(parent_id: nil).where.not(slug: "categories-industry").where(products_count: 0).order(:id)
   end
 end
