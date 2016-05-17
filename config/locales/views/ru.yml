@@ -35,7 +35,8 @@ ru:
     t_email: "ЭЛ. АДРЕС"
 
   category:
-    title: "Категория"
+    header-title: "Категория"
+    title-table: "Название"
     new_category: "Создать новую категорию"
     all_category: "Категории"
 

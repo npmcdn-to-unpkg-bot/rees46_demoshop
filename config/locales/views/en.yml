@@ -6,9 +6,6 @@ en:
     edit:
       save: "Save"
 
-  category:
-    title: "CATEGORIES"
-
   product:
     index:
       title: "Products"
@@ -35,7 +32,8 @@ en:
     t_email: "EMAIL"
 
   category:
-    title: "Category"
+    header-title: "Category"
+    title-table: "Title"
     new_category: "Create New Category"
     all_category: "Categories"
 

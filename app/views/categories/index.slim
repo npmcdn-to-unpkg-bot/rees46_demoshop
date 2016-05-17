@@ -1,14 +1,20 @@
 .container
-  .row
+  .row.category-list-header
     .col-md-6
-      h1 = t('category.title')
-    .col-md-6 
+      h1 = t('category.header-title')
+    .col-md-6.create-category-button
       = link_to new_category_path, :class => 'btn btn-success pull-right' do
         .i.fa.fa-plus.fa-lg
           = t('category.new_category')
-  hr
-    h1 = @category.nil? ? t('category.all_category') : @category.name
-    - Category.walk_tree do |c, level|
-        = "#{'&nbsp;&nbsp;-> '*level}#{c.name}&nbsp;".html_safe
-        = link_to t('simple_form.edit'), edit_category_path(c), class: 'btn btn-primary', style: "margin-right: 15px;, margin-top: 15px;"
-        = link_to t('simple_form.delete'), c, method: :delete, data: { confirm: t('simple_form.confirmation') }, class: "btn btn-danger"
+
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        / th
+        /   = t('category.title-table')
+        / th.text-center
+        /   = t('simple_form.edit')
+        / th.text-center
+        /   = t('simple_form.delete')
+    tbody
+      = render "index"
