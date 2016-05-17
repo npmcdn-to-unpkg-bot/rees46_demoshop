@@ -13,6 +13,7 @@
 
 .remove_padding {
   padding-left: 0 !important;
+  margin-top: 70px;
 }
 
 .form-group.required .control-label:after {
@@ -22,4 +23,35 @@
 
 #line_item_size_id {
   margin-top: 10px;
+}
+
+// Import form
+.import-label {
+  margin-bottom: 15px;
+}
+
+.import-body {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+// Product index
+.product-create-button {
+  margin-top: 19px;
+}
+.product-list-header {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+// Product edit page
+.value-remove-button {
+  margin-top: 26px;
+  margin-left: 30px;
+}
+
+// Product show page
+.price {
+  margin-top: 50px;
+  font-size: 25px;
 }
