@@ -24,7 +24,7 @@
   #chi-product_child_sizes_1.hidden.child_group_sizes
     = f.input :hight_sizes, as: :check_boxes, include_hidden: false, collection: Product::HIGHT_SIZES, item_wrapper_class: 'radio-inline'
     hr
-    
+
   #child-less.product_child_sizes_0.hidden.child_age_sizes
     = f.input :age_sizes, as: :check_boxes, include_hidden: false, collection: Product::AGE_SIZES, item_wrapper_class: 'radio-inline'
     hr
@@ -59,7 +59,7 @@
   #hypoallergenic.hidden.country-hypoallergenic
     = f.input :hypoallergenic, as: :radio_buttons, include_hidden: false, collection: Product::HYPOALLERGENIC, item_wrapper_class: 'radio-inline'
     hr
-    
+
   #cosmetic-param.hidden.country-sizes
     = f.input :part_types, as: :check_boxes, include_hidden: false, collection: Product::PART_TYPES, item_wrapper_class: 'radio-inline'
     hr
@@ -67,7 +67,7 @@
     hr
     = f.input :conditions, as: :check_boxes, include_hidden: false, collection: Product::CONDITIONS, item_wrapper_class: 'radio-inline'
     hr
-    
+
     // Nested form
     p 
       strong
@@ -75,11 +75,6 @@
     = f.fields_for  :volumes do |v|
       = render "volume_fields", :f => v  
     = f.link_to_add "Add Volume", :volumes  
-    
-    
-  br
+
   = f.input :category_id, as: :select, collection: Category.all
   = f.submit "Сохранить", :class => 'btn btn-primary'
-  br
-  br
-  br

@@ -42,6 +42,10 @@
 
 // Footer
 
+.h-card {
+  margin-top: 90px;
+}
+
 .r-figure:hover .r-figure__icon {
   margin-top: -25px;
   font-size: 50px;
@@ -364,12 +368,6 @@
   top: 45% !important;
 }
 
-// recommended title
-.interesting-for-home {
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
 // Dashboard
 .dashboard-menu {
   margin-top: 20px;
@@ -380,5 +378,4 @@
 
 .dashboard-table {
   margin-top: 30px;
-  margin-bottom: 90px;
 }
