@@ -1,22 +1,16 @@
-br
-
 .container
   = render "import"
-br
 
-.container
-  .col-md-6
-    h1 = t('product.index.title')
-  .col-md-6
-    - if current_user && current_user.has_role?(:admin)
-      = link_to new_product_path, class: 'btn btn-success pull-right' do
-        .i.fa.fa-plus.fa-lg
+  .row.product-list-header
+    .col-md-6
+      h1 = t('product.index.title')
+    .col-md-6.product-create-button
+      - if current_user && current_user.has_role?(:admin)
+        = link_to new_product_path, class: 'btn btn-success pull-right' do
+          span.glyphicon.glyphicon-plus
           = t('product.index.new_product')
-hr
 
 .container
-  br
-  br
   table.table.table-bordered.table-striped
     thead
       tr
