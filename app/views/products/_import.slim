@@ -4,73 +4,61 @@
     br
   .panel-body
     = form_tag import_products_path, multipart: true do |f|
-      .col-md-6
-        = file_field_tag :xml_file
-        br
-        = label_tag 'Main Category :-'
-        = select_tag :category_id, options_for_select(Category.all.map {|c| [c.name, c.id ] }), :prompt => "Please select"
-        br
-        br
-        = label_tag 'Stranger Category:-'
-        = text_field_tag 'stranger_category'
-        br
-        br
+      .col-md-6.import-body
+        .import-label
+          = file_field_tag :xml_file
 
-        = label_tag 'Limit: '
-        = text_field_tag "limit_number"
-        br
-        br
+        .import-label
+          = label_tag 'Main Category :-'
+          = select_tag :category_id, options_for_select(Category.all.map {|c| [c.name, c.id ] }), :prompt => "Please select"
 
-        = label_tag 'Stock:- '
-        = text_field_tag "stock"
-        br
-        br
-      .col-md-6
-        = label_tag 'Gender:-'
+        .import-label
+          = label_tag 'Stranger Category:-'
+          = text_field_tag 'stranger_category'
 
-        = select_tag :gender, options_for_select(Product::GENDERS), :prompt => "Please select"
-        br
-        br
-        = label_tag 'Fashion Type:-'
+        .import-label
+          = label_tag 'Limit: '
+          = text_field_tag "limit_number"
 
-        = select_tag :product_type, options_for_select(Product::TYPES), :prompt => "Please select"
-        br
-        br
-        = label_tag 'Industry:-'
+        .import-label
+          = label_tag 'Stock:- '
+          = text_field_tag "stock"
 
-        = select_tag :industry, options_for_select(Product.industries.keys.to_a), :prompt => "Please select"
+      .col-md-6.import-body
+        .import-label
+          = label_tag 'Gender:-'
+          = select_tag :gender, options_for_select(Product::GENDERS), :prompt => "Please select"
 
-        br
-        br
-        = label_tag 'Size:-'
-        = select_tag :size, options_for_select(Product::SIZES.keys.to_a), prompt: " "
+        .import-label
+          = label_tag 'Fashion Type:-'
+          = select_tag :product_type, options_for_select(Product::TYPES), :prompt => "Please select"
+
+        .import-label
+          = label_tag 'Industry:-'
+          = select_tag :industry, options_for_select(Product.industries.keys.to_a), :prompt => "Please select"
+
+        .import-label
+          = label_tag 'Size:-'
+          = select_tag :size, options_for_select(Product::SIZES.keys.to_a), prompt: " "
+
+        .import-label
+          = label_tag 'Russian Sizes:- '
+          - Product::RUSSIAN_SIZES.each do |k,v|
+            = check_box_tag 'russian_sizes[]', v
+            = ' ' + k + ' '
+
+        .import-label
+          = label_tag 'PART_TYPES :-'
+          = select_tag :part_types, options_for_select(Product::PART_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
+
+        .import-label
+          = label_tag 'SKIN TYPES :-'
+          = select_tag :skin_types, options_for_select(Product::SKIN_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
         
-        br
-        br
+        .import-label
+          = label_tag 'CONDITIONS :-'
+          = select_tag :conditions, options_for_select(Product::CONDITIONS.keys.to_a), :prompt => "Please select", :include_blank => true
 
-        = label_tag 'Russian Sizes:- '
-        - Product::RUSSIAN_SIZES.each do |k,v|
-          = check_box_tag 'russian_sizes[]', v
-          = ' ' + k + ' '
-        br
-        br
-
-        = label_tag 'PART_TYPES :-'
-
-        = select_tag :part_types, options_for_select(Product::PART_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
-        br
-        br
-
-        = label_tag 'SKIN TYPES :-'
-        = select_tag :skin_types, options_for_select(Product::SKIN_TYPES.keys.to_a), :prompt => "Please select", :include_blank => true
-
-        br
-        br
-        = label_tag 'CONDITIONS :-'
-        = select_tag :conditions, options_for_select(Product::CONDITIONS.keys.to_a), :prompt => "Please select", :include_blank => true
-
-        br
-        br
         = button_tag(type: "submit", class: "btn btn-success") do
-          .i.fa.fa-plus.fa-lg
-            = t('product.import.import_button')
+          span.glyphicon.glyphicon-plus
+          = t('product.import.import_button')
