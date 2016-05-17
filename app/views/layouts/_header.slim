@@ -11,9 +11,9 @@ header
           = link_to image_tag('rees46-logo.png'), root_path, class: "logo"
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav
-          = render "layouts/categories_menu"
+          = render collection: @menu_categories, partial: "layouts/categories_menu", as: :category
         ul.nav.navbar-nav.navbar-right
-          = render "layouts/cart_total_quantity.slim"
+          = render "layouts/cart_total_quantity"
           li.dropdown
             - if user_signed_in?
               a#drop.dropdown-toggle href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'

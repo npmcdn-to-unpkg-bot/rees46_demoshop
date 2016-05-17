@@ -1,10 +1,9 @@
-- Category.where(parent_id: nil).where.not(slug: "categories-industry").order(:id).each do |category|
-  li.dropdown class="#{active_class(category_path(category))}" 
-    = link_to category.name.upcase, category_path(category)
-    - if category.children.any?
-      ul.dropdown-menu role='menu' aria-labelledby='drop'
-        - category.walk_tree do |c, level|
-          li= link_to "#{'-> '*level}#{c.name.upcase}", category_path(c)
+li.dropdown class="#{active_class(category_path(category))}" 
+  = link_to category.name.upcase, category_path(category)
+  - if category.children.any?
+    ul.dropdown-menu role='menu' aria-labelledby='drop'
+      - category.walk_tree do |c, level|
+        li= link_to "#{'-> '*level}#{c.name.upcase}", category_path(c)
 
 / - Category.where(parent_id: nil).where.not(slug: "categories-industry").order(:id).each do |category|
 /   li.dropdown class="#{active_class(category_path(category))}" 

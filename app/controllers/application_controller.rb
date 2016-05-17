@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   include CurrentCart
   before_action :find_cart
+  before_action :find_menu_categories
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -12,5 +13,9 @@ class ApplicationController < ActionController::Base
       else
         root_path
       end
+  end
+
+  def find_menu_categories
+    @menu_categories = Category.where(parent_id: nil).where.not(slug: "categories-industry").order(:id)
   end
 end
