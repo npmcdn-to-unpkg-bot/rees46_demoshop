@@ -13,7 +13,7 @@
 
 .remove_padding {
   padding-left: 0 !important;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .form-group.required .control-label:after {
@@ -52,6 +52,9 @@
 
 // Product show page
 .price {
-  margin-top: 50px;
   font-size: 25px;
+}
+
+.product-title {
+  margin-bottom: 50px;
 }

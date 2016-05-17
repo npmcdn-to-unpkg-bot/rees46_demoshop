@@ -16,7 +16,8 @@
     .col-md-6
       / - if !@product.brand.nil?
       /   = link_to @product.brand.name, brand_path(@product.brand)
-      h1= @product.title
+      .product-title 
+        h1= @product.title
       .price
         = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
       = simple_form_for @line_item, remote: true do |f|
