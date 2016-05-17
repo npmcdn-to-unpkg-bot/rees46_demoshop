@@ -241,7 +241,7 @@ class Product < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
-  belongs_to :category
+  belongs_to :category, counter_cache: true
   belongs_to :brand
   has_many :line_items
   has_many :volumes, dependent: :destroy
