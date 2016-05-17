@@ -3,14 +3,14 @@
   - rec = @recommender
   - case rec
     - when "popular"
-      h1 Популярные товары
+      .recommender-block-title
+        h1 Популярные товары
     - when "recently_viewed"
-      h1 Вы недавно смотрели
+      .recommender-block-title
+        h1 Вы недавно смотрели
     - when  "interesting"
-      h1 Возможно, вам это понравится
-  br
-  br
-  br
-  .row
-    div class="carousel js-flickity #{recommender}"
-      = render "recommend_cat_products"
+      .recommender-block-title
+        h1 Возможно, вам это понравится
+
+  div class="carousel js-flickity #{recommender}"
+    = render "recommend_cat_products"

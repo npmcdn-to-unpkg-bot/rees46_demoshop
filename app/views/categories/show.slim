@@ -10,37 +10,27 @@
   .col-md-12
     h1.text-center
       = @category.name.upcase
-    br
-    #recommender_popular
-    .row
-      - @products.where(category_id: @category.id).each do |product|
-        = render 'categories/product_categories', product: product
-      .clr
-      - if @category.children
-        - @category.children.each do |child|
-          - if !child.products.empty?
-            br
-            br
-            .category_title
-              h1= link_to child.name, category_path(child)
-            br
-          - if !child.products.empty?
-            .carousel.js-flickity data-flickity-options=("{ \"cellAlign\": \"left\" }") 
-              - @products.where(category_id: child).each do |product|
-                = render 'categories/product_categories', product: product
-          - if !child.children.product.empty?
-            br
-            br
-            .category_title
-              h1= link_to child.name, category_path(child)
-            br
-          - if !child.children.product.empty?
-            .carousel.js-flickity data-flickity-options=("{ \"cellAlign\": \"left\" }") 
-              - @products.where(category_id: child.children).each do |product|
-                = render 'categories/product_categories', product: product
-    br
-    br
-      .clr
-      #recommender_recently_viewed
-      .clr
-      #recommender_interesting
+
+#recommender_popular
+- @products.where(category_id: @category.id).each do |product|
+  = render 'categories/product_categories', product: product
+
+- if @category.children
+  - @category.children.each do |child|
+    - if !child.products.empty?
+      .category_title
+        h1= link_to child.name, category_path(child)
+      .carousel.js-flickity data-flickity-options=("{ \"cellAlign\": \"left\" }") 
+        - @products.where(category_id: child).each do |product|
+          = render 'categories/product_categories', product: product
+
+    - if !child.children.product.empty?
+      .category_title
+        h1= link_to child.name, category_path(child)
+        .carousel.js-flickity data-flickity-options=("{ \"cellAlign\": \"left\" }") 
+          - @products.where(category_id: child.children).each do |product|
+            = render 'categories/product_categories', product: product
+
+#recommender_recently_viewed
+
+#recommender_interesting

@@ -1,5 +1,3 @@
-br
-
 .container
   .row
     .col-md-6
@@ -9,13 +7,8 @@ br
         .i.fa.fa-plus.fa-lg
           = t('category.new_category')
   hr
-  br
     h1 = @category.nil? ? t('category.all_category') : @category.name
-    br
     - Category.walk_tree do |c, level|
         = "#{'&nbsp;&nbsp;-> '*level}#{c.name}&nbsp;".html_safe
         = link_to t('simple_form.edit'), edit_category_path(c), class: 'btn btn-primary', style: "margin-right: 15px;, margin-top: 15px;"
         = link_to t('simple_form.delete'), c, method: :delete, data: { confirm: t('simple_form.confirmation') }, class: "btn btn-danger"
-        br
-    br
-    br
