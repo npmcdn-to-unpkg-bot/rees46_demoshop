@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331124200) do
+ActiveRecord::Schema.define(version: 20160518205310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,10 +30,13 @@ ActiveRecord::Schema.define(version: 20160331124200) do
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.integer  "parent_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "slug"
     t.integer  "categories_industry"
+    t.integer  "products_count",      default: 0, null: false
+    t.string   "ancestry"
+    t.integer  "category_hide",       default: 0
   end
 
   add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true, using: :btree
@@ -78,33 +81,33 @@ ActiveRecord::Schema.define(version: 20160331124200) do
     t.string   "image"
     t.text     "description"
     t.integer  "category_id"
-    t.datetime "created_at",                                          null: false
-    t.datetime "updated_at",                                          null: false
-    t.decimal  "price",          precision: 8, scale: 2
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
+    t.decimal  "price",             precision: 8, scale: 2
     t.integer  "gender"
     t.integer  "industry"
     t.integer  "fashion"
     t.integer  "size"
     t.integer  "cosmetic"
-    t.integer  "hypoallergenic",                         default: 0
     t.integer  "periodic"
-    t.integer  "russian_sizes",                          default: [], null: false, array: true
-    t.integer  "euro_sizes",                             default: [], null: false, array: true
-    t.integer  "british_sizes",                          default: [], null: false, array: true
-    t.integer  "american_sizes",                         default: [], null: false, array: true
-    t.integer  "asian_sizes",                            default: [], null: false, array: true
-    t.integer  "part_types",                             default: [], null: false, array: true
-    t.integer  "skin_types",                             default: [], null: false, array: true
-    t.integer  "conditions",                             default: [], null: false, array: true
+    t.integer  "russian_sizes",                             default: [], null: false, array: true
+    t.integer  "euro_sizes",                                default: [], null: false, array: true
+    t.integer  "british_sizes",                             default: [], null: false, array: true
+    t.integer  "american_sizes",                            default: [], null: false, array: true
+    t.integer  "part_types",                                default: [], null: false, array: true
+    t.integer  "skin_types",                                default: [], null: false, array: true
+    t.integer  "conditions",                                default: [], null: false, array: true
     t.integer  "child"
     t.integer  "child_size"
-    t.integer  "age_sizes",                              default: [], null: false, array: true
-    t.integer  "hight_sizes",                            default: [], null: false, array: true
+    t.integer  "age_sizes",                                 default: [], null: false, array: true
+    t.integer  "hight_sizes",                               default: [], null: false, array: true
     t.integer  "child_ages"
     t.integer  "child_sizes"
     t.integer  "brand_id"
-    t.integer  "stock",                                  default: 0
     t.integer  "product_type"
+    t.integer  "age_sizes_by_year",                         default: [], null: false, array: true
+    t.integer  "stock",                                     default: 0
+    t.integer  "hypoallergenic"
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree

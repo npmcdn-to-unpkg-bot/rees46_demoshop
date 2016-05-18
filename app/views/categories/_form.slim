@@ -2,5 +2,6 @@
   = f.input :name
   = f.input :parent_id, as: :select, collection: Category.all
   = f.input :categories_industry, as: :select, collection: Product.industries
+  = f.input :category_hide, as: :radio_buttons, include_hidden: false, collection: Category.hides, item_wrapper_class: 'radio-inline'
 
   = f.submit "Сохранить", :class => 'btn btn-primary'
