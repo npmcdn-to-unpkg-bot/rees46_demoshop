@@ -1,5 +1,6 @@
-li.dropdown class="#{active_class(category_path(category))}" 
-  = link_to category.name.upcase, category_path(category)
+li.dropdown class="#{active_class(category_path(category))}"
+  - if category.category_hide != 1
+    = link_to category.name.upcase, category_path(category)
   - if category.children.any?
     ul.dropdown-menu role='menu' aria-labelledby='drop'
       - category.walk_tree do |c, level|
