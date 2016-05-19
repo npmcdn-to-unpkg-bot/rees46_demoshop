@@ -3,6 +3,8 @@ class Category < ActiveRecord::Base
   extend ActsAsTree::TreeView
   extend FriendlyId
 
+  enum hide: [:no, :yes]
+
   acts_as_tree order: 'name'
 
   friendly_id :name, use: :slugged
