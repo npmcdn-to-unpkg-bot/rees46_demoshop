@@ -3,8 +3,8 @@ li.dropdown class="#{active_class(category_path(category))}"
   - if category.children.any?
     ul.dropdown-menu role='menu' aria-labelledby='drop'
       - category.walk_tree do |c, level|
-        li style= "list-style-type: #{ level == 1 ? 'disc' : 'none'}; margin-left: #{level == 1 ? '42' : ''}px;"
-          = link_to "#{c.name.upcase}", category_path(c), style: "padding-left: #{ level == 0 ? 15 : level * 1 }px;"
+        li style= "list-style-type: #{ level == 1 ? 'disc' : 'none'}; margin-left: #{level == 1 ? '40' : ''}px;"
+          = link_to "#{c.name.upcase}", category_path(c), style: "padding-left: #{ level == 0 ? 15 : level * 0 }px;"
 
 / - Category.where(parent_id: nil).where.not(slug: "categories-industry").order(:id).each do |category|
 /   li.dropdown class="#{active_class(category_path(category))}" 
