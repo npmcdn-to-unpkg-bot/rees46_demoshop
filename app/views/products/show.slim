@@ -20,7 +20,7 @@
         h1= @product.title
       .price
         = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
-      = simple_form_for @line_item, remote: true do |f|
+      = simple_form_for @line_item do |f|
         #errors_log
           - if @line_item.errors.any?
             #error_explanation
@@ -48,23 +48,23 @@
                 false
               - else
                 = f.submit t('simple_form.add_to_cart'), class: "btn btn-success"
-            #server_msg_modal.modal.fade
-              .modal-dialog
-                .modal-content
-                  .modal-header
-                    button.close[type="button" data-dismiss="modal" aria-label="Close"]
-                      span[aria-hidden="true"]
-                        | ×
-                    h4.modal-title
-                      = @product.title.upcase
-                  .modal-body
-                    .row
-                      .col-sm-6
-                        = image_tag(@product.image.medium, class: "img-fit")
-                      .col-sm-6
-                        = @product.title.upcase
-                        = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
-                        h1= link_to "Перейти в корзину", @cart
+                #server_msg_modal.modal.fade
+                  .modal-dialog
+                    .modal-content
+                      .modal-header
+                        button.close[type="button" data-dismiss="modal" aria-label="Close"]
+                          span[aria-hidden="true"]
+                            | ×
+                        h4.modal-title
+                          = @product.title.upcase
+                      .modal-body
+                        .row
+                          .col-sm-6
+                            = image_tag(@product.image.medium, class: "img-fit")
+                          .col-sm-6
+                            = @product.title.upcase
+                            = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
+                            h1= link_to "Перейти в корзину", @cart
 
 .products
   #recommender_also_bought
