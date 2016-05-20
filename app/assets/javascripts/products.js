@@ -48,7 +48,3 @@ $( document ).on("last-element-rendered", function() {
     }
   });
 });
-
-$('#server_msg_modal').modal({
-  show: 'true'
-});

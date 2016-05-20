@@ -4,8 +4,8 @@ li
       = link_to cart_path(@cart)
         span.cart-count
           span.glyphicon.glyphicon-shopping-cart
-          = "#{@cart.line_items.size}"
+          span#line_count = "#{@cart.line_items.size}"
     - else
       span.cart-count
         span.glyphicon.glyphicon-shopping-cart
-        = "0"
+        span#line_count = "0"
