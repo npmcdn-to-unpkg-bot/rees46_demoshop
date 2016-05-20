@@ -5,22 +5,3 @@ li.dropdown class="#{active_class(category_path(category))}"
       - category.walk_tree do |c, level|
         li style= "list-style-type: #{ level == 1 ? 'disc' : 'none'}; margin-left: #{level == 1 ? '40' : ''}px;"
           = link_to "#{c.name.upcase}", category_path(c), style: "padding-left: #{ level == 0 ? 15 : level * 0 }px;"
-
-/ - Category.where(parent_id: nil).where.not(slug: "categories-industry").order(:id).each do |category|
-/   li.dropdown class="#{active_class(category_path(category))}" 
-/     = link_to category.name.upcase, category_path(category)
-/     - if category.children.any?
-/       ul.dropdown-menu role='menu' aria-labelledby='drop'
-/         - category.walk_tree do |c, level|
-/           - if level == 0
-/             li.dropdown-submenu
-/               = link_to "#{'-> '*level}#{c.name.upcase}", category_path(c)
-/               ul.dropdown-menu
-/                 /- if level == 1
-/                   li = link_to "#{'-> '*level}#{c.name.upcase}", category_path(c)
-/         
-/         
-/           / li.dropdown-submenu
-/           /   = link_to "мужские"
-/           /   ul.dropdown-menu
-/           /     li = link_to "сынок мужских"
