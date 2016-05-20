@@ -11,7 +11,8 @@ class Product < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   belongs_to :category
-  counter_culture :category
+  counter_culture :category, foreign_key_values:
+      Proc.new {|category_id| [category_id, Category.find_by_id(category_id).try(:parent).try(:id), Category.find_by_id(category_id).try(:parent).try(:parent).try(:id)] }, touch: true
   belongs_to :brand
   has_many :line_items
   has_many :volumes, dependent: :destroy
