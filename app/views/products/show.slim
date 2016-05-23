@@ -61,7 +61,7 @@
                         .col-sm-6
                           = @product.title.upcase
                           = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
-                          h1= link_to "Перейти в корзину", @cart, class: "cart_link",  data: {id: @cart.try(:id)}
+                          h1= link_to "Перейти в корзину", @cart, class: "cart_link"
 .products
   #recommender_also_bought
   .clr

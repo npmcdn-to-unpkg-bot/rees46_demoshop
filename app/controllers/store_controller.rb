@@ -9,8 +9,6 @@ class StoreController < ApplicationController
       @products << Product.find(id) if Product.where(id: id).any?
     end
 
-    # @products = Kaminari.paginate_array(@products).page(params[:page]).per(4)
-
     @recommender = params[:recommender]
     respond_to do |format|
       format.js
