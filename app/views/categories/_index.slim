@@ -1,7 +1,7 @@
 - Category.walk_tree do |c, level|
   tr
     td
-      = link_to "#{'-> '*level}#{c.name.upcase}", category_path(c)
+      = link_to "#{'-> '*level}#{c.name}", category_path(c)
     td.text-center
       = link_to t('simple_form.edit'), edit_category_path(c), class: 'btn btn-primary'
     td.text-center

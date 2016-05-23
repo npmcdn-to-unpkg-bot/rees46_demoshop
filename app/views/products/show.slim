@@ -4,10 +4,10 @@
       ol.breadcrumb
         li = link_to t('product.root_path'), root_path
         - if !@product.category.nil?
-          li = link_to @product.category.root.name.upcase, category_path(@category.root)
+          li = link_to @product.category.root.name, category_path(@category.root)
         - if !@product.category.nil?
           li= link_to @product.category.name, category_path(@category)
-        li.breadcrumb-title = @product.title.upcase
+        li.breadcrumb-title = @product.title
 
   .row
     .col-md-6
@@ -53,13 +53,13 @@
                         span[aria-hidden="true"]
                           | ×
                       h4.modal-title
-                        = @product.title.upcase
+                        = @product.title
                     .modal-body
                       .row
                         .col-sm-6
                           = image_tag(@product.image.medium, class: "img-fit")
                         .col-sm-6
-                          = @product.title.upcase
+                          = @product.title
                           = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
                           h1= link_to "Перейти в корзину", @cart, class: "cart_link"
 .products

@@ -6,7 +6,7 @@
 
 .col-md-12
   h1.text-center
-    = @category.name.upcase
+    = @category.name
 
 #recommender_popular
 - @products.where(category_id: @category.id).each do |product|
