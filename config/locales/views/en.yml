@@ -64,30 +64,30 @@ en:
       create:
         notice: "Brand was saved successfully"
       update:
-        notice: "Brand was update successfully update"
+        notice: "Brand was updated successfully update"
       destroy:
-        notice: "Brand was successfully remove"
-        notice_brands_path: "Sorry you dont have permission to delte this"
+        notice: "Brand was successfully removed"
+        notice_brands_path: "Sorry you don't have permission to delete this"
     categories:
       create:
         notice: "Category was saved successfully"
       update:
-        notice: "Category was update successfully"
+        notice: "Category was updated successfully"
       destroy:
-        notice: "Category was delete successfully"
+        notice: "Category was deleted successfully"
         notice_root: "You dont have permission to delete this"
     products:
       create:
         notice: "Products was saved successfully"
         notice_new: "Product was not saved successfully"
       update:
-        notice: "Product was update successfully"
-        notice_edit: "Product was not update successfully"
+        notice: "Product was updated successfully"
+        notice_edit: "Product was not updated successfully"
       destroy:
-        notice: "Product was delete successfully"
-        notice_products_path: "Ordered Product cant be delete"
+        notice: "Product was deleted successfully"
+        notice_products_path: "Ordered Product can be deleted"
     orders:
       notice: "Your cart is empty"
     line_items:
       destroy:
-        notice: "Product was successfully remove form line item"
+        notice: "Product was successfully removed form line item"
