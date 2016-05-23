@@ -13,9 +13,10 @@
 //= require jquery
 //= require jquery-ui/effect-blind
 //= require jquery_ujs
+//= require jquery.slick
+//= require initialize
 //= require_tree .
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require redactor-rails
 //= require jquery_nested_form
-//= require jquery.slick
