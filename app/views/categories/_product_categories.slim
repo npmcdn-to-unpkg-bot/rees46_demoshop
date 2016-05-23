@@ -13,7 +13,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: "POST",
-        url: 'cat_urls',
+        url: 'categories_recommender',
         data: {ids: data, recommender: 'popular'},
       });
       return false;
@@ -27,7 +27,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: "POST",
-        url: 'cat_urls',
+        url: 'categories_recommender',
         data: {ids: data, recommender: 'recently_viewed'},
       });
       return false;
@@ -39,7 +39,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: "POST",
-        url: 'cat_urls',
+        url: 'categories_recommender',
         data: {ids: data, recommender: 'interesting'},
       });
       return false;

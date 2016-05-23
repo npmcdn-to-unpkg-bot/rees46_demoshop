@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :products_urls]
-  before_action :admin_permission, except: [:show, :products_urls]
+  before_action :authenticate_user!, except: [:show, :products_recommender]
+  before_action :admin_permission, except: [:show, :products_recommender]
 
   def index
     @products = Product.order('created_at DESC').page(params[:page]).per(15)
@@ -46,7 +46,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  def products_urls
+  def products_recommender
     @products = []
     if !params[:ids].nil?
       params[:ids].each do |id|

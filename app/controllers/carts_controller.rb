@@ -15,7 +15,7 @@ class CartsController < ApplicationController
     redirect_to root_path, notice: t('cart.notice_controller')
   end
 
-  def cart_urls
+  def cart_recommender
     @products = []
     unless params[:ids].nil?
       params[:ids].each do |id|

@@ -37,7 +37,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: "POST",
-        url: 'cart_urls',
+        url: 'cart_recommender',
         data: {ids: data, recommender: 'see_also'},
       });
       return false;

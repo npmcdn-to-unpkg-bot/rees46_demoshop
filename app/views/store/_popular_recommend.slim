@@ -4,7 +4,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: "POST",
-        url: 'store/font_products_urls',
+        url: 'store/store_recommender',
         data: {ids: data, recommender: 'popular'},
       });
       return false;
@@ -14,10 +14,10 @@ javascript:
   var cf_interesting = function(data){
     // jQuery code
     if(data.length > 0) {
-      var url = 'products_urls';
+      var url = 'products_recommender';
       $.ajax({
         type: "POST",
-        url: 'store/font_products_urls',
+        url: 'store/store_recommender',
         data: {ids: data, recommender: 'interesting'},
       });
       return false;
