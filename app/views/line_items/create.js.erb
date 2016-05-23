@@ -1,14 +1,7 @@
 <% if  @line_item.errors.any? %>
   $('#errors_log').html('<%= @line_item.errors['size_id'][0] %>');
 <% else %>
-  var id = <%= @cart.id %>
   $('#line_count').text('<%= @cart.line_items.size %>')
   $('#server_msg_modal').modal('show');
-  //$('#cart_link').onclick('<%= @cart.id %>')
   $('.cart_link').attr('href','<%= cart_path(@cart)%>')
-  $('.cart_link').click(function() {
-  var id = $(this).data(id);
-    // now do something with the id
-  });
-  console.log(id)
 <% end %>
