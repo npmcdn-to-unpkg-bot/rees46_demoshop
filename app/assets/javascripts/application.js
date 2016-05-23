@@ -18,3 +18,4 @@
 //= require bootstrap
 //= require redactor-rails
 //= require jquery_nested_form
+//= require jquery.slick
