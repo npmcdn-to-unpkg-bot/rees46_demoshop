@@ -159,7 +159,6 @@ GEM
     erubis (2.7.0)
     execjs (2.6.0)
     ffi (1.9.10)
-    flamegraph (0.9.5)
     font-awesome-rails (4.5.0.0)
       railties (>= 3.2, < 5.0)
     friendly_id (5.1.0)
@@ -245,8 +244,6 @@ GEM
     rack-contrib (1.4.0)
       git-version-bump (~> 0.15)
       rack (~> 1.4)
-    rack-mini-profiler (0.10.1)
-      rack (>= 1.2.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.5)
@@ -354,7 +351,6 @@ GEM
     sshkit (1.8.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    stackprof (0.2.9)
     temple (0.7.6)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
@@ -412,7 +408,6 @@ DEPENDENCIES
   devise-bootstrap-views
   devise-i18n
   devise-i18n-views (~> 0.3.7)
-  flamegraph
   font-awesome-rails
   friendly_id (~> 5.1.0)
   jazz_hands!
@@ -429,7 +424,6 @@ DEPENDENCIES
   poltergeist
   pry
   quiet_assets
-  rack-mini-profiler
   rails (= 4.2.5)
   rails-i18n (~> 4.0, >= 4.0.8)
   redactor-rails (~> 0.5.0)
@@ -445,7 +439,6 @@ DEPENDENCIES
   simple_form
   slim-rails
   spring
-  stackprof
   therubyracer
   timecop
   turbolinks
