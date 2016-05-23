@@ -3,11 +3,14 @@
   - rec = @recommender
   - case rec
     - when 'also_bought'
-      h1 С этим товаром покупают
+      .recommender-store-block-title
+        h1 С этим товаром покупают
     - when 'interesting'
-      h1 Возможно, вам это понравится
+      .recommender-store-block-title
+        h1 Возможно, вам это понравится
     - when 'similar'
-      h1 Похожие товары
+      .recommender-store-block-title
+        h1 Похожие товары
   .row
     div class="carousel js-flickity #{recommender}" data-flickity-options='{ "freeScroll": true, "contain": true, "pageDots": false }'
       = render "recommend_products"
