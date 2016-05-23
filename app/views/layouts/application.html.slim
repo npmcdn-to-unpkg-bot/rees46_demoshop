@@ -41,3 +41,11 @@ javascript:
   $(document).ready(function(){
     $(document).trigger("last-element-rendered");
   });
+
+  // mk: for new type of cards
+  $(document).ready(function () {
+    $('.r-product_card').height($('.r-product_card').width());
+    $(window).resize(function () {
+      $('.r-product_card').height($('.r-product_card').width());
+    });
+  });
