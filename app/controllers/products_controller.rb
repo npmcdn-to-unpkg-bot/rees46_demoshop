@@ -16,9 +16,9 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to products_path, notice: 'Products was saved successfully'
+      redirect_to products_path, notice: t('controller.products.create.notice')
     else
-      render :new, notice: 'Product was not saved successfully'
+      render :new, notice: t('controller.products.create.notice_new')
     end
   end
 
@@ -32,17 +32,17 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update_attributes(product_params)
-      redirect_to @product, notice: 'Product was update successfully'
+      redirect_to @product, notice: t('controller.products.update.notice')
     else
-      render :edit, notice: 'Product was not update successfully'
+      render :edit, notice: t('controller.products.update.notice_edit')
     end
   end
 
   def destroy
     if @product.destroy
-      redirect_to products_path, notice: 'Product was delete successfully'
+      redirect_to products_path, notice: t(controller.products.destroy.notice)
     else
-      redirect_to products_path, notice: 'Ordered Product cant be delete'
+      redirect_to products_path, notice: t(controller.products.destroy.notice_products_path)
     end
   end
 
