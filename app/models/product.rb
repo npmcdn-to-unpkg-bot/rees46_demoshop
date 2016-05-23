@@ -18,10 +18,9 @@ class Product < ActiveRecord::Base
   has_many :volumes, dependent: :destroy
   accepts_nested_attributes_for :volumes, reject_if: ->(attributes) { attributes['value'].blank? }, allow_destroy: true
 
-  # validates :title, :image, :description, :brand, :category_id, presence: true
-  # validates :title, uniqueness: true
-  # # Price should be not less then $100 :) lets do some business
-  # validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
+  validates :title, :image, :description, :brand, :category_id, presence: true
+  validates :title, uniqueness: true
+  validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
 
   def show_product_id?
     if industry == 'fashion'
@@ -94,27 +93,6 @@ class Product < ActiveRecord::Base
   def child_ages_prefixed
     age_sizes.map { |pas| Product::AGE_SIZES_VALUES.keys[pas] }
   end
-
-  # def self.import(con, category, cat_id, lit_num)
-  #   parsed_products = con.root.find('//offer').take(lit_num.to_i)
-  #
-  #   parsed_products.each do |product|
-  #     "#{binding.pry}"
-  #     if product.find_first('categoryId').content == cat_id
-  #       Product.create!(
-  #           price: product.find_first('price').content,
-  #           category_id: product.find_first('categoryId').content.gsub(cat_id, category),
-  #
-  #           remote_image_url: product.find_first('picture').content.strip,
-  #           brand_id: product.find_first('vendor').content,
-  #           title: product.find_first('name').content,
-  #           description: product.find_first('description').content
-  #       )
-  #     else
-  #       return false
-  #     end
-  #   end
-  # end
 
   def self.redirected_url(page)
     result = Curl::Easy.perform(page) do |curl|

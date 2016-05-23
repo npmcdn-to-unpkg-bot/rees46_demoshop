@@ -62,27 +62,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # require 'xml'
-  #
-  # def import
-  #   if params[:xml_file]
-  #     file = params[:xml_file]
-  #     raw_xml = open(file).read
-  #     source = XML::Parser.string(raw_xml)
-  #     content = source.parse
-  #
-  #     total_product = content.root.find('//offer').take(params[:limit_number].to_i).length
-  #
-  #     if Product.import(content, params[:category_id], params[:stranger_category], params[:limit_number]) == false
-  #       redirect_to products_path, notice: "Cant find stranger category id."
-  #     else
-  #       redirect_to products_path, notice: "#{total_product} Product added."
-  #     end
-  #   else
-  #     redirect_to products_path, notice: "Upload file and fill up form please"
-  #   end
-  # end
-
   def import
     if params[:xml_file]
       file = params[:xml_file]
