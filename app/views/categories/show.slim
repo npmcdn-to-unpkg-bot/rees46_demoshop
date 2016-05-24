@@ -24,7 +24,7 @@
     - if !child.children.product.empty?
       .category_title
         h1= link_to child.name, category_path(child)
-        .carousel.js-flickity data-flickity-options=("{ \"cellAlign\": \"left\" }") 
+        .multiple-items
           - @products.where(category_id: child.children).each do |product|
             = render 'categories/product_categories', product: product
 
