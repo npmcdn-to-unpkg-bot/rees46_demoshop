@@ -287,3 +287,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .slick-arrow {
    top: 163px;
 }
+
+.slick-arrow:hover {
+  height: 27px;
+  width: 30px;
+  right: -4px;
+}
