@@ -246,11 +246,6 @@
   }
 }
 
-// flickity next icon
-.flickity-prev-next-button {
-  top: 45% !important;
-}
-
 // Dashboard
 .dashboard-menu {
   margin-top: 20px;
@@ -266,4 +261,29 @@
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 300;
+}
+
+
+
+// Slick slider Style
+
+.slick-slide img {
+  display: inherit;
+}
+
+.slick-next {
+  right: 6px;
+}
+
+.slick-prev {
+  left: -3px;
+  z-index: 999;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: black !important;
+  font-size: 30px !important;
+}
+.slick-arrow {
+   top: 163px;
 }

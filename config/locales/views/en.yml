@@ -58,3 +58,36 @@ en:
       title: "Thanks for your order "
       order_id: "Your order id:-"
       root_link: "Back to store"
+
+  controller:
+    brands:
+      create:
+        notice: "Brand was saved successfully"
+      update:
+        notice: "Brand was updated successfully update"
+      destroy:
+        notice: "Brand was successfully removed"
+        notice_brands_path: "Sorry you don't have permission to delete this"
+    categories:
+      create:
+        notice: "Category was saved successfully"
+      update:
+        notice: "Category was updated successfully"
+      destroy:
+        notice: "Category was deleted successfully"
+        notice_root: "You dont have permission to delete this"
+    products:
+      create:
+        notice: "Products was saved successfully"
+        notice_new: "Product was not saved successfully"
+      update:
+        notice: "Product was updated successfully"
+        notice_edit: "Product was not updated successfully"
+      destroy:
+        notice: "Product was deleted successfully"
+        notice_products_path: "Ordered Product can be deleted"
+    orders:
+      notice: "Your cart is empty"
+    line_items:
+      destroy:
+        notice: "Product was successfully removed form line item"

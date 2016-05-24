@@ -42,7 +42,7 @@ class LineItemsController < ApplicationController
 
   def destroy
     if @line_item.destroy
-      redirect_to @line_item.cart, notice: 'Product was successfully remove form line item'
+      redirect_to @line_item.cart, notice: t('controller.line_items.destroy.notice')
     else
       redirect_to @line_item.cart, notice: 'Somethign is worng'
     end

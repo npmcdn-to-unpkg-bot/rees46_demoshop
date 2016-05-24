@@ -2,9 +2,9 @@
   hr
   h1 Посмотрите также
   .row
-    div class="carousel-cell js-flickity delayed-sa-flickity" data-flickity-options='{ "freeScroll": true, "contain": true, "pageDots": false }'
+    div class="multiple-items delayed-sa-slick"
       - products.each do |product|
-        .col-md-3.col-sm-4.col-xs-6.carousel-cell
+        .col-md-3.col-sm-4.col-xs-6
           .r-product-item
             .picture
               = link_to image_tag(product.image.thumbs), product_path(product, recommdend_by: @recommender)

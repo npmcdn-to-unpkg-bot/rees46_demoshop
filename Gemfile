@@ -24,6 +24,8 @@ gem 'jquery-ui-rails'
 gem 'compass-rails', github: 'Compass/compass-rails'
 gem 'kaminari', '~> 0.16.3'
 
+gem "jquery-slick-rails", '>= 1.5.8.2'
+
 # Database
 gem 'pg'
 

@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def index
-    return (redirect_to root_path, notice: 'Your cart is empty') if @cart.line_items.empty?
+    return (redirect_to root_path, notice: t('controller.orders.notice')) if @cart.line_items.empty?
 
     @orders = Order.all
   end
@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
   end
 
   def new
-    return (redirect_to root_path, notice: 'Your cart is empty') if @cart.line_items.empty?
+    return (redirect_to root_path, notice: t('controller.orders.notice')) if @cart.line_items.empty?
 
     @order = Order.new
   end
