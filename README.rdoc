@@ -1,14 +1,25 @@
 == README
+# Rees46 demo Shop
 
-0. Использовать Bootstrap и simple_form (simple_form установить перед devise,  чтобы devise использовал формы simple_form)
-1. Сделать регистрацию пользователей и админов.
-3. Сделать раздел админки со своей навигацией bootstrap.
-4. Сделать управление деревом категорий в админке. Категории бывают родительские    и дочерние неограниченного уровня вложенности. Категории имеют name и parent_id.
-5. Сделать управление товарами и привязку их к категории. Товар может быть только в одной категории. Товар содержит картинку, название, описание (redactor.js), цену, старую цену (не обязательно), категорию, производителя (строка).
+Simple Rails demonstrating
 
-* ...
-6. Gender type Products
+* Clone the repo
+* Install the gems (`bundle install`)
+* Boot the server (`$ rails s`)
+* Navigate to `http://127.0.0.1:3000` or `http://localhost:3000`
 
+How to create Admin user
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Create a User using rails console
+* user = User.new
+* user.email = "anyemail@address.com"
+* user.password = "test1234"
+* user.save
+
+Add a role to the new User
+* user.add_role "admin"
+
+Check if the user has admin rights
+* ability = Ability.new(user)
+* ability.can? :manage, :all
+  =* true
