@@ -10,16 +10,16 @@ Simple Rails demonstrating
 
 How to create Admin user
 
-Create a User using rails console
-* user = User.new
-* user.email = "anyemail@address.com"
-* user.password = "test1234"
-* user.save
+How to Create a Admin User using rails console
+> user = User.new
+> user.email = "anyemail@address.com"
+> user.password = "test1234"
+> user.save
 
 Add a role to the new User
-* user.add_role "admin"
+> user.add_role "admin"
 
 Check if the user has admin rights
-* ability = Ability.new(user)
-* ability.can? :manage, :all
-  =* true
+> ability = Ability.new(user)
+> ability.can? :manage, :all
+  => true
