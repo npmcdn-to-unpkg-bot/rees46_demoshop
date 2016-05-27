@@ -52,15 +52,8 @@ class CategoriesController < ApplicationController
   end
 
   def categories_recommender
-    @products = []
-    params[:ids].each do |id|
-      @products << Product.find(id) if Product.where(id: id).any?
-    end
-
+    @products = Product.where(params[:ids])
     @recommender = params[:recommender]
-    respond_to do |format|
-      format.js
-    end
   end
 
   private

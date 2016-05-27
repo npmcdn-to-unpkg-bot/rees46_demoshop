@@ -16,17 +16,8 @@ class CartsController < ApplicationController
   end
 
   def cart_recommender
-    @products = []
-    unless params[:ids].nil?
-      params[:ids].each do |id|
-        @products << Product.find(id) if Product.where(id: id).any?
-      end
-    end
-
+    @products = Product.where(params[:ids])
     @recommender = params[:recommender]
-    respond_to do |format|
-      format.js
-    end
   end
 
   private
