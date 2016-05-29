@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root 'store#index'
   get 'dashboard' => 'store#dashboard'
 
+  get 'recommendations', to: 'recommendations#show'
+
   resources :categories do
     post 'categories_recommender' => 'categories#categories_recommender'
   end
