@@ -15,11 +15,6 @@ class CartsController < ApplicationController
     redirect_to root_path, notice: t('cart.notice_controller')
   end
 
-  def cart_recommender
-    @products = Product.where(params[:ids])
-    @recommender = params[:recommender]
-  end
-
   private
 
   def set_cart
