@@ -1,9 +1,9 @@
 <% if (@recommender == 'popular') %>
-  jQuery('#recommender_popular').html("<%= j render(partial: 'rees46_popular.slim', locals: { products: @products, recommender: @recommender }) %>");
+  $('#recommender_popular').html("<%= j render(partial: 'rees46_popular.slim', locals: { products: @products, recommender: @recommender }) %>");
 <% end %>
 
 <% if ( @recommender == 'interesting') %>
-  jQuery('#recommender_interesting').html("<%= j render(partial: 'rees46_interesting.slim', locals: { products: @products, recommender: @recommender }) %>");
+  $('#recommender_interesting').html("<%= j render(partial: 'rees46_interesting.slim', locals: { products: @products, recommender: @recommender }) %>");
 
   $('.delayed-i-flickity').slick({
     infinite: false,

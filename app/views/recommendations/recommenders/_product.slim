@@ -31,6 +31,27 @@ javascript:
 
   function afterInitRees46() {
     var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
+    
+    console.log('hihihi')
+    REES46.addReadyListener(function () {
+      REES46.pushData('view', {
+        item_id: '#{@product.id}',
+        price: '#{@product.price}',
+        is_available: '#{@product.available?}',
+        categories: '#{@product.category_id}'
+      });
+    });
+
+    REES46.addReadyListener(function () {
+      $('#add-to-cart-button').click(function () {
+        REES46.pushData('cart', {
+          item_id: '#{@product.id}',
+          price: '#{@product.price}',
+          is_available: '#{@product.available?}',
+          categories: '#{@product.category_id}'
+        });
+      });
+    });
 
     REES46.addReadyListener(function () {
       REES46.recommend({

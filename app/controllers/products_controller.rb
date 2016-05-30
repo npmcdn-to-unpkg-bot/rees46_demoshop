@@ -46,11 +46,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  def products_recommender
-    @products = Product.where(id: params[:ids])
-    @recommender = params[:recommender]
-  end
-
   def import
     if params[:xml_file]
       file = params[:xml_file]

@@ -1,8 +1,0 @@
-$('#recommender_' + recommender).html("<%= j render(partial: 'rees46_recommender.slim', locals: { products: @products, recommender: @recommender }) %>");
-
-$('.' + recommender).slick({
-  infinite: false,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4
-});

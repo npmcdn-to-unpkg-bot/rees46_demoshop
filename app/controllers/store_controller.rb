@@ -4,15 +4,8 @@ class StoreController < ApplicationController
   end
 
   def store_recommender
-    @products = []
-    params[:ids].each do |id|
-      @products << Product.find(id) if Product.where(id: id).any?
-    end
-
+    @products = Product.where(id: params[:ids])
     @recommender = params[:recommender]
-    respond_to do |format|
-      format.js
-    end
   end
 
   def xml_rees46
