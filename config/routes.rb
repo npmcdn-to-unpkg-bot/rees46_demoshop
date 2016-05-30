@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'store/index'
   post 'store/store_recommender' => 'store#store_recommender'
-  
+
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
   root 'store#index'
@@ -29,9 +29,8 @@ Rails.application.routes.draw do
   end
 
   resources :carts, only: [:index, :show, :destroy] do
-    post 'cart_recommender' => 'carts#cart_recommender'
+    post 'recommended_by=' => 'recommendations#rees46_recommender', on: :collection
   end
-  post 'carts/cart_recommender' => 'carts#cart_recommender'
 
   resources :parsers, only: :index
   get 'store/xml_rees46'
