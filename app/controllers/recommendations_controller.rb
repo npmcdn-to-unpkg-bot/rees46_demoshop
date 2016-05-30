@@ -1,8 +1,8 @@
-class RecommendationsController
-  def show
-    @products = Where(id: params[:ids])
-    @recommended_by = params[:recommended_by]
+class RecommendationsController < ApplicationController
+  def rees46_recommender
+    raise(ArgumentError, 'recommended_by name is not provided') if params[:recommended_by].blank?
 
-    render nothing: true, if @products.none?
+    @products = Product.where(id: params[:ids])
+    @recommended_by = params[:recommended_by]
   end
 end

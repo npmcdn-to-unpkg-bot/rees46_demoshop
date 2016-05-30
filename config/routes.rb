@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root 'store#index'
   get 'dashboard' => 'store#dashboard'
 
-  get 'recommendations', to: 'recommendations#show'
+  post 'recommendations' => 'recommendations#rees46_recommender'
 
   resources :categories do
     post 'categories_recommender' => 'categories#categories_recommender'
@@ -19,10 +19,9 @@ Rails.application.routes.draw do
   resources :brands
 
   resources :products do
-    post 'products_recommender' => 'products#products_recommender'
+    post 'recommended_by=' => 'recommendations#rees46_recommender', on: :collection
     collection { post :import }
   end
-  post 'products/products_recommender' => 'products#products_recommender'
 
   resources :line_items, only: [:create, :destroy] do
     get 'increment', on: :member

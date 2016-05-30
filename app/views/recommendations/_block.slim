@@ -1,0 +1,14 @@
+- if products.present?
+  hr
+  - rec = @recommended_by
+  - case rec
+    - when 'also_bought'
+      h2.text-center С этим товаром покупают
+    - when 'interesting'
+      h2.text-center Возможно, вам это понравится
+    - when 'similar'
+      h2.text-center Похожие товары
+  .row
+    div class="multiple-items #{recommended_by}"
+      - products.each do |product|
+        = render partial: 'product', locals: { product: product, recommended_by: @recommended_by }

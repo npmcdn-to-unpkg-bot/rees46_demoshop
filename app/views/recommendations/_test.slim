@@ -1,0 +1,91 @@
+javascript:
+  var cf_also_bought = function(data){
+    if(data.length > 0) {
+      $.ajax({
+        type: 'POST',
+        url: 'recommended_by=',
+        data: {ids: data, recommended_by: 'also_bought'},
+      });
+    }
+  };
+
+  var cf_interesting = function(data){
+    if(data.length > 0) {
+      $.ajax({
+        type: 'POST',
+        url: 'recommended_by=',
+        data: {ids: data, recommended_by: 'interesting'},
+      });
+    }
+  };
+
+  var cf_similar = function(data){
+    if(data.length > 0) {
+      $.ajax({
+        type: 'POST',
+        url: 'recommended_by=',
+        data: {ids: data, recommended_by: 'similar'},
+      });
+    }
+  };
+
+  function afterInitRees46() {
+    var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
+
+    REES46.addReadyListener(function () {
+      REES46.pushData('view', {
+        item_id: '#{@product.id}',
+        price: '#{@product.price}',
+        is_available: '#{@product.available?}',
+        categories: '#{@product.category_id}'
+      });
+    });
+
+    REES46.addReadyListener(function () {
+      $('#add-to-cart-button').click(function () {
+        REES46.pushData('cart', {
+          item_id: '#{@product.id}',
+          price: '#{@product.price}',
+          is_available: '#{@product.available?}',
+          categories: '#{@product.category_id}'
+        });
+      });
+    });
+
+    REES46.addReadyListener(function () {
+      REES46.recommend({
+        recommender_type: 'also_bought',
+        item: '#{@product.id}',
+        cart: JSON.parse(cart_product_ids).map(function(el){
+          return el.cart
+        }),
+        limit: 8,
+        modification: '#{@product.category.try(:human_categories_industry)}'
+        }, cf_also_bought);
+    });
+
+    REES46.addReadyListener(function () {
+      REES46.recommend({
+        recommender_type: 'interesting',
+        item: '#{@product.id}',
+        cart: JSON.parse(cart_product_ids).map(function(el){
+          return el.cart
+        }),
+        limit: 8,
+        modification: '#{@product.category.try(:human_categories_industry)}'
+        }, cf_interesting);
+    });
+
+    REES46.addReadyListener(function () {
+      REES46.recommend({
+        recommender_type: 'similar',
+        item: '#{@product.id}',
+        cart: JSON.parse(cart_product_ids).map(function(el){
+          return el.cart
+        }),
+        categories: '#{@product.category_id}',
+        limit: 8,
+        modification: '#{@product.category.try(:human_categories_industry)}'
+        }, cf_similar);
+    });
+  }

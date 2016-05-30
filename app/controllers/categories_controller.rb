@@ -52,7 +52,7 @@ class CategoriesController < ApplicationController
   end
 
   def categories_recommender
-    @products = Product.where(params[:ids])
+    @products = Product.where(id: params[:ids])
     @recommender = params[:recommender]
   end
 
