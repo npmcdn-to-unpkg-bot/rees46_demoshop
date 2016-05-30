@@ -12,7 +12,7 @@ class Product < ActiveRecord::Base
 
   belongs_to :category
   counter_culture :category, foreign_key_values:
-      Proc.new {|category_id| [category_id, Category.find_by_id(category_id).try(:parent).try(:id), Category.find_by_id(category_id).try(:parent).try(:parent).try(:id)] }, touch: true
+      proc { |category_id| [category_id, Category.find_by_id(category_id).try(:parent).try(:id), Category.find_by_id(category_id).try(:parent).try(:parent).try(:id)] }, touch: true
   belongs_to :brand
   has_many :line_items
   has_many :volumes, dependent: :destroy
@@ -20,7 +20,7 @@ class Product < ActiveRecord::Base
 
   validates :title, :image, :description, :brand, :category_id, presence: true
   validates :title, uniqueness: true
-  validates :price, :presence => true, numericality: { greater_than_or_equal_to: 100 }
+  validates :price, presence: true, numericality: { greater_than_or_equal_to: 100 }
 
   def show_product_id?
     if industry == 'fashion'
@@ -41,7 +41,7 @@ class Product < ActiveRecord::Base
   def decrement_stock(value)
     reload
     self.stock = stock - value
-    raise if stock < 0
+    fail if stock < 0
     save(validate: false)
   end
 
@@ -126,11 +126,11 @@ class Product < ActiveRecord::Base
                         product.at_xpath('name').text
                       end
 
-       if remote_image_exists?(URI.extract(URI.encode((product.at_xpath('picture').text.strip)))[0]) == false
-         image_link = nil
-      else
-      image_link = redirected_url(URI.extract(URI.encode(product.at_xpath('picture').text.strip))[0])
-       end
+      image_link = if remote_image_exists?(URI.extract(URI.encode(product.at_xpath('picture').text.strip))[0]) == false
+                     nil
+                   else
+                     redirected_url(URI.extract(URI.encode(product.at_xpath('picture').text.strip))[0])
+      end
 
       count += 1
       pro_brand = Product.create!(

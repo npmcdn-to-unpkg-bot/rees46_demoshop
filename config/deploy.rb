@@ -7,7 +7,7 @@ set :scm, :git
 
 set :deploy_to, "/home/rails/#{fetch(:application)}"
 set :deploy_via,      :remote_cache
-set :ssh_options,     {forward_agent: true}
+set :ssh_options,     forward_agent: true
 set :use_sudo,        false
 set :keep_releases, 5
 set :linked_files, %w(config/database.yml config/secrets.yml config/unicorn.rb)
@@ -15,8 +15,8 @@ set :linked_dirs, %w(public/system public/uploads public/files log pids sockets 
 
 set :normalize_asset_timestamps, false
 
-set :rails_env,   'production'
-set :default_stage,   'production'
+set :rails_env, 'production'
+set :default_stage, 'production'
 
 set :keep_releases, 10
 
@@ -37,13 +37,12 @@ set :rvm_ruby_string, '2.2.3'
 
 # Only precompile assets when necessary [config]
 set :assets_dependencies, %w(app/assets lib/assets vendor/assets Gemfile.lock config/routes.rb)
-Rake::Task["deploy:assets:precompile"].clear_actions
+Rake::Task['deploy:assets:precompile'].clear_actions
 class PrecompileRequired < StandardError; end
 
 after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
-
   desc 'Start unicorn'
   task :start do
     on roles(:app), in: :sequence, wait: 5 do
@@ -65,12 +64,12 @@ namespace :deploy do
     end
   end
 
-  desc "Create database"
+  desc 'Create database'
   # task :database, :roles => :db, :only => { :primary => true } do
   #   run "cd #{current_path}; bundle exec rake db:create RAILS_ENV=#{rails_env}"
   # end
 
-  desc "Seed database"
+  desc 'Seed database'
   task :seed do
     on roles(:db), in: :sequence, wait: 5 do
       run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
@@ -96,10 +95,8 @@ namespace :deploy do
   #   end
   # end
 
-
-
   namespace :assets do
-    desc "Precompile assets"
+    desc 'Precompile assets'
     task :precompile do
       on roles(fetch(:assets_roles)) do
         within release_path do
@@ -109,35 +106,36 @@ namespace :deploy do
               latest_release = capture(:ls, '-xr', releases_path).split[1]
 
               # precompile if this is the first deploy
-              raise PrecompileRequired unless latest_release
+              fail PrecompileRequired unless latest_release
 
               latest_release_path = releases_path.join(latest_release)
 
               # precompile if the previous deploy failed to finish precompiling
-              execute(:ls, latest_release_path.join('assets_manifest_backup')) rescue raise(PrecompileRequired)
+              begin
+                execute(:ls, latest_release_path.join('assets_manifest_backup'))
+              rescue
+                raise(PrecompileRequired)
+              end
 
               fetch(:assets_dependencies).each do |dep|
                 # execute raises if there is a diff
-                execute(:diff, '-Naur', release_path.join(dep), latest_release_path.join(dep)) rescue raise(PrecompileRequired)
+                begin
+                  execute(:diff, '-Naur', release_path.join(dep), latest_release_path.join(dep))
+                rescue
+                  raise(PrecompileRequired)
+                end
               end
 
-              info("Skipping asset precompile, no asset diff found")
+              info('Skipping asset precompile, no asset diff found')
 
               # copy over all of the assets from the last release
               execute(:cp, '-r', latest_release_path.join('public', fetch(:assets_prefix)), release_path.join('public', fetch(:assets_prefix)))
             rescue PrecompileRequired
-              execute(:rake, "assets:precompile")
+              execute(:rake, 'assets:precompile')
             end
           end
         end
       end
     end
   end
-
 end
-
-
-
-
-
-

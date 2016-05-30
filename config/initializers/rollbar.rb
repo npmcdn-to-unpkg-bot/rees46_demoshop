@@ -5,9 +5,7 @@ Rollbar.configure do |config|
   config.access_token = 'dd415f37287e48619d05d44c7a528697'
 
   # Here we'll disable in 'test' 'development':
-  unless Rails.env.production?
-    config.enabled = false
-  end
+  config.enabled = false unless Rails.env.production?
 
   # By default, Rollbar will try to call the `current_user` controller method
   # to fetch the logged-in user object, and then call that object's `id`,
