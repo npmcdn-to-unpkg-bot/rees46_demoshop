@@ -8,6 +8,13 @@
       h2.text-center Возможно, вам это понравится
     - when 'similar'
       h2.text-center Похожие товары
+    - when "popular"
+      .recommender-block-title
+        h1 Популярные товары
+    - when "recently_viewed"
+      .recommender-block-title
+        h1 Вы недавно смотрели
+
   .row
     div class="multiple-items #{recommended_by}"
       - products.each do |product|

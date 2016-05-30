@@ -12,9 +12,8 @@ Rails.application.routes.draw do
   post 'recommendations' => 'recommendations#rees46_recommender'
 
   resources :categories do
-    post 'categories_recommender' => 'categories#categories_recommender'
+    post 'recommended_by=' => 'recommendations#rees46_recommender', on: :collection
   end
-  post 'categories/categories_recommender' => 'categories#categories_recommender'
 
   resources :brands
 

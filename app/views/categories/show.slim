@@ -1,6 +1,5 @@
 .col-md-12
   ol.breadcrumb
-    li= link_to "HOME", root_path
     - for category in @category.ancestors.reverse
       li= link_to category.name, category
 
@@ -32,79 +31,5 @@
 
 #recommender_interesting
 
-javascript:
-  var cf_popular = function(data){
-    // jQuery code
-    if(data.length > 0) {
-      $.ajax({
-        type: "POST",
-        url: 'categories_recommender',
-        data: {ids: data, recommender: 'popular'},
-      });
-      return false;
-    } else {
-      console.log('popular')
-    }
-  };
 
-  var cf_recently_viewed = function(data){
-    // jQuery code
-    if(data.length > 0) {
-      $.ajax({
-        type: "POST",
-        url: 'categories_recommender',
-        data: {ids: data, recommender: 'recently_viewed'},
-      });
-      return false;
-    }
-  };
-
-  var cf_interesting = function(data){
-    // jQuery code
-    if(data.length > 0) {
-      $.ajax({
-        type: "POST",
-        url: 'categories_recommender',
-        data: {ids: data, recommender: 'interesting'},
-      });
-      return false;
-    }
-  };
-
-  function afterInitRees46() {
-    var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
-
-    REES46.addReadyListener(function () {
-      REES46.recommend({
-        recommender_type: 'popular',
-        cart: JSON.parse(cart_product_ids).map(function(el){
-          return el.cart
-        }),
-        category: '#{@category.id}',
-        limit: 8,
-        modification: '#{@category.human_categories_industry}'
-      }, cf_popular );
-    });
-
-    REES46.addReadyListener(function () {
-      REES46.recommend({
-        recommender_type: 'recently_viewed',
-        cart: JSON.parse(cart_product_ids).map(function(el){
-          return el.cart
-        }),
-        limit: 8,
-        modification: '#{@category.human_categories_industry}'
-      }, cf_recently_viewed);
-    });
-
-    REES46.addReadyListener(function () {
-      REES46.recommend({
-        recommender_type: 'interesting',
-        cart: JSON.parse(cart_product_ids).map(function(el){
-          return el.cart
-        }),
-        limit: 8,
-        modification: '#{@category.human_categories_industry}'
-      }, cf_interesting);
-    });
-  }
+= render 'recommendations/recommenders/category'

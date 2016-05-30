@@ -51,11 +51,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def categories_recommender
-    @products = Product.where(id: params[:ids])
-    @recommender = params[:recommender]
-  end
-
   private
 
   def admin_permission
