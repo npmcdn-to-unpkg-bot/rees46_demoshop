@@ -1,0 +1,48 @@
+/ javascript:
+/   var cf_popular = function(data){
+/     // jQuery code
+/     if(data.length > 0) {
+/       $.ajax({
+/         type: "POST",
+/         url: 'recommended_by=',
+/         data: {ids: data, recommended_by: 'popular'},
+/       });
+/       return false;
+/     }
+/   };
+/ 
+/   var cf_interesting = function(data){
+/     // jQuery code
+/     if(data.length > 0) {
+/       $.ajax({
+/         type: "POST",
+/         url: 'recommended_by=',
+/         data: {ids: data, recommended_by: 'interesting'},
+/       });
+/       return false;
+/     }
+/   };
+/ 
+/   function afterInitRees46() {
+/     var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
+/     REES46.addReadyListener(function () {
+/       REES46.recommend({
+/         recommender_type: 'popular',
+/         cart: JSON.parse(cart_product_ids).map(function(el){
+/           return el.cart
+/         }),
+/         limit: 12
+/         }, cf_popular );
+/       });
+/ 
+/     REES46.addReadyListener(function () {
+/       REES46.recommend({
+/         recommender_type: 'interesting',
+/         cart: JSON.parse(cart_product_ids).map(function(el){
+/           return el.cart
+/         }),
+/         limit: 8,
+/         modification: 'fashion'
+/         }, cf_interesting);
+/     });
+/   }

@@ -3,10 +3,11 @@ Rails.application.routes.draw do
 
   get 'store/index'
   post 'store/store_recommender' => 'store#store_recommender'
-
+  
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
   root 'store#index'
+
   get 'dashboard' => 'store#dashboard'
 
   post 'recommendations' => 'recommendations#rees46_recommender'
