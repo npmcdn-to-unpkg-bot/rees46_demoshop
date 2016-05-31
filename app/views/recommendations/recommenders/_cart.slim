@@ -3,7 +3,7 @@ javascript:
     // jQuery code
     if(data.length > 0) {
       $.ajax({
-        type: "POST",
+        type: "GET",
         url: 'recommended_by=',
         data: {ids: data, recommended_by: 'see_also'},
       });

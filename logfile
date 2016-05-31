@@ -6179,3 +6179,1155 @@ ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
 STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
 ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
 STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
+ERROR:  schema "pgagent" does not exist at character 8
+STATEMENT:  SELECT pgagent.pgagent_schema_version()
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 59
+STATEMENT:  INSERT INTO pga_tmp_zombies (jagpid) SELECT jagpid   FROM pgagent.pga_jobagent AG   LEFT JOIN pg_stat_activity PA ON jagpid=pid  WHERE pid IS NULL
+ERROR:  relation "pgagent.pga_jobagent" does not exist at character 13
+STATEMENT:  INSERT INTO pgagent.pga_jobagent (jagpid, jagstation) SELECT pg_backend_pid(), 'AlifMacBookPro.local'
