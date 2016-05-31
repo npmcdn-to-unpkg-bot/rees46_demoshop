@@ -4,7 +4,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: "GET",
-        url: 'recommended_by=',
+        url: 'recommendations',
         data: {ids: data, recommended_by: 'popular'},
       });
       return false;
@@ -16,7 +16,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: "GET",
-        url: 'recommended_by=',
+        url: 'recommendations',
         data: {ids: data, recommended_by: 'interesting'},
       });
       return false;

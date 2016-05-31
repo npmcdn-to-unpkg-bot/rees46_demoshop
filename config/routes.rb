@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'store/index'
 
-  get 'recommended_by=' => 'recommendations#rees46_recommender'
+  get 'recommendations=' => 'recommendations#rees46_recommender'
 
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
@@ -14,13 +14,13 @@ Rails.application.routes.draw do
   get 'recommendations' => 'recommendations#rees46_recommender'
 
   resources :categories do
-    get 'recommended_by=' => 'recommendations#rees46_recommender', on: :collection
+    get 'recommendations' => 'recommendations#rees46_recommender', on: :collection
   end
 
   resources :brands
 
   resources :products do
-    get 'recommended_by=' => 'recommendations#rees46_recommender', on: :collection
+    get 'recommendations' => 'recommendations#rees46_recommender', on: :collection
     collection { post :import }
   end
 
@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   end
 
   resources :carts, only: [:index, :show, :destroy] do
-    get 'recommended_by=' => 'recommendations#rees46_recommender', on: :collection
+    get 'recommendations' => 'recommendations#rees46_recommender', on: :collection
   end
 
   resources :parsers, only: :index

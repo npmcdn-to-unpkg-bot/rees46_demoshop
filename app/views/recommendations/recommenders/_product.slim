@@ -3,7 +3,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: 'GET',
-        url: 'recommended_by=',
+        url: 'recommendations',
         data: {ids: data, recommended_by: 'also_bought'},
       });
     }
@@ -13,7 +13,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: 'GET',
-        url: 'recommended_by=',
+        url: 'recommendations',
         data: {ids: data, recommended_by: 'interesting'},
       });
     }
@@ -23,7 +23,7 @@ javascript:
     if(data.length > 0) {
       $.ajax({
         type: 'GET',
-        url: 'recommended_by=',
+        url: 'recommendations',
         data: {ids: data, recommended_by: 'similar'},
       });
     }
