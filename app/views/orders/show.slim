@@ -12,7 +12,6 @@
 javascript:
   function afterInitRees46() {
     var line_items = '#{ProductsInfo.new(Order.last.try(:line_items) || []).products_info.to_json.html_safe}'
-    console.log(line_items)
     REES46.addReadyListener(function () {
        REES46.pushData('purchase', JSON.parse(line_items), '#{@order.id}');
     });

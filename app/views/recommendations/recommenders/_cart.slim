@@ -7,11 +7,8 @@ javascript:
         url: 'recommendations',
         data: {ids: data, recommended_by: 'see_also'},
       });
-      return false;
-    } else {
-      console.log("Not work or id nil")
-    }
-  };
+    };
+
   function afterInitRees46() {
     var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
     REES46.addReadyListener(function () {
