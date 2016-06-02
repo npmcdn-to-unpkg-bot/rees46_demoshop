@@ -62,6 +62,7 @@
                           = @product.title
                           = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
                           h1= link_to "Перейти в корзину", @cart, class: "cart_link"
+
 .row
   #recommender_also_bought
   .clr
@@ -69,6 +70,11 @@
   .clr
   #recommender_similar
   .clr
+  
+  div class="rec-type" id="also_bought"
+  div class="rec-type" id="interesting"
+  div class="rec-type" id="similar"
+
 
 /= render 'recommendations/events/show'
 = render 'recommendations/recommenders/product'

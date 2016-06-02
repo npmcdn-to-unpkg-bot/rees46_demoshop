@@ -16,7 +16,27 @@ javascript:
     script.src = '//cdn.rees46.com/rees46_script2.js';
     script.async = true;
     script.onload = function() {
+    var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
     initREES46();
+
+      $('.rec-type').each(function() {
+        var id = $(this).attr('id')
+        REES46.addReadyListener(function () {
+          REES46.recommend({
+            recommender_type: id,
+            item: '#{@product.try(:id)}',
+            cart: JSON.parse(cart_product_ids).map(function(el){
+              return el.cart
+            })
+          }, function(data){
+              $.ajax({
+                type: 'GET',
+                url: 'recommendations',
+                data: {ids: data, recommended_by: id},
+              });
+          });
+        });
+      })
     };
     $('head')[0].appendChild(script);
   });

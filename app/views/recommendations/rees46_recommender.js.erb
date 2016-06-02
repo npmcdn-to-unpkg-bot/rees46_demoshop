@@ -1,5 +1,7 @@
 <% redner_category_template = render 'recommendations/recommended_by.js.erb', recommended_by: @recommended_by %>
-var recommended_by  = '<%= recommended_by %>'
+var recommended_type_by  = '<%= recommended_type_by %>'
+console.log('recommended_type_by')
+
 <% case @recommended_by %>
   <% when 'interesting' %>
     var recommended_by = 'interesting'
