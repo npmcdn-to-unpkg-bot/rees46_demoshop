@@ -18,7 +18,6 @@ javascript:
     script.onload = function() {
     var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
     initREES46();
-
       $('.rec-type').each(function() {
         var id = $(this).attr('id')
         REES46.addReadyListener(function () {
@@ -28,13 +27,13 @@ javascript:
             cart: JSON.parse(cart_product_ids).map(function(el){
               return el.cart
             })
-          }, function(data){
+          },function(data) {
               $.ajax({
                 type: 'GET',
                 url: 'recommendations',
                 data: {ids: data, recommended_by: id},
               });
-          });
+            });
         });
       })
     };

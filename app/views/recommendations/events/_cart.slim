@@ -1,0 +1,26 @@
+javascript:
+  function afterInitRees46() {
+    REES46.addReadyListener(function () {
+     $('.remove_single_from_cart_decrement').click(function () {
+       if ($(this).next().text() == 1) {
+         REES46.pushData('remove_from_cart', {
+           item_id: '#{item.product_id}',
+           price: '#{item.product.price}',
+           is_available: '#{item.product.available?}',
+           categories: '#{item.product.category_id}'
+         });
+       }
+     });
+   });
+
+   REES46.addReadyListener(function () {
+     $('.remove_single_from_cart_delete').click(function () {
+       REES46.pushData('remove_from_cart', {
+         item_id: '#{item.product_id}',
+         price: '#{item.product.price}',
+         is_available: '#{item.product.available?}',
+         categories: '#{item.product.category_id}'
+       });
+     });
+   });
+  }

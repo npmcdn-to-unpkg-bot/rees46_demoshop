@@ -64,35 +64,35 @@ ru:
       order_id: "Ваш заказа номер:-"
       root_link: "Вернуться на главную страницу"
 
-    controller:
-      brands:
-        create:
-          notice: "Бренд был успешно сохранен"
-        update:
-          notice: "Бренд был успешно обновлен обновить"
-        destroy:
-          notice: "Марка была успешно удалена"
-          notice_brands_path: "К сожалению у вас нет разрешения на удаление этого"
-      categories:
-        create:
-          notice: "Категория был успешно сохранен"
-        update:
-          notice: "Категория был успешно обновлен"
-        destroy:
-          notice: "Категория была успешно удалена"
-          notice_root: "У вас нет разрешения на удаление этого"
-      products:
-        create:
-          notice: "Продукция была успешно сохранена"
-          notice_new: "Продукт не был успешно сохранен"
-        update:
-          notice: "Продукт был успешно обновлен"
-          notice_edit: "Продукт не был успешно обновить"
-        destroy:
-          notice: "Продукт был успешно удален"
-          notice_products_path: "Заказанный продукт может быть удален"
-      orders:
-        notice: "Ваша корзина пуста"
-      line_items:
-        destroy:
-          notice: "Продукт был успешно удален из позиции"
+  controller:
+    brands:
+      create:
+        notice: "Бренд был успешно сохранен"
+      update:
+        notice: "Бренд был успешно обновлен обновить"
+      destroy:
+        notice: "Марка была успешно удалена"
+        notice_brands_path: "К сожалению у вас нет разрешения на удаление этого"
+    categories:
+      create:
+        notice: "Категория был успешно сохранен"
+      update:
+        notice: "Категория был успешно обновлен"
+      destroy:
+        notice: "Категория была успешно удалена"
+        notice_root: "У вас нет разрешения на удаление этого"
+    products:
+      create:
+        notice: "Продукция была успешно сохранена"
+        notice_new: "Продукт не был успешно сохранен"
+      update:
+        notice: "Продукт был успешно обновлен"
+        notice_edit: "Продукт не был успешно обновить"
+      destroy:
+        notice: "Продукт был успешно удален"
+        notice_products_path: "Заказанный продукт может быть удален"
+    orders:
+      notice: "Ваша корзина пуста"
+    line_items:
+      destroy:
+        notice: "Продукт был успешно удален из позиции"
