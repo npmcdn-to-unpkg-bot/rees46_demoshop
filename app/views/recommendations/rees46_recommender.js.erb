@@ -1,27 +1,4 @@
-<% redner_category_template = render 'recommendations/recommended_by.js.erb', recommended_by: @recommended_by %>
-var recommended_type_by  = '<%= recommended_type_by %>'
-console.log('recommended_type_by')
-
-<% case @recommended_by %>
-  <% when 'interesting' %>
-    var recommended_by = 'interesting'
-    <%= redner_category_template %>
-  <% when 'also_bought'%>
-    var recommended_by = 'also_bought'
-    <%= redner_category_template %>
-  <% when 'similar' %>
-    var recommended_by = 'similar'
-    <%= redner_category_template  %>
-  <% when 'popular' %>
-    var recommended_by = 'popular'
-    <%= redner_category_template  %>
-  <% when 'see_also' %>
-    var recommended_by = 'see_also'
-    <%= redner_category_template  %>
-  <% when 'recently_viewed' %>
-    var recommended_by = 'recently_viewed'
-    <%= redner_category_template  %>
-  <% when 'buying_now' %>
-    var recommended_by = 'buying_now'
-    <%= redner_category_template  %>
+<% if @recommended_by %>
+  var recommended_by = '<%= @recommended_by %>';
+  <%= render 'recommendations/recommended_by.js.erb', recommended_by: @recommended_by %>
 <% end %>
