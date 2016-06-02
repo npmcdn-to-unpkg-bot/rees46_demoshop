@@ -20,5 +20,4 @@
 
   .row
     div class="multiple-items #{recommended_by}"
-      - products.each do |product|
-        = render partial: 'product', locals: { product: product, recommended_by: @recommended_by }
+      = render partial: "product", collection: @products, as: :product
