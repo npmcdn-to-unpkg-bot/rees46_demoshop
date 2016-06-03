@@ -1,18 +1,1 @@
-javascript:
-  var cart_line_items = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart_line_items.to_json.html_safe}'
 
-  function afterInitRees46() {
-    REES46.addReadyListener(function () {
-     $('.remove_single_from_cart_decrement').click(function () {
-       if ($(this).next().text() == 1) {
-         REES46.pushData('remove_from_cart', cart_line_items);
-       }
-     });
-   });
-
-   REES46.addReadyListener(function () {
-     $('.remove_single_from_cart_delete').click(function () {
-       REES46.pushData('remove_from_cart', cart_line_items);
-     });
-   });
-  }

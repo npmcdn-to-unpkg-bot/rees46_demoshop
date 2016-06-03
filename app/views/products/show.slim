@@ -71,4 +71,25 @@
   div class="recommendations_type" id="recommender_similar" data-type="similar" data-limit="12"
   .clr
 
-= render 'recommendations/events/product'
+javascript:
+  function afterInitRees46() {
+    REES46.addReadyListener(function () {
+      REES46.pushData('view', {
+        item_id: '#{@product.id}',
+        price: '#{@product.price}',
+        is_available: '#{@product.available?}',
+        categories: '#{@product.category_id}'
+      });
+    });
+
+    REES46.addReadyListener(function () {
+      $('#add-to-cart-button').click(function () {
+        REES46.pushData('cart', {
+          item_id: '#{@product.id}',
+          price: '#{@product.price}',
+          is_available: '#{@product.available?}',
+          categories: '#{@product.category_id}'
+        });
+      });
+    });
+  }

@@ -27,7 +27,24 @@ div class="row row_#{item.id}"
     p.text-right class="item_total_#{item.id}"
       = number_to_currency(item.total_price,  unit: "₽ ")
   .col-md-1.remove_single_from_cart_delete
-    = button_to "X", line_item_path(item), method: :delete, class: "del"
+    = button_to "X", line_item_path(item), method: :delete, class: "del", onclick: 'REES46.pushData("remove_from_cart", "#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart_line_items.to_json}")'.html_safe
 hr
 
-= render 'recommendations/events/cart', item: item
+javascript:
+  var cart_line_items = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart_line_items.to_json.html_safe}'
+
+  function afterInitRees46() {
+    REES46.addReadyListener(function () {
+     $('.remove_single_from_cart_decrement').click(function () {
+       if ($(this).next().text() == 1) {
+         REES46.pushData('remove_from_cart', cart_line_items);
+       }
+     });
+   });
+
+   REES46.addReadyListener(function () {
+     $('.remove_single_from_cart_delete').click(function () {
+       REES46.pushData('remove_from_cart', cart_line_items);
+     });
+   });
+  }
