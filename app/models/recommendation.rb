@@ -1,2 +1,2 @@
-class Recommendation < ActiveRecord::Base
+class Recommendation
 end

@@ -1,22 +1,7 @@
 - if products.present?
   hr
-  - rec = @recommended_by
-  - case rec
-    - when 'also_bought'
-      h2.text-center С этим товаром покупают
-    - when 'interesting'
-      h2.text-center Возможно, вам это понравится
-    - when 'similar'
-      h2.text-center Похожие товары
-    - when 'popular'
-      .recommender-block-title
-        h1 Популярные товары
-    - when 'recently_viewed'
-      .recommender-block-title
-        h1 Вы недавно смотрели
-    - when 'see_also'
-      .recommender-block-title
-        h1 Посмотрите также
+
+  = get_recommended_case(@recommended_by)
 
   .row
     div class="multiple-items #{recommended_by}"
