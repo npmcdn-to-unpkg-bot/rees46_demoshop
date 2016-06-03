@@ -1,9 +1,9 @@
-div[class="row row_#{item.id}"]
+div class="row row_#{item.id}"
   .col-md-6
     .row
       .col-md-3
         = link_to image_tag(item.product.image.medium, class: "img-responsive"), product_path(item.product)
-      .col-md-3[style="width: 350px;"]
+      .col-md-3 style="width: 350px;"
         p= link_to item.product.title, product_path(item.product)
 
   .col-md-2
@@ -13,19 +13,18 @@ div[class="row row_#{item.id}"]
     - elsif item.product.child_ages && Product::AGE_SIZES.keys[item.product.child_ages].present? 
       li= Product::AGE_SIZES.key(item.size_id)
     - elsif item.size_id && Product::PART_TYPES.keys[item.product.part_types[item.size_id.to_i]].present?
-    - else
-      false
+
   .col-md-1
     span.qt-minus.remove_single_from_cart_decrement
       = link_to "-  ", decrement_line_item_path(item), remote: true
     span.qt
-      div[class="quantity_#{item.id}"]
+      div class="quantity_#{item.id}"
         = item.quantity
     span.qt-plus
       = link_to "  +", increment_line_item_path(item), remote: true
 
   .col-md-2
-    p.text-right[class="item_total_#{item.id}"] 
+    p.text-right class="item_total_#{item.id}"
       = number_to_currency(item.total_price,  unit: "₽ ")
   .col-md-1.remove_single_from_cart_delete
     = button_to "X", line_item_path(item), method: :delete, class: "del"
