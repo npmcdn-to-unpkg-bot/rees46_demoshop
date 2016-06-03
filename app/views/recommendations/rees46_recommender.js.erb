@@ -1,4 +1,15 @@
 <% if @recommended_by %>
   var recommended_by = '<%= @recommended_by %>';
-  <%= render 'recommendations/recommended_by.js.erb', recommended_by: @recommended_by %>
+  $('#recommender_' + recommended_by).html("<%= j render(partial: 'recommendations/block', locals: { products: @products, recommended_by: @recommended_by }) %>");
 <% end %>
+
+
+$('.rees46_' + recommended_by).slick({
+  infinite: false,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4
+});
+
+// Rremove slider form Home page
+$('.popular-for-home .rees46_popular').slick('unslick');
