@@ -1,10 +1,6 @@
-<% if @recommended_by %>
-  var recommended_by = '<%= @recommended_by %>';
-  $('#recommender_' + recommended_by).html("<%= j render(partial: 'recommendations/block', locals: { products: @products, recommended_by: @recommended_by }) %>");
-<% end %>
+$('#recommender_' + "<%= @recommended_by %>").html("<%= j render(partial: 'recommendations/block', locals: { products: @products, recommended_by: @recommended_by }) %>");
 
-
-$('.rees46_block_' + recommended_by).slick({
+$('.rees46_block_' + '<%= @recommended_by %>').slick({
   infinite: false,
   speed: 500,
   slidesToShow: 4,
