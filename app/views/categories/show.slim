@@ -8,7 +8,7 @@
     = @category.name
     hr
 
-div class="recommendations_type" data-type="popular" data-limit="12"
+div class="rees46-recommend" data-type="popular" data-limit="12"
 - @products.where(category_id: @category.id).each do |product|
   = render 'categories/product_categories', product: product
 
@@ -29,5 +29,5 @@ div class="recommendations_type" data-type="popular" data-limit="12"
             = render 'categories/product_categories', product: product
 
 
-div class="recommendations_type" data-type="recently_viewed" data-limit="12"
-div class="recommendations_type" data-type="interesting" data-limit="12"
+div class="rees46-recommend" data-type="recently_viewed" data-limit="12"
+div class="rees46-recommend" data-type="interesting" data-limit="12"
