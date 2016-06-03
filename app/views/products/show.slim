@@ -64,15 +64,11 @@
                           h1= link_to "Перейти в корзину", @cart, class: "cart_link"
 
 .row
-  #recommender_also_bought
+  div class="rec-type" id="recommender_also_bought" data-type="also_bought" data-limit="12"
   .clr
-  #recommender_interesting
+  div class="rec-type" id="recommender_interesting" data-type="interesting" data-limit="12"
   .clr
-  #recommender_similar
+  div class="rec-type" id="recommender_similar" data-type="similar" data-limit="12"
   .clr
-  
-  div class="rec-type" id="also_bought" limit="12"
-  div class="rec-type" id="interesting" limit="12"
-  div class="rec-type" id="similar" limit="12"
 
 = render 'recommendations/events/product'
