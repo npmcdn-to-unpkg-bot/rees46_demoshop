@@ -20,13 +20,17 @@ javascript:
     initREES46();
       $('.rec-type').each(function() {
         var id = $(this).attr('id')
+        var num = $(this).attr('limit')
+        var modi = $(this).attr('modification')
         REES46.addReadyListener(function () {
           REES46.recommend({
             recommender_type: id,
             item: '#{@product.try(:id)}',
             cart: JSON.parse(cart_product_ids).map(function(el){
               return el.cart
-            })
+            }),
+            limit: num,
+            modification: modi
           },function(data) {
               $.ajax({
                 type: 'GET',
