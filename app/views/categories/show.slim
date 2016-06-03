@@ -6,6 +6,7 @@
 .col-md-12
   h1.text-center
     = @category.name
+    hr
 
 #recommender_popular
 - @products.where(category_id: @category.id).each do |product|
