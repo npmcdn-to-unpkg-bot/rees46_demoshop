@@ -2,5 +2,5 @@
   hr
   = get_recommended_case(@recommended_by)
   .row
-    div class="multiple-items #{"rees46_" + recommended_by}"
+    div class="multiple-items #{"rees46_block_" + recommended_by}"
       = render partial: "product", collection: @products, as: :product

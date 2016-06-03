@@ -18,7 +18,7 @@ javascript:
     script.onload = function() {
     var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
     initREES46();
-      $('.rec-type').each(function() {
+      $('.recommendations_type').each(function() {
         var dataType = $(this).attr('data-type')
         var dataLimit = $(this).attr('data-limit')
         var dataModification = $(this).attr('data-modification')
