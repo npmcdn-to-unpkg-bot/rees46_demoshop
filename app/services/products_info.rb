@@ -30,7 +30,7 @@ class ProductsInfo
   end
 
   def product_ids_in_cart_line_items
-    @line_items.order(:id).select do |cli|
+    @line_items.order(:id).each do |cli|
       product = {}
       product[:item_id] = cli.product.id
       product[:price] = cli.product.price

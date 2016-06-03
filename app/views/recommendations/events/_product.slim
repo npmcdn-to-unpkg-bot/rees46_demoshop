@@ -1,14 +1,22 @@
 javascript:
-  var product_attr = '#{ProductsInfo.new(@products).products_info.to_json.html_safe}'
-
   function afterInitRees46() {
     REES46.addReadyListener(function () {
-      REES46.pushData('view', product_attr);
+      REES46.pushData('view', {
+        item_id: '#{@product.id}',
+        price: '#{@product.price}',
+        is_available: '#{@product.available?}',
+        categories: '#{@product.category_id}'
+      });
     });
 
     REES46.addReadyListener(function () {
       $('#add-to-cart-button').click(function () {
-        REES46.pushData('cart', product_attr);
+        REES46.pushData('cart', {
+          item_id: '#{@product.id}',
+          price: '#{@product.price}',
+          is_available: '#{@product.available?}',
+          categories: '#{@product.category_id}'
+        });
       });
     });
   }
