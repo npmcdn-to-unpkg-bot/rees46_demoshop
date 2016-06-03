@@ -1,4 +1,4 @@
-$('#recommender_' + "<%= @recommended_by %>").html("<%= j render(partial: 'recommendations/block', locals: { products: @products, recommended_by: @recommended_by }) %>");
+$('.recommendations_type[data-type=' + "<%= @recommended_by %>" + ']').html("<%= j render(partial: 'recommendations/block', locals: { products: @products, recommended_by: @recommended_by }) %>");
 
 $('.rees46_block_' + '<%= @recommended_by %>').slick({
   infinite: false,
