@@ -34,7 +34,7 @@ javascript:
           },function(data) {
               $.ajax({
                 type: 'GET',
-                url: 'recommendations',
+                url: '/recommendations',
                 data: {ids: data, recommended_by: id},
               });
             });

@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   resources :orders
 
-  get 'store/index'
-
-  get 'recommendations=' => 'recommendations#rees46_recommender'
-
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
   root 'store#index'
@@ -13,14 +9,11 @@ Rails.application.routes.draw do
 
   get 'recommendations' => 'recommendations#rees46_recommender'
 
-  resources :categories do
-    get 'recommendations' => 'recommendations#rees46_recommender', on: :collection
-  end
+  resources :categories
 
   resources :brands
 
   resources :products do
-    get 'recommendations' => 'recommendations#rees46_recommender', on: :collection
     collection { post :import }
   end
 
@@ -29,9 +22,7 @@ Rails.application.routes.draw do
     get 'decrement', on: :member
   end
 
-  resources :carts, only: [:index, :show, :destroy] do
-    get 'recommendations' => 'recommendations#rees46_recommender', on: :collection
-  end
+  resources :carts, only: [:index, :show, :destroy]
 
   resources :parsers, only: :index
   get 'store/xml_rees46'
