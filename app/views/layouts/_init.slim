@@ -32,12 +32,15 @@ javascript:
             limit: dataLimit,
             modification: dataModification
           },function(data) {
+            if (data.length > 0) {
               $.ajax({
                 type: 'GET',
                 url: '/recommendations',
                 data: {ids: data, recommended_by: dataType},
               });
-            });
+              return false
+            }
+          });
         });
       })
     };
