@@ -3,11 +3,11 @@ module RecommendationsHelper
     @recommended_by = recommended_case
     case @recommended_by
       when 'also_bought'
-        content_tag(:h2, 'С этим товаром покупают')
+        content_tag(:h2, 'С этим товаром покупают', class: ["recommender-block-title"])
       when 'interesting'
-        content_tag(:h2, 'Возможно, вам это понравится')
+        content_tag(:h2, 'Возможно, вам это понравится', class: ["recommender-block-title"])
       when 'similar'
-        content_tag(:h2, 'Похожие товары')
+        content_tag(:h2, 'Похожие товары', class: ["recommender-block-title"])
       when 'popular'
         content_tag(:h2, 'Популярные товары', class: ["recommender-block-title"])
       when 'recently_viewed'

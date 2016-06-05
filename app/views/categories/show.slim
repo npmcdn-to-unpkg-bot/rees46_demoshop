@@ -1,33 +1,31 @@
-.col-md-12
-  ol.breadcrumb
-    - for category in @category.ancestors.reverse
-      li= link_to category.name, category
+ol.breadcrumb
+  - for category in @category.ancestors.reverse
+    li= link_to category.name, category
 
-.col-md-12
-  h1.text-center
-    = @category.name
-    hr
+h1.text-center
+  = @category.name
 
 div class="rees46-recommend" data-type="popular" data-limit="12"
 
-- @products.where(category_id: @category.id).each do |product|
-  = render 'categories/product_categories', product: product
-
-- if @category.children
-  - @category.children.each do |child|
-    - if !child.products.empty?
-      .category_title
-        h1= link_to child.name, category_path(child)
-      .multiple-items
-        - @products.where(category_id: child).each do |product|
-          = render 'categories/product_categories', product: product
-
-    - if !child.children.product.empty?
-      .category_title
-        h1= link_to child.name, category_path(child)
+.row
+  - @products.where(category_id: @category.id).each do |product|
+    = render 'categories/product_categories', product: product
+.row
+  - if @category.children
+    - @category.children.each do |child|
+      - if !child.products.empty?
+        .category_title
+          h1= link_to child.name, category_path(child)
         .multiple-items
-          - @products.where(category_id: child.children).each do |product|
+          - @products.where(category_id: child).each do |product|
             = render 'categories/product_categories', product: product
+
+      - if !child.children.product.empty?
+        .category_title
+          h1= link_to child.name, category_path(child)
+          .multiple-items
+            - @products.where(category_id: child.children).each do |product|
+              = render 'categories/product_categories', product: product
 
 .clr
 
