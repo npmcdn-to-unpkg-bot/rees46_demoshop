@@ -1,5 +1,7 @@
   tr
     td
+      = order.created_at.strftime("%d-%m-%y")
+    td
       - order.line_items.each do |ol|
         = image_tag ol.product.image.thumb
     td
