@@ -1,4 +1,3 @@
-
 if("<%= @cart.line_items.any?%>" == 'false'){
   window.location.href = "<%= root_url %>";
 }else{
@@ -10,4 +9,4 @@ if("<%= @cart.line_items.any?%>" == 'false'){
   }
 }
 $('.cart_total').html('Total <%= number_to_currency(@cart.total_price,  unit: "₽ ") %>');
-$('.item_total_<%= @line_item.id %>').html('<%= number_to_currency(@line_item.total_price,  unit: "₽ ") %>')
+$('.item_total_<%= @line_item.id %>').html('<%= number_to_currency(@line_item.total_price,  unit: "₽ ") %>');

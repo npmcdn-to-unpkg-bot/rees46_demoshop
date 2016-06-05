@@ -7,17 +7,16 @@ class ProductsInfo
   end
 
   def products_info
-    @products.each do |pr|
-      if pr.nil?
-        product = {}
-        product[:item_id] = pr.product.id
-        product[:price] = pr.product.price
-        product[:is_available] = pr.product.available?
-        product[:categories] = pr.product.category_id
-        products << product
-      end
+    @line_items.each do |l|
+      product = {}
+      product[:item_id] = l.product.id
+      product[:price] = l.product.price
+      product[:is_available] = 1
+      product[:categories] = l.product.category_id
+      product[:amount] = 1
+      products << product
     end
-    products[0]
+    products
   end
 
   def product_ids_in_cart

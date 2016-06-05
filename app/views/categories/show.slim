@@ -9,6 +9,7 @@
     hr
 
 div class="rees46-recommend" data-type="popular" data-limit="12"
+
 - @products.where(category_id: @category.id).each do |product|
   = render 'categories/product_categories', product: product
 
