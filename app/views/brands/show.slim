@@ -1,5 +1,3 @@
 h1  Brand #{@brand.name}
 
-.products
-  - @products.each do |product|
-    = render 'brands/product_brand', product: product
+= render partial: 'brands/product_brand',  collection: @products, as: product
