@@ -5,7 +5,7 @@ javascript:
       callback = afterInitRees46
     } else {
       callback = function() {}
-    }
+    };
 
     function initREES46 () {
       var user_data = JSON.parse('#{j current_user.to_json(only: [:id, :email]).html_safe}');
@@ -19,9 +19,9 @@ javascript:
     var cart_product_ids = '#{ProductsInfo.new(@cart.try(:line_items) || []).product_ids_in_cart.to_json.html_safe}'
     initREES46();
       $('.rees46-recommend').each(function() {
-        var dataType = $(this).attr('data-type')
-        var dataLimit = $(this).attr('data-limit')
-        var dataModification = $(this).attr('data-modification')
+        var dataType = $(this).attr('data-type');
+        var dataLimit = $(this).attr('data-limit');
+        var dataModification = $(this).attr('data-modification');
         REES46.addReadyListener(function () {
           REES46.recommend({
             recommender_type: dataType,
@@ -39,10 +39,10 @@ javascript:
                 data: {ids: data, recommended_by: dataType},
               });
               return false
-            }
+            };
           });
         });
-      })
+      });
     };
     $('head')[0].appendChild(script);
   });

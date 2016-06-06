@@ -1,7 +1,7 @@
 <% if  @line_item.errors.any? %>
   $('#errors_log').html('<%= @line_item.errors['size_id'][0] %>');
 <% else %>
-  $('#line_count').text('<%= @cart.line_items.size %>')
+  $('#line_count').text('<%= @cart.line_items.size %>');
   $('#server_msg_modal').modal('show');
-  $('.cart_link').attr('href','<%= cart_path(@cart)%>')
+  $('.cart_link').attr('href','<%= cart_path(@cart)%>');
 <% end %>
