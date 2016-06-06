@@ -8,8 +8,7 @@ h1.text-center
 div class="rees46-recommend" data-type="popular" data-limit="12"
 
 .row
-  - @products.where(category_id: @category.id).each do |product|
-    = render 'categories/product_categories', product: product
+  = render partial: 'categories/product_categories',collection: @products.where(category_id: @category.id), as: :product
 .row
   - @category.children.each do |child|
     - if !child.products.empty?
