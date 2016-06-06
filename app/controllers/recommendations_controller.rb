@@ -4,5 +4,6 @@ class RecommendationsController < ApplicationController
 
     @products = Product.where(id: params[:ids])
     @recommended_by = params[:recommended_by]
+    @recommended_title = params[:recommended_title]
   end
 end

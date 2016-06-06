@@ -22,6 +22,8 @@ javascript:
         var dataType = $(this).attr('data-type');
         var dataLimit = $(this).attr('data-limit');
         var dataModification = $(this).attr('data-modification');
+        var dataTitle = $(this).attr('data-title');
+        console.log(dataTitle);
         REES46.addReadyListener(function () {
           REES46.recommend({
             recommender_type: dataType,
@@ -36,7 +38,7 @@ javascript:
               $.ajax({
                 type: 'GET',
                 url: '/recommendations',
-                data: {ids: data, recommended_by: dataType},
+                data: {ids: data, recommended_by: dataType, recommended_title: dataTitle},
               });
               return false
             };

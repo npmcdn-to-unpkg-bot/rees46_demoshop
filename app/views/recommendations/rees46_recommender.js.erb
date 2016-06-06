@@ -1,4 +1,4 @@
-$('.rees46-recommend[data-type=' + "<%= @recommended_by %>" + ']').html("<%= j render(partial: 'recommendations/block', locals: { products: @products, recommended_by: @recommended_by }) %>");
+$('.rees46-recommend[data-type=' + "<%= @recommended_by %>" + ']').html("<%= j render(partial: 'recommendations/block', locals: { products: @products, recommended_by: @recommended_by, recommended_title: @recommended_title }) %>");
 
 $('.rees46_carousel_' + '<%= @recommended_by %>').slick({
   infinite: false,

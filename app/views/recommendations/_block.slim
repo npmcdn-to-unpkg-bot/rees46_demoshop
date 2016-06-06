@@ -1,6 +1,16 @@
 - if products.present?
   hr
-  = get_recommended_case(@recommended_by)
+  .recommender-block-title
+    h2 = @recommended_title
+
   .row
     div class="multiple-items #{"rees46_carousel_" + recommended_by}"
-      = render partial: "product", collection: products, as: :product
+      - @products.each do |product|
+        .col-md-3.col-sm-4.col-xs-6
+          .r-product-item
+            .picture
+              = link_to image_tag(product.image.thumbs), product_path(product, recommdend_by: @recommended_by)
+            .title
+              = link_to product.title.truncate(40), product_path(product)
+            .price
+              = number_to_currency(product.price,  unit: "₽ ", precision: 0)
