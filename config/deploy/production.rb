@@ -1,11 +1,11 @@
 # role :app, %w{5.101.116.131}
 # role :web, %w{5.101.116.131}
 # role :db,  %w{5.101.116.131}
-role :app, %w(5.45.118.36)
-role :web, %w(5.45.118.36)
-role :db,  %w(5.45.118.36)
+role :app, %w(176.9.145.71)
+role :web, %w(176.9.145.71)
+role :db,  %w(176.9.145.71)
 
-role :production_cron, %w(5.45.118.36)
+role :production_cron, %w(176.9.145.71)
 
 set :stage, :production
 
