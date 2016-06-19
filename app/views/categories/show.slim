@@ -5,7 +5,7 @@ ol.breadcrumb
 h1.text-center
   = @category.name
 
-div class="rees46-recommend" data-type="popular" data-limit="12" data-title="Популярные товары"
+div class="rees46-recommend" data-type="popular" data-limit="12" data-title="Популярные товары" data-category="#{@category.id}"
 
 .row
   = render partial: 'categories/product_categories',collection: @products.where(category_id: @category.id), as: :product
