@@ -23,16 +23,24 @@ javascript:
         var dataLimit = $(this).attr('data-limit');
         var dataModification = $(this).attr('data-modification');
         var dataTitle = $(this).attr('data-title');
+        var dataCategory = $(this).attr('data-category');
         REES46.addReadyListener(function () {
-          REES46.recommend({
+
+          var params = {
             recommender_type: dataType,
             item: '#{@product.try(:id)}',
-            cart: JSON.parse(cart_product_ids).map(function(el){
+            cart: JSON.parse(cart_product_ids).map(function (el) {
               return el.cart
             }),
             limit: dataLimit,
-            modification: dataModification
-          },function(data) {
+            modification: dataModification,
+          };
+
+          if(dataCategory) {
+            params['categories'] = dataCategory;
+          }
+
+          REES46.recommend(params ,function(data) {
             if (data.length > 0) {
               $.ajax({
                 type: 'GET',
