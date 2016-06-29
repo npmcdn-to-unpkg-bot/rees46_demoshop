@@ -1,3 +1,6 @@
+- content_for :title do
+  = @product.title
+
 .container
   .row
     .col-md-12
@@ -15,9 +18,12 @@
 
     .col-md-8
       .product-title 
-        h1= @product.title
+        h1 = @product.title
+      /.product-description
+      /  = @product.description
       .price
         = number_to_currency(@product.price,  unit: "₽ ", precision: 0)
+
       = simple_form_for @line_item, remote: true do |f|
         .col-md-10.remove_padding
           #errors_log
@@ -64,11 +70,11 @@
                           h1= link_to "Перейти в корзину", @cart, class: "cart_link"
 
 .row
+  div class="rees46-recommend" data-type="similar" data-limit="12" data-title="Похожие товары"
+  .clr
   div class="rees46-recommend" data-type="also_bought" data-limit="12" data-title="С этим товаром покупают"
   .clr
   div class="rees46-recommend" data-type="interesting" data-limit="12" data-title="Возможно, вам это понравится"
-  .clr
-  div class="rees46-recommend" data-type="similar" data-limit="12" data-title="Похожие товары"
   .clr
 
 javascript:
