@@ -22,7 +22,7 @@ set :keep_releases, 10
 
 set :rvm_type, :user
 # set :rvm_custom_path, '~/.rvm'  # only needed if not detected
-set :rvm_ruby_string, '2.2.3'
+set :rvm_ruby_string, '2.3.0'
 
 # Whenever
 # set :whenever_roles, "#{fetch(:rails_env)}_cron"
